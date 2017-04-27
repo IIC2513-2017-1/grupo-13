@@ -4,7 +4,7 @@ class Player < ApplicationRecord
   validates :mail, presence: true, uniqueness: true, allow_blank: false,
                     format: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
   validates :age, presence: true, allow_blank: false,
-                    numericality: {only_integer: true, greater_than: 15}
+                    numericality: {only_integer: true, greater_than: 15, less_than:99}
 
 
 end

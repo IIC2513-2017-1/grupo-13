@@ -11,6 +11,26 @@
     </div>
   <% end %>
 
+    <div class="field">
+      <%= f.label :name %>
+      <%= f.text_field :name, required: true%>
+    </div>
+
+    <div class="field">
+      <%= f.label :bases %>
+      <%= f.text_field :bases %>
+    </div>
+
+    <div class="field">
+      <%= f.label :place %>
+      <%= f.text_field :place, required: true %>
+    </div>
+    <div class="field">
+      <%=f.label :organizer_id %>
+      <%=f.select :organizer, Organizer.all.collect{ |organizer| [ organizer.first_name + organizer.last_name ,organizer.id]},
+                                                      {include_blank: true}, {required: true}%>
+    </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -876,3 +876,1385 @@ Processing by PlayersController#new as HTML
 Completed 200 OK in 18ms (Views: 15.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-04-27 11:55:39 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.2) lib/active_record/migration.rb:573:in `check_pending!'
+activerecord (5.0.2) lib/active_record/migration.rb:549:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.5ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (34.8ms)
+Started GET "/" for 127.0.0.1 at 2017-04-27 11:55:40 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.2) lib/active_record/migration.rb:573:in `check_pending!'
+activerecord (5.0.2) lib/active_record/migration.rb:549:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.8ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.1ms)
+Started GET "/" for 127.0.0.1 at 2017-04-27 11:55:42 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.2) lib/active_record/migration.rb:573:in `check_pending!'
+activerecord (5.0.2) lib/active_record/migration.rb:549:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.3ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.0ms)
+Started GET "/" for 127.0.0.1 at 2017-04-27 11:55:45 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.2) lib/active_record/migration.rb:573:in `check_pending!'
+activerecord (5.0.2) lib/active_record/migration.rb:549:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.3ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.8ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6096862881537638385);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateTournaments (20170427145238)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6096862881537638385)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6096862881537638385);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateTournaments (20170427145238)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (15.2ms)[0m  [1m[35mCREATE TABLE "tournaments" ("id" serial primary key, "name" character varying NOT NULL, "organizer" character varying NOT NULL, "place" character varying NOT NULL, "bases" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE  INDEX  "index_tournaments_on_name" ON "tournaments"  ("name")[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170427145238"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTeams (20170427145305)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "teams" ("id" serial primary key, "name" character varying, "capitan" character varying, "logo" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE  INDEX  "index_teams_on_name" ON "teams"  ("name")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170427145305"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6096862881537638385)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for 127.0.0.1 at 2017-04-27 12:11:41 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 23ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/organizers" for 127.0.0.1 at 2017-04-27 12:11:49 -0300
+Processing by OrganizersController#index as HTML
+  Rendering organizers/index.html.erb within layouts/application
+  [1m[36mOrganizer Load (0.7ms)[0m  [1m[34mSELECT "organizers".* FROM "organizers"[0m
+  Rendered organizers/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 16ms (Views: 5.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/organizers/new" for 127.0.0.1 at 2017-04-27 12:11:52 -0300
+Processing by OrganizersController#new as HTML
+  Rendering organizers/new.html.erb within layouts/application
+  Rendered organizers/_form.html.erb (25.6ms)
+  Rendered organizers/new.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 44ms (Views: 28.7ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2017-04-27 12:12:03 -0300
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (1.3ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournaments/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 23ms (Views: 8.6ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/tournaments/new" for 127.0.0.1 at 2017-04-27 12:12:05 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mOrganizer Load (0.4ms)[0m  [1m[34mSELECT "organizers".* FROM "organizers"[0m
+  Rendered tournaments/_form.html.erb (18.8ms)
+  Rendered tournaments/new.html.erb within layouts/application (19.8ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 2.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `organizer_id' for #<Tournament:0x00562544381cf0>
+Did you mean?  organizer
+               organizer?
+               organizer=
+               organizer_was):
+    27:     </div>
+    28:     <div class="field">
+    29:       <%=f.label :organizer_id %>
+    30:       <%=f.select :organizer_id, Organizer.all.collect{ |organizer| [organizer.name, organizer.id]},
+    31:                                                       {include_blank: true}, {required: true}%>
+    32:     </div>
+    33: 
+  
+app/views/tournaments/_form.html.erb:30:in `block in _app_views_tournaments__form_html_erb___887836406032574467_47359028750520'
+app/views/tournaments/_form.html.erb:1:in `_app_views_tournaments__form_html_erb___887836406032574467_47359028750520'
+app/views/tournaments/new.html.erb:3:in `_app_views_tournaments_new_html_erb__4079822495969645796_47359028788540'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.2ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.3ms)
+Started GET "/tournaments/new" for 127.0.0.1 at 2017-04-27 12:12:34 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mOrganizer Load (0.5ms)[0m  [1m[34mSELECT "organizers".* FROM "organizers"[0m
+  Rendered tournaments/_form.html.erb (5.3ms)
+  Rendered tournaments/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 17ms (Views: 13.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/organizers" for 127.0.0.1 at 2017-04-27 12:12:45 -0300
+Processing by OrganizersController#index as HTML
+  Rendering organizers/index.html.erb within layouts/application
+  [1m[36mOrganizer Load (1.1ms)[0m  [1m[34mSELECT "organizers".* FROM "organizers"[0m
+  Rendered organizers/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 9ms (Views: 6.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/organizers/new" for 127.0.0.1 at 2017-04-27 12:12:46 -0300
+Processing by OrganizersController#new as HTML
+  Rendering organizers/new.html.erb within layouts/application
+  Rendered organizers/_form.html.erb (3.5ms)
+  Rendered organizers/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 12ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/organizers" for 127.0.0.1 at 2017-04-27 12:12:58 -0300
+Processing by OrganizersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hJp3ptvZtbzekB5mbME+lLCGwodcmfdxUILUZTMAz8JC4+rYAQo6IaqSZgxmIlhgbL+YuCcDRPq7w5yoPwWARQ==", "organizer"=>{"first_name"=>"asdfadsf", "last_name"=>"asdfasfdas", "mail"=>"asdfasd@gmail.com", "password"=>"[FILTERED]", "age"=>"321313"}, "commit"=>"Create Organizer"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "organizers" ("first_name", "last_name", "password", "mail", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "asdfadsf"], ["last_name", "asdfasfdas"], ["password", "asdffadf"], ["mail", "asdfasd@gmail.com"], ["age", 321313], ["created_at", 2017-04-27 15:12:58 UTC], ["updated_at", 2017-04-27 15:12:58 UTC]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/organizers/1
+Completed 302 Found in 9ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/organizers/1" for 127.0.0.1 at 2017-04-27 12:12:58 -0300
+Processing by OrganizersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrganizer Load (0.5ms)[0m  [1m[34mSELECT  "organizers".* FROM "organizers" WHERE "organizers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering organizers/show.html.erb within layouts/application
+  Rendered organizers/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 7ms (Views: 2.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/organizers" for 127.0.0.1 at 2017-04-27 12:13:06 -0300
+Processing by OrganizersController#index as HTML
+  Rendering organizers/index.html.erb within layouts/application
+  [1m[36mOrganizer Load (0.5ms)[0m  [1m[34mSELECT "organizers".* FROM "organizers"[0m
+  Rendered organizers/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2017-04-27 12:13:12 -0300
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.6ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournaments/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tournaments/new" for 127.0.0.1 at 2017-04-27 12:13:13 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mOrganizer Load (0.4ms)[0m  [1m[34mSELECT "organizers".* FROM "organizers"[0m
+  Rendered tournaments/_form.html.erb (10.5ms)
+  Rendered tournaments/new.html.erb within layouts/application (11.5ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<Organizer:0x00562544084ac0>):
+    27:     </div>
+    28:     <div class="field">
+    29:       <%=f.label :organizer_id %>
+    30:       <%=f.select :organizer, Organizer.all.collect{ |organizer| [organizer.name, organizer.id]},
+    31:                                                       {include_blank: true}, {required: true}%>
+    32:     </div>
+    33: 
+  
+app/views/tournaments/_form.html.erb:30:in `block (2 levels) in _app_views_tournaments__form_html_erb___887836406032574467_47359027776300'
+app/views/tournaments/_form.html.erb:30:in `block in _app_views_tournaments__form_html_erb___887836406032574467_47359027776300'
+app/views/tournaments/_form.html.erb:1:in `_app_views_tournaments__form_html_erb___887836406032574467_47359027776300'
+app/views/tournaments/new.html.erb:3:in `_app_views_tournaments_new_html_erb__4079822495969645796_47359027844640'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.9ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.6ms)
+Started GET "/tournaments/new" for 127.0.0.1 at 2017-04-27 12:13:36 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mOrganizer Load (0.7ms)[0m  [1m[34mSELECT "organizers".* FROM "organizers"[0m
+  Rendered tournaments/_form.html.erb (17.0ms)
+  Rendered tournaments/new.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 30ms (Views: 26.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tournaments/new" for 127.0.0.1 at 2017-04-27 12:14:24 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  Rendered tournaments/_form.html.erb (4.7ms)
+  Rendered tournaments/new.html.erb within layouts/application (10.0ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/cristobal/rails_project/web_semestre/app/views/tournaments/_form.html.erb:30: syntax error, unexpected ',', expecting =>
+anizer| {organizer.first_name, organizer.id},
+                              ^):
+  
+app/views/tournaments/_form.html.erb:30: syntax error, unexpected ',', expecting =>
+app/views/tournaments/new.html.erb:3:in `_app_views_tournaments_new_html_erb__4079822495969645796_47359023090000'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.7ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.2ms)
+Started GET "/tournaments/new" for 127.0.0.1 at 2017-04-27 12:14:59 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  Rendered tournaments/_form.html.erb (3.1ms)
+  Rendered tournaments/new.html.erb within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/cristobal/rails_project/web_semestre/app/views/tournaments/_form.html.erb:30: syntax error, unexpected ',', expecting '}'
+zer.last_name], organizer.id],
+                              ^
+/home/cristobal/rails_project/web_semestre/app/views/tournaments/_form.html.erb:31: syntax error, unexpected ',', expecting ')'
+        {include_blank: true}, {required: true});@output_buf
+                              ^):
+  
+app/views/tournaments/_form.html.erb:30: syntax error, unexpected ',', expecting '}'
+app/views/tournaments/_form.html.erb:31: syntax error, unexpected ',', expecting ')'
+app/views/tournaments/new.html.erb:3:in `_app_views_tournaments_new_html_erb__4079822495969645796_70282110766960'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.4ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.2ms)
+Started GET "/tournaments/new" for 127.0.0.1 at 2017-04-27 12:15:24 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  Rendered tournaments/_form.html.erb (2.7ms)
+  Rendered tournaments/new.html.erb within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/cristobal/rails_project/web_semestre/app/views/tournaments/_form.html.erb:30: syntax error, unexpected ',', expecting '}'
+zer.first_name, organizer.id],
+                              ^
+/home/cristobal/rails_project/web_semestre/app/views/tournaments/_form.html.erb:31: syntax error, unexpected ',', expecting ')'
+        {include_blank: true}, {required: true});@output_buf
+                              ^):
+  
+app/views/tournaments/_form.html.erb:30: syntax error, unexpected ',', expecting '}'
+app/views/tournaments/_form.html.erb:31: syntax error, unexpected ',', expecting ')'
+app/views/tournaments/new.html.erb:3:in `_app_views_tournaments_new_html_erb__4079822495969645796_70282108869860'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.6ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.7ms)
+Started GET "/tournaments/new" for 127.0.0.1 at 2017-04-27 12:15:51 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  Rendered tournaments/_form.html.erb (3.7ms)
+  Rendered tournaments/new.html.erb within layouts/application (5.7ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/cristobal/rails_project/web_semestre/app/views/tournaments/_form.html.erb:30: syntax error, unexpected ',', expecting '}'
+zer.last_name], organizer.id],
+                              ^
+/home/cristobal/rails_project/web_semestre/app/views/tournaments/_form.html.erb:31: syntax error, unexpected ',', expecting ')'
+        {include_blank: true}, {required: true}});@output_bu
+                              ^
+/home/cristobal/rails_project/web_semestre/app/views/tournaments/_form.html.erb:31: syntax error, unexpected '}', expecting ')'
+lank: true}, {required: true}});@output_buffer.safe_append='
+                              ^
+/home/cristobal/rails_project/web_semestre/app/views/tournaments/_form.html.erb:37: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/home/cristobal/rails_project/web_semestre/app/views/tournaments/_form.html.erb:39: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/cristobal/rails_project/web_semestre/app/views/tournaments/_form.html.erb:41: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/tournaments/_form.html.erb:30: syntax error, unexpected ',', expecting '}'
+app/views/tournaments/_form.html.erb:31: syntax error, unexpected ',', expecting ')'
+app/views/tournaments/_form.html.erb:31: syntax error, unexpected '}', expecting ')'
+app/views/tournaments/_form.html.erb:37: syntax error, unexpected keyword_end, expecting ')'
+app/views/tournaments/_form.html.erb:39: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/tournaments/_form.html.erb:41: syntax error, unexpected keyword_end, expecting ')'
+app/views/tournaments/new.html.erb:3:in `_app_views_tournaments_new_html_erb__4079822495969645796_47359021472260'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.4ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.2ms)
+Started GET "/tournaments/new" for 127.0.0.1 at 2017-04-27 12:16:05 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  Rendered tournaments/_form.html.erb (3.6ms)
+  Rendered tournaments/new.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/cristobal/rails_project/web_semestre/app/views/tournaments/_form.html.erb:30: syntax error, unexpected ',', expecting '}'
+zer.first_name, organizer.id],
+                              ^
+/home/cristobal/rails_project/web_semestre/app/views/tournaments/_form.html.erb:31: syntax error, unexpected ',', expecting ')'
+        {include_blank: true}, {required: true}});@output_bu
+                              ^
+/home/cristobal/rails_project/web_semestre/app/views/tournaments/_form.html.erb:31: syntax error, unexpected '}', expecting ')'
+lank: true}, {required: true}});@output_buffer.safe_append='
+                              ^
+/home/cristobal/rails_project/web_semestre/app/views/tournaments/_form.html.erb:37: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/home/cristobal/rails_project/web_semestre/app/views/tournaments/_form.html.erb:39: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/cristobal/rails_project/web_semestre/app/views/tournaments/_form.html.erb:41: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/tournaments/_form.html.erb:30: syntax error, unexpected ',', expecting '}'
+app/views/tournaments/_form.html.erb:31: syntax error, unexpected ',', expecting ')'
+app/views/tournaments/_form.html.erb:31: syntax error, unexpected '}', expecting ')'
+app/views/tournaments/_form.html.erb:37: syntax error, unexpected keyword_end, expecting ')'
+app/views/tournaments/_form.html.erb:39: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/tournaments/_form.html.erb:41: syntax error, unexpected keyword_end, expecting ')'
+app/views/tournaments/new.html.erb:3:in `_app_views_tournaments_new_html_erb__4079822495969645796_70282109520040'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.3ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.0ms)
+Started GET "/tournaments/new" for 127.0.0.1 at 2017-04-27 12:16:33 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mOrganizer Load (0.4ms)[0m  [1m[34mSELECT "organizers".* FROM "organizers"[0m
+  Rendered tournaments/_form.html.erb (6.9ms)
+  Rendered tournaments/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tournaments/new" for 127.0.0.1 at 2017-04-27 12:16:48 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mOrganizer Load (0.5ms)[0m  [1m[34mSELECT "organizers".* FROM "organizers"[0m
+  Rendered tournaments/_form.html.erb (6.7ms)
+  Rendered tournaments/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 14ms (Views: 11.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tournaments/new" for 127.0.0.1 at 2017-04-27 12:17:16 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  Rendered tournaments/_form.html.erb (2.6ms)
+  Rendered tournaments/new.html.erb within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/cristobal/rails_project/web_semestre/app/views/tournaments/_form.html.erb:30: syntax error, unexpected tIDENTIFIER, expecting ']'
+organizer.first_name organizer.last_name ,organizer.id]},
+                              ^
+/home/cristobal/rails_project/web_semestre/app/views/tournaments/_form.html.erb:30: syntax error, unexpected ']', expecting &. or :: or '[' or '.'
+nizer.last_name ,organizer.id]},
+                              ^
+/home/cristobal/rails_project/web_semestre/app/views/tournaments/_form.html.erb:31: syntax error, unexpected ',', expecting '}'
+        {include_blank: true}, {required: true});@output_buf
+                              ^):
+  
+app/views/tournaments/_form.html.erb:30: syntax error, unexpected tIDENTIFIER, expecting ']'
+app/views/tournaments/_form.html.erb:30: syntax error, unexpected ']', expecting &. or :: or '[' or '.'
+app/views/tournaments/_form.html.erb:31: syntax error, unexpected ',', expecting '}'
+app/views/tournaments/new.html.erb:3:in `_app_views_tournaments_new_html_erb__4079822495969645796_70282110959720'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.8ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.1ms)
+Started GET "/tournaments/new" for 127.0.0.1 at 2017-04-27 12:17:31 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  Rendered tournaments/_form.html.erb (3.2ms)
+  Rendered tournaments/new.html.erb within layouts/application (8.2ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/cristobal/rails_project/web_semestre/app/views/tournaments/_form.html.erb:30: syntax error, unexpected unary+, expecting ']'
+izer| [ organizer.first_name +''+organizer.last_name ,organi
+                              ^
+/home/cristobal/rails_project/web_semestre/app/views/tournaments/_form.html.erb:30: syntax error, unexpected ',', expecting '}'
+name +''+organizer.last_name ,organizer.id]},
+                              ^
+/home/cristobal/rails_project/web_semestre/app/views/tournaments/_form.html.erb:30: syntax error, unexpected ']', expecting ')'
+nizer.last_name ,organizer.id]},
+                              ^
+/home/cristobal/rails_project/web_semestre/app/views/tournaments/_form.html.erb:31: syntax error, unexpected ',', expecting ')'
+        {include_blank: true}, {required: true});@output_buf
+                              ^):
+  
+app/views/tournaments/_form.html.erb:30: syntax error, unexpected unary+, expecting ']'
+app/views/tournaments/_form.html.erb:30: syntax error, unexpected ',', expecting '}'
+app/views/tournaments/_form.html.erb:30: syntax error, unexpected ']', expecting ')'
+app/views/tournaments/_form.html.erb:31: syntax error, unexpected ',', expecting ')'
+app/views/tournaments/new.html.erb:3:in `_app_views_tournaments_new_html_erb__4079822495969645796_70282108660340'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.0ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.1ms)
+Started GET "/tournaments/new" for 127.0.0.1 at 2017-04-27 12:17:36 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mOrganizer Load (0.5ms)[0m  [1m[34mSELECT "organizers".* FROM "organizers"[0m
+  Rendered tournaments/_form.html.erb (7.2ms)
+  Rendered tournaments/new.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2017-04-27 12:22:58 -0300
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (1.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 24ms (Views: 10.1ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/teams/new" for 127.0.0.1 at 2017-04-27 12:23:00 -0300
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered teams/_form.html.erb (16.0ms)
+  Rendered teams/new.html.erb within layouts/application (17.0ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 4.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `player' for #<Team:0x007fd7a87cb988>):
+    23: 
+    24:   <div class="field">
+    25:     <%=f.label :organizer_id %>
+    26:     <%=f.select :player, Player.all.collect{ |player| [ player.first_name + player.last_name ,player.id]},
+    27:                                                         {include_blank: true}, {required: true}%>
+    28:   </div>
+    29: 
+  
+app/views/teams/_form.html.erb:26:in `block in _app_views_teams__form_html_erb___1237267362671671192_70282110554040'
+app/views/teams/_form.html.erb:1:in `_app_views_teams__form_html_erb___1237267362671671192_70282110554040'
+app/views/teams/new.html.erb:3:in `_app_views_teams_new_html_erb___3494391648729624068_70282110587360'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.7ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.2ms)
+Started GET "/teams/new" for 127.0.0.1 at 2017-04-27 12:26:56 -0300
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered teams/_form.html.erb (13.4ms)
+  Rendered teams/new.html.erb within layouts/application (14.6ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `player' for #<Team:0x00562542d61a38>):
+    23: 
+    24:   <div class="field">
+    25:     <%=f.label :player_id %>
+    26:     <%=f.select :player, Player.all.collect{ |player| [ player.first_name + player.last_name ,player.id]},
+    27:                                                         {include_blank: true}, {required: true}%>
+    28:   </div>
+    29: 
+  
+app/views/teams/_form.html.erb:26:in `block in _app_views_teams__form_html_erb___1237267362671671192_70282076959640'
+app/views/teams/_form.html.erb:1:in `_app_views_teams__form_html_erb___1237267362671671192_70282076959640'
+app/views/teams/new.html.erb:3:in `_app_views_teams_new_html_erb___3494391648729624068_70282076982740'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.7ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.1ms)
+Started GET "/tournaments" for 127.0.0.1 at 2017-04-27 12:27:47 -0300
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (1.1ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournaments/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 18ms (Views: 6.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/tournaments/new" for 127.0.0.1 at 2017-04-27 12:27:49 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mOrganizer Load (0.4ms)[0m  [1m[34mSELECT "organizers".* FROM "organizers"[0m
+  Rendered tournaments/_form.html.erb (18.4ms)
+  Rendered tournaments/new.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 32ms (Views: 19.1ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/tea" for 127.0.0.1 at 2017-04-27 12:27:54 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/tea"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered collection of /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [34 times] (15.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (44.2ms)
+Started GET "/teams" for 127.0.0.1 at 2017-04-27 12:27:58 -0300
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (1.0ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/teams/new" for 127.0.0.1 at 2017-04-27 12:28:00 -0300
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.7ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered teams/_form.html.erb (11.7ms)
+  Rendered teams/new.html.erb within layouts/application (13.4ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `player' for #<Team:0x007fd7a88117f8>):
+    23: 
+    24:   <div class="field">
+    25:     <%=f.label :player_id %>
+    26:     <%=f.select :player, Player.all.collect{ |player| [ player.first_name + player.last_name ,player.id]},
+    27:                                                         {include_blank: true}, {required: true}%>
+    28:   </div>
+    29: 
+  
+app/views/teams/_form.html.erb:26:in `block in _app_views_teams__form_html_erb___1237267362671671192_70282110855300'
+app/views/teams/_form.html.erb:1:in `_app_views_teams__form_html_erb___1237267362671671192_70282110855300'
+app/views/teams/new.html.erb:3:in `_app_views_teams_new_html_erb___3494391648729624068_70282110861560'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.0ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.2ms)
+Started PUT "/__web_console/repl_sessions/ed54ace71a261182e1b2cfb433d39efb" for 127.0.0.1 at 2017-04-27 12:28:14 -0300
+Started PUT "/__web_console/repl_sessions/ed54ace71a261182e1b2cfb433d39efb" for 127.0.0.1 at 2017-04-27 12:28:17 -0300
+Started PUT "/__web_console/repl_sessions/ed54ace71a261182e1b2cfb433d39efb" for 127.0.0.1 at 2017-04-27 12:28:17 -0300
+  [1m[36mPlayer Load (0.7ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+Started PUT "/__web_console/repl_sessions/ed54ace71a261182e1b2cfb433d39efb" for 127.0.0.1 at 2017-04-27 12:28:20 -0300
+Started PUT "/__web_console/repl_sessions/ed54ace71a261182e1b2cfb433d39efb" for 127.0.0.1 at 2017-04-27 12:28:23 -0300
+Started PUT "/__web_console/repl_sessions/ed54ace71a261182e1b2cfb433d39efb" for 127.0.0.1 at 2017-04-27 12:28:24 -0300
+Started PUT "/__web_console/repl_sessions/ed54ace71a261182e1b2cfb433d39efb" for 127.0.0.1 at 2017-04-27 12:28:26 -0300
+  [1m[36mPlayer Load (0.7ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+Started PUT "/__web_console/repl_sessions/ed54ace71a261182e1b2cfb433d39efb" for 127.0.0.1 at 2017-04-27 12:28:29 -0300
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+Started PUT "/__web_console/repl_sessions/ed54ace71a261182e1b2cfb433d39efb" for 127.0.0.1 at 2017-04-27 12:28:46 -0300
+Started PUT "/__web_console/repl_sessions/ed54ace71a261182e1b2cfb433d39efb" for 127.0.0.1 at 2017-04-27 12:28:48 -0300
+Started PUT "/__web_console/repl_sessions/ed54ace71a261182e1b2cfb433d39efb" for 127.0.0.1 at 2017-04-27 12:28:49 -0300
+  [1m[36mPlayer Load (0.7ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+Started PUT "/__web_console/repl_sessions/ed54ace71a261182e1b2cfb433d39efb" for 127.0.0.1 at 2017-04-27 12:28:53 -0300
+Started PUT "/__web_console/repl_sessions/ed54ace71a261182e1b2cfb433d39efb" for 127.0.0.1 at 2017-04-27 12:28:54 -0300
+Started PUT "/__web_console/repl_sessions/ed54ace71a261182e1b2cfb433d39efb" for 127.0.0.1 at 2017-04-27 12:28:55 -0300
+  [1m[36mPlayer Load (0.7ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+Started GET "/teams/new" for 127.0.0.1 at 2017-04-27 12:29:32 -0300
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.8ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered teams/_form.html.erb (29.6ms)
+  Rendered teams/new.html.erb within layouts/application (34.0ms)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `playr' for #<Team:0x00562544217c98>):
+    23: 
+    24:   <div class="field">
+    25:     <%=f.label :player_id %>
+    26:     <%=f.select :playr, Player.all.collect{ |player| [ player.first_name + player.last_name ,player.id]},
+    27:                                                         {include_blank: true}, {required: true}%>
+    28:   </div>
+    29: 
+  
+app/views/teams/_form.html.erb:26:in `block in _app_views_teams__form_html_erb___1237267362671671192_47359028731200'
+app/views/teams/_form.html.erb:1:in `_app_views_teams__form_html_erb___1237267362671671192_47359028731200'
+app/views/teams/new.html.erb:3:in `_app_views_teams_new_html_erb___3494391648729624068_47359028603460'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.5ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.1ms)
+Started GET "/teams/new" for 127.0.0.1 at 2017-04-27 12:29:38 -0300
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.8ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered teams/_form.html.erb (19.5ms)
+  Rendered teams/new.html.erb within layouts/application (27.9ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `player' for #<Team:0x007fd7a87882f0>):
+    23: 
+    24:   <div class="field">
+    25:     <%=f.label :player_id %>
+    26:     <%=f.select :player, Player.all.collect{ |player| [ player.first_name + player.last_name ,player.id]},
+    27:                                                         {include_blank: true}, {required: true}%>
+    28:   </div>
+    29: 
+  
+app/views/teams/_form.html.erb:26:in `block in _app_views_teams__form_html_erb___1237267362671671192_70282110545060'
+app/views/teams/_form.html.erb:1:in `_app_views_teams__form_html_erb___1237267362671671192_70282110545060'
+app/views/teams/new.html.erb:3:in `_app_views_teams_new_html_erb___3494391648729624068_70282110572020'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.4ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.8ms)
+Started GET "/teams/new" for 127.0.0.1 at 2017-04-27 12:30:54 -0300
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered teams/_form.html.erb (12.4ms)
+  Rendered teams/new.html.erb within layouts/application (14.1ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `players' for #<Team:0x005625440c70a0>):
+    23: 
+    24:   <div class="field">
+    25:     <%=f.label :player_id %>
+    26:     <%=f.select :players, Player.all.collect{ |player| [ player.first_name + player.last_name ,player.id]},
+    27:                                                         {include_blank: true}, {required: true}%>
+    28:   </div>
+    29: 
+  
+app/views/teams/_form.html.erb:26:in `block in _app_views_teams__form_html_erb___1237267362671671192_47359027597120'
+app/views/teams/_form.html.erb:1:in `_app_views_teams__form_html_erb___1237267362671671192_47359027597120'
+app/views/teams/new.html.erb:3:in `_app_views_teams_new_html_erb___3494391648729624068_47359027716240'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.4ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.2ms)
+Started GET "/players" for 127.0.0.1 at 2017-04-27 12:31:48 -0300
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered players/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 14ms (Views: 11.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/players/new" for 127.0.0.1 at 2017-04-27 12:31:49 -0300
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/_form.html.erb (5.7ms)
+  Rendered players/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 24ms (Views: 9.4ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/players" for 127.0.0.1 at 2017-04-27 12:32:05 -0300
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ggyv8gbfKKZ3RPBg8H47xTzU/PLaDL8/ufdQdQivXXYC03KGFcn3IzJXkXrxO7lycL0ECWGUfalsLT3vdIHN1A==", "player"=>{"first_name"=>"Nicolas", "last_name"=>"Julio", "mail"=>"aasdfasd@gmmail.com", "password"=>"[FILTERED]", "age"=>"5454654", "position"=>"delantero"}, "commit"=>"Create Player"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "aasdfasd@gmmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "password", "mail", "position", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Nicolas"], ["last_name", "Julio"], ["password", "asdfasfasdf"], ["mail", "aasdfasd@gmmail.com"], ["position", "delantero"], ["age", 5454654], ["created_at", 2017-04-27 15:32:05 UTC], ["updated_at", 2017-04-27 15:32:05 UTC]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/players/1
+Completed 302 Found in 16ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/players/1" for 127.0.0.1 at 2017-04-27 12:32:05 -0300
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering players/show.html.erb within layouts/application
+  Rendered players/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2017-04-27 12:32:06 -0300
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered players/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2017-04-27 12:32:10 -0300
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/teams/new" for 127.0.0.1 at 2017-04-27 12:32:11 -0300
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  [1m[36mPlayer Load (2.8ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered teams/_form.html.erb (16.6ms)
+  Rendered teams/new.html.erb within layouts/application (17.8ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 2.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `player' for #<Team:0x005625441a3578>):
+    23: 
+    24:   <div class="field">
+    25:     <%=f.label :player_id %>
+    26:     <%=f.select :player, Player.all.collect{ |player| [ player.first_name + player.last_name ,player.id]},
+    27:                                                         {include_blank: true}, {required: true}%>
+    28:   </div>
+    29: 
+  
+app/views/teams/_form.html.erb:26:in `block in _app_views_teams__form_html_erb___1237267362671671192_47359028010880'
+app/views/teams/_form.html.erb:1:in `_app_views_teams__form_html_erb___1237267362671671192_47359028010880'
+app/views/teams/new.html.erb:3:in `_app_views_teams_new_html_erb___3494391648729624068_47359028157940'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.3ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (27.8ms)
+Started GET "/teams/new" for 127.0.0.1 at 2017-04-27 12:34:03 -0300
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered teams/_form.html.erb (15.9ms)
+  Rendered teams/new.html.erb within layouts/application (18.6ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `team' for #<Team:0x007fd7a84ef908>):
+    23: 
+    24:   <div class="field">
+    25:     <%=f.label :player_id %>
+    26:     <%=f.select :team, Player.all.collect{ |player| [ player.first_name + player.last_name ,player.id]},
+    27:                                                         {include_blank: true}, {required: true}%>
+    28:   </div>
+    29: 
+  
+app/views/teams/_form.html.erb:26:in `block in _app_views_teams__form_html_erb___1237267362671671192_70282109148560'
+app/views/teams/_form.html.erb:1:in `_app_views_teams__form_html_erb___1237267362671671192_70282109148560'
+app/views/teams/new.html.erb:3:in `_app_views_teams_new_html_erb___3494391648729624068_70282109217980'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.4ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.0ms)
+Started GET "/teams/new" for 127.0.0.1 at 2017-04-27 12:34:12 -0300
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  [1m[36mPlayer Load (1.0ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered teams/_form.html.erb (19.7ms)
+  Rendered teams/new.html.erb within layouts/application (20.7ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `organizer' for #<Team:0x007fd7a87256a0>):
+    23: 
+    24:   <div class="field">
+    25:     <%=f.label :player_id %>
+    26:     <%=f.select :organizer, Player.all.collect{ |player| [ player.first_name + player.last_name ,player.id]},
+    27:                                                         {include_blank: true}, {required: true}%>
+    28:   </div>
+    29: 
+  
+app/views/teams/_form.html.erb:26:in `block in _app_views_teams__form_html_erb___1237267362671671192_70282110325960'
+app/views/teams/_form.html.erb:1:in `_app_views_teams__form_html_erb___1237267362671671192_70282110325960'
+app/views/teams/new.html.erb:3:in `_app_views_teams_new_html_erb___3494391648729624068_70282110378180'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.6ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.7ms)
+Started GET "/teams/new" for 127.0.0.1 at 2017-04-27 12:35:51 -0300
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  [1m[36mOrganizer Load (0.5ms)[0m  [1m[34mSELECT "organizers".* FROM "organizers"[0m
+  Rendered teams/_form.html.erb (12.8ms)
+  Rendered teams/new.html.erb within layouts/application (14.3ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `organizer' for #<Team:0x007fd7a4747150>):
+    23:   
+    24:   <div class="field">
+    25:     <%=f.label :organizer_id %>
+    26:     <%=f.select :organizer, Organizer.all.collect{ |organizer| [ organizer.first_name + organizer.last_name ,organizer.id]},
+    27:                                                     {include_blank: true}, {required: true}%>
+    28:   </div>
+    29: 
+  
+app/views/teams/_form.html.erb:26:in `block in _app_views_teams__form_html_erb___1237267362671671192_70282006003440'
+app/views/teams/_form.html.erb:1:in `_app_views_teams__form_html_erb___1237267362671671192_70282006003440'
+app/views/teams/new.html.erb:3:in `_app_views_teams_new_html_erb___3494391648729624068_70282076892180'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.5ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.0ms)
+Started GET "/teams/new" for 127.0.0.1 at 2017-04-27 12:37:00 -0300
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  [1m[36mOrganizer Load (0.6ms)[0m  [1m[34mSELECT "organizers".* FROM "organizers"[0m
+  Rendered teams/_form.html.erb (4.9ms)
+  Rendered teams/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/teams/new" for 127.0.0.1 at 2017-04-27 12:37:30 -0300
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/_form.html.erb (7.1ms)
+  Rendered teams/new.html.erb within layouts/application (9.2ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Players):
+    23: 
+    24:   <div class="field">
+    25:     <%=f.label :organizer_id %>
+    26:     <%=f.select :capitan, Players.all.collect{ |organizer| [ organizer.first_name + organizer.last_name ,organizer.id]},
+    27:                                                     {include_blank: true}, {required: true}%>
+    28:   </div>
+    29: 
+  
+app/views/teams/_form.html.erb:26:in `block in _app_views_teams__form_html_erb___1237267362671671192_47359022952560'
+app/views/teams/_form.html.erb:1:in `_app_views_teams__form_html_erb___1237267362671671192_47359022952560'
+app/views/teams/new.html.erb:3:in `_app_views_teams_new_html_erb___3494391648729624068_47359023472720'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.4ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.4ms)
+Started GET "/teams/new" for 127.0.0.1 at 2017-04-27 12:37:36 -0300
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered teams/_form.html.erb (6.0ms)
+  Rendered teams/new.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/teams/new" for 127.0.0.1 at 2017-04-27 12:38:06 -0300
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered teams/_form.html.erb (11.6ms)
+  Rendered teams/new.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 21ms (Views: 18.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/teams/new" for 127.0.0.1 at 2017-04-27 12:38:15 -0300
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered teams/_form.html.erb (7.2ms)
+  Rendered teams/new.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/teams/new" for 127.0.0.1 at 2017-04-27 12:39:30 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered teams/_form.html.erb (6.7ms)
+  Rendered teams/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 17ms (Views: 11.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/teams/new" for 127.0.0.1 at 2017-04-27 12:40:24 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered teams/_form.html.erb (54.1ms)
+  Rendered teams/new.html.erb within layouts/application (56.2ms)
+Completed 200 OK in 90ms (Views: 58.3ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2017-04-27 12:40:56 -0300
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tournaments/new" for 127.0.0.1 at 2017-04-27 12:41:00 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mOrganizer Load (0.7ms)[0m  [1m[34mSELECT "organizers".* FROM "organizers"[0m
+  Rendered tournaments/_form.html.erb (20.9ms)
+  Rendered tournaments/new.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 66ms (Views: 20.7ms | ActiveRecord: 14.0ms)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6096862881537638385);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddRelationTables (20170427154511)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (11.7ms)[0m  [1m[35mCREATE TABLE "matches" ("id" serial primary key, "local" character varying NOT NULL, "visitor" character varying NOT NULL, "date" integer NOT NULL, "tournament_name" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "nominates" ("id" serial primary key, "team_id" character varying NOT NULL, "match_id" character varying NOT NULL, "player_id" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "cards" ("id" serial primary key, "match_id" character varying NOT NULL, "player_id" character varying NOT NULL, "type" character varying NOT NULL, "quantity" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE TABLE "goals" ("id" serial primary key, "match_id" character varying NOT NULL, "player_id" character varying NOT NULL, "quantity" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (10.9ms)[0m  [1m[35mCREATE TABLE "team_player" ("id" serial primary key, "player_id" character varying NOT NULL, "team_id" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE "tournament_team" ("id" serial primary key, "tournament_id" character varying NOT NULL, "team_id" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170427154511"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6096862881537638385)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for 127.0.0.1 at 2017-04-27 13:07:09 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 17ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2017-04-27 13:07:15 -0300
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.7ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered players/index.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 28ms (Views: 13.4ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/players/new" for 127.0.0.1 at 2017-04-27 13:07:18 -0300
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/_form.html.erb (24.2ms)
+  Rendered players/new.html.erb within layouts/application (25.6ms)
+Completed 200 OK in 29ms (Views: 27.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/players" for 127.0.0.1 at 2017-04-27 13:07:39 -0300
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i2P0/G5DtzIsfXgdUWgPHXEt0EQHty3vhjARBlIimmsLvCmIfVVot2luGQdQLY2qPUQov7wv73lT6nycLgwKyQ==", "player"=>{"first_name"=>"niocadsfalkjfdl", "last_name"=>"asdfqerq", "mail"=>"adasf@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "age"=>"21321321321", "position"=>"delantero"}, "commit"=>"Create Player"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "adasf@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/_form.html.erb (6.0ms)
+  Rendered players/new.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 31ms (Views: 9.9ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/players" for 127.0.0.1 at 2017-04-27 13:07:48 -0300
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qM7wEYtW+9qXoA/cxLuX3E5x6db5mZhRi1HAJW0jENooES1lmEAkX9KzbsbF/hVrAhgRLUIBWsdei62/EQ2AeA==", "player"=>{"first_name"=>"niocadsfalkjfdl", "last_name"=>"asdfqerq", "mail"=>"adasf@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "age"=>"21321321321", "position"=>"delantero"}, "commit"=>"Create Player"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (2.2ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "adasf@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 3.1ms)
+
+
+  
+ActiveModel::RangeError (21321321321 is out of range for ActiveModel::Type::Integer with limit 4):
+  
+app/controllers/players_controller.rb:30:in `block in create'
+app/controllers/players_controller.rb:29:in `create'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.8ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.6ms)
+Started POST "/players" for 127.0.0.1 at 2017-04-27 13:08:12 -0300
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qM7wEYtW+9qXoA/cxLuX3E5x6db5mZhRi1HAJW0jENooES1lmEAkX9KzbsbF/hVrAhgRLUIBWsdei62/EQ2AeA==", "player"=>{"first_name"=>"niocadsfalkjfdl", "last_name"=>"asdfqerq", "mail"=>"adasf@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "age"=>"213", "position"=>"delantero"}, "commit"=>"Create Player"}
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "adasf@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "password", "mail", "position", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "niocadsfalkjfdl"], ["last_name", "asdfqerq"], ["password", "123456"], ["mail", "adasf@gmail.com"], ["position", "delantero"], ["age", 213], ["created_at", 2017-04-27 16:08:12 UTC], ["updated_at", 2017-04-27 16:08:12 UTC]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/players/2
+Completed 302 Found in 10ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/players/2" for 127.0.0.1 at 2017-04-27 13:08:12 -0300
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering players/show.html.erb within layouts/application
+  Rendered players/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 9ms (Views: 2.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2017-04-27 13:08:15 -0300
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered players/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/players/1" for 127.0.0.1 at 2017-04-27 13:08:16 -0300
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering players/show.html.erb within layouts/application
+  Rendered players/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 8ms (Views: 4.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2017-04-27 13:08:18 -0300
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered players/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-27 13:08:21 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/new" for 127.0.0.1 at 2017-04-27 13:09:22 -0300
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/_form.html.erb (5.6ms)
+  Rendered players/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 25ms (Views: 8.9ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/players" for 127.0.0.1 at 2017-04-27 13:09:57 -0300
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dJj45Sj/oDcJO76B66V59Yoec4xhkLlAFXi1gZBha1T0RyWRO+l/skwo35vq4PtCxneLd9oIe9bAotgb7E/79g==", "player"=>{"first_name"=>"hoasdlfa", "last_name"=>"hoasdfasdf", "mail"=>"asdfasd@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "age"=>"999", "position"=>"asdfasdf"}, "commit"=>"Create Player"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "asdfasd@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/_form.html.erb (5.5ms)
+  Rendered players/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 25ms (Views: 12.7ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/players" for 127.0.0.1 at 2017-04-27 13:10:11 -0300
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v1/FkcbaifZ5HuSir+MwWkqEBEp6EmhfQAiSMboEBLI/gBjl1cxWczwNhbiuprLtBu38scGKqsmV0v+rxiqUEA==", "player"=>{"first_name"=>"hoasdlfa", "last_name"=>"hoasdfasdf", "mail"=>"asdfasd@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "age"=>"98", "position"=>"asdfasdf"}, "commit"=>"Create Player"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "asdfasd@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "password", "mail", "position", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "hoasdlfa"], ["last_name", "hoasdfasdf"], ["password", "123456"], ["mail", "asdfasd@gmail.com"], ["position", "asdfasdf"], ["age", 98], ["created_at", 2017-04-27 16:10:11 UTC], ["updated_at", 2017-04-27 16:10:11 UTC]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/players/3
+Completed 302 Found in 15ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/players/3" for 127.0.0.1 at 2017-04-27 13:10:11 -0300
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering players/show.html.erb within layouts/application
+  Rendered players/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 9ms (Views: 3.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2017-04-27 13:10:14 -0300
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.8ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered players/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.8ms)
+
+
