@@ -28,3 +28,851 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 70ms (Views: 65.6ms | ActiveRecord: 0.0ms)
 
 
+  [1m[35m (18.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6096862881537638385);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePlayers (20170427140554)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE TABLE "players" ("id" serial primary key, "first_name" character varying, "last_name" character varying, "password" character varying, "mail" character varying, "position" character varying, "age" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170427140554"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-04-27 14:12:04 UTC], ["updated_at", 2017-04-27 14:12:04 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6096862881537638385)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for 127.0.0.1 at 2017-04-27 11:12:19 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (9.0ms)
+Started GET "/" for 127.0.0.1 at 2017-04-27 11:12:20 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 501ms (Views: 489.9ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 274ms (Views: 271.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2017-04-27 11:12:30 -0300
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered players/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 32ms (Views: 23.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/players/new" for 127.0.0.1 at 2017-04-27 11:12:33 -0300
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/_form.html.erb (33.7ms)
+  Rendered players/new.html.erb within layouts/application (35.1ms)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 5.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `email' for #<Player:0x007f676406bdf0>
+Did you mean?  mail
+               mail?
+               mail=):
+    24: 
+    25:   <div class="field">
+    26:     <%= f.label :email %>
+    27:     <%= f.email_field :email, required: true %>
+    28:   </div>
+    29: 
+    30:   <div class="field">
+  
+app/views/players/_form.html.erb:27:in `block in _app_views_players__form_html_erb__1844766678638802681_70040931955920'
+app/views/players/_form.html.erb:1:in `_app_views_players__form_html_erb__1844766678638802681_70040931955920'
+app/views/players/new.html.erb:3:in `_app_views_players_new_html_erb__556773297915107810_70040931965040'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.3ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.2ms)
+Started GET "/players/new" for 127.0.0.1 at 2017-04-27 11:13:07 -0300
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/_form.html.erb (8.2ms)
+  Rendered players/new.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 36ms (Views: 33.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/players" for 127.0.0.1 at 2017-04-27 11:13:50 -0300
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3JX6nvXhXOHOo4aztQOu+xCCkrQO7NiuMdtp6ACrVaRNfp//7CGJCQ4Gp9bW7gGLwfCtkXT/gxIi68l/HN/AFA==", "player"=>{"first_name"=>"Nico", "last_name"=>"Julio", "mail"=>"adasf@gmail.com", "password"=>"[FILTERED]", "position"=>"delantero"}, "commit"=>"Create Player"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/players_controller.rb:27:in `create'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.4ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.5ms)
+Started GET "/players" for 127.0.0.1 at 2017-04-27 11:17:27 -0300
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered players/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 30ms (Views: 25.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/players/new" for 127.0.0.1 at 2017-04-27 11:17:29 -0300
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/_form.html.erb (106.8ms)
+  Rendered players/new.html.erb within layouts/application (108.1ms)
+Completed 500 Internal Server Error in 130ms (ActiveRecord: 5.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `integer_field' for #<ActionView::Helpers::FormBuilder:0x007f6759bbb990>):
+    34: 
+    35:   <div class="field">
+    36:     <%= f.label :age %>
+    37:     <%= f.integer_field :age, required: true %>
+    38:   </div>
+    39: 
+    40:   <div class="field">
+  
+app/views/players/_form.html.erb:37:in `block in _app_views_players__form_html_erb__1844766678638802681_70040951668180'
+app/views/players/_form.html.erb:1:in `_app_views_players__form_html_erb__1844766678638802681_70040951668180'
+app/views/players/new.html.erb:3:in `_app_views_players_new_html_erb__556773297915107810_70040951711380'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.4ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.3ms)
+Started GET "/players/new" for 127.0.0.1 at 2017-04-27 11:17:56 -0300
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/_form.html.erb (6.2ms)
+  Rendered players/new.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 36ms (Views: 35.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/players" for 127.0.0.1 at 2017-04-27 11:18:29 -0300
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VQOhc8ODtgLatx34Xrh9rKexOBlf55QdWwlWvfTFViTE6MQS2kNj6hoSPJ09VdLcdsMHPCX0z6FIOfYq6LHDlA==", "player"=>{"first_name"=>"asdf", "last_name"=>"asdf", "mail"=>"asdf@gmail.com", "password"=>"[FILTERED]", "age"=>"1321", "position"=>"asdf"}, "commit"=>"Create Player"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "password", "mail", "position", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "asdf"], ["last_name", "asdf"], ["password", "asdf"], ["mail", "asdf@gmail.com"], ["position", "asdf"], ["age", 1321], ["created_at", 2017-04-27 14:18:29 UTC], ["updated_at", 2017-04-27 14:18:29 UTC]]
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/players/1
+Completed 302 Found in 11ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/players/1" for 127.0.0.1 at 2017-04-27 11:18:29 -0300
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering players/show.html.erb within layouts/application
+  Rendered players/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 33ms (Views: 25.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2017-04-27 11:18:32 -0300
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered players/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 45ms (Views: 42.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/players/1" for 127.0.0.1 at 2017-04-27 11:18:33 -0300
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering players/show.html.erb within layouts/application
+  Rendered players/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 61ms (Views: 55.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2017-04-27 11:18:34 -0300
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered players/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 40ms (Views: 37.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/players/new" for 127.0.0.1 at 2017-04-27 11:20:03 -0300
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/_form.html.erb (3.4ms)
+  Rendered players/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 54ms (Views: 23.8ms | ActiveRecord: 4.8ms)
+
+
+Started POST "/players" for 127.0.0.1 at 2017-04-27 11:20:18 -0300
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1x059blqXW33dKw/lnX/m7JmuBFBQdEOnER61fJtrHxXwuSBqnyC6LJnzSWXMH0s/g9A6vrZE5hJnhdPjkM83g==", "player"=>{"first_name"=>"adfasdf", "last_name"=>"asfdasfd", "mail"=>"asdfasd@gmail.com", "password"=>"[FILTERED]", "age"=>"asdf", "position"=>"adsfa"}, "commit"=>"Create Player"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.5ms)
+
+
+  
+NoMethodError (undefined method `email' for #<Player:0x007f67644a01a0>
+Did you mean?  mail
+               mail?
+               mail=):
+  
+app/controllers/players_controller.rb:30:in `block in create'
+app/controllers/players_controller.rb:29:in `create'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.8ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.9ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (34.2ms)
+Started GET "/players" for 127.0.0.1 at 2017-04-27 11:20:29 -0300
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered players/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 47ms (Views: 41.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/players/1" for 127.0.0.1 at 2017-04-27 11:20:32 -0300
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering players/show.html.erb within layouts/application
+  Rendered players/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 47ms (Views: 41.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/players/1/edit" for 127.0.0.1 at 2017-04-27 11:20:34 -0300
+Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering players/edit.html.erb within layouts/application
+  Rendered players/_form.html.erb (6.6ms)
+  Rendered players/edit.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 53ms (Views: 48.2ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/players/1" for 127.0.0.1 at 2017-04-27 11:20:40 -0300
+Processing by PlayersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UKjceAk8gypnZT7JnT4EyzmoUx4OzHb8D5dh8kCqu+24gfWmUD2DjXafvPHlZWUAIrfCc/jO/v6ed1doYtRldA==", "player"=>{"first_name"=>"asdf", "last_name"=>"asdf", "mail"=>"asdf@gmail.com", "password"=>"[FILTERED]", "age"=>"1321", "position"=>"asdf"}, "commit"=>"Update Player", "id"=>"1"}
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 AND ("players"."id" != $2) LIMIT $3[0m  [["mail", "asdf@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering players/edit.html.erb within layouts/application
+  Rendered players/_form.html.erb (4.1ms)
+  Rendered players/edit.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 44ms (Views: 24.6ms | ActiveRecord: 1.5ms)
+
+
+Started PATCH "/players/1" for 127.0.0.1 at 2017-04-27 11:20:53 -0300
+Processing by PlayersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F814CoY44Xe46LW2bBCqgXhAFJhfflkRoCtnczMA9QOGJh1rn/g0n3hNlNMP/QXxqTIrvSVtAq2zG8fkL3Rgsw==", "player"=>{"first_name"=>"asdf", "last_name"=>"asdf", "mail"=>"asdf@gmail.com", "password"=>"[FILTERED]", "age"=>"1321", "position"=>"asdf"}, "commit"=>"Update Player", "id"=>"1"}
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 AND ("players"."id" != $2) LIMIT $3[0m  [["mail", "asdf@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "players" SET "password" = $1, "updated_at" = $2 WHERE "players"."id" = $3[0m  [["password", "asddfg123"], ["updated_at", 2017-04-27 14:20:53 UTC], ["id", 1]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/players/1
+Completed 302 Found in 18ms (ActiveRecord: 4.9ms)
+
+
+Started GET "/players/1" for 127.0.0.1 at 2017-04-27 11:20:53 -0300
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering players/show.html.erb within layouts/application
+  Rendered players/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/players/1/edit" for 127.0.0.1 at 2017-04-27 11:23:39 -0300
+Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (Unknown key: :presence. Valid keys are: :on, :if, :unless, :prepend. Perhaps you meant to call `validates` instead of `validate`?):
+  
+app/models/player.rb:6:in `<class:Player>'
+app/models/player.rb:1:in `<top (required)>'
+app/controllers/players_controller.rb:67:in `set_player'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.6ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.3ms)
+Started GET "/players/1/edit" for 127.0.0.1 at 2017-04-27 11:23:50 -0300
+Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (Unknown key: :presence. Valid keys are: :on, :if, :unless, :prepend. Perhaps you meant to call `validates` instead of `validate`?):
+  
+app/models/player.rb:6:in `<class:Player>'
+app/models/player.rb:1:in `<top (required)>'
+app/controllers/players_controller.rb:67:in `set_player'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.8ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.0ms)
+Started GET "/players/1/edit" for 127.0.0.1 at 2017-04-27 11:23:57 -0300
+Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering players/edit.html.erb within layouts/application
+  Rendered players/_form.html.erb (4.8ms)
+  Rendered players/edit.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 58ms (Views: 35.4ms | ActiveRecord: 3.6ms)
+
+
+Started PATCH "/players/1" for 127.0.0.1 at 2017-04-27 11:24:08 -0300
+Processing by PlayersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BUYAxzKoLk0YVfAhbeyM8KpMYD3VGezRGaGqiBlcg2qUrWWmK2j7pdjw0UQOASOAez5fGK8Kt20KkQofBSgW2g==", "player"=>{"first_name"=>"asdf", "last_name"=>"asdf", "mail"=>"asdf@gmail.com", "password"=>"[FILTERED]", "age"=>"asdfasd", "position"=>"asdf"}, "commit"=>"Update Player", "id"=>"1"}
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 AND ("players"."id" != $2) LIMIT $3[0m  [["mail", "asdf@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering players/edit.html.erb within layouts/application
+  Rendered players/_form.html.erb (4.0ms)
+  Rendered players/edit.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 38ms (Views: 25.9ms | ActiveRecord: 1.6ms)
+
+
+Started PATCH "/players/1" for 127.0.0.1 at 2017-04-27 11:24:18 -0300
+Processing by PlayersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xCIoZCvzNQeZyVlxVsKHwN14A+8o2inyI6xEXB/OLsxVyU0FMjPg71lseBQ1LyiwDAo8ylLJck4wnOTLA7q7fA==", "player"=>{"first_name"=>"asdf", "last_name"=>"asdf", "mail"=>"asdf@gmail.com", "password"=>"[FILTERED]", "age"=>"-1", "position"=>"asdf"}, "commit"=>"Update Player", "id"=>"1"}
+  [1m[36mPlayer Load (0.7ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 AND ("players"."id" != $2) LIMIT $3[0m  [["mail", "asdf@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "players" SET "password" = $1, "age" = $2, "updated_at" = $3 WHERE "players"."id" = $4[0m  [["password", "asdfasdfa"], ["age", -1], ["updated_at", 2017-04-27 14:24:18 UTC], ["id", 1]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/players/1
+Completed 302 Found in 18ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/players/1" for 127.0.0.1 at 2017-04-27 11:24:18 -0300
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering players/show.html.erb within layouts/application
+  Rendered players/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 25ms (Views: 21.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/players/1" for 127.0.0.1 at 2017-04-27 11:25:23 -0300
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering players/show.html.erb within layouts/application
+  Rendered players/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 56ms (Views: 31.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/players/1/edit" for 127.0.0.1 at 2017-04-27 11:25:26 -0300
+Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (1.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering players/edit.html.erb within layouts/application
+  Rendered players/_form.html.erb (11.5ms)
+  Rendered players/edit.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 68ms (Views: 62.8ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/players/1" for 127.0.0.1 at 2017-04-27 11:25:32 -0300
+Processing by PlayersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"furxWUgTlv+saxFvG82/bny2MPpdHqi5JBinvsjhF/2Ww9iHERKWWL2Rk1djlt6lZ6mhl6scILu1+JEk6p/JZA==", "player"=>{"first_name"=>"asdf", "last_name"=>"asdf", "mail"=>"asdf@gmail.com", "password"=>"[FILTERED]", "age"=>"-1", "position"=>"asdf"}, "commit"=>"Update Player", "id"=>"1"}
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 AND ("players"."id" != $2) LIMIT $3[0m  [["mail", "asdf@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering players/edit.html.erb within layouts/application
+  Rendered players/_form.html.erb (3.8ms)
+  Rendered players/edit.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 35ms (Views: 26.7ms | ActiveRecord: 1.5ms)
+
+
+Started PATCH "/players/1" for 127.0.0.1 at 2017-04-27 11:25:41 -0300
+Processing by PlayersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H6V5HaBadXiQi1gSJDLDjG8UH9s/m0+yOnNPKzdxDBaOThx8uZqgkFAueXdH32z8vmYg/kWIFA4pQ++8KwWZpg==", "player"=>{"first_name"=>"asdf", "last_name"=>"asdf", "mail"=>"asdf@gmail.com", "password"=>"[FILTERED]", "age"=>"20", "position"=>"asdf"}, "commit"=>"Update Player", "id"=>"1"}
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 AND ("players"."id" != $2) LIMIT $3[0m  [["mail", "asdf@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "players" SET "age" = $1, "updated_at" = $2 WHERE "players"."id" = $3[0m  [["age", 20], ["updated_at", 2017-04-27 14:25:41 UTC], ["id", 1]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/players/1
+Completed 302 Found in 18ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/players/1" for 127.0.0.1 at 2017-04-27 11:25:41 -0300
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.7ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering players/show.html.erb within layouts/application
+  Rendered players/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 24ms (Views: 21.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2017-04-27 11:25:43 -0300
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered players/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 39ms (Views: 37.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/players/1/edit" for 127.0.0.1 at 2017-04-27 11:25:45 -0300
+Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering players/edit.html.erb within layouts/application
+  Rendered players/_form.html.erb (5.9ms)
+  Rendered players/edit.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 53ms (Views: 49.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/players/1" for 127.0.0.1 at 2017-04-27 11:25:47 -0300
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.7ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering players/show.html.erb within layouts/application
+  Rendered players/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 35ms (Views: 30.2ms | ActiveRecord: 0.7ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6096862881537638385);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePlayers (20170427140554)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.9ms)[0m  [1m[35mDROP TABLE "players"[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20170427140554"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6096862881537638385)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for 127.0.0.1 at 2017-04-27 11:37:19 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.2) lib/active_record/migration.rb:573:in `check_pending!'
+activerecord (5.0.2) lib/active_record/migration.rb:549:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.7ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.3ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6096862881537638385);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePlayers (20170427140554)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6096862881537638385)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6096862881537638385);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePlayers (20170427140554)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (11.3ms)[0m  [1m[35mCREATE TABLE "players" ("id" serial primary key, "first_name" character varying NOT NULL, "last_name" character varying NOT NULL, "password" character varying NOT NULL, "mail" character varying NOT NULL, "position" character varying NOT NULL, "age" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_players_on_mail" ON "players"  ("mail")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170427140554"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateOrganizers (20170427143234)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (10.7ms)[0m  [1m[35mCREATE TABLE "organizers" ("id" serial primary key, "first_name" character varying NOT NULL, "last_name" character varying NOT NULL, "password" character varying NOT NULL, "mail" character varying NOT NULL, "age" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_organizers_on_mail" ON "organizers"  ("mail")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170427143234"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6096862881537638385)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for 127.0.0.1 at 2017-04-27 11:40:31 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 183ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (cannot load such file -- coffee_script):
+  
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___141659175572825513_47411362778720'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (15.1ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (14.8ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (44.7ms)
+Started GET "/" for 127.0.0.1 at 2017-04-27 11:40:34 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (cannot load such file -- coffee_script):
+  
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___141659175572825513_70105796035260'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.3ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (27.0ms)
+Started GET "/" for 127.0.0.1 at 2017-04-27 11:42:32 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (cannot load such file -- coffee_script):
+  
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___141659175572825513_70105783318720'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.7ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (27.4ms)
+Started POST "/__web_console/repl_sessions/4ed53434cf86e6959b47db663014fe29/trace" for 127.0.0.1 at 2017-04-27 11:42:54 -0300
+Started POST "/__web_console/repl_sessions/4ed53434cf86e6959b47db663014fe29/trace" for 127.0.0.1 at 2017-04-27 11:42:56 -0300
+Started POST "/__web_console/repl_sessions/4ed53434cf86e6959b47db663014fe29/trace" for 127.0.0.1 at 2017-04-27 11:42:56 -0300
+Started POST "/__web_console/repl_sessions/4ed53434cf86e6959b47db663014fe29/trace" for 127.0.0.1 at 2017-04-27 11:42:56 -0300
+Started POST "/__web_console/repl_sessions/4ed53434cf86e6959b47db663014fe29/trace" for 127.0.0.1 at 2017-04-27 11:42:56 -0300
+Started POST "/__web_console/repl_sessions/4ed53434cf86e6959b47db663014fe29/trace" for 127.0.0.1 at 2017-04-27 11:42:57 -0300
+Started POST "/__web_console/repl_sessions/4ed53434cf86e6959b47db663014fe29/trace" for 127.0.0.1 at 2017-04-27 11:42:57 -0300
+Started POST "/__web_console/repl_sessions/4ed53434cf86e6959b47db663014fe29/trace" for 127.0.0.1 at 2017-04-27 11:42:57 -0300
+Started POST "/__web_console/repl_sessions/4ed53434cf86e6959b47db663014fe29/trace" for 127.0.0.1 at 2017-04-27 11:42:57 -0300
+Started POST "/__web_console/repl_sessions/4ed53434cf86e6959b47db663014fe29/trace" for 127.0.0.1 at 2017-04-27 11:42:57 -0300
+Started GET "/" for 127.0.0.1 at 2017-04-27 11:43:49 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 152ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (cannot load such file -- coffee_script):
+  
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__855558597640752762_46995620721260'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.1ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.7ms)
+Started GET "/" for 127.0.0.1 at 2017-04-27 11:44:57 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (cannot load such file -- coffee_script):
+  
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__855558597640752762_70074286959140'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.0ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.6ms)
+Started GET "/" for 127.0.0.1 at 2017-04-27 11:45:20 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-27 11:46:08 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hola" for 127.0.0.1 at 2017-04-27 11:46:34 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/hola"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered collection of /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [18 times] (7.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.8ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (36.7ms)
+Started GET "/hola" for 127.0.0.1 at 2017-04-27 11:47:01 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/hola"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered collection of /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [18 times] (5.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (28.0ms)
+Started GET "/" for 127.0.0.1 at 2017-04-27 11:47:05 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/new_organizer_path" for 127.0.0.1 at 2017-04-27 11:47:07 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/new_organizer_path"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered collection of /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [18 times] (5.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (29.3ms)
+Started GET "/new_organizer_path" for 127.0.0.1 at 2017-04-27 11:49:09 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/new_organizer_path"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered collection of /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [18 times] (12.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (34.2ms)
+Started GET "/" for 127.0.0.1 at 2017-04-27 11:49:14 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/organizers/new" for 127.0.0.1 at 2017-04-27 11:49:16 -0300
+Processing by OrganizersController#new as HTML
+  Rendering organizers/new.html.erb within layouts/application
+  Rendered organizers/_form.html.erb (11.9ms)
+  Rendered organizers/new.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 40ms (Views: 15.3ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/players/new" for 127.0.0.1 at 2017-04-27 11:49:18 -0300
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/_form.html.erb (4.1ms)
+  Rendered players/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 27ms (Views: 7.4ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/organizers/new" for 127.0.0.1 at 2017-04-27 11:50:26 -0300
+Processing by OrganizersController#new as HTML
+  Rendering organizers/new.html.erb within layouts/application
+  Rendered organizers/_form.html.erb (2.7ms)
+  Rendered organizers/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/new" for 127.0.0.1 at 2017-04-27 11:50:28 -0300
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/_form.html.erb (7.8ms)
+  Rendered players/new.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 18ms (Views: 15.4ms | ActiveRecord: 0.0ms)
+
+

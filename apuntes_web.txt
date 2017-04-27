@@ -1,0 +1,9 @@
+---CLASE 27.04---
+Repaso de lo que son las cookies y la utilizacion de flash
+Como se implementa el manejo de sesiones?
+lo primero para poder iniciar sesion es definir una ruta en rails
+
+si defino un usuario = User.find()
+y usuario es nil
+& es un shortcut de rails para hacer
+if user&.password == 'balablab':

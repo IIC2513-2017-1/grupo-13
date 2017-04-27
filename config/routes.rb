@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :teams
+  resources :tournaments
+  resources :organizers
+  resources :players
   get 'welcome/index'
   root 'welcome#index'
 
