@@ -1570,3 +1570,156 @@ Migrating to AddRelationTables (20170427154511)
   [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "players"[0m
   [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "organizers"[0m
   [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "teams"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6096862881537638385);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateTeamplayers (20170430210621)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170430210621"]]
+  [1m[35m (44.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6096862881537638385)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (7.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "players"[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "organizers"[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "teams"[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "teamplayers"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "cullen.rempel@hotmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "password", "mail", "position", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Jane"], ["last_name", "Roob"], ["password", "NjLuSeQh"], ["mail", "cullen.rempel@hotmail.com"], ["position", "Delantero"], ["age", 20], ["created_at", 2017-04-30 21:08:23 UTC], ["updated_at", 2017-04-30 21:08:23 UTC]]
+  [1m[35m (1044.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "baron_swift@hotmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "password", "mail", "position", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Derrick"], ["last_name", "Tromp"], ["password", "8uS9SsBm48UhMhD"], ["mail", "baron_swift@hotmail.com"], ["position", "Delantero"], ["age", 20], ["created_at", 2017-04-30 21:08:24 UTC], ["updated_at", 2017-04-30 21:08:24 UTC]]
+  [1m[35m (414.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "darrel.lakin@yahoo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "password", "mail", "position", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Korey"], ["last_name", "Grant"], ["password", "9kSw18YmF"], ["mail", "darrel.lakin@yahoo.com"], ["position", "Delantero"], ["age", 20], ["created_at", 2017-04-30 21:08:25 UTC], ["updated_at", 2017-04-30 21:08:25 UTC]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "zachariah_considine@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "password", "mail", "position", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Malvina"], ["last_name", "Waelchi"], ["password", "P6W29w6"], ["mail", "zachariah_considine@gmail.com"], ["position", "Delantero"], ["age", 20], ["created_at", 2017-04-30 21:08:25 UTC], ["updated_at", 2017-04-30 21:08:25 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "melia_bernier@hotmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "password", "mail", "position", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Skylar"], ["last_name", "Stiedemann"], ["password", "R98u5wU5L3KcZaP"], ["mail", "melia_bernier@hotmail.com"], ["position", "Delantero"], ["age", 20], ["created_at", 2017-04-30 21:08:25 UTC], ["updated_at", 2017-04-30 21:08:25 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "gabe.moen@hotmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "password", "mail", "position", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Alycia"], ["last_name", "Mueller"], ["password", "0p80GuRs7e0e9k"], ["mail", "gabe.moen@hotmail.com"], ["position", "Delantero"], ["age", 20], ["created_at", 2017-04-30 21:08:25 UTC], ["updated_at", 2017-04-30 21:08:25 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "juana@hotmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "password", "mail", "position", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Ryann"], ["last_name", "Hartmann"], ["password", "Ld2k37TvBd0"], ["mail", "juana@hotmail.com"], ["position", "Delantero"], ["age", 20], ["created_at", 2017-04-30 21:08:25 UTC], ["updated_at", 2017-04-30 21:08:25 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "cody@hotmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "password", "mail", "position", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Sterling"], ["last_name", "Rath"], ["password", "62EyS9VyWv"], ["mail", "cody@hotmail.com"], ["position", "Delantero"], ["age", 20], ["created_at", 2017-04-30 21:08:25 UTC], ["updated_at", 2017-04-30 21:08:25 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "morton.bashirian@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "password", "mail", "position", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Brooklyn"], ["last_name", "Pfannerstill"], ["password", "D6WnNq"], ["mail", "morton.bashirian@gmail.com"], ["position", "Delantero"], ["age", 20], ["created_at", 2017-04-30 21:08:25 UTC], ["updated_at", 2017-04-30 21:08:25 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "vince@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "password", "mail", "position", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Grover"], ["last_name", "Schumm"], ["password", "HmL1XuC"], ["mail", "vince@gmail.com"], ["position", "Delantero"], ["age", 20], ["created_at", 2017-04-30 21:08:25 UTC], ["updated_at", 2017-04-30 21:08:25 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "dana.legros@yahoo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "password", "mail", "position", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Kyra"], ["last_name", "Ernser"], ["password", "0wZmHaW"], ["mail", "dana.legros@yahoo.com"], ["position", "Delantero"], ["age", 20], ["created_at", 2017-04-30 21:08:25 UTC], ["updated_at", 2017-04-30 21:08:25 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "thad_mosciski@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "password", "mail", "position", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Gideon"], ["last_name", "Crooks"], ["password", "9iYnObV0"], ["mail", "thad_mosciski@gmail.com"], ["position", "Delantero"], ["age", 20], ["created_at", 2017-04-30 21:08:25 UTC], ["updated_at", 2017-04-30 21:08:25 UTC]]
+  [1m[35m (21.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "jared_olson@hotmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "password", "mail", "position", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Hollie"], ["last_name", "Will"], ["password", "Sd7dJ6YhJ9R8Z"], ["mail", "jared_olson@hotmail.com"], ["position", "Delantero"], ["age", 20], ["created_at", 2017-04-30 21:08:25 UTC], ["updated_at", 2017-04-30 21:08:25 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "richard.towne@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "password", "mail", "position", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Reva"], ["last_name", "Kautzer"], ["password", "Db5sB8M0Vh9"], ["mail", "richard.towne@gmail.com"], ["position", "Delantero"], ["age", 20], ["created_at", 2017-04-30 21:08:25 UTC], ["updated_at", 2017-04-30 21:08:25 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "isabell@yahoo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "password", "mail", "position", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Eddie"], ["last_name", "Rempel"], ["password", "JqTkNrWpGt7rXkJ"], ["mail", "isabell@yahoo.com"], ["position", "Delantero"], ["age", 20], ["created_at", 2017-04-30 21:08:25 UTC], ["updated_at", 2017-04-30 21:08:25 UTC]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "margie_sauer@hotmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "password", "mail", "position", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Zion"], ["last_name", "Langworth"], ["password", "4cA5KzYp7pIbY"], ["mail", "margie_sauer@hotmail.com"], ["position", "Delantero"], ["age", 20], ["created_at", 2017-04-30 21:08:25 UTC], ["updated_at", 2017-04-30 21:08:25 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "sylvia.friesen@yahoo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "password", "mail", "position", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Laura"], ["last_name", "Wyman"], ["password", "L6H3V6ChGi"], ["mail", "sylvia.friesen@yahoo.com"], ["position", "Delantero"], ["age", 20], ["created_at", 2017-04-30 21:08:25 UTC], ["updated_at", 2017-04-30 21:08:25 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "isabella@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "password", "mail", "position", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Betsy"], ["last_name", "Thompson"], ["password", "4uHgTfQ"], ["mail", "isabella@gmail.com"], ["position", "Delantero"], ["age", 20], ["created_at", 2017-04-30 21:08:25 UTC], ["updated_at", 2017-04-30 21:08:25 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "dannie_davis@hotmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "password", "mail", "position", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Adonis"], ["last_name", "Crist"], ["password", "65A3S3TvV"], ["mail", "dannie_davis@hotmail.com"], ["position", "Delantero"], ["age", 20], ["created_at", 2017-04-30 21:08:25 UTC], ["updated_at", 2017-04-30 21:08:25 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "rodolfo.pagac@hotmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "password", "mail", "position", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Mohamed"], ["last_name", "Abbott"], ["password", "7e285uP7"], ["mail", "rodolfo.pagac@hotmail.com"], ["position", "Delantero"], ["age", 20], ["created_at", 2017-04-30 21:08:25 UTC], ["updated_at", 2017-04-30 21:08:25 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "jonatan_parisian@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "password", "mail", "position", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Marisa"], ["last_name", "Hartmann"], ["password", "G3JnEr7"], ["mail", "jonatan_parisian@gmail.com"], ["position", "Delantero"], ["age", 20], ["created_at", 2017-04-30 21:08:25 UTC], ["updated_at", 2017-04-30 21:08:25 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "greta@hotmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "password", "mail", "position", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Manley"], ["last_name", "Wuckert"], ["password", "9n2iP35b600y"], ["mail", "greta@hotmail.com"], ["position", "Delantero"], ["age", 20], ["created_at", 2017-04-30 21:08:25 UTC], ["updated_at", 2017-04-30 21:08:25 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "abagail.fay@hotmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "password", "mail", "position", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Erin"], ["last_name", "Fay"], ["password", "QeVi2390ZaX1E"], ["mail", "abagail.fay@hotmail.com"], ["position", "Delantero"], ["age", 20], ["created_at", 2017-04-30 21:08:25 UTC], ["updated_at", 2017-04-30 21:08:25 UTC]]
+  [1m[35m (7.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (5.1ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "randy@yahoo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "password", "mail", "position", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Kallie"], ["last_name", "Streich"], ["password", "K5K4D109Ar"], ["mail", "randy@yahoo.com"], ["position", "Delantero"], ["age", 20], ["created_at", 2017-04-30 21:08:25 UTC], ["updated_at", 2017-04-30 21:08:25 UTC]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "eliza.wiza@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (3.6ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "password", "mail", "position", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Arnold"], ["last_name", "Powlowski"], ["password", "UzSj1wAxJ7FnHl"], ["mail", "eliza.wiza@gmail.com"], ["position", "Delantero"], ["age", 20], ["created_at", 2017-04-30 21:08:25 UTC], ["updated_at", 2017-04-30 21:08:25 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "alta@hotmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (2.9ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "password", "mail", "position", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Marvin"], ["last_name", "Price"], ["password", "1o7vEpM9YaY"], ["mail", "alta@hotmail.com"], ["position", "Delantero"], ["age", 20], ["created_at", 2017-04-30 21:08:25 UTC], ["updated_at", 2017-04-30 21:08:25 UTC]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "carmelo@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "password", "mail", "position", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Jaeden"], ["last_name", "O'Connell"], ["password", "8tW1KmMdVtHs"], ["mail", "carmelo@gmail.com"], ["position", "Delantero"], ["age", 20], ["created_at", 2017-04-30 21:08:25 UTC], ["updated_at", 2017-04-30 21:08:25 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "wilfrid@yahoo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "password", "mail", "position", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Nels"], ["last_name", "Lebsack"], ["password", "WvFhVh"], ["mail", "wilfrid@yahoo.com"], ["position", "Delantero"], ["age", 20], ["created_at", 2017-04-30 21:08:25 UTC], ["updated_at", 2017-04-30 21:08:25 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "beatrice@yahoo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "password", "mail", "position", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Roosevelt"], ["last_name", "Lakin"], ["password", "I288Cy6"], ["mail", "beatrice@yahoo.com"], ["position", "Delantero"], ["age", 20], ["created_at", 2017-04-30 21:08:25 UTC], ["updated_at", 2017-04-30 21:08:25 UTC]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "wiley_marks@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "password", "mail", "position", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Ettie"], ["last_name", "Koepp"], ["password", "Go131nAm5h0"], ["mail", "wiley_marks@gmail.com"], ["position", "Delantero"], ["age", 20], ["created_at", 2017-04-30 21:08:25 UTC], ["updated_at", 2017-04-30 21:08:25 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "organizers" WHERE "organizers"."mail" = $1 LIMIT $2[0m  [["mail", "alvera@hotmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizer Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "organizers" WHERE "organizers"."mail" = $1 LIMIT $2[0m  [["mail", "meda@yahoo.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "organizers" WHERE "organizers"."mail" = $1 LIMIT $2[0m  [["mail", "meta.runte@hotmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "organizers" WHERE "organizers"."mail" = $1 LIMIT $2[0m  [["mail", "emma_gottlieb@yahoo.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizer Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "organizers" WHERE "organizers"."mail" = $1 LIMIT $2[0m  [["mail", "heaven_mosciski@yahoo.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
