@@ -23,7 +23,7 @@ Teamplayer.delete_all
     position: "Delantero"
     }])
 end
-  
+
 5.times do
   password = Faker::Internet.password(6,15)
   Organizer.create([{
@@ -38,7 +38,7 @@ end
 2.times do
   Team.create([{
     name: Faker::GameOfThrones.city,
-    capitan: Player.all.collect.sample,
+    capitan: Player.all.collect.first,
     logo: "Imagen"
     }])
 end
@@ -46,6 +46,6 @@ end
 Player.all.collect do |player|
   Teamplayer.create([{
     player_id: player.id,
-    team_id: Team.all.collect.sample,
+    team_id: Team.all.collect.first,
     }])
 end
