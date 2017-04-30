@@ -26,12 +26,12 @@ class AddRelationTables < ActiveRecord::Migration[5.0]
       t.integer :quantity, null: false
       t.timestamps
     end
-    create_table :team_player do |t|
+    create_table :teamplayers do |t|
       t.string :player_id, null: false
       t.string :team_id, null: false
       t.timestamps
     end
-    create_table :tournament_team do |t|
+    create_table :tournamentteams do |t|
       t.string :tournament_id, null: false
       t.string :team_id, null: false
       t.timestamps

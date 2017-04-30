@@ -72,7 +72,7 @@ ActiveRecord::Schema.define(version: 20170427154511) do
     t.index ["mail"], name: "index_players_on_mail", unique: true, using: :btree
   end
 
-  create_table "team_player", force: :cascade do |t|
+  create_table "teamplayers", force: :cascade do |t|
     t.string   "player_id",  null: false
     t.string   "team_id",    null: false
     t.datetime "created_at", null: false
@@ -88,13 +88,6 @@ ActiveRecord::Schema.define(version: 20170427154511) do
     t.index ["name"], name: "index_teams_on_name", using: :btree
   end
 
-  create_table "tournament_team", force: :cascade do |t|
-    t.string   "tournament_id", null: false
-    t.string   "team_id",       null: false
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-  end
-
   create_table "tournaments", force: :cascade do |t|
     t.string   "name",       null: false
     t.string   "organizer",  null: false
@@ -103,6 +96,13 @@ ActiveRecord::Schema.define(version: 20170427154511) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_tournaments_on_name", using: :btree
+  end
+
+  create_table "tournamentteams", force: :cascade do |t|
+    t.string   "tournament_id", null: false
+    t.string   "team_id",       null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
 end

@@ -2,13 +2,14 @@
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
 # Examples:
-#
+
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
 Player.delete_all
 Organizer.delete_all
 Team.delete_all
-Team_Player.delete_all
+Teamplayer.delete_all
 
 30.times do
   password = Faker::Internet.password(6,15)
@@ -44,7 +45,7 @@ end
 end
 
 Player.all.collect do |player|
-  Team_player.create([{
+  Teamplayer.create([{
     player_id: player.id,
     team_id: Team.all.collect.sample,
     }])
