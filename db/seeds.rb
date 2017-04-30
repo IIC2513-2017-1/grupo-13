@@ -38,7 +38,7 @@ end
 2.times do
   Team.create([{
     name: Faker::GameOfThrones.city,
-    capitan: Player.all.collect.first,
+    capitan: Player.all.collect.first.first_name,
     logo: "Imagen"
     }])
 end

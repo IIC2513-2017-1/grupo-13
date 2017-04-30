@@ -1,4 +1,33 @@
 <p id="notice"><%= notice %></p>
 
+<table>
+<thead>
+<tr>
+    <th></th>
+    <th></th>
+    <th colspan="1"></th>
+</tr>
+  </thead>
+
+  <tbody>
+
+<% Tournamentteams.all.collect do |team| %>
+  <% if team.tournament_id ==  @tournament.id.to_s %>
+    <tr>
+        <td><%= Team.find(team.team_id).name %></td>
+        <td><%= Team.find(team.team_id).capitan%></td>
+        <td><%= link_to 'Show' , team, method: :show%></td>
+        <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+  <%end%>
+<%end%>
+
+
+
+</tbody>
+</table>
+<%= link_to 'Agregar jugador',new_teamplayer_path(@team) %> |
+<%= link_to 'Volver', teams_path %>
+
 <%= link_to 'Edit', edit_tournament_path(@tournament) %> |
 <%= link_to 'Back', tournaments_path %>

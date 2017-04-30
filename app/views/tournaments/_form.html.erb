@@ -28,7 +28,7 @@
     <div class="field">
       <%=f.label :organizer_id %>
       <%=f.select :organizer, Organizer.all.collect{ |organizer| [ organizer.first_name + organizer.last_name ,organizer.id]},
-                                                      {include_blank: true}, {required: true}%>
+                                                      {include_blank: true}%>
     </div>
 
   <div class="actions">
