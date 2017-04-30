@@ -46,6 +46,6 @@ end
 Player.all.collect do |player|
   Teamplayer.create([{
     player_id: player.id,
-    team_id: Team.all.collect.first,
+    team_id: Team.all.collect.first.id,
     }])
 end

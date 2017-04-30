@@ -1,17 +1,28 @@
 <p id="notice"><%= notice %></p>
+<table>
+<thead>
+<tr>
+    <th>Nombre de jugador</th>
+    <th>Posicion</th>
+    <th colspan="1"></th>
+</tr>
+  </thead>
 
-
+  <tbody>
 
 <% Teamplayer.all.collect do |player| %>
-  <% #if player.team_id ==  @team.id %>
-  <tr>
-      <td><% Player.find(player.player_id).first_name %></td>
-      <td><% Player.find(player.player_id).position %></td>
-      <td><%= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' } %>
-  </tr>
-  <%#end%>
+  <% if player.team_id ==  @team.id.to_s %>
+    <tr>
+        <td><%= Player.find(player.player_id).first_name %></td>
+        <td><%= Player.find(player.player_id).position %></td>
+        <td><%= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <%end%>
 <%end%>
 
 
-<%= link_to 'Edit', edit_team_path(@team) %> |
-<%= link_to 'Back', teams_path %>
+
+</tbody>
+</table>
+<%= link_to 'Agregar jugador',new_teamplayer_path(@team) %> |
+<%= link_to 'Volver', teams_path %>
