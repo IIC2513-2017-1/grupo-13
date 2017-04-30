@@ -1,4 +1,16 @@
 <p id="notice"><%= notice %></p>
 
+
+
+<% Team_Player.all.collect do |player| %>
+  <% if player.team_id ==  @team.id %>
+  <tr>
+      <td><% Player.find(player.player_id).name %></td>
+      <td><% Player.find(player.player_id).position %></td>
+      <td><%= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </tr>
+  <%end%>
+
+
 <%= link_to 'Edit', edit_team_path(@team) %> |
 <%= link_to 'Back', teams_path %>
