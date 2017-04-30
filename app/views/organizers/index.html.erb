@@ -12,6 +12,10 @@
   <tbody>
     <% @organizers.each do |organizer| %>
       <tr>
+        <td><%= organizer.first_name %></td>
+        <td><%= organizer.last_name %></td>
+        <td><%= organizer.mail %></td>
+        <td><%= organizer.password %></td>
         <td><%= link_to 'Show', organizer %></td>
         <td><%= link_to 'Edit', edit_organizer_path(organizer) %></td>
         <td><%= link_to 'Destroy', organizer, method: :delete, data: { confirm: 'Are you sure?' } %></td>

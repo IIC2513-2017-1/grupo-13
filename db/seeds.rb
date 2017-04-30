@@ -19,8 +19,7 @@
     position: "Delantero"
     }])
 end
-
-
+  
 5.times do
   password = Faker::Internet.password(6,15)
   Organizer.create([{
