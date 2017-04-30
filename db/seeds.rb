@@ -5,9 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Player.delete_all
+Organizer.delete_all
+Team.delete_all
+Team_Player.delete_all
 
-
-10.times do
+30.times do
   password = Faker::Internet.password(6,15)
   Player.create([{
     first_name: Faker::Name.first_name,
@@ -29,5 +32,20 @@ end
     mail: Faker::Internet.unique.free_email,
     password: password,
     age: 20
+    }])
+end
+
+2.times do
+  Team.create([{
+    name: Faker::GameOfThrones.city,
+    capitan: Player.all.collect.sample,
+    logo: "Imagen"
+    }])
+end
+
+Player.all.collect do |player|
+  Team_player.create([{
+    player_id: player.id,
+    team_id: Team.all.collect.sample,
     }])
 end
