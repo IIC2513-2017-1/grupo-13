@@ -1,4 +1,3 @@
-
 <p id="notice"><%= notice %></p>
 
 <h1>Matches</h1>
@@ -6,19 +5,23 @@
 <table>
   <thead>
     <tr>
-      <th>Local</th>
-      <th>Visitante</th>
-      <th>Fecha</th>
-      <th>Nombre torneo</th>
+      <th>Fecha<th>
+      <th>Local<th>
+      <th>Visitante<th>
+      <th>Nombre Campeonato<th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @matches.each do |organizer| %>
+    <% Match.all.collect do |match| %>
       <tr>
+        <td><%=match.date%></td>
+        <td><%=match.local%></td>
+        <td><%=match.visitor%></td>
+        <td><%=match.tournament_name%></td>
         <td><%= link_to 'Show', match %></td>
-        <td><%= link_to 'Edit', edit_match_path(matches) %></td>
+        <td><%= link_to 'Edit', edit_match_path(match) %></td>
         <td><%= link_to 'Destroy', match, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -27,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Match', new_match_path %>
+<%= link_to 'New Match', new_match_path(@match) %>

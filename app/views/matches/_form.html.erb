@@ -1,22 +1,33 @@
-<%= form_for(matches) do |f| %>
-  <% if matches.errors.any? %>
+<%= form_for(match) do |f| %>
+  <% if match.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(matches.errors.count, "error") %> prohibited this organizer from being saved:</h2>
+      <h2><%= pluralize(match.errors.count, "error") %> prohibited this match from being saved:</h2>
 
       <ul>
-      <% matches.errors.full_messages.each do |message| %>
+      <% match.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
-
   <div class="field">
-    <%= f.label :first_name %>
-    <%= f.text_field :first_name %>
+    <%= f.label :date %>
+    <%= f.text_field :date %>
+  </div>
+  <div class="field">
+    <%= f.label :local %>
+    <%= f.text_field :local %>
+  </div>
+  <div class="field">
+    <%= f.label :visitor %>
+    <%= f.text_field :visitor %>
+  </div>
+  <div class="field">
+    <%= f.label :tournament_name %>
+    <%= f.text_field :tournament_name %>
   </div>
 
   <div class="actions">
     <%= f.submit %>
   </div>
-  <% end %>
+<% end %>

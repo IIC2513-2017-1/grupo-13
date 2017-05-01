@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
+  resources :matches
   resources :tournamentteams
   resources :teamplayers
   resources :teams
   resources :tournaments
   resources :organizers
   resources :players
-  resources :matches
   get 'welcome/index'
   root 'welcome#index'
 

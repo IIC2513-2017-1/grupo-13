@@ -27,7 +27,7 @@
     </div>
     <div class="field">
       <%=f.label :organizer_id %>
-      <%=f.select :organizer, Organizer.all.collect{ |organizer| [ organizer.first_name + organizer.last_name ,organizer.id]},
+      <%=f.select :organizer, Organizer.all.collect{ |organizer| [ organizer.first_name + organizer.last_name ,organizer]},
                                                       {include_blank: true}%>
     </div>
 

@@ -10,6 +10,16 @@
       </ul>
     </div>
   <% end %>
+  <div class="field">
+    <%= f.label :team_id%>
+    <%= f.select :team_id, Team.all.collect {|x| [x.name, x.id]}, {:include_blank => "Select One"} %> </br>
+  </div>
+  <div class="field">
+    <%= f.label :tournament_id%>
+    <%= f.select :tournament_id, Tournament.all.collect {|x| [x.name, x.id]}, {:include_blank => "Select One"} %> </br>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
 
   <div class="actions">
     <%= f.submit %>
