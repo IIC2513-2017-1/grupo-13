@@ -1,0 +1,22 @@
+<%= form_for(matches) do |f| %>
+  <% if matches.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(matches.errors.count, "error") %> prohibited this organizer from being saved:</h2>
+
+      <ul>
+      <% matches.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  <% end %>
