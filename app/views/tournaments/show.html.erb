@@ -11,7 +11,7 @@
 
   <tbody>
 
-<% Tournamentteams.all.collect do |team| %>
+<% Tournamentteam.all.collect do |team| %>
   <% if team.tournament_id ==  @tournament.id.to_s %>
     <tr>
         <td><%= Team.find(team.team_id).name %></td>

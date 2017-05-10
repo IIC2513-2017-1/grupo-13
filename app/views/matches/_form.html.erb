@@ -16,15 +16,15 @@
   </div>
   <div class="field">
     <%= f.label :local %>
-    <%= f.text_field :local %>
+    <%= f.select :local, Team.all.collect {|team| [team.name]} %>
   </div>
   <div class="field">
     <%= f.label :visitor %>
-    <%= f.text_field :visitor %>
+    <%= f.select :visitor, Team.all.collect {|team| [team.name]} %>
   </div>
   <div class="field">
     <%= f.label :tournament_name %>
-    <%= f.text_field :tournament_name %>
+    <%= f.select :tournament_name , Tournament.all.collect {|tour| [tour.name]}%>
   </div>
 
   <div class="actions">
