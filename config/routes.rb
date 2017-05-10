@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :tournaments
   resources :organizers
   resources :players
+  resources :sessions
   get 'welcome/index'
   root 'welcome#index'
 
