@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   resources :tournaments
   resources :organizers
   resources :players
-  resources :sessions
+  get '/login' , to:'sessions#new'
+  post "/login" , to:"sessions#create"
+  delete "/logout", to: "sessions#destroy"
   get 'welcome/index'
   root 'welcome#index'
 
