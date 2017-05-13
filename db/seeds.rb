@@ -47,7 +47,7 @@ end
     }])
 end
 
-2.times do
+5.times do
   Team.create([{
     name: Faker::GameOfThrones.city,
     capitan: Player.all.sample.first_name,
@@ -59,5 +59,15 @@ Player.all.collect do |player|
   Teamplayer.create([{
     player_id: player.id,
     team_id: Team.all.sample.id,
+    }])
+end
+2.times do
+  Tournament.create([{
+    name:Faker::StarWars.planet,
+    organizer: Organizer.all.sample.first_name,
+    place: Faker::HarryPotter.location,
+    number_team: 4,
+    number_date: 3
+
     }])
 end

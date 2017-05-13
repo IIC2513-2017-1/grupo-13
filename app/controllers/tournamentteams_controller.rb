@@ -1,5 +1,6 @@
 class TournamentteamsController < ApplicationController
   before_action :set_tournamentteam, only: [:show, :edit, :update, :destroy]
+  before_action :total_team
 
   # GET /tournamentteams
   # GET /tournamentteams.json
@@ -27,13 +28,20 @@ class TournamentteamsController < ApplicationController
     @tournamentteam = Tournamentteam.new(tournamentteam_params)
 
     respond_to do |format|
-      if @tournamentteam.save
+      if total_team >= Tournament.find(@tournamentteam.tournament_id).number_team
+        return :false
+      elsif @tournamentteam.save
         format.html { redirect_to @tournamentteam, notice: 'Tournamentteam was successfully created.' }
         format.json { render :show, status: :created, location: @tournamentteam }
+        if (total_team + 1) == Tournament.find(@tournamentteam.tournament_id).number_team
+          format.html { redirect_to tournaments_path, notice: 'Se completo el torneo, se creo el fixture.' }
+        end
+
       else
         format.html { render :new }
         format.json { render json: @tournamentteam.errors, status: :unprocessable_entity }
       end
+
     end
   end
 
@@ -60,7 +68,9 @@ class TournamentteamsController < ApplicationController
       format.json { head :no_content }
     end
   end
-
+  def total_team
+    Tournamentteam.where({tournament_id: @tournamentteam.tournament_id}).count
+  end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_tournamentteam

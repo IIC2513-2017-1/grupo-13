@@ -5,6 +5,8 @@
 <table>
   <thead>
     <tr>
+      <td>Tournament</td>
+      <td>Team</td>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -12,6 +14,8 @@
   <tbody>
     <% @tournamentteams.each do |tournamentteam| %>
       <tr>
+        <td><%=Tournament.find(tournamentteam.tournament_id).name%></td>
+        <td><%=Team.find(tournamentteam.team_id).name%></td>
         <td><%= link_to 'Show', tournamentteam %></td>
         <td><%= link_to 'Edit', edit_tournamentteam_path(tournamentteam) %></td>
         <td><%= link_to 'Destroy', tournamentteam, method: :delete, data: { confirm: 'Are you sure?' } %></td>

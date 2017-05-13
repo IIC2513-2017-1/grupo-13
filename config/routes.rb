@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :tournaments
   resources :organizers
   resources :players
-  resource :sessions, only: [:new,:create,:destroy]
+  resource :sessions, only: [:new,:create]
   delete 'logout', to: 'sessions#destroy'
   get 'welcome/index'
   root 'welcome#index'
