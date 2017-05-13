@@ -25,9 +25,13 @@ class OrganizersController < ApplicationController
   # POST /organizers.json
   def create
     @organizer = Organizer.new(organizer_params)
-
     respond_to do |format|
-      if @organizer.save
+    if Player.find_by(mail: @organizer.mail)
+      format.html { render :new, notice: 'Mail ya existe' }
+      format.json { render json: @organizer.errors, notice: 'Mail ya existe' }
+
+
+    elsif @organizer.save
         format.html { redirect_to @organizer, notice: 'Organizer was successfully created.' }
         format.json { render :show, status: :created, location: @organizer }
       else
@@ -41,7 +45,10 @@ class OrganizersController < ApplicationController
   # PATCH/PUT /organizers/1.json
   def update
     respond_to do |format|
-      if @organizer.update(organizer_params)
+      if Player.find_by(mail: @organizer.mail)
+        format.html { render :new, notice: 'Mail ya existe' }
+        format.json { render json: @organizer.errors, notice: 'Mail ya existe' }
+      elsif @organizer.update(organizer_params)
         format.html { redirect_to @organizer, notice: 'Organizer was successfully updated.' }
         format.json { render :show, status: :ok, location: @organizer }
       else

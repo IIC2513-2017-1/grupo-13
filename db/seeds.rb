@@ -13,6 +13,16 @@ Teamplayer.delete_all
 
 positions = ["Delantero", "Arquero", "Defensa","Mediocampista"]
 
+Player.create([{
+  first_name: 'Nicolas',
+  last_name: 'Julio',
+  mail: 'nijulio@uc.cl',
+  password: '123456',
+  password_confirmation: '123456',
+  age: 22,
+  position: 'Defensa'
+    }])
+
 30.times do
   password = Faker::Internet.password(6,15)
   Player.create([{

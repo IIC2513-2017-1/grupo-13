@@ -27,7 +27,11 @@ class PlayersController < ApplicationController
     @player = Player.new(player_params)
 
     respond_to do |format|
-      if @player.save
+      if Organizer.find_by(mail: @player.mail)
+        format.html { render :new, notice: 'Mail ya existe' }
+        format.json { render json: @player.errors, notice: 'Mail ya existe' }
+
+      elsif @player.save
         format.html { redirect_to @player, notice: 'Player was successfully created.' }
         format.json { render :show, status: :created, location: @player }
       else
@@ -41,7 +45,10 @@ class PlayersController < ApplicationController
   # PATCH/PUT /players/1.json
   def update
     respond_to do |format|
-      if @player.update(player_params)
+      if Organizer.find_by(mail: @player.mail)
+        format.html { render :new, notice: 'Mail ya existe' }
+        format.json { render json: @player.errors, notice: 'Mail ya existe' }
+      elsif @player.update(player_params)
         format.html { redirect_to @player, notice: 'Player was successfully updated.' }
         format.json { render :show, status: :ok, location: @player }
       else

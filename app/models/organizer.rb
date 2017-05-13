@@ -1,4 +1,6 @@
 class Organizer < ApplicationRecord
+  has_secure_password
+  before_save{|organizer| organizer.mail = organizer.mail.downcase}
   validates :password, presence: true, length: { minimum: 6 },
                        confirmation: true, allow_blank: false
   validates :mail, presence: true, uniqueness: true, allow_blank: false,
