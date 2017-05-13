@@ -1,0 +1,9 @@
+
+<nav id="main-menu" >
+  <%= link_to 'Teams', teams_path %>
+  <%= link_to 'Tournaments', tournaments_path %>
+  <%= link_to 'Matches', matches_path %>
+</nav>
+<h1>Welcome</h1>
+  <p>Welcome <%=link_to current_player.first_name, current_player%></p>
+  <p><%= link_to logout_path %></p>

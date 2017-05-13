@@ -16564,3 +16564,980 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 87ms (Views: 82.8ms | ActiveRecord: 2.5ms)
 
 
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6096862881537638385);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPasswordDigestToPlayer (20170513133547)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE "players" ADD "password_digest" character varying[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "players" DROP "password"[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170513133547"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to PasswordOrganizer (20170513134334)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "organizers" ADD "password_digest" character varying[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "organizers" DROP "password"[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170513134334"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6096862881537638385)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for 127.0.0.1 at 2017-05-13 12:10:15 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 302ms (Views: 293.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2017-05-13 12:10:21 -0300
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (3.2ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournaments/index.html.erb within layouts/application (23.7ms)
+Completed 200 OK in 79ms (Views: 36.6ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-13 12:13:14 -0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 38ms (Views: 35.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2017-05-13 12:13:56 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (499.2ms)
+Completed 200 OK in 546ms (Views: 544.9ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (3.3ms)[0m  [1m[31mDELETE FROM "players"[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[31mDELETE FROM "organizers"[0m
+  [1m[35mSQL (2.5ms)[0m  [1m[31mDELETE FROM "teams"[0m
+  [1m[35mSQL (2.1ms)[0m  [1m[31mDELETE FROM "teamplayers"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "nijulio@uc.cl"], ["LIMIT", 1]]
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "age", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Nicolas"], ["last_name", "Julio"], ["mail", "nijulio@uc.cl"], ["position", "Defensa"], ["age", 22], ["created_at", 2017-05-13 15:14:12 UTC], ["updated_at", 2017-05-13 15:14:12 UTC], ["password_digest", "$2a$10$prxJVTBgVCQgbiC94BD.o.wsAx0CAWWrv4FiyBF2HPGxphy7YDDJG"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "gail.schuppe@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "age", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Alfreda"], ["last_name", "Crooks"], ["mail", "gail.schuppe@gmail.com"], ["position", "Delantero"], ["age", 20], ["created_at", 2017-05-13 15:14:12 UTC], ["updated_at", 2017-05-13 15:14:12 UTC], ["password_digest", "$2a$10$Rh0rRCye92IlEbyuJyu62Ow6FcvtfgQ4Cf0hfXNDTqeTl4A6yw0ve"]]
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "marjory.lueilwitz@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "age", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Leilani"], ["last_name", "Zboncak"], ["mail", "marjory.lueilwitz@gmail.com"], ["position", "Delantero"], ["age", 20], ["created_at", 2017-05-13 15:14:12 UTC], ["updated_at", 2017-05-13 15:14:12 UTC], ["password_digest", "$2a$10$TrgYktkzB0MBXLeVzwm2HOU1nn9B6xVsPL6TL///tp/ANuAxLlFO2"]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "jabari_gottlieb@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "age", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Aimee"], ["last_name", "Treutel"], ["mail", "jabari_gottlieb@gmail.com"], ["position", "Arquero"], ["age", 20], ["created_at", 2017-05-13 15:14:12 UTC], ["updated_at", 2017-05-13 15:14:12 UTC], ["password_digest", "$2a$10$aHTQf4vIPCnQLorMRUQmwO8Eba8zLP8j5HX0fGK0DU0vD7MymBOk2"]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "dalton_collins@yahoo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "age", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Kade"], ["last_name", "Predovic"], ["mail", "dalton_collins@yahoo.com"], ["position", "Arquero"], ["age", 20], ["created_at", 2017-05-13 15:14:12 UTC], ["updated_at", 2017-05-13 15:14:12 UTC], ["password_digest", "$2a$10$Nser1h2nsA9qYmZIIXvSyO8g9AWx2.JxnAAeisqaZtvFvSlvF007C"]]
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "maynard.mills@hotmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "age", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Shyann"], ["last_name", "Adams"], ["mail", "maynard.mills@hotmail.com"], ["position", "Arquero"], ["age", 20], ["created_at", 2017-05-13 15:14:13 UTC], ["updated_at", 2017-05-13 15:14:13 UTC], ["password_digest", "$2a$10$/Fk6OB5TyF23vYJcoAUG0O5PCQ00d.oBljsuIYbp7/p3Z5imiVtVa"]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "amparo@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "age", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Ashlee"], ["last_name", "Pfannerstill"], ["mail", "amparo@gmail.com"], ["position", "Mediocampista"], ["age", 20], ["created_at", 2017-05-13 15:14:13 UTC], ["updated_at", 2017-05-13 15:14:13 UTC], ["password_digest", "$2a$10$WQXJXzfzfZ.81AKt5qj7K.uR4ud4g026GKGYMApIrlok1QGawonG."]]
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "noemy@yahoo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "age", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Randy"], ["last_name", "McLaughlin"], ["mail", "noemy@yahoo.com"], ["position", "Defensa"], ["age", 20], ["created_at", 2017-05-13 15:14:13 UTC], ["updated_at", 2017-05-13 15:14:13 UTC], ["password_digest", "$2a$10$.YaNoNeZVD4MsP5ow.sDJeByIAdYMBnvYZP50mbnw4ua9AEFviD6G"]]
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "houston@yahoo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "age", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Randal"], ["last_name", "Walsh"], ["mail", "houston@yahoo.com"], ["position", "Mediocampista"], ["age", 20], ["created_at", 2017-05-13 15:14:13 UTC], ["updated_at", 2017-05-13 15:14:13 UTC], ["password_digest", "$2a$10$PVvYdAGA.XYZ9pKYI0LrDuG5rZQUbNQ1xeGlezzLS5Oijdx97/IWy"]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "thomas.davis@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "age", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Buford"], ["last_name", "Blanda"], ["mail", "thomas.davis@gmail.com"], ["position", "Mediocampista"], ["age", 20], ["created_at", 2017-05-13 15:14:13 UTC], ["updated_at", 2017-05-13 15:14:13 UTC], ["password_digest", "$2a$10$W.Ggsw6srr0yw4sVpqAUUOc6H8d4RFOQkPzCBNqOHPXSnFu9hXKJu"]]
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "larry.ullrich@yahoo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "age", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Joany"], ["last_name", "Bayer"], ["mail", "larry.ullrich@yahoo.com"], ["position", "Defensa"], ["age", 20], ["created_at", 2017-05-13 15:14:13 UTC], ["updated_at", 2017-05-13 15:14:13 UTC], ["password_digest", "$2a$10$GkXerUCjiBHXwruocrfp4e6y1WKV7950/LdnFtc0TGa58fMSuvdMq"]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "kameron@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "age", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Mateo"], ["last_name", "Harvey"], ["mail", "kameron@gmail.com"], ["position", "Delantero"], ["age", 20], ["created_at", 2017-05-13 15:14:13 UTC], ["updated_at", 2017-05-13 15:14:13 UTC], ["password_digest", "$2a$10$qYGboJRjDkYu4wmTYgTQFekIB.aQ1G40pSogWr1usVmhSg0bu1AyK"]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "kattie.leffler@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "age", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Dovie"], ["last_name", "Gleichner"], ["mail", "kattie.leffler@gmail.com"], ["position", "Delantero"], ["age", 20], ["created_at", 2017-05-13 15:14:13 UTC], ["updated_at", 2017-05-13 15:14:13 UTC], ["password_digest", "$2a$10$ik8rCrk849I1cjqxi7kWpOAUAEUaJR2Cc.eGUJxGWcGEsmkJe/Bnu"]]
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "gus.waters@hotmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "age", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Katherine"], ["last_name", "Abbott"], ["mail", "gus.waters@hotmail.com"], ["position", "Delantero"], ["age", 20], ["created_at", 2017-05-13 15:14:13 UTC], ["updated_at", 2017-05-13 15:14:13 UTC], ["password_digest", "$2a$10$DEuc.EiaARvdqMShqEqMeO2nyMtQETyMpQfSW.peTRpOzTqgZzLKq"]]
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "lilyan.quigley@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "age", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Abagail"], ["last_name", "Streich"], ["mail", "lilyan.quigley@gmail.com"], ["position", "Delantero"], ["age", 20], ["created_at", 2017-05-13 15:14:13 UTC], ["updated_at", 2017-05-13 15:14:13 UTC], ["password_digest", "$2a$10$FOdTp.xaeuFhP6y.YMsbd.MTiNUw1CKSnXlhEB6PIXcU9fh71GRVS"]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "christina@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "age", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Narciso"], ["last_name", "Ullrich"], ["mail", "christina@gmail.com"], ["position", "Defensa"], ["age", 20], ["created_at", 2017-05-13 15:14:13 UTC], ["updated_at", 2017-05-13 15:14:13 UTC], ["password_digest", "$2a$10$A2H3SL5Ee3V8K/auBaHdCuCyG6dM1FPW4bSLj1.dKzmook2Agmppe"]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "palma_bernier@yahoo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "age", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Okey"], ["last_name", "Kovacek"], ["mail", "palma_bernier@yahoo.com"], ["position", "Delantero"], ["age", 20], ["created_at", 2017-05-13 15:14:13 UTC], ["updated_at", 2017-05-13 15:14:13 UTC], ["password_digest", "$2a$10$s4UaWVAZdHtwwKd4alZtleQMclWnOME2lV8CY6dFu..54xqhbx0aa"]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "rosalia@hotmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "age", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Mustafa"], ["last_name", "Turner"], ["mail", "rosalia@hotmail.com"], ["position", "Arquero"], ["age", 20], ["created_at", 2017-05-13 15:14:14 UTC], ["updated_at", 2017-05-13 15:14:14 UTC], ["password_digest", "$2a$10$F/Kfgg66FFrFW6NCL7C.uu6IaJMj3Eonx9j7mO8VD4mFCu7k6cj/G"]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "lexi_kozey@hotmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "age", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Gus"], ["last_name", "Sporer"], ["mail", "lexi_kozey@hotmail.com"], ["position", "Arquero"], ["age", 20], ["created_at", 2017-05-13 15:14:14 UTC], ["updated_at", 2017-05-13 15:14:14 UTC], ["password_digest", "$2a$10$PbT5.slDss.8.0Ql8q8xHeMv3YVCL8SrYDP8Hg6AcLSVSzEKGUGra"]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "alison_stoltenberg@hotmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "age", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Adelle"], ["last_name", "Okuneva"], ["mail", "alison_stoltenberg@hotmail.com"], ["position", "Delantero"], ["age", 20], ["created_at", 2017-05-13 15:14:14 UTC], ["updated_at", 2017-05-13 15:14:14 UTC], ["password_digest", "$2a$10$INCf3MnTvhHDU9RhwjNzleblNB6k0eCmgFiWGowi7ehO/NEiFWi6i"]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "berta@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "age", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Athena"], ["last_name", "Keeling"], ["mail", "berta@gmail.com"], ["position", "Defensa"], ["age", 20], ["created_at", 2017-05-13 15:14:14 UTC], ["updated_at", 2017-05-13 15:14:14 UTC], ["password_digest", "$2a$10$RpLonXRD99mene/k.eKYyuRo4QlQu8./84We4skmXS0ymcxO1ikB6"]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "rudy@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "age", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Woodrow"], ["last_name", "Rau"], ["mail", "rudy@gmail.com"], ["position", "Mediocampista"], ["age", 20], ["created_at", 2017-05-13 15:14:14 UTC], ["updated_at", 2017-05-13 15:14:14 UTC], ["password_digest", "$2a$10$TjjG.yqM5XnivQso8fUDoO4IHCowE6vrccFiUUlehJNzbRd0IOQbe"]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "tiffany.ryan@yahoo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "age", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Stanton"], ["last_name", "Nienow"], ["mail", "tiffany.ryan@yahoo.com"], ["position", "Mediocampista"], ["age", 20], ["created_at", 2017-05-13 15:14:14 UTC], ["updated_at", 2017-05-13 15:14:14 UTC], ["password_digest", "$2a$10$L/81O0HG9r8s8YSZMd3.7uhvhhPG4Bk5yfbXWn9/58gANQjXDH4Re"]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "kara.monahan@hotmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "age", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Grover"], ["last_name", "Bahringer"], ["mail", "kara.monahan@hotmail.com"], ["position", "Defensa"], ["age", 20], ["created_at", 2017-05-13 15:14:14 UTC], ["updated_at", 2017-05-13 15:14:14 UTC], ["password_digest", "$2a$10$AqvkJckURw1xB9RLbTE2vOwyFVVUPSsqshtjeIQAVWRnAwvPCDmfC"]]
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "theresia@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "age", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Zaria"], ["last_name", "Weimann"], ["mail", "theresia@gmail.com"], ["position", "Arquero"], ["age", 20], ["created_at", 2017-05-13 15:14:14 UTC], ["updated_at", 2017-05-13 15:14:14 UTC], ["password_digest", "$2a$10$PYLU3IsMWrpZBSDvDoGqpu7zfWNdFxehjQmeVtmitYEa2vi7hu/2S"]]
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "mara_streich@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "age", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Marilie"], ["last_name", "Boehm"], ["mail", "mara_streich@gmail.com"], ["position", "Defensa"], ["age", 20], ["created_at", 2017-05-13 15:14:14 UTC], ["updated_at", 2017-05-13 15:14:14 UTC], ["password_digest", "$2a$10$iYXGi7XpXg4sIEugDLt4HulHMWF6XK3j7d6AFYSOf4LQO9MsWfe9q"]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "monique@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "age", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Isaiah"], ["last_name", "Gorczany"], ["mail", "monique@gmail.com"], ["position", "Arquero"], ["age", 20], ["created_at", 2017-05-13 15:14:14 UTC], ["updated_at", 2017-05-13 15:14:14 UTC], ["password_digest", "$2a$10$YI7T63G5SIAcaYuCjaiEOuJCC3xc9TWl6OG2VhMTeTjJMAPiNrjfa"]]
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "wilfred@yahoo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "age", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Amie"], ["last_name", "Keebler"], ["mail", "wilfred@yahoo.com"], ["position", "Delantero"], ["age", 20], ["created_at", 2017-05-13 15:14:14 UTC], ["updated_at", 2017-05-13 15:14:14 UTC], ["password_digest", "$2a$10$PYJY9hbY5cQ7VUJrVT3kLOFJQW8eSZLizLsgYHgUdBM5Sws2FcdEC"]]
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "meagan.mclaughlin@hotmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "age", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Zoe"], ["last_name", "Carroll"], ["mail", "meagan.mclaughlin@hotmail.com"], ["position", "Arquero"], ["age", 20], ["created_at", 2017-05-13 15:14:15 UTC], ["updated_at", 2017-05-13 15:14:15 UTC], ["password_digest", "$2a$10$M213V3xmhFT3YQ/D1rI.KuYr1RVd1mL5enSdRh/sM/N2SsPzlRdeK"]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "chanelle@hotmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "age", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Wilton"], ["last_name", "O'Kon"], ["mail", "chanelle@hotmail.com"], ["position", "Defensa"], ["age", 20], ["created_at", 2017-05-13 15:14:15 UTC], ["updated_at", 2017-05-13 15:14:15 UTC], ["password_digest", "$2a$10$87r7C9ZX37NhRLQHSO1QD.Mgd2kOMdvFwJEZ7iWHP4nubCLqOIqi2"]]
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "jeanie@hotmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "age", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Hank"], ["last_name", "Abbott"], ["mail", "jeanie@hotmail.com"], ["position", "Delantero"], ["age", 20], ["created_at", 2017-05-13 15:14:15 UTC], ["updated_at", 2017-05-13 15:14:15 UTC], ["password_digest", "$2a$10$7eluTAmIYFWe0dpZ5gxjs.u8uXbTHveqAfwLs6i6fhrkoM8C5UCNe"]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "organizers" WHERE "organizers"."mail" = $1 LIMIT $2[0m  [["mail", "adela.bashirian@yahoo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (2.5ms)[0m  [1m[32mINSERT INTO "organizers" ("first_name", "last_name", "mail", "age", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Amiya"], ["last_name", "Prohaska"], ["mail", "adela.bashirian@yahoo.com"], ["age", 26], ["created_at", 2017-05-13 15:14:15 UTC], ["updated_at", 2017-05-13 15:14:15 UTC], ["password_digest", "$2a$10$xJYb57szEoJZEdC5F5M/ruVjoYCTui.mztioxjiky8XDzRvj6kpi."]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "organizers" WHERE "organizers"."mail" = $1 LIMIT $2[0m  [["mail", "cristopher@yahoo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "organizers" ("first_name", "last_name", "mail", "age", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Marty"], ["last_name", "King"], ["mail", "cristopher@yahoo.com"], ["age", 26], ["created_at", 2017-05-13 15:14:15 UTC], ["updated_at", 2017-05-13 15:14:15 UTC], ["password_digest", "$2a$10$GXaRzU093bzRYZLGtY673e571l/peqeM1xd428cRoU8f5A5mt001S"]]
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizer Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "organizers" WHERE "organizers"."mail" = $1 LIMIT $2[0m  [["mail", "selena_ritchie@hotmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "organizers" ("first_name", "last_name", "mail", "age", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Erwin"], ["last_name", "Wehner"], ["mail", "selena_ritchie@hotmail.com"], ["age", 26], ["created_at", 2017-05-13 15:14:15 UTC], ["updated_at", 2017-05-13 15:14:15 UTC], ["password_digest", "$2a$10$E.qeUUQfkM0mgJHq6Y7A9.7GGu/YM9JPAczhQdArUi.o6nhgtYXS2"]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizer Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "organizers" WHERE "organizers"."mail" = $1 LIMIT $2[0m  [["mail", "kellie@hotmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "organizers" ("first_name", "last_name", "mail", "age", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Stacey"], ["last_name", "Adams"], ["mail", "kellie@hotmail.com"], ["age", 26], ["created_at", 2017-05-13 15:14:15 UTC], ["updated_at", 2017-05-13 15:14:15 UTC], ["password_digest", "$2a$10$3pubI5zi9WWvNMimtV5fOOMDN5vgAimX4G69BJRk5FmEcBrGhvUx6"]]
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "organizers" WHERE "organizers"."mail" = $1 LIMIT $2[0m  [["mail", "hadley.lockman@yahoo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "organizers" ("first_name", "last_name", "mail", "age", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Suzanne"], ["last_name", "Breitenberg"], ["mail", "hadley.lockman@yahoo.com"], ["age", 26], ["created_at", 2017-05-13 15:14:15 UTC], ["updated_at", 2017-05-13 15:14:15 UTC], ["password_digest", "$2a$10$BRhLzzp/SvJvpWWyK8YJkunE8irr2Y61Y0OZXX6ILN5SXCmWjLCfe"]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "teams" ("name", "capitan", "logo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Lys"], ["capitan", "Mustafa"], ["logo", "Imagen"], ["created_at", 2017-05-13 15:14:15 UTC], ["updated_at", 2017-05-13 15:14:15 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "teams" ("name", "capitan", "logo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Oldtown"], ["capitan", "Wilton"], ["logo", "Imagen"], ["created_at", 2017-05-13 15:14:15 UTC], ["updated_at", 2017-05-13 15:14:15 UTC]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "181"], ["team_id", "13"], ["created_at", 2017-05-13 15:14:15 UTC], ["updated_at", 2017-05-13 15:14:15 UTC]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "182"], ["team_id", "14"], ["created_at", 2017-05-13 15:14:15 UTC], ["updated_at", 2017-05-13 15:14:15 UTC]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "183"], ["team_id", "13"], ["created_at", 2017-05-13 15:14:15 UTC], ["updated_at", 2017-05-13 15:14:15 UTC]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "184"], ["team_id", "13"], ["created_at", 2017-05-13 15:14:15 UTC], ["updated_at", 2017-05-13 15:14:15 UTC]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "185"], ["team_id", "14"], ["created_at", 2017-05-13 15:14:15 UTC], ["updated_at", 2017-05-13 15:14:15 UTC]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "186"], ["team_id", "14"], ["created_at", 2017-05-13 15:14:15 UTC], ["updated_at", 2017-05-13 15:14:15 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "187"], ["team_id", "14"], ["created_at", 2017-05-13 15:14:15 UTC], ["updated_at", 2017-05-13 15:14:15 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "188"], ["team_id", "14"], ["created_at", 2017-05-13 15:14:15 UTC], ["updated_at", 2017-05-13 15:14:15 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "189"], ["team_id", "13"], ["created_at", 2017-05-13 15:14:15 UTC], ["updated_at", 2017-05-13 15:14:15 UTC]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "190"], ["team_id", "14"], ["created_at", 2017-05-13 15:14:15 UTC], ["updated_at", 2017-05-13 15:14:15 UTC]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "191"], ["team_id", "13"], ["created_at", 2017-05-13 15:14:15 UTC], ["updated_at", 2017-05-13 15:14:15 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "192"], ["team_id", "14"], ["created_at", 2017-05-13 15:14:15 UTC], ["updated_at", 2017-05-13 15:14:15 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "193"], ["team_id", "14"], ["created_at", 2017-05-13 15:14:15 UTC], ["updated_at", 2017-05-13 15:14:15 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "194"], ["team_id", "13"], ["created_at", 2017-05-13 15:14:15 UTC], ["updated_at", 2017-05-13 15:14:15 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "195"], ["team_id", "13"], ["created_at", 2017-05-13 15:14:15 UTC], ["updated_at", 2017-05-13 15:14:15 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "196"], ["team_id", "14"], ["created_at", 2017-05-13 15:14:15 UTC], ["updated_at", 2017-05-13 15:14:15 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "197"], ["team_id", "13"], ["created_at", 2017-05-13 15:14:15 UTC], ["updated_at", 2017-05-13 15:14:15 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "198"], ["team_id", "13"], ["created_at", 2017-05-13 15:14:15 UTC], ["updated_at", 2017-05-13 15:14:15 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "199"], ["team_id", "13"], ["created_at", 2017-05-13 15:14:15 UTC], ["updated_at", 2017-05-13 15:14:15 UTC]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "200"], ["team_id", "13"], ["created_at", 2017-05-13 15:14:15 UTC], ["updated_at", 2017-05-13 15:14:15 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "201"], ["team_id", "13"], ["created_at", 2017-05-13 15:14:15 UTC], ["updated_at", 2017-05-13 15:14:15 UTC]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "202"], ["team_id", "14"], ["created_at", 2017-05-13 15:14:15 UTC], ["updated_at", 2017-05-13 15:14:15 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "203"], ["team_id", "13"], ["created_at", 2017-05-13 15:14:15 UTC], ["updated_at", 2017-05-13 15:14:15 UTC]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "204"], ["team_id", "13"], ["created_at", 2017-05-13 15:14:15 UTC], ["updated_at", 2017-05-13 15:14:15 UTC]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "205"], ["team_id", "13"], ["created_at", 2017-05-13 15:14:15 UTC], ["updated_at", 2017-05-13 15:14:15 UTC]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "206"], ["team_id", "13"], ["created_at", 2017-05-13 15:14:15 UTC], ["updated_at", 2017-05-13 15:14:15 UTC]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "207"], ["team_id", "14"], ["created_at", 2017-05-13 15:14:15 UTC], ["updated_at", 2017-05-13 15:14:15 UTC]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "208"], ["team_id", "14"], ["created_at", 2017-05-13 15:14:15 UTC], ["updated_at", 2017-05-13 15:14:15 UTC]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "209"], ["team_id", "14"], ["created_at", 2017-05-13 15:14:15 UTC], ["updated_at", 2017-05-13 15:14:15 UTC]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "210"], ["team_id", "14"], ["created_at", 2017-05-13 15:14:15 UTC], ["updated_at", 2017-05-13 15:14:15 UTC]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "211"], ["team_id", "13"], ["created_at", 2017-05-13 15:14:15 UTC], ["updated_at", 2017-05-13 15:14:15 UTC]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/sessions" for 127.0.0.1 at 2017-05-13 12:15:53 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActionController::RoutingError (No route matches [GET] "/sessions"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered collection of /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [63 times] (18.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.2ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (65.7ms)
+Started GET "/" for 127.0.0.1 at 2017-05-13 12:15:56 -0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 270ms (Views: 268.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2017-05-13 12:15:58 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (496.8ms)
+Completed 200 OK in 517ms (Views: 515.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-05-13 12:16:04 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+3FbqOeEKKqGJAidVbc359hn96PoBp75YYk45dGOin6oJQVs2R6J9e41ZRJhM35mfGj8cU0tr+r19xUO1FziPg==", "session"=>{"mail"=>"nijulio@uc.cl", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mPlayer Load (1.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "nijulio@uc.cl"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 126ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-13 12:16:05 -0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 181], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (Missing partial static_pages/_header_player, application/_header_player with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/cristobal/rails_project/web_semestre/app/views"
+):
+    10:     <div id="user-bar">
+    11:       <header>
+    12:         <% if current_player %>
+    13:           <%= render 'header_player' %>
+    14:         <% elsif current_organizer %>
+    15:           <%= render 'header_organizer' %>
+    16:         <% end %>
+  
+app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb___1884911077799735578_70136928969660'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.9ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.5ms)
+Started GET "/" for 127.0.0.1 at 2017-05-13 12:16:46 -0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.6ms)
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 181], ["LIMIT", 1]]
+  Rendered layouts/_header_player.html.erb (3.0ms)
+Completed 200 OK in 49ms (Views: 46.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-13 12:18:40 -0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.1ms)
+  [1m[36mPlayer Load (0.9ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 181], ["LIMIT", 1]]
+  Rendered layouts/_header_player.html.erb (1.0ms)
+Completed 200 OK in 29ms (Views: 25.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-13 12:18:49 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (3.6ms)
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 181], ["LIMIT", 1]]
+  Rendered layouts/_header_player.html.erb (2.2ms)
+Completed 200 OK in 244ms (Views: 229.6ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-13 12:22:16 -0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/cristobal/rails_project/web_semestre/app/views/layouts/application.html.erb:13: syntax error, unexpected ')'
+er 'layouts/header_player',  );@output_buffer.safe_append='
+                              ^
+/home/cristobal/rails_project/web_semestre/app/views/layouts/application.html.erb:14: syntax error, unexpected keyword_elsif, expecting ')'
+'.freeze;         elsif current_organizer 
+                       ^
+/home/cristobal/rails_project/web_semestre/app/views/layouts/application.html.erb:16: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;         end 
+                     ^
+/home/cristobal/rails_project/web_semestre/app/views/layouts/application.html.erb:31: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/cristobal/rails_project/web_semestre/app/views/layouts/application.html.erb:33: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/layouts/application.html.erb:13: syntax error, unexpected ')'
+app/views/layouts/application.html.erb:14: syntax error, unexpected keyword_elsif, expecting ')'
+app/views/layouts/application.html.erb:16: syntax error, unexpected keyword_end, expecting ')'
+app/views/layouts/application.html.erb:31: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/layouts/application.html.erb:33: syntax error, unexpected keyword_end, expecting ')'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.7ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (29.2ms)
+Started GET "/" for 127.0.0.1 at 2017-05-13 12:24:31 -0300
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:2:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.3ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.3ms)
+Started GET "/home" for 127.0.0.1 at 2017-05-13 12:24:47 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/home"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.1ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (29.4ms)
+Started GET "/home" for 127.0.0.1 at 2017-05-13 12:25:12 -0300
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:2:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.8ms)
+Started GET "/" for 127.0.0.1 at 2017-05-13 12:25:14 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (19.8ms)
+Started GET "/" for 127.0.0.1 at 2017-05-13 12:25:48 -0300
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:2:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.2ms)
+Started GET "/" for 127.0.0.1 at 2017-05-13 12:26:08 -0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/cristobal/rails_project/web_semestre/app/views/layouts/application.html.erb:13: syntax error, unexpected ')'
+er 'layouts/header_player',  );@output_buffer.safe_append='
+                              ^
+/home/cristobal/rails_project/web_semestre/app/views/layouts/application.html.erb:14: syntax error, unexpected keyword_elsif, expecting ')'
+'.freeze;         elsif current_organizer 
+                       ^
+/home/cristobal/rails_project/web_semestre/app/views/layouts/application.html.erb:16: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;         end 
+                     ^
+/home/cristobal/rails_project/web_semestre/app/views/layouts/application.html.erb:31: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/cristobal/rails_project/web_semestre/app/views/layouts/application.html.erb:33: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/layouts/application.html.erb:13: syntax error, unexpected ')'
+app/views/layouts/application.html.erb:14: syntax error, unexpected keyword_elsif, expecting ')'
+app/views/layouts/application.html.erb:16: syntax error, unexpected keyword_end, expecting ')'
+app/views/layouts/application.html.erb:31: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/layouts/application.html.erb:33: syntax error, unexpected keyword_end, expecting ')'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.8ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.9ms)
+Started GET "/" for 127.0.0.1 at 2017-05-13 12:26:31 -0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+  [1m[36mPlayer Load (0.7ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 181], ["LIMIT", 1]]
+  Rendered layouts/_header_player.html.erb (1.7ms)
+Completed 200 OK in 50ms (Views: 42.6ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-13 12:28:27 -0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 32ms (Views: 30.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2017-05-13 12:28:29 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (541.9ms)
+Completed 200 OK in 563ms (Views: 561.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2017-05-13 12:28:56 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-13 12:30:54 -0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-13 12:31:15 -0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial static_pages/_footer, application/_footer with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/cristobal/rails_project/web_semestre/app/views"
+):
+    24:         <% end %>
+    25:       <% end %>
+    26:     </main>
+    27:     <% render 'footer' %>
+    28:     <%= yield %>
+    29:   </body>
+    30: </html>
+  
+app/views/layouts/application.html.erb:27:in `_app_views_layouts_application_html_erb___2599042276544132775_70259240992300'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.4ms)
+Started GET "/" for 127.0.0.1 at 2017-05-13 12:31:41 -0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_footer.html.erb (201.7ms)
+Completed 500 Internal Server Error in 225ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `about_path' for #<#<Class:0x007fccfc4f2740>:0x007fccf4449260>
+Did you mean?  logout_path):
+    4:   </small>
+    5:   <nav>
+    6:     <ul>
+    7:       <li><%= link_to "About",   about_path %></li>
+    8:       <li><%= link_to "Contact", contact_path %></li>
+    9:       <li><a href="http://www.fifa.com/">News</a></li>
+   10:     </ul>
+  
+app/views/layouts/_footer.html.erb:7:in `_app_views_layouts__footer_html_erb__4372892104205611067_70259123983660'
+app/views/layouts/application.html.erb:27:in `_app_views_layouts_application_html_erb___2599042276544132775_70259124907580'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.5ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.1ms)
+Started GET "/" for 127.0.0.1 at 2017-05-13 12:32:17 -0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 19ms (Views: 18.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-13 12:32:30 -0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-13 12:32:45 -0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 20ms (Views: 19.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-05-13 12:32:50 -0300
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 41ms (Views: 39.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-05-13 12:32:51 -0300
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 20ms (Views: 17.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-13 12:33:24 -0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 30ms (Views: 28.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-05-13 12:33:44 -0300
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 28ms (Views: 26.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-13 12:35:07 -0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 36ms (Views: 32.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2017-05-13 12:35:08 -0300
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 31ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/https//www.facebook.com" for 127.0.0.1 at 2017-05-13 12:35:10 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/https/www.facebook.com"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered collection of /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [63 times] (15.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (41.2ms)
+Started GET "/https//www.facebook.com" for 127.0.0.1 at 2017-05-13 12:35:33 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/https/www.facebook.com"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered collection of /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [63 times] (19.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (51.7ms)
+Started GET "/contact" for 127.0.0.1 at 2017-05-13 12:35:36 -0300
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-13 12:35:52 -0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 31ms (Views: 29.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-13 12:36:18 -0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 29ms (Views: 27.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2017-05-13 12:41:13 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-05-13 12:41:16 -0300
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-13 12:42:05 -0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2017-05-13 12:42:06 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-05-13 12:42:11 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EpuFIsKMAXJQXjtW470CluDWm47gzUYK6ZLKkkxrBN/1TGyUJ0K1XoVtv0T40oSX44sKAkvM6fEfINBuVs6EfA==", "session"=>{"mail"=>"nijulio@uc.cl", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "nijulio@uc.cl"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 107ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-13 12:42:11 -0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.9ms)
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 181], ["LIMIT", 1]]
+  Rendered static_pages/_header_player.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2017-05-13 12:42:43 -0300
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.6ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournaments/index.html.erb within layouts/application (11.4ms)
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 181], ["LIMIT", 1]]
+  Rendered static_pages/_header_player.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 36ms (Views: 28.9ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2017-05-13 12:42:46 -0300
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (9.7ms)
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 181], ["LIMIT", 1]]
+  Rendered static_pages/_header_player.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 39ms (Views: 27.7ms | ActiveRecord: 3.8ms)
+
+

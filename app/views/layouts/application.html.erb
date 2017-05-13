@@ -7,6 +7,16 @@
   </head>
 
   <body>
+    <div id="user-bar">
+      <header>
+        <% if current_player %>
+          <%= render 'static_pages/header_player' %>
+        <% elsif current_organizer %>
+          <%= render 'static_pages/header_organizer' %>
+        <% end %>
+      </header>
+    </div>
+
     <main>
       <% [:alert, :notice].each do |flash_type| %>
         <% if (flash_message = flash[flash_type]).present? %>
@@ -14,8 +24,7 @@
         <% end %>
       <% end %>
     </main>
-
-    <%= render 'layouts/header' %>
     <%= yield %>
+        <%= render 'layouts/footer' %>
   </body>
 </html>
