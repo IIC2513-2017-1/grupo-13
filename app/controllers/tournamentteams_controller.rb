@@ -68,6 +68,7 @@ class TournamentteamsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
   def total_team
     Tournamentteam.where({tournament_id: @tournamentteam.tournament_id}).count
   end
