@@ -7,13 +7,23 @@
   </head>
 
   <body>
+
     <div id="user-bar">
       <header>
+        <div id="logo">
+          <%= link_to root_path do %>
+          <img src="https://pbs.twimg.com/profile_images/616969183948054528/mF1Oxcly.jpg"/>
+          <% end %>
+          </div>
+
         <% if current_player %>
-          <%= render 'static_pages/header_player' %>
+          <%= render 'layouts/header_player' %>
         <% elsif current_organizer %>
-          <%= render 'static_pages/header_organizer' %>
+          <%= render 'layouts/header_organizer' %>
+        <% else %>
+          <%= render 'layouts/header_visitor' %>
         <% end %>
+        <hr>
       </header>
     </div>
 
@@ -25,6 +35,8 @@
       <% end %>
     </main>
     <%= yield %>
+    <footer id=footer>
         <%= render 'layouts/footer' %>
+    </footer>
   </body>
 </html>

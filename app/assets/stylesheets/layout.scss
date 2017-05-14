@@ -3,7 +3,6 @@ html, body {
   padding: 0;
 }
 
-
 body {
   background-color: #fff;
   color: #333;
@@ -12,9 +11,14 @@ body {
   line-height: 18px;
   margin: 33px;
 }
-nav#main-menu {
-  margin-left: 10px;
 
+nav#main-menu, #logo {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+nav#main-menu {
+  margin-left: 1%;
   a {
     border-radius: 13px;
     color: #ffffff;
@@ -27,4 +31,11 @@ nav#main-menu {
   a:hover {
     color: #1b95e0;
   }
+
+}
+nav#logout {
+
+}
+#logo img{
+  width: 70px
 }
