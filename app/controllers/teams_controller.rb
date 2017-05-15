@@ -1,6 +1,7 @@
 class TeamsController < ApplicationController
   before_action :set_team, only: [:show, :edit, :update, :destroy]
-
+  before_action :logged_in?, only: %i[:show]
+  before_action :is_current_player, only: %i[:show]
   # GET /teams
   # GET /teams.json
   def index

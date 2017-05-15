@@ -25,6 +25,11 @@
   </tbody>
 </table>
 
+  <% if current_organizer %>
+    <%= link_to 'Agregar incidencia', new_event_path %>
+
+  <%end%>
+
 <br>
 
 <%= link_to 'New Tournament', new_tournament_path %>

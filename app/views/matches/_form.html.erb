@@ -14,7 +14,7 @@
   </div>
   <div class="field">
     <%= f.label :tournament_name %>
-    <%= f.select :tournament_name , Tournament.all.collect {|tour| [tour.id,tour.name]}%>
+    <%= f.select :tournament_name , Tournament.all.collect {|tour| [tour.name,tour.name]}%>
   </div>
 
   <div class="actions">
