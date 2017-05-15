@@ -14,14 +14,12 @@ class AddRelationTables < ActiveRecord::Migration[5.0]
       t.timestamps
     end
     create_table :cards do |t|
-      t.string :match_id, null: false
       t.string :player_id, null: false
-      t.string :type, null: false
+      t.string :tipo, null: false
       t.integer :quantity, null: false
       t.timestamps
     end
     create_table :goals do |t|
-      t.string :match_id, null: false
       t.string :player_id, null: false
       t.integer :quantity, null: false
       t.timestamps

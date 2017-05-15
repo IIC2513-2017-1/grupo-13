@@ -10,6 +10,8 @@ Player.delete_all
 Organizer.delete_all
 Team.delete_all
 Teamplayer.delete_all
+Tournament.delete_all
+
 
 positions = ["Delantero", "Arquero", "Defensa","Mediocampista"]
 

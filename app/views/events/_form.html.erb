@@ -1,0 +1,35 @@
+<%= form_for(event) do |f| %>
+  <% if event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+      <ul>
+      <% event.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :player_id%>
+    <%= f.select :player_id, Player.all.collect {|x| [x.first_name, x.id]}, {:include_blank => "Select One"} %> </br>
+  </div>
+  <div class="field">
+    <%= f.label :cards %>
+    <%= f.text_field :cards, default: '0' %>
+  </div>
+  <div class="field">
+    <%= f.label :tipo %>
+    <%= f.select :tipo, ['red','yellow'] %>
+
+  <div class="field">
+    <%= f.label :goals %>
+    <%= f.text_field :goals, default: '0' %>
+  </div>
+
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

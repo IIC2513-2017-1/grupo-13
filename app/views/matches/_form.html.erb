@@ -10,21 +10,11 @@
       </ul>
     </div>
   <% end %>
-  <div class="field">
-    <%= f.label :date %>
-    <%= f.text_field :date %>
-  </div>
-  <div class="field">
-    <%= f.label :local %>
-    <%= f.select :local, Team.all.collect {|team| [team.name]} %>
-  </div>
-  <div class="field">
-    <%= f.label :visitor %>
-    <%= f.select :visitor, Team.all.collect {|team| [team.name]} %>
+
   </div>
   <div class="field">
     <%= f.label :tournament_name %>
-    <%= f.select :tournament_name , Tournament.all.collect {|tour| [tour.name]}%>
+    <%= f.select :tournament_name , Tournament.all.collect {|tour| [tour.id,tour.name]}%>
   </div>
 
   <div class="actions">
