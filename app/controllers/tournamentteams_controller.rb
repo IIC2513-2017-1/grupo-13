@@ -25,7 +25,11 @@ class TournamentteamsController < ApplicationController
   # POST /tournamentteams
   # POST /tournamentteams.json
   def create
-    @tournamentteam = Tournamentteam.new(tournamentteam_params)
+    puts '-------------'
+    puts @current_tournament
+    puts '-------------'
+    @tournamentteam = Tournamentteam.new(tournamentteam_params.merge(:tournament_id => @current_tournament))
+
 
     respond_to do |format|
       #if total_team >= Tournament.find(@tournamentteam.tournament_id).number_team
@@ -35,7 +39,7 @@ class TournamentteamsController < ApplicationController
         format.json { render :show, status: :created, location: @tournamentteam }
         #if (total_team + 1) == Tournament.find(@tournamentteam.tournament_id).number_team
         #  format.html { redirect_to tournaments_path, notice: 'Se completo el torneo, se creo el fixture.' }
-        
+
 
       else
         format.html { render :new }
@@ -77,6 +81,6 @@ class TournamentteamsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tournamentteam_params
-      params.require(:tournamentteam).permit(:tournament_id, :team_id)
+      params.require(:tournamentteam).permit(:team_id, :tournament_id)
     end
 end

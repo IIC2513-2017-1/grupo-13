@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_player
   helper_method :current_organizer
+  helper_method :current_tournament
 
   protected
 
@@ -13,12 +14,15 @@ class ApplicationController < ActionController::Base
       @current_player = session.key?(:user_id) && Player.find(session[:user_id])
     end
   end
-
-  def current_organizer
-    if defined?(@current_organizer)
-      return @current_organizer
+  def current_tournament(tournament)
+    if defined?(@current_tournament)
+      return @current_tournament
     else
-      @current_organizer = session.key?(:user_id) && Organizer.find(session[:user_id])
+      @current_tournament = tournament
     end
+    puts '111111111111111'
+    puts tournament
+    puts '-111111111111'
   end
+
 end

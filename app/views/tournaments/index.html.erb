@@ -25,7 +25,7 @@
   </tbody>
 </table>
 
-  <% if current_organizer %>
+  <% if current_player.is_organizer %>
     <%= link_to 'Agregar incidencia', new_event_path %>
 
   <%end%>

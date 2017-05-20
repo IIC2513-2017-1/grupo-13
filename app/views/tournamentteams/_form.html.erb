@@ -12,14 +12,11 @@
   <% end %>
   <div class="field">
     <%= f.label :team_id%>
-    <%= f.select :team_id, Team.all.collect {|x| [x.name, x.id]}, {:include_blank => "Select One"} %> </br>
+    <%= f.select :team_id, Team.all.collect {|x| [x.name, x.id]} %> </br>
   </div>
-  <div class="field">
-    <%= f.label :tournament_id%>
-    <%= f.select :tournament_id, Tournament.all.collect {|x| [x.name, x.id]}, {:include_blank => "Select One"} %> </br>
-  </div>
+  <% current_tournament(params[:tournament]) %>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Agregar Equipo'%>
 
   </div>
 <% end %>
