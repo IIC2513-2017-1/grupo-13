@@ -15,19 +15,23 @@
     <%= f.select :player_id, Player.all.collect {|x| [x.first_name, x.id]}, {:include_blank => "Select One"} %> </br>
   </div>
   <div class="field">
-    <%= f.label :cards %>
-    <%= f.text_field :cards, default: '0' %>
+    <%= f.label :yellow_cards %>
+    <%= f.select :yellow_cards, [0,1]%>
   </div>
   <div class="field">
-    <%= f.label :tipo %>
-    <%= f.select :tipo, ['red','yellow'] %>
+    <%= f.label :red_cards%>
+    <%= f.select :red_cards, [0,1,2] %>
 
   <div class="field">
     <%= f.label :goals %>
-    <%= f.text_field :goals, default: '0' %>
+    <%= f.select :goals, Array.new(30){|a| a } %>
   </div>
-
-
+  ### Agregar id del partido
+  <div class="field">
+    <%= f.label :match_id %>
+    <%= f.select :match_id, Array.new(30){|a| a.to_s*3 }%>
+  </div>
+### Agregar id del partido
 
   <div class="actions">
     <%= f.submit %>

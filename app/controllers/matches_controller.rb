@@ -26,19 +26,8 @@ class MatchesController < ApplicationController
   # POST /matches
   # POST /matches.json
   def create
-    parejas = Tournamentteam.where(tournament_id: Tournament.find_by(name: match_params[:tournament_name]).name)
-    parejas.each do |pareja|
-      parejas.each do |pare|
-        if pareja != pare
-          Match.create([{
-            local: pareja,
-            visitor: pare,
-            date: 1,
-            tournament_name: match_params[:tournament_name]
-            }])
-        end
-      end
-    end
+    @match = Match.new(match_params)
+    @match.save
     redirect_to matches_path
   end
 
@@ -74,6 +63,6 @@ class MatchesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def match_params
-      params.require(:match).permit(:tournament_name)
+      params.require(:match).permit(:tournament_name,:local,:visitor,:date)
     end
 end
