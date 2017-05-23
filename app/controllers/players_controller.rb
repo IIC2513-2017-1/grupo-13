@@ -51,7 +51,7 @@ class PlayersController < ApplicationController
         format.html { render :edit }
         format.json { render json: @player.errors, status: :unprocessable_entity }
       end
-    end 
+    end
  end
 
   # DELETE /players/1
@@ -73,7 +73,8 @@ class PlayersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def player_params
       params.require(:player).permit(:first_name, :last_name, :mail,
-                             :password, :age, :position ,:password_confirmation)
+                             :password, :birthday, :position ,:password_confirmation,
+                             :is_organizer)
     end
 
     def is_current_player?

@@ -38,8 +38,9 @@
   </div>
 
   <div class="field">
-    <%= f.label :age %>
-    <%= f.text_field :age, required: true %>
+    <%= f.label "Fecha nacimiento" %>
+    <%= f.date_select :birthday, required: true, :start_year => Time.now.year - 99,
+                      :end_year => Time.now.year - 18 %>
   </div>
 
   <div class="field">

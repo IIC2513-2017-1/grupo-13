@@ -26905,3 +26905,1389 @@ Migrating to AddPlayersBirthday (20170523204302)
   [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6096862881537638385)[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for 127.0.0.1 at 2017-05-23 17:15:48 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_header_visitor.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 335ms (Views: 323.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/new" for 127.0.0.1 at 2017-05-23 17:15:53 -0400
+Processing by PlayersController#new as HTML
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (You need to supply at least one validation):
+  
+app/models/player.rb:9:in `<class:Player>'
+app/models/player.rb:1:in `<top (required)>'
+app/controllers/players_controller.rb:20:in `new'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.0ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.4ms)
+Started GET "/players/new" for 127.0.0.1 at 2017-05-23 17:17:12 -0400
+Started GET "/" for 127.0.0.1 at 2017-05-23 17:17:23 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_header_visitor.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 240ms (Views: 231.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/new" for 127.0.0.1 at 2017-05-23 17:17:25 -0400
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/_form.html.erb (570.4ms)
+  Rendered players/new.html.erb within layouts/application (571.6ms)
+  Rendered layouts/_header_visitor.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 645ms (Views: 611.8ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/players/new" for 127.0.0.1 at 2017-05-23 17:18:46 -0400
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/_form.html.erb (10.4ms)
+  Rendered players/new.html.erb within layouts/application (13.3ms)
+  Rendered layouts/_header_visitor.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 73ms (Views: 71.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/new" for 127.0.0.1 at 2017-05-23 17:20:11 -0400
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/_form.html.erb (8.4ms)
+  Rendered players/new.html.erb within layouts/application (10.1ms)
+  Rendered layouts/_header_visitor.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 59ms (Views: 57.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/new" for 127.0.0.1 at 2017-05-23 17:20:52 -0400
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/_form.html.erb (1.2ms)
+  Rendered players/new.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/cristobal/rails_project/web_semestre/app/views/players/_form.html.erb:47: syntax error, unexpected tSTRING_BEG, expecting =>
+ required: true, :start_year "1980" );@output_buffer.safe_ap
+                              ^):
+  
+app/views/players/_form.html.erb:47: syntax error, unexpected tSTRING_BEG, expecting =>
+app/views/players/new.html.erb:3:in `_app_views_players_new_html_erb__43404766632110768_70340726277740'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.2ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.3ms)
+Started GET "/players/new" for 127.0.0.1 at 2017-05-23 17:21:10 -0400
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/_form.html.erb (7.2ms)
+  Rendered players/new.html.erb within layouts/application (9.8ms)
+  Rendered layouts/_header_visitor.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 54ms (Views: 52.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/new" for 127.0.0.1 at 2017-05-23 17:23:00 -0400
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/_form.html.erb (6.2ms)
+  Rendered players/new.html.erb within layouts/application (7.9ms)
+  Rendered layouts/_header_visitor.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 49ms (Views: 47.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-23 17:23:05 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header_visitor.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 65ms (Views: 63.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/new" for 127.0.0.1 at 2017-05-23 17:23:06 -0400
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/_form.html.erb (14.4ms)
+  Rendered players/new.html.erb within layouts/application (21.3ms)
+  Rendered layouts/_header_visitor.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 77ms (Views: 74.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/new" for 127.0.0.1 at 2017-05-23 17:24:53 -0400
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/_form.html.erb (2.8ms)
+  Rendered players/new.html.erb within layouts/application (4.7ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/cristobal/rails_project/web_semestre/app/views/players/_form.html.erb:47: syntax error, unexpected ')'
+ :position, required: true,  );@output_buffer.safe_append='
+                              ^
+/home/cristobal/rails_project/web_semestre/app/views/players/_form.html.erb:60: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/home/cristobal/rails_project/web_semestre/app/views/players/_form.html.erb:62: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/cristobal/rails_project/web_semestre/app/views/players/_form.html.erb:64: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/players/_form.html.erb:47: syntax error, unexpected ')'
+app/views/players/_form.html.erb:60: syntax error, unexpected keyword_end, expecting ')'
+app/views/players/_form.html.erb:62: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/players/_form.html.erb:64: syntax error, unexpected keyword_end, expecting ')'
+app/views/players/new.html.erb:3:in `_app_views_players_new_html_erb__43404766632110768_70340833125280'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.3ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.8ms)
+Started GET "/players/new" for 127.0.0.1 at 2017-05-23 17:25:18 -0400
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/_form.html.erb (1.5ms)
+  Rendered players/new.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/cristobal/rails_project/web_semestre/app/views/players/_form.html.erb:42: syntax error, unexpected ':', expecting ')'
+80, end_year: Time.now.year) :birthday, required: true  );@o
+                              ^
+/home/cristobal/rails_project/web_semestre/app/views/players/_form.html.erb:47: syntax error, unexpected ')'
+ :position, required: true,  );@output_buffer.safe_append='
+                              ^
+/home/cristobal/rails_project/web_semestre/app/views/players/_form.html.erb:60: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/home/cristobal/rails_project/web_semestre/app/views/players/_form.html.erb:62: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/cristobal/rails_project/web_semestre/app/views/players/_form.html.erb:64: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/players/_form.html.erb:42: syntax error, unexpected ':', expecting ')'
+app/views/players/_form.html.erb:47: syntax error, unexpected ')'
+app/views/players/_form.html.erb:60: syntax error, unexpected keyword_end, expecting ')'
+app/views/players/_form.html.erb:62: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/players/_form.html.erb:64: syntax error, unexpected keyword_end, expecting ')'
+app/views/players/new.html.erb:3:in `_app_views_players_new_html_erb__43404766632110768_70340728474740'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.3ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (27.1ms)
+Started GET "/players/new" for 127.0.0.1 at 2017-05-23 17:26:06 -0400
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/_form.html.erb (2.0ms)
+  Rendered players/new.html.erb within layouts/application (3.6ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/cristobal/rails_project/web_semestre/app/views/players/_form.html.erb:42: syntax error, unexpected tINTEGER, expecting =>
+quired: true, :start_year 1980  );@output_buffer.safe_append
+                              ^
+/home/cristobal/rails_project/web_semestre/app/views/players/_form.html.erb:47: syntax error, unexpected ')'
+ :position, required: true,  );@output_buffer.safe_append='
+                              ^
+/home/cristobal/rails_project/web_semestre/app/views/players/_form.html.erb:60: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/home/cristobal/rails_project/web_semestre/app/views/players/_form.html.erb:62: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/cristobal/rails_project/web_semestre/app/views/players/_form.html.erb:64: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/players/_form.html.erb:42: syntax error, unexpected tINTEGER, expecting =>
+app/views/players/_form.html.erb:47: syntax error, unexpected ')'
+app/views/players/_form.html.erb:60: syntax error, unexpected keyword_end, expecting ')'
+app/views/players/_form.html.erb:62: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/players/_form.html.erb:64: syntax error, unexpected keyword_end, expecting ')'
+app/views/players/new.html.erb:3:in `_app_views_players_new_html_erb__43404766632110768_70340674847020'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.1ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.3ms)
+Started GET "/players/new" for 127.0.0.1 at 2017-05-23 17:30:15 -0400
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/_form.html.erb (1.1ms)
+  Rendered players/new.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/cristobal/rails_project/web_semestre/app/views/players/_form.html.erb:47: syntax error, unexpected ')'
+ :position, required: true,  );@output_buffer.safe_append='
+                              ^
+/home/cristobal/rails_project/web_semestre/app/views/players/_form.html.erb:60: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/home/cristobal/rails_project/web_semestre/app/views/players/_form.html.erb:62: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/cristobal/rails_project/web_semestre/app/views/players/_form.html.erb:64: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/players/_form.html.erb:47: syntax error, unexpected ')'
+app/views/players/_form.html.erb:60: syntax error, unexpected keyword_end, expecting ')'
+app/views/players/_form.html.erb:62: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/players/_form.html.erb:64: syntax error, unexpected keyword_end, expecting ')'
+app/views/players/new.html.erb:3:in `_app_views_players_new_html_erb__43404766632110768_70340677238820'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.0ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (27.5ms)
+Started GET "/players/new" for 127.0.0.1 at 2017-05-23 17:30:20 -0400
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/_form.html.erb (11.4ms)
+  Rendered players/new.html.erb within layouts/application (13.5ms)
+  Rendered layouts/_header_visitor.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 64ms (Views: 62.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/new" for 127.0.0.1 at 2017-05-23 17:30:44 -0400
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/_form.html.erb (5.6ms)
+  Rendered players/new.html.erb within layouts/application (6.8ms)
+  Rendered layouts/_header_visitor.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 55ms (Views: 53.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/new" for 127.0.0.1 at 2017-05-23 17:32:44 -0400
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/_form.html.erb (6.6ms)
+  Rendered players/new.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_header_visitor.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 71ms (Views: 50.2ms | ActiveRecord: 4.1ms)
+
+
+Started POST "/players" for 127.0.0.1 at 2017-05-23 17:33:55 -0400
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Iojp9VEO39PpwDgvzpXcgf0Z6kzCvGN2TA/NYtJh5ZsilDb2n8MZw7qEt7mxwiQjSG7OYHOPRxI/lnM/rGXRJg==", "player"=>{"first_name"=>"carlos", "last_name"=>"calron", "mail"=>"q@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "birthday(1i)"=>"1998", "birthday(2i)"=>"5", "birthday(3i)"=>"23", "position"=>"gk", "is_organizer"=>"1"}, "commit"=>"Create Player"}
+Unpermitted parameters: birthday(1i), birthday(2i), birthday(3i), is_organizer
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "q@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 113ms (ActiveRecord: 1.3ms)
+
+
+  
+NoMethodError (undefined method `dated_on' for #<Player:0x007ff300acd0f0>):
+  
+app/models/player.rb:14:in `validate_dated_around_now'
+app/controllers/players_controller.rb:33:in `block in create'
+app/controllers/players_controller.rb:32:in `create'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.0ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.8ms)
+Started POST "/players" for 127.0.0.1 at 2017-05-23 17:34:25 -0400
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Iojp9VEO39PpwDgvzpXcgf0Z6kzCvGN2TA/NYtJh5ZsilDb2n8MZw7qEt7mxwiQjSG7OYHOPRxI/lnM/rGXRJg==", "player"=>{"first_name"=>"carlos", "last_name"=>"calron", "mail"=>"q@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "birthday(1i)"=>"1998", "birthday(2i)"=>"5", "birthday(3i)"=>"23", "position"=>"gk", "is_organizer"=>"1"}, "commit"=>"Create Player"}
+Unpermitted parameters: birthday(1i), birthday(2i), birthday(3i), is_organizer
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "q@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 109ms (ActiveRecord: 5.3ms)
+
+
+  
+TypeError (can't iterate from ActiveSupport::TimeWithZone):
+  
+app/models/player.rb:14:in `validate_dated_around_now'
+app/controllers/players_controller.rb:33:in `block in create'
+app/controllers/players_controller.rb:32:in `create'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.9ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (34.2ms)
+Started POST "/players" for 127.0.0.1 at 2017-05-23 17:37:25 -0400
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Iojp9VEO39PpwDgvzpXcgf0Z6kzCvGN2TA/NYtJh5ZsilDb2n8MZw7qEt7mxwiQjSG7OYHOPRxI/lnM/rGXRJg==", "player"=>{"first_name"=>"carlos", "last_name"=>"calron", "mail"=>"q@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "birthday(1i)"=>"1998", "birthday(2i)"=>"5", "birthday(3i)"=>"23", "position"=>"gk", "is_organizer"=>"1"}, "commit"=>"Create Player"}
+Unpermitted parameters: birthday(1i), birthday(2i), birthday(3i), is_organizer
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "q@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 104ms (ActiveRecord: 1.1ms)
+
+
+  
+TypeError (can't iterate from ActiveSupport::TimeWithZone):
+  
+app/models/player.rb:14:in `validate_dated_around_now'
+app/controllers/players_controller.rb:33:in `block in create'
+app/controllers/players_controller.rb:32:in `create'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.8ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (27.2ms)
+Started POST "/players" for 127.0.0.1 at 2017-05-23 17:39:23 -0400
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Iojp9VEO39PpwDgvzpXcgf0Z6kzCvGN2TA/NYtJh5ZsilDb2n8MZw7qEt7mxwiQjSG7OYHOPRxI/lnM/rGXRJg==", "player"=>{"first_name"=>"carlos", "last_name"=>"calron", "mail"=>"q@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "birthday(1i)"=>"1998", "birthday(2i)"=>"5", "birthday(3i)"=>"23", "position"=>"gk", "is_organizer"=>"1"}, "commit"=>"Create Player"}
+Unpermitted parameters: birthday(1i), birthday(2i), birthday(3i), is_organizer
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "q@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/_form.html.erb (7.9ms)
+  Rendered players/new.html.erb within layouts/application (9.4ms)
+  Rendered layouts/_header_visitor.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 158ms (Views: 51.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/players" for 127.0.0.1 at 2017-05-23 17:39:36 -0400
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"poS88WmYwMg9VEqnjWgK+QAfFj4Z2COIp0i6RxMgz2emmGPyp1UG2G4QxTHyP/JbtWgyEqjrB+zU0QQabST72g==", "player"=>{"first_name"=>"carlos", "last_name"=>"calron", "mail"=>"q@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "birthday(1i)"=>"1931", "birthday(2i)"=>"5", "birthday(3i)"=>"23", "position"=>"gk", "is_organizer"=>"0"}, "commit"=>"Create Player"}
+Unpermitted parameters: birthday(1i), birthday(2i), birthday(3i), is_organizer
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "q@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/_form.html.erb (6.3ms)
+  Rendered players/new.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_header_visitor.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 148ms (Views: 57.3ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/players" for 127.0.0.1 at 2017-05-23 17:40:10 -0400
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"x7ZW0I3O9+MNpUCMSNBbhqNryZwxuOYrm6S/uTxC+p/HqonTQwMx817hzxo3h6MkFhztsICLwk/oPQHkQkbOIg==", "player"=>{"first_name"=>"carlos", "last_name"=>"calron", "mail"=>"q@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "birthday(1i)"=>"1986", "birthday(2i)"=>"5", "birthday(3i)"=>"23", "position"=>"gk", "is_organizer"=>"0"}, "commit"=>"Create Player"}
+Unpermitted parameters: birthday(1i), birthday(2i), birthday(3i), is_organizer
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "q@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/_form.html.erb (6.6ms)
+  Rendered players/new.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_header_visitor.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 140ms (Views: 50.1ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/players" for 127.0.0.1 at 2017-05-23 17:41:46 -0400
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y6KphuwHM73NesTyxrpdqST5rVcnE9fkiH8xBRPGEwNjvnaFIsr1rZ4+S2S57aULkY6Je5Yg84D75o9YbcInvg==", "player"=>{"first_name"=>"carlos", "last_name"=>"calron", "mail"=>"q@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "birthday(1i)"=>"1930", "birthday(2i)"=>"5", "birthday(3i)"=>"23", "position"=>"gk", "is_organizer"=>"0"}, "commit"=>"Create Player"}
+Unpermitted parameters: birthday(1i), birthday(2i), birthday(3i), is_organizer
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "q@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/_form.html.erb (6.1ms)
+  Rendered players/new.html.erb within layouts/application (7.3ms)
+  Rendered layouts/_header_visitor.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 150ms (Views: 45.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2017-05-23 17:42:07 -0400
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (1.1ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered players/index.html.erb within layouts/application (21.6ms)
+  Rendered layouts/_header_visitor.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 67ms (Views: 64.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-23 17:42:10 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_header_visitor.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 57ms (Views: 55.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/new" for 127.0.0.1 at 2017-05-23 17:42:14 -0400
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/_form.html.erb (13.9ms)
+  Rendered players/new.html.erb within layouts/application (17.5ms)
+  Rendered layouts/_header_visitor.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 86ms (Views: 81.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/players" for 127.0.0.1 at 2017-05-23 17:43:35 -0400
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TqihhnaZka5sDkE1M/3S7aTPZFMay7wYichPvjOA97chBZl/Hla4fUmsfkPa+lBo4k8ACDBFK5IxGM4YejflAg==", "player"=>{"first_name"=>"calros", "last_name"=>"calros", "mail"=>"d@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "birthday(1i)"=>"1934", "birthday(2i)"=>"5", "birthday(3i)"=>"23", "position"=>"hg", "is_organizer"=>"0"}, "commit"=>"Create Player"}
+Unpermitted parameters: birthday(1i), birthday(2i), birthday(3i), is_organizer
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "d@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/_form.html.erb (5.6ms)
+  Rendered players/new.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_header_visitor.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 136ms (Views: 43.8ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/players" for 127.0.0.1 at 2017-05-23 17:45:24 -0400
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DZ9a40AeS9BjQNDcPWWEr/jwqfXMd3WwcZYsp1htfT8Ng4XgjtONwDAEX0pCMnwNTYeN2X1EUdQCD5L6JmlJgg==", "player"=>{"first_name"=>"calros", "last_name"=>"calros", "mail"=>"d@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "birthday(1i)"=>"1953", "birthday(2i)"=>"5", "birthday(3i)"=>"23", "position"=>"hg", "is_organizer"=>"0"}, "commit"=>"Create Player"}
+Unpermitted parameters: birthday(1i), birthday(2i), birthday(3i), is_organizer
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "d@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 103ms (ActiveRecord: 0.9ms)
+
+
+  
+NoMethodError (undefined method `between?' for nil:NilClass):
+  
+app/models/player.rb:14:in `validate_dated_around_now'
+app/controllers/players_controller.rb:33:in `block in create'
+app/controllers/players_controller.rb:32:in `create'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.3ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (27.0ms)
+Started GET "/players" for 127.0.0.1 at 2017-05-23 17:46:14 -0400
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.7ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered players/index.html.erb within layouts/application (17.6ms)
+  Rendered layouts/_header_visitor.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 77ms (Views: 65.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-23 17:50:38 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_header_visitor.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 56ms (Views: 54.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2017-05-23 17:50:44 -0400
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.7ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered players/index.html.erb within layouts/application (17.8ms)
+  Rendered layouts/_header_visitor.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 71ms (Views: 68.5ms | ActiveRecord: 0.7ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (5010.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "champions_liga_development"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (121.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "champions_liga_development"[0m
+  [1m[35m (117.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "champions_liga_test"[0m
+  [1m[35m (318.4ms)[0m  [1m[35mCREATE DATABASE "champions_liga_development" ENCODING = 'unicode'[0m
+  [1m[35m (262.0ms)[0m  [1m[35mCREATE DATABASE "champions_liga_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (14.2ms)[0m  [1m[35mCREATE TABLE "cards" ("id" serial primary key, "match_id" character varying NOT NULL, "player_id" character varying NOT NULL, "type" character varying NOT NULL, "quantity" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (9.4ms)[0m  [1m[35mCREATE TABLE "events" ("id" serial primary key, "player_id" character varying, "cards" integer, "goals" integer, "tipo" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (9.1ms)[0m  [1m[35mCREATE TABLE "goals" ("id" serial primary key, "match_id" character varying NOT NULL, "player_id" character varying NOT NULL, "quantity" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (10.3ms)[0m  [1m[35mCREATE TABLE "matches" ("id" serial primary key, "local" character varying NOT NULL, "visitor" character varying NOT NULL, "date" integer NOT NULL, "tournament_name" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (8.9ms)[0m  [1m[35mCREATE TABLE "nominates" ("id" serial primary key, "team_id" character varying NOT NULL, "match_id" character varying NOT NULL, "player_id" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (9.3ms)[0m  [1m[35mCREATE TABLE "players" ("id" serial primary key, "first_name" character varying NOT NULL, "last_name" character varying NOT NULL, "mail" character varying NOT NULL, "position" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying, "is_organizer" boolean, "birthday" timestamp)[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_players_on_mail" ON "players" USING btree ("mail")[0m
+  [1m[35m (8.3ms)[0m  [1m[35mCREATE TABLE "teamplayers" ("id" serial primary key, "player_id" character varying NOT NULL, "team_id" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE TABLE "teams" ("id" serial primary key, "name" character varying, "capitan" character varying, "logo" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE  INDEX  "index_teams_on_name" ON "teams" USING btree ("name")[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "tournaments" ("id" serial primary key, "name" character varying NOT NULL, "organizer" character varying NOT NULL, "place" character varying NOT NULL, "bases" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "number_date" integer NOT NULL, "number_team" integer NOT NULL)[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE  INDEX  "index_tournaments_on_name" ON "tournaments" USING btree ("name")[0m
+  [1m[35m (8.9ms)[0m  [1m[35mCREATE TABLE "tournamentteams" ("id" serial primary key, "tournament_id" character varying NOT NULL, "team_id" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170523204302)[0m
+  [1m[35m (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170523195314),
+(20170430210621),
+(20170513144252),
+(20170513134334),
+(20170515023540),
+(20170427145238),
+(20170513133547),
+(20170501003929),
+(20170427140554),
+(20170430225808),
+(20170427154511),
+(20170427145305);
+
+[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-05-23 21:51:49 UTC], ["updated_at", 2017-05-23 21:51:49 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (9.2ms)[0m  [1m[35mCREATE TABLE "cards" ("id" serial primary key, "match_id" character varying NOT NULL, "player_id" character varying NOT NULL, "type" character varying NOT NULL, "quantity" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "events" ("id" serial primary key, "player_id" character varying, "cards" integer, "goals" integer, "tipo" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "goals" ("id" serial primary key, "match_id" character varying NOT NULL, "player_id" character varying NOT NULL, "quantity" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "matches" ("id" serial primary key, "local" character varying NOT NULL, "visitor" character varying NOT NULL, "date" integer NOT NULL, "tournament_name" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "nominates" ("id" serial primary key, "team_id" character varying NOT NULL, "match_id" character varying NOT NULL, "player_id" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "players" ("id" serial primary key, "first_name" character varying NOT NULL, "last_name" character varying NOT NULL, "mail" character varying NOT NULL, "position" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying, "is_organizer" boolean, "birthday" timestamp)[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_players_on_mail" ON "players" USING btree ("mail")[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "teamplayers" ("id" serial primary key, "player_id" character varying NOT NULL, "team_id" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE TABLE "teams" ("id" serial primary key, "name" character varying, "capitan" character varying, "logo" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE  INDEX  "index_teams_on_name" ON "teams" USING btree ("name")[0m
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "tournaments" ("id" serial primary key, "name" character varying NOT NULL, "organizer" character varying NOT NULL, "place" character varying NOT NULL, "bases" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "number_date" integer NOT NULL, "number_team" integer NOT NULL)[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE  INDEX  "index_tournaments_on_name" ON "tournaments" USING btree ("name")[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "tournamentteams" ("id" serial primary key, "tournament_id" character varying NOT NULL, "team_id" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170523204302)[0m
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170523195314),
+(20170430210621),
+(20170513144252),
+(20170513134334),
+(20170515023540),
+(20170427145238),
+(20170513133547),
+(20170501003929),
+(20170427140554),
+(20170430225808),
+(20170427154511),
+(20170427145305);
+
+[0m
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-05-23 21:51:49 UTC], ["updated_at", 2017-05-23 21:51:49 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "players"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (115.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "champions_liga_development"[0m
+  [1m[35m (117.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "champions_liga_test"[0m
+  [1m[35m (262.3ms)[0m  [1m[35mCREATE DATABASE "champions_liga_development" ENCODING = 'unicode'[0m
+  [1m[35m (260.3ms)[0m  [1m[35mCREATE DATABASE "champions_liga_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (15.9ms)[0m  [1m[35mCREATE TABLE "cards" ("id" serial primary key, "match_id" character varying NOT NULL, "player_id" character varying NOT NULL, "type" character varying NOT NULL, "quantity" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (11.8ms)[0m  [1m[35mCREATE TABLE "events" ("id" serial primary key, "player_id" character varying, "cards" integer, "goals" integer, "tipo" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (9.4ms)[0m  [1m[35mCREATE TABLE "goals" ("id" serial primary key, "match_id" character varying NOT NULL, "player_id" character varying NOT NULL, "quantity" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (8.7ms)[0m  [1m[35mCREATE TABLE "matches" ("id" serial primary key, "local" character varying NOT NULL, "visitor" character varying NOT NULL, "date" integer NOT NULL, "tournament_name" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (8.6ms)[0m  [1m[35mCREATE TABLE "nominates" ("id" serial primary key, "team_id" character varying NOT NULL, "match_id" character varying NOT NULL, "player_id" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (9.9ms)[0m  [1m[35mCREATE TABLE "players" ("id" serial primary key, "first_name" character varying NOT NULL, "last_name" character varying NOT NULL, "mail" character varying NOT NULL, "position" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying, "is_organizer" boolean, "birthday" timestamp)[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_players_on_mail" ON "players" USING btree ("mail")[0m
+  [1m[35m (10.9ms)[0m  [1m[35mCREATE TABLE "teamplayers" ("id" serial primary key, "player_id" character varying NOT NULL, "team_id" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (11.0ms)[0m  [1m[35mCREATE TABLE "teams" ("id" serial primary key, "name" character varying, "capitan" character varying, "logo" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE  INDEX  "index_teams_on_name" ON "teams" USING btree ("name")[0m
+  [1m[35m (11.0ms)[0m  [1m[35mCREATE TABLE "tournaments" ("id" serial primary key, "name" character varying NOT NULL, "organizer" character varying NOT NULL, "place" character varying NOT NULL, "bases" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "number_date" integer NOT NULL, "number_team" integer NOT NULL)[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE  INDEX  "index_tournaments_on_name" ON "tournaments" USING btree ("name")[0m
+  [1m[35m (8.7ms)[0m  [1m[35mCREATE TABLE "tournamentteams" ("id" serial primary key, "tournament_id" character varying NOT NULL, "team_id" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (4.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170523204302)[0m
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170523195314),
+(20170430210621),
+(20170513144252),
+(20170513134334),
+(20170515023540),
+(20170427145238),
+(20170513133547),
+(20170501003929),
+(20170427140554),
+(20170430225808),
+(20170427154511),
+(20170427145305);
+
+[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-05-23 21:52:49 UTC], ["updated_at", 2017-05-23 21:52:49 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (8.8ms)[0m  [1m[35mCREATE TABLE "cards" ("id" serial primary key, "match_id" character varying NOT NULL, "player_id" character varying NOT NULL, "type" character varying NOT NULL, "quantity" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (12.8ms)[0m  [1m[35mCREATE TABLE "events" ("id" serial primary key, "player_id" character varying, "cards" integer, "goals" integer, "tipo" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "goals" ("id" serial primary key, "match_id" character varying NOT NULL, "player_id" character varying NOT NULL, "quantity" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "matches" ("id" serial primary key, "local" character varying NOT NULL, "visitor" character varying NOT NULL, "date" integer NOT NULL, "tournament_name" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "nominates" ("id" serial primary key, "team_id" character varying NOT NULL, "match_id" character varying NOT NULL, "player_id" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "players" ("id" serial primary key, "first_name" character varying NOT NULL, "last_name" character varying NOT NULL, "mail" character varying NOT NULL, "position" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying, "is_organizer" boolean, "birthday" timestamp)[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_players_on_mail" ON "players" USING btree ("mail")[0m
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "teamplayers" ("id" serial primary key, "player_id" character varying NOT NULL, "team_id" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "teams" ("id" serial primary key, "name" character varying, "capitan" character varying, "logo" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE  INDEX  "index_teams_on_name" ON "teams" USING btree ("name")[0m
+  [1m[35m (19.9ms)[0m  [1m[35mCREATE TABLE "tournaments" ("id" serial primary key, "name" character varying NOT NULL, "organizer" character varying NOT NULL, "place" character varying NOT NULL, "bases" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "number_date" integer NOT NULL, "number_team" integer NOT NULL)[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE  INDEX  "index_tournaments_on_name" ON "tournaments" USING btree ("name")[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "tournamentteams" ("id" serial primary key, "tournament_id" character varying NOT NULL, "team_id" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170523204302)[0m
+  [1m[35m (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170523195314),
+(20170430210621),
+(20170513144252),
+(20170513134334),
+(20170515023540),
+(20170427145238),
+(20170513133547),
+(20170501003929),
+(20170427140554),
+(20170430225808),
+(20170427154511),
+(20170427145305);
+
+[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-05-23 21:52:50 UTC], ["updated_at", 2017-05-23 21:52:50 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "players"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (117.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "champions_liga_development"[0m
+  [1m[35m (118.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "champions_liga_test"[0m
+  [1m[35m (251.2ms)[0m  [1m[35mCREATE DATABASE "champions_liga_development" ENCODING = 'unicode'[0m
+  [1m[35m (260.5ms)[0m  [1m[35mCREATE DATABASE "champions_liga_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (13.8ms)[0m  [1m[35mCREATE TABLE "cards" ("id" serial primary key, "match_id" character varying NOT NULL, "player_id" character varying NOT NULL, "type" character varying NOT NULL, "quantity" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (9.1ms)[0m  [1m[35mCREATE TABLE "events" ("id" serial primary key, "player_id" character varying, "cards" integer, "goals" integer, "tipo" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (9.2ms)[0m  [1m[35mCREATE TABLE "goals" ("id" serial primary key, "match_id" character varying NOT NULL, "player_id" character varying NOT NULL, "quantity" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (9.3ms)[0m  [1m[35mCREATE TABLE "matches" ("id" serial primary key, "local" character varying NOT NULL, "visitor" character varying NOT NULL, "date" integer NOT NULL, "tournament_name" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE "nominates" ("id" serial primary key, "team_id" character varying NOT NULL, "match_id" character varying NOT NULL, "player_id" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (9.1ms)[0m  [1m[35mCREATE TABLE "players" ("id" serial primary key, "first_name" character varying NOT NULL, "last_name" character varying NOT NULL, "mail" character varying NOT NULL, "position" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying, "is_organizer" boolean, "birthday" timestamp)[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_players_on_mail" ON "players" USING btree ("mail")[0m
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE "teamplayers" ("id" serial primary key, "player_id" character varying NOT NULL, "team_id" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "teams" ("id" serial primary key, "name" character varying, "capitan" character varying, "logo" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE  INDEX  "index_teams_on_name" ON "teams" USING btree ("name")[0m
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE TABLE "tournaments" ("id" serial primary key, "name" character varying NOT NULL, "organizer" character varying NOT NULL, "place" character varying NOT NULL, "bases" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "number_date" integer NOT NULL, "number_team" integer NOT NULL)[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE  INDEX  "index_tournaments_on_name" ON "tournaments" USING btree ("name")[0m
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE TABLE "tournamentteams" ("id" serial primary key, "tournament_id" character varying NOT NULL, "team_id" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170523204302)[0m
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170523195314),
+(20170430210621),
+(20170513144252),
+(20170513134334),
+(20170515023540),
+(20170427145238),
+(20170513133547),
+(20170501003929),
+(20170427140554),
+(20170430225808),
+(20170427154511),
+(20170427145305);
+
+[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-05-23 21:53:09 UTC], ["updated_at", 2017-05-23 21:53:09 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE "cards" ("id" serial primary key, "match_id" character varying NOT NULL, "player_id" character varying NOT NULL, "type" character varying NOT NULL, "quantity" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "events" ("id" serial primary key, "player_id" character varying, "cards" integer, "goals" integer, "tipo" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "goals" ("id" serial primary key, "match_id" character varying NOT NULL, "player_id" character varying NOT NULL, "quantity" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "matches" ("id" serial primary key, "local" character varying NOT NULL, "visitor" character varying NOT NULL, "date" integer NOT NULL, "tournament_name" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "nominates" ("id" serial primary key, "team_id" character varying NOT NULL, "match_id" character varying NOT NULL, "player_id" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE "players" ("id" serial primary key, "first_name" character varying NOT NULL, "last_name" character varying NOT NULL, "mail" character varying NOT NULL, "position" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying, "is_organizer" boolean, "birthday" timestamp)[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_players_on_mail" ON "players" USING btree ("mail")[0m
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE TABLE "teamplayers" ("id" serial primary key, "player_id" character varying NOT NULL, "team_id" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "teams" ("id" serial primary key, "name" character varying, "capitan" character varying, "logo" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE  INDEX  "index_teams_on_name" ON "teams" USING btree ("name")[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "tournaments" ("id" serial primary key, "name" character varying NOT NULL, "organizer" character varying NOT NULL, "place" character varying NOT NULL, "bases" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "number_date" integer NOT NULL, "number_team" integer NOT NULL)[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE  INDEX  "index_tournaments_on_name" ON "tournaments" USING btree ("name")[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "tournamentteams" ("id" serial primary key, "tournament_id" character varying NOT NULL, "team_id" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (10.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170523204302)[0m
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170523195314),
+(20170430210621),
+(20170513144252),
+(20170513134334),
+(20170515023540),
+(20170427145238),
+(20170513133547),
+(20170501003929),
+(20170427140554),
+(20170430225808),
+(20170427154511),
+(20170427145305);
+
+[0m
+  [1m[35m (9.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-05-23 21:53:09 UTC], ["updated_at", 2017-05-23 21:53:09 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "players"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (215.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "champions_liga_development"[0m
+  [1m[35m (113.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "champions_liga_test"[0m
+  [1m[35m (244.9ms)[0m  [1m[35mCREATE DATABASE "champions_liga_development" ENCODING = 'unicode'[0m
+  [1m[35m (261.8ms)[0m  [1m[35mCREATE DATABASE "champions_liga_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (13.4ms)[0m  [1m[35mCREATE TABLE "cards" ("id" serial primary key, "match_id" character varying NOT NULL, "player_id" character varying NOT NULL, "type" character varying NOT NULL, "quantity" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (9.1ms)[0m  [1m[35mCREATE TABLE "events" ("id" serial primary key, "player_id" character varying, "cards" integer, "goals" integer, "tipo" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE TABLE "goals" ("id" serial primary key, "match_id" character varying NOT NULL, "player_id" character varying NOT NULL, "quantity" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (9.3ms)[0m  [1m[35mCREATE TABLE "matches" ("id" serial primary key, "local" character varying NOT NULL, "visitor" character varying NOT NULL, "date" integer NOT NULL, "tournament_name" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE TABLE "nominates" ("id" serial primary key, "team_id" character varying NOT NULL, "match_id" character varying NOT NULL, "player_id" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "players" ("id" serial primary key, "first_name" character varying NOT NULL, "last_name" character varying NOT NULL, "mail" character varying NOT NULL, "position" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying, "is_organizer" boolean, "birthday" timestamp)[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_players_on_mail" ON "players" USING btree ("mail")[0m
+  [1m[35m (8.7ms)[0m  [1m[35mCREATE TABLE "teamplayers" ("id" serial primary key, "player_id" character varying NOT NULL, "team_id" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE TABLE "teams" ("id" serial primary key, "name" character varying, "capitan" character varying, "logo" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE  INDEX  "index_teams_on_name" ON "teams" USING btree ("name")[0m
+  [1m[35m (8.6ms)[0m  [1m[35mCREATE TABLE "tournaments" ("id" serial primary key, "name" character varying NOT NULL, "organizer" character varying NOT NULL, "place" character varying NOT NULL, "bases" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "number_date" integer NOT NULL, "number_team" integer NOT NULL)[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE  INDEX  "index_tournaments_on_name" ON "tournaments" USING btree ("name")[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "tournamentteams" ("id" serial primary key, "tournament_id" character varying NOT NULL, "team_id" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170523204302)[0m
+  [1m[35m (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170523195314),
+(20170430210621),
+(20170513144252),
+(20170513134334),
+(20170515023540),
+(20170427145238),
+(20170513133547),
+(20170501003929),
+(20170427140554),
+(20170430225808),
+(20170427154511),
+(20170427145305);
+
+[0m
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-05-23 21:53:22 UTC], ["updated_at", 2017-05-23 21:53:22 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (9.1ms)[0m  [1m[35mCREATE TABLE "cards" ("id" serial primary key, "match_id" character varying NOT NULL, "player_id" character varying NOT NULL, "type" character varying NOT NULL, "quantity" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE TABLE "events" ("id" serial primary key, "player_id" character varying, "cards" integer, "goals" integer, "tipo" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "goals" ("id" serial primary key, "match_id" character varying NOT NULL, "player_id" character varying NOT NULL, "quantity" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "matches" ("id" serial primary key, "local" character varying NOT NULL, "visitor" character varying NOT NULL, "date" integer NOT NULL, "tournament_name" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE TABLE "nominates" ("id" serial primary key, "team_id" character varying NOT NULL, "match_id" character varying NOT NULL, "player_id" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE TABLE "players" ("id" serial primary key, "first_name" character varying NOT NULL, "last_name" character varying NOT NULL, "mail" character varying NOT NULL, "position" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying, "is_organizer" boolean, "birthday" timestamp)[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_players_on_mail" ON "players" USING btree ("mail")[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "teamplayers" ("id" serial primary key, "player_id" character varying NOT NULL, "team_id" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (8.1ms)[0m  [1m[35mCREATE TABLE "teams" ("id" serial primary key, "name" character varying, "capitan" character varying, "logo" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE  INDEX  "index_teams_on_name" ON "teams" USING btree ("name")[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "tournaments" ("id" serial primary key, "name" character varying NOT NULL, "organizer" character varying NOT NULL, "place" character varying NOT NULL, "bases" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "number_date" integer NOT NULL, "number_team" integer NOT NULL)[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE  INDEX  "index_tournaments_on_name" ON "tournaments" USING btree ("name")[0m
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE TABLE "tournamentteams" ("id" serial primary key, "tournament_id" character varying NOT NULL, "team_id" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170523204302)[0m
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170523195314),
+(20170430210621),
+(20170513144252),
+(20170513134334),
+(20170515023540),
+(20170427145238),
+(20170513133547),
+(20170501003929),
+(20170427140554),
+(20170430225808),
+(20170427154511),
+(20170427145305);
+
+[0m
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-05-23 21:53:22 UTC], ["updated_at", 2017-05-23 21:53:22 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "players"[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "teams"[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "teamplayers"[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "tournaments"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "nijulio@uc.cl"], ["LIMIT", 1]]
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "created_at", "updated_at", "password_digest", "birthday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Nicolas"], ["last_name", "Julio"], ["mail", "nijulio@uc.cl"], ["position", "Defensa"], ["created_at", 2017-05-23 21:53:22 UTC], ["updated_at", 2017-05-23 21:53:22 UTC], ["password_digest", "$2a$10$cWFiZapMmTM7vLvkIVnoxejKmixcrzD6PYB7aKdZuRY25fGDjxlzK"], ["birthday", 1997-05-23 21:53:22 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (219.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "champions_liga_development"[0m
+  [1m[35m (117.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "champions_liga_test"[0m
+  [1m[35m (251.3ms)[0m  [1m[35mCREATE DATABASE "champions_liga_development" ENCODING = 'unicode'[0m
+  [1m[35m (252.4ms)[0m  [1m[35mCREATE DATABASE "champions_liga_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (14.9ms)[0m  [1m[35mCREATE TABLE "cards" ("id" serial primary key, "match_id" character varying NOT NULL, "player_id" character varying NOT NULL, "type" character varying NOT NULL, "quantity" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (11.8ms)[0m  [1m[35mCREATE TABLE "events" ("id" serial primary key, "player_id" character varying, "cards" integer, "goals" integer, "tipo" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (16.0ms)[0m  [1m[35mCREATE TABLE "goals" ("id" serial primary key, "match_id" character varying NOT NULL, "player_id" character varying NOT NULL, "quantity" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (9.1ms)[0m  [1m[35mCREATE TABLE "matches" ("id" serial primary key, "local" character varying NOT NULL, "visitor" character varying NOT NULL, "date" integer NOT NULL, "tournament_name" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (13.1ms)[0m  [1m[35mCREATE TABLE "nominates" ("id" serial primary key, "team_id" character varying NOT NULL, "match_id" character varying NOT NULL, "player_id" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (11.0ms)[0m  [1m[35mCREATE TABLE "players" ("id" serial primary key, "first_name" character varying NOT NULL, "last_name" character varying NOT NULL, "mail" character varying NOT NULL, "position" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying, "is_organizer" boolean, "birthday" timestamp)[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_players_on_mail" ON "players" USING btree ("mail")[0m
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE TABLE "teamplayers" ("id" serial primary key, "player_id" character varying NOT NULL, "team_id" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE TABLE "teams" ("id" serial primary key, "name" character varying, "capitan" character varying, "logo" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE  INDEX  "index_teams_on_name" ON "teams" USING btree ("name")[0m
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "tournaments" ("id" serial primary key, "name" character varying NOT NULL, "organizer" character varying NOT NULL, "place" character varying NOT NULL, "bases" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "number_date" integer NOT NULL, "number_team" integer NOT NULL)[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE  INDEX  "index_tournaments_on_name" ON "tournaments" USING btree ("name")[0m
+  [1m[35m (11.2ms)[0m  [1m[35mCREATE TABLE "tournamentteams" ("id" serial primary key, "tournament_id" character varying NOT NULL, "team_id" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (9.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (4.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170523204302)[0m
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170523195314),
+(20170430210621),
+(20170513144252),
+(20170513134334),
+(20170515023540),
+(20170427145238),
+(20170513133547),
+(20170501003929),
+(20170427140554),
+(20170430225808),
+(20170427154511),
+(20170427145305);
+
+[0m
+  [1m[35m (13.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-05-23 21:53:46 UTC], ["updated_at", 2017-05-23 21:53:46 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (9.1ms)[0m  [1m[35mCREATE TABLE "cards" ("id" serial primary key, "match_id" character varying NOT NULL, "player_id" character varying NOT NULL, "type" character varying NOT NULL, "quantity" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE TABLE "events" ("id" serial primary key, "player_id" character varying, "cards" integer, "goals" integer, "tipo" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (10.3ms)[0m  [1m[35mCREATE TABLE "goals" ("id" serial primary key, "match_id" character varying NOT NULL, "player_id" character varying NOT NULL, "quantity" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE TABLE "matches" ("id" serial primary key, "local" character varying NOT NULL, "visitor" character varying NOT NULL, "date" integer NOT NULL, "tournament_name" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE "nominates" ("id" serial primary key, "team_id" character varying NOT NULL, "match_id" character varying NOT NULL, "player_id" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (10.7ms)[0m  [1m[35mCREATE TABLE "players" ("id" serial primary key, "first_name" character varying NOT NULL, "last_name" character varying NOT NULL, "mail" character varying NOT NULL, "position" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying, "is_organizer" boolean, "birthday" timestamp)[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_players_on_mail" ON "players" USING btree ("mail")[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "teamplayers" ("id" serial primary key, "player_id" character varying NOT NULL, "team_id" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (8.9ms)[0m  [1m[35mCREATE TABLE "teams" ("id" serial primary key, "name" character varying, "capitan" character varying, "logo" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE  INDEX  "index_teams_on_name" ON "teams" USING btree ("name")[0m
+  [1m[35m (14.7ms)[0m  [1m[35mCREATE TABLE "tournaments" ("id" serial primary key, "name" character varying NOT NULL, "organizer" character varying NOT NULL, "place" character varying NOT NULL, "bases" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "number_date" integer NOT NULL, "number_team" integer NOT NULL)[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE  INDEX  "index_tournaments_on_name" ON "tournaments" USING btree ("name")[0m
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE TABLE "tournamentteams" ("id" serial primary key, "tournament_id" character varying NOT NULL, "team_id" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170523204302)[0m
+  [1m[35m (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170523195314),
+(20170430210621),
+(20170513144252),
+(20170513134334),
+(20170515023540),
+(20170427145238),
+(20170513133547),
+(20170501003929),
+(20170427140554),
+(20170430225808),
+(20170427154511),
+(20170427145305);
+
+[0m
+  [1m[35m (10.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-05-23 21:53:47 UTC], ["updated_at", 2017-05-23 21:53:47 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "players"[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "teams"[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "teamplayers"[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "tournaments"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "nijulio@uc.cl"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "created_at", "updated_at", "password_digest", "birthday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Nicolas"], ["last_name", "Julio"], ["mail", "nijulio@uc.cl"], ["position", "Defensa"], ["created_at", 2017-05-23 21:53:47 UTC], ["updated_at", 2017-05-23 21:53:47 UTC], ["password_digest", "$2a$10$kzZPVv.lZnovRblgzdYy..2nEjxasVNTsRAQdQ0.0Kn1tWo.bAeQq"], ["birthday", 1997-05-23 21:53:47 UTC]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "obie@yahoo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "created_at", "updated_at", "password_digest", "birthday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Jett"], ["last_name", "Volkman"], ["mail", "obie@yahoo.com"], ["position", "Defensa"], ["created_at", 2017-05-23 21:53:47 UTC], ["updated_at", 2017-05-23 21:53:47 UTC], ["password_digest", "$2a$10$631IUh.e0bwsU1FEAHgza.aFOYkQ49cGcKRBpQQyfQQFE/MVjYyK."], ["birthday", 1997-05-23 21:53:47 UTC]]
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "vida@yahoo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "created_at", "updated_at", "password_digest", "birthday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Sibyl"], ["last_name", "Stark"], ["mail", "vida@yahoo.com"], ["position", "Arquero"], ["created_at", 2017-05-23 21:53:47 UTC], ["updated_at", 2017-05-23 21:53:47 UTC], ["password_digest", "$2a$10$QfHr3j9eMeQMha3QmzBWhOTIUJBzFluY1JVYP8Neqo2vCax7d5JFK"], ["birthday", 1997-05-23 21:53:47 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "yazmin.brakus@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "created_at", "updated_at", "password_digest", "birthday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Terrell"], ["last_name", "Haley"], ["mail", "yazmin.brakus@gmail.com"], ["position", "Defensa"], ["created_at", 2017-05-23 21:53:47 UTC], ["updated_at", 2017-05-23 21:53:47 UTC], ["password_digest", "$2a$10$.LG0rx2o612qbLUIEuG8uuqtWOU/8TQIILAgzntJviWUVgudC6hEG"], ["birthday", 1997-05-23 21:53:47 UTC]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "alvah_ratke@yahoo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "created_at", "updated_at", "password_digest", "birthday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Ceasar"], ["last_name", "Fritsch"], ["mail", "alvah_ratke@yahoo.com"], ["position", "Arquero"], ["created_at", 2017-05-23 21:53:47 UTC], ["updated_at", 2017-05-23 21:53:47 UTC], ["password_digest", "$2a$10$tKt7HnTUGi0Qgl9KBNlJy.lGikl.hDs3.X993MlKRHIU9C/FBugti"], ["birthday", 1997-05-23 21:53:47 UTC]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "aracely_sporer@yahoo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "created_at", "updated_at", "password_digest", "birthday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Destini"], ["last_name", "Stehr"], ["mail", "aracely_sporer@yahoo.com"], ["position", "Defensa"], ["created_at", 2017-05-23 21:53:47 UTC], ["updated_at", 2017-05-23 21:53:47 UTC], ["password_digest", "$2a$10$.MpIB6bSZzkqCr/AhYvbYeB3dy35WQuCzn/oGXegry02qqJasjvSe"], ["birthday", 1997-05-23 21:53:47 UTC]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "lincoln.kuvalis@yahoo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "created_at", "updated_at", "password_digest", "birthday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Helen"], ["last_name", "Weimann"], ["mail", "lincoln.kuvalis@yahoo.com"], ["position", "Arquero"], ["created_at", 2017-05-23 21:53:48 UTC], ["updated_at", 2017-05-23 21:53:48 UTC], ["password_digest", "$2a$10$Nnzt4SHnX7SN4r5w4EsFKelFXwRxkNJBjZ5MDasvfXLzh2bHihv6W"], ["birthday", 1997-05-23 21:53:47 UTC]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "ashton@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "created_at", "updated_at", "password_digest", "birthday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Amelia"], ["last_name", "Marvin"], ["mail", "ashton@gmail.com"], ["position", "Mediocampista"], ["created_at", 2017-05-23 21:53:48 UTC], ["updated_at", 2017-05-23 21:53:48 UTC], ["password_digest", "$2a$10$lziJGSp74SUJKENA.3St9.6WPPsvUs9Fql6.TbU.Q1lVzeR1xx9F."], ["birthday", 1997-05-23 21:53:48 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "delbert@hotmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "created_at", "updated_at", "password_digest", "birthday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Nannie"], ["last_name", "Boyer"], ["mail", "delbert@hotmail.com"], ["position", "Defensa"], ["created_at", 2017-05-23 21:53:48 UTC], ["updated_at", 2017-05-23 21:53:48 UTC], ["password_digest", "$2a$10$9hJbykxKq52Fa7.z7SFn1eS39cfWMCMIo/Uz/SKdVoQB3gmGCT.ii"], ["birthday", 1997-05-23 21:53:48 UTC]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "finn.schumm@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "created_at", "updated_at", "password_digest", "birthday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Marcus"], ["last_name", "Simonis"], ["mail", "finn.schumm@gmail.com"], ["position", "Defensa"], ["created_at", 2017-05-23 21:53:48 UTC], ["updated_at", 2017-05-23 21:53:48 UTC], ["password_digest", "$2a$10$4F69yS5E16HTalPbfqamiu6McdZ98VexHEcYwwQJdmPkvQdZHUgC6"], ["birthday", 1997-05-23 21:53:48 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "francesco@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "created_at", "updated_at", "password_digest", "birthday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Garrison"], ["last_name", "Lockman"], ["mail", "francesco@gmail.com"], ["position", "Mediocampista"], ["created_at", 2017-05-23 21:53:48 UTC], ["updated_at", 2017-05-23 21:53:48 UTC], ["password_digest", "$2a$10$aSbNpJNtegRk5AB9BqRLOesniePYeNesXzPRyMsVwRqDydOUNhNgy"], ["birthday", 1997-05-23 21:53:48 UTC]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "karine@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "created_at", "updated_at", "password_digest", "birthday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Carole"], ["last_name", "Powlowski"], ["mail", "karine@gmail.com"], ["position", "Arquero"], ["created_at", 2017-05-23 21:53:48 UTC], ["updated_at", 2017-05-23 21:53:48 UTC], ["password_digest", "$2a$10$lwM7BPhw3AU9bctgTY97tO/UQHli/ddSb7tUQmzjJORycaYyOXSeu"], ["birthday", 1997-05-23 21:53:48 UTC]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "millie@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "created_at", "updated_at", "password_digest", "birthday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Jamir"], ["last_name", "Hermann"], ["mail", "millie@gmail.com"], ["position", "Mediocampista"], ["created_at", 2017-05-23 21:53:48 UTC], ["updated_at", 2017-05-23 21:53:48 UTC], ["password_digest", "$2a$10$xsLvniSiJwI7E7hp59BakuPxVJf3KzSw5q2fFPpRntal7giCl8Liy"], ["birthday", 1997-05-23 21:53:48 UTC]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "malvina.shanahan@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "created_at", "updated_at", "password_digest", "birthday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Marilou"], ["last_name", "Cummings"], ["mail", "malvina.shanahan@gmail.com"], ["position", "Mediocampista"], ["created_at", 2017-05-23 21:53:48 UTC], ["updated_at", 2017-05-23 21:53:48 UTC], ["password_digest", "$2a$10$2METb4/IAS7gv5rNztJFqe6FLp/nSJ2KtZZZJqTfbQhOqz6S5O9tm"], ["birthday", 1997-05-23 21:53:48 UTC]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "claire_eichmann@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "created_at", "updated_at", "password_digest", "birthday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Delphia"], ["last_name", "Ledner"], ["mail", "claire_eichmann@gmail.com"], ["position", "Delantero"], ["created_at", 2017-05-23 21:53:48 UTC], ["updated_at", 2017-05-23 21:53:48 UTC], ["password_digest", "$2a$10$uwZdY/Nk0QgfPb8xV5zcE.vdMo4TINeX0Wc6GuHz9Qo2pLLVWIElW"], ["birthday", 1997-05-23 21:53:48 UTC]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "leonor@hotmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "created_at", "updated_at", "password_digest", "birthday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Ashton"], ["last_name", "White"], ["mail", "leonor@hotmail.com"], ["position", "Arquero"], ["created_at", 2017-05-23 21:53:48 UTC], ["updated_at", 2017-05-23 21:53:48 UTC], ["password_digest", "$2a$10$0uumdlY6XyXQTh95t6Fj7.o5BeyticN4X4El81v.KlpuSlPTrdOjC"], ["birthday", 1997-05-23 21:53:48 UTC]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "heber@yahoo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "created_at", "updated_at", "password_digest", "birthday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Helmer"], ["last_name", "Hamill"], ["mail", "heber@yahoo.com"], ["position", "Delantero"], ["created_at", 2017-05-23 21:53:48 UTC], ["updated_at", 2017-05-23 21:53:48 UTC], ["password_digest", "$2a$10$xbJXoQHpehOlW4XwhX6EmeH0ttAhLU1jfVXWCNwIaJbKG8qwpNvru"], ["birthday", 1997-05-23 21:53:48 UTC]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "mireya@yahoo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "created_at", "updated_at", "password_digest", "birthday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Bernice"], ["last_name", "Braun"], ["mail", "mireya@yahoo.com"], ["position", "Mediocampista"], ["created_at", 2017-05-23 21:53:49 UTC], ["updated_at", 2017-05-23 21:53:49 UTC], ["password_digest", "$2a$10$70Q6meRpHD2FsClEcOZ7QeiSiDCPmQ9O2Bq1Ps6yMCUBl0BycTYta"], ["birthday", 1997-05-23 21:53:48 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "melvina@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "created_at", "updated_at", "password_digest", "birthday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Maurine"], ["last_name", "D'Amore"], ["mail", "melvina@gmail.com"], ["position", "Arquero"], ["created_at", 2017-05-23 21:53:49 UTC], ["updated_at", 2017-05-23 21:53:49 UTC], ["password_digest", "$2a$10$ZtLwzYaQYlZ4wQTEaUpP5uRHUTLrXY5gRlix6uYNAuFh7gGEAcwhe"], ["birthday", 1997-05-23 21:53:49 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "hillard.runolfsdottir@yahoo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "created_at", "updated_at", "password_digest", "birthday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Leopold"], ["last_name", "Schmitt"], ["mail", "hillard.runolfsdottir@yahoo.com"], ["position", "Arquero"], ["created_at", 2017-05-23 21:53:49 UTC], ["updated_at", 2017-05-23 21:53:49 UTC], ["password_digest", "$2a$10$vr.DDYJ9.NBFIEPN6VpnkOinKk7jU3jBgT8XnpvLcKXKO8j3jDotK"], ["birthday", 1997-05-23 21:53:49 UTC]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "annetta@yahoo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "created_at", "updated_at", "password_digest", "birthday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Astrid"], ["last_name", "Kub"], ["mail", "annetta@yahoo.com"], ["position", "Mediocampista"], ["created_at", 2017-05-23 21:53:49 UTC], ["updated_at", 2017-05-23 21:53:49 UTC], ["password_digest", "$2a$10$idvqII1KM4E3MMs.JtlRMuGY/cw1lq70Q2iUfuEm5aGdSLDtYYifq"], ["birthday", 1997-05-23 21:53:49 UTC]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "jalen_thiel@hotmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "created_at", "updated_at", "password_digest", "birthday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Ralph"], ["last_name", "Waelchi"], ["mail", "jalen_thiel@hotmail.com"], ["position", "Arquero"], ["created_at", 2017-05-23 21:53:49 UTC], ["updated_at", 2017-05-23 21:53:49 UTC], ["password_digest", "$2a$10$6SYHgfgIsGaCuNl7eRlEuOdU7I/TiykEOy500LDyoqO1pSNmTg4AW"], ["birthday", 1997-05-23 21:53:49 UTC]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "angel.walter@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "created_at", "updated_at", "password_digest", "birthday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Tyra"], ["last_name", "Heaney"], ["mail", "angel.walter@gmail.com"], ["position", "Mediocampista"], ["created_at", 2017-05-23 21:53:49 UTC], ["updated_at", 2017-05-23 21:53:49 UTC], ["password_digest", "$2a$10$iC53ySswuh4xtKeirME/Aec//D9GbMxWhjRinAFjrzE0D9876wy.C"], ["birthday", 1997-05-23 21:53:49 UTC]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "sienna.crist@hotmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "created_at", "updated_at", "password_digest", "birthday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Marjorie"], ["last_name", "Labadie"], ["mail", "sienna.crist@hotmail.com"], ["position", "Delantero"], ["created_at", 2017-05-23 21:53:49 UTC], ["updated_at", 2017-05-23 21:53:49 UTC], ["password_digest", "$2a$10$6061K3oUlrOTyAGiv8hPGuSDpzADWlR6c38is7V6ULHC1wViuP/OC"], ["birthday", 1997-05-23 21:53:49 UTC]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "joey@yahoo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "created_at", "updated_at", "password_digest", "birthday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Earline"], ["last_name", "Kshlerin"], ["mail", "joey@yahoo.com"], ["position", "Defensa"], ["created_at", 2017-05-23 21:53:49 UTC], ["updated_at", 2017-05-23 21:53:49 UTC], ["password_digest", "$2a$10$s4s5M0SoMorDDb2TxvliCO3Z9REEHfhW4zDWmQJEorVwAL8lYvMha"], ["birthday", 1997-05-23 21:53:49 UTC]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "asha_collins@hotmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "created_at", "updated_at", "password_digest", "birthday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Hettie"], ["last_name", "Champlin"], ["mail", "asha_collins@hotmail.com"], ["position", "Delantero"], ["created_at", 2017-05-23 21:53:49 UTC], ["updated_at", 2017-05-23 21:53:49 UTC], ["password_digest", "$2a$10$Zn/zbntsVaSIQ9IuFgVr2up3njq3yby8nB7AfrrU2PvyQ9Q/TYJly"], ["birthday", 1997-05-23 21:53:49 UTC]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "juanita_leffler@yahoo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "created_at", "updated_at", "password_digest", "birthday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Hallie"], ["last_name", "Feest"], ["mail", "juanita_leffler@yahoo.com"], ["position", "Delantero"], ["created_at", 2017-05-23 21:53:49 UTC], ["updated_at", 2017-05-23 21:53:49 UTC], ["password_digest", "$2a$10$EAcqoneF7XXfdS/3FazOduDkB1u.ZEyuy076uazVHuThy1t8YlMzq"], ["birthday", 1997-05-23 21:53:49 UTC]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "reta.huels@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "created_at", "updated_at", "password_digest", "birthday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Jaeden"], ["last_name", "Kuhlman"], ["mail", "reta.huels@gmail.com"], ["position", "Delantero"], ["created_at", 2017-05-23 21:53:49 UTC], ["updated_at", 2017-05-23 21:53:49 UTC], ["password_digest", "$2a$10$jWAfb6OcenQ0f8UNoq8n/.y3HWzruFtT7qFeuiTrA9JQt47150/8y"], ["birthday", 1997-05-23 21:53:49 UTC]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "colton@yahoo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "created_at", "updated_at", "password_digest", "birthday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Stephon"], ["last_name", "McLaughlin"], ["mail", "colton@yahoo.com"], ["position", "Arquero"], ["created_at", 2017-05-23 21:53:49 UTC], ["updated_at", 2017-05-23 21:53:49 UTC], ["password_digest", "$2a$10$zOH81tfyLb74.BbKfhr.O.pUAq2ZS.mpJzQ88tn18EixwPAxBOxJG"], ["birthday", 1997-05-23 21:53:49 UTC]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "joana_cremin@hotmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "created_at", "updated_at", "password_digest", "birthday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Rusty"], ["last_name", "Dibbert"], ["mail", "joana_cremin@hotmail.com"], ["position", "Defensa"], ["created_at", 2017-05-23 21:53:50 UTC], ["updated_at", 2017-05-23 21:53:50 UTC], ["password_digest", "$2a$10$c49auXLta7VycQ54mdagUOQyNKPyodpb58q6fl3wUcHMAHkC08mQO"], ["birthday", 1997-05-23 21:53:49 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "grover@yahoo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "created_at", "updated_at", "password_digest", "birthday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Princess"], ["last_name", "Christiansen"], ["mail", "grover@yahoo.com"], ["position", "Delantero"], ["created_at", 2017-05-23 21:53:50 UTC], ["updated_at", 2017-05-23 21:53:50 UTC], ["password_digest", "$2a$10$BrKNvNdYQtAAoX2UKMqBj.V2Uo.PG5IQS6QWip34uHjqbiowbpKSq"], ["birthday", 1997-05-23 21:53:50 UTC]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlayer Load (0.7ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "teams" ("name", "capitan", "logo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Ny Sar"], ["capitan", "Delphia"], ["logo", "Imagen"], ["created_at", 2017-05-23 21:53:50 UTC], ["updated_at", 2017-05-23 21:53:50 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "teams" ("name", "capitan", "logo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mantarys"], ["capitan", "Princess"], ["logo", "Imagen"], ["created_at", 2017-05-23 21:53:50 UTC], ["updated_at", 2017-05-23 21:53:50 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "teams" ("name", "capitan", "logo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Sar Meel"], ["capitan", "Marcus"], ["logo", "Imagen"], ["created_at", 2017-05-23 21:53:50 UTC], ["updated_at", 2017-05-23 21:53:50 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "teams" ("name", "capitan", "logo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Braavos"], ["capitan", "Helmer"], ["logo", "Imagen"], ["created_at", 2017-05-23 21:53:50 UTC], ["updated_at", 2017-05-23 21:53:50 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "teams" ("name", "capitan", "logo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Tyria"], ["capitan", "Ralph"], ["logo", "Imagen"], ["created_at", 2017-05-23 21:53:50 UTC], ["updated_at", 2017-05-23 21:53:50 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "1"], ["team_id", "2"], ["created_at", 2017-05-23 21:53:50 UTC], ["updated_at", 2017-05-23 21:53:50 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "2"], ["team_id", "3"], ["created_at", 2017-05-23 21:53:50 UTC], ["updated_at", 2017-05-23 21:53:50 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "3"], ["team_id", "1"], ["created_at", 2017-05-23 21:53:50 UTC], ["updated_at", 2017-05-23 21:53:50 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "4"], ["team_id", "4"], ["created_at", 2017-05-23 21:53:50 UTC], ["updated_at", 2017-05-23 21:53:50 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "5"], ["team_id", "2"], ["created_at", 2017-05-23 21:53:50 UTC], ["updated_at", 2017-05-23 21:53:50 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "6"], ["team_id", "1"], ["created_at", 2017-05-23 21:53:50 UTC], ["updated_at", 2017-05-23 21:53:50 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "7"], ["team_id", "1"], ["created_at", 2017-05-23 21:53:50 UTC], ["updated_at", 2017-05-23 21:53:50 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "8"], ["team_id", "2"], ["created_at", 2017-05-23 21:53:50 UTC], ["updated_at", 2017-05-23 21:53:50 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "9"], ["team_id", "1"], ["created_at", 2017-05-23 21:53:50 UTC], ["updated_at", 2017-05-23 21:53:50 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "10"], ["team_id", "2"], ["created_at", 2017-05-23 21:53:50 UTC], ["updated_at", 2017-05-23 21:53:50 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "11"], ["team_id", "3"], ["created_at", 2017-05-23 21:53:50 UTC], ["updated_at", 2017-05-23 21:53:50 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "12"], ["team_id", "5"], ["created_at", 2017-05-23 21:53:50 UTC], ["updated_at", 2017-05-23 21:53:50 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "13"], ["team_id", "2"], ["created_at", 2017-05-23 21:53:50 UTC], ["updated_at", 2017-05-23 21:53:50 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "14"], ["team_id", "5"], ["created_at", 2017-05-23 21:53:50 UTC], ["updated_at", 2017-05-23 21:53:50 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "15"], ["team_id", "2"], ["created_at", 2017-05-23 21:53:50 UTC], ["updated_at", 2017-05-23 21:53:50 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "16"], ["team_id", "5"], ["created_at", 2017-05-23 21:53:50 UTC], ["updated_at", 2017-05-23 21:53:50 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "17"], ["team_id", "4"], ["created_at", 2017-05-23 21:53:50 UTC], ["updated_at", 2017-05-23 21:53:50 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "18"], ["team_id", "5"], ["created_at", 2017-05-23 21:53:50 UTC], ["updated_at", 2017-05-23 21:53:50 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "19"], ["team_id", "1"], ["created_at", 2017-05-23 21:53:50 UTC], ["updated_at", 2017-05-23 21:53:50 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "20"], ["team_id", "2"], ["created_at", 2017-05-23 21:53:50 UTC], ["updated_at", 2017-05-23 21:53:50 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "21"], ["team_id", "3"], ["created_at", 2017-05-23 21:53:50 UTC], ["updated_at", 2017-05-23 21:53:50 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "22"], ["team_id", "1"], ["created_at", 2017-05-23 21:53:50 UTC], ["updated_at", 2017-05-23 21:53:50 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "23"], ["team_id", "4"], ["created_at", 2017-05-23 21:53:50 UTC], ["updated_at", 2017-05-23 21:53:50 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "24"], ["team_id", "5"], ["created_at", 2017-05-23 21:53:50 UTC], ["updated_at", 2017-05-23 21:53:50 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "25"], ["team_id", "3"], ["created_at", 2017-05-23 21:53:50 UTC], ["updated_at", 2017-05-23 21:53:50 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "26"], ["team_id", "3"], ["created_at", 2017-05-23 21:53:50 UTC], ["updated_at", 2017-05-23 21:53:50 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "27"], ["team_id", "4"], ["created_at", 2017-05-23 21:53:50 UTC], ["updated_at", 2017-05-23 21:53:50 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "28"], ["team_id", "3"], ["created_at", 2017-05-23 21:53:50 UTC], ["updated_at", 2017-05-23 21:53:50 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "29"], ["team_id", "5"], ["created_at", 2017-05-23 21:53:50 UTC], ["updated_at", 2017-05-23 21:53:50 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "30"], ["team_id", "4"], ["created_at", 2017-05-23 21:53:50 UTC], ["updated_at", 2017-05-23 21:53:50 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "31"], ["team_id", "1"], ["created_at", 2017-05-23 21:53:50 UTC], ["updated_at", 2017-05-23 21:53:50 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "tournaments" ("name", "organizer", "place", "created_at", "updated_at", "number_date", "number_team") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Utapau"], ["organizer", "Hettie"], ["place", "Castlelobruxo"], ["created_at", 2017-05-23 21:53:50 UTC], ["updated_at", 2017-05-23 21:53:50 UTC], ["number_date", 3], ["number_team", 4]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tournaments" ("name", "organizer", "place", "created_at", "updated_at", "number_date", "number_team") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Lothal"], ["organizer", "Destini"], ["place", "Azkaban"], ["created_at", 2017-05-23 21:53:50 UTC], ["updated_at", 2017-05-23 21:53:50 UTC], ["number_date", 3], ["number_team", 4]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlayer Load (0.7ms)[0m  [1m[34mSELECT  "players".* FROM "players" ORDER BY "players"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPlayer Load (1.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" ORDER BY "players"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2017-05-23 17:58:57 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_header_visitor.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 221ms (Views: 212.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/new" for 127.0.0.1 at 2017-05-23 17:58:59 -0400
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/_form.html.erb (512.5ms)
+  Rendered players/new.html.erb within layouts/application (513.6ms)
+  Rendered layouts/_header_visitor.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 579ms (Views: 551.6ms | ActiveRecord: 5.3ms)
+
+
+Started POST "/players" for 127.0.0.1 at 2017-05-23 17:59:16 -0400
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UPhFl0to4kxjOZIvmKFQJXkAeIVKILktUiGx4NZ48lE/VX1uI6fLn0abrVlxptKgP4Ac3mCuLqfq8TBGn8/g5A==", "player"=>{"first_name"=>"carlos", "last_name"=>"carlos", "mail"=>"r@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "birthday(1i)"=>"1950", "birthday(2i)"=>"5", "birthday(3i)"=>"23", "position"=>"gk", "is_organizer"=>"0"}, "commit"=>"Create Player"}
+Unpermitted parameters: birthday(1i), birthday(2i), birthday(3i), is_organizer
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "r@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/_form.html.erb (7.8ms)
+  Rendered players/new.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_header_visitor.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 204ms (Views: 57.1ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/players" for 127.0.0.1 at 2017-05-23 17:59:45 -0400
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tO0eGRNAUD6W29SfXP2tZpGpEzOjDIzip69xeywnnpu08cEa3Y2WLsWfWwkjqlXEJN43HxI/qIbUNs8mUiOqJg==", "player"=>{"first_name"=>"carlos", "last_name"=>"carlos", "mail"=>"r@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "birthday(1i)"=>"1918", "birthday(2i)"=>"5", "birthday(3i)"=>"23", "position"=>"gk", "is_organizer"=>"1"}, "commit"=>"Create Player"}
+Unpermitted parameters: birthday(1i), birthday(2i), birthday(3i), is_organizer
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "r@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/_form.html.erb (6.0ms)
+  Rendered players/new.html.erb within layouts/application (7.2ms)
+  Rendered layouts/_header_visitor.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 197ms (Views: 47.3ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/players" for 127.0.0.1 at 2017-05-23 18:00:45 -0400
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0Opa7DxUSelUkLBl/RbczGPQ3zjuhW97295x+43AF7nQ9oXv8pmP+QfUP/OCQSRu1qf7FF+2Sx+oR8+m88QjBA==", "player"=>{"first_name"=>"carlos", "last_name"=>"carlos", "mail"=>"r@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "birthday(1i)"=>"1933", "birthday(2i)"=>"5", "birthday(3i)"=>"23", "position"=>"gk", "is_organizer"=>"1"}, "commit"=>"Create Player"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."mail" = $1 LIMIT $2[0m  [["mail", "r@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "mail", "position", "created_at", "updated_at", "password_digest", "is_organizer", "birthday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "carlos"], ["last_name", "carlos"], ["mail", "r@gmail.com"], ["position", "gk"], ["created_at", 2017-05-23 22:00:55 UTC], ["updated_at", 2017-05-23 22:00:55 UTC], ["password_digest", "$2a$10$RDtNPPHhXAaIQnrgORfjPuk9DNsoN8dha8yYyODXNN9zosjzNgiya"], ["is_organizer", true], ["birthday", 1933-05-23 00:00:00 UTC]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/players/32
+Completed 302 Found in 153ms (ActiveRecord: 8.6ms)
+
+
+Started GET "/players/32" for 127.0.0.1 at 2017-05-23 18:00:55 -0400
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  Rendering players/show.html.erb within layouts/application
+  Rendered players/show.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header_visitor.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 59ms (Views: 53.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2017-05-23 18:01:24 -0400
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.7ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered players/index.html.erb within layouts/application (9.9ms)
+  Rendered layouts/_header_visitor.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 62ms (Views: 59.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-23 18:01:25 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_header_visitor.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 55ms (Views: 52.7ms | ActiveRecord: 0.0ms)
+
+

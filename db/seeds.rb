@@ -7,7 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Player.delete_all
-Organizer.delete_all
 Team.delete_all
 Teamplayer.delete_all
 Tournament.delete_all
@@ -21,7 +20,7 @@ Player.create([{
   mail: 'nijulio@uc.cl',
   password: '123456',
   password_confirmation: '123456',
-  age: 22,
+  birthday: Time.now - 20.years,
   position: 'Defensa'
     }])
 
@@ -33,19 +32,8 @@ Player.create([{
     mail: Faker::Internet.unique.free_email,
     password: password,
     password_confirmation: password,
-    age: 20,
+    birthday: Time.now - 20.years,
     position: positions.sample
-    }])
-end
-
-5.times do
-  password = Faker::Internet.password(6,15)
-  Organizer.create!([{
-    first_name: Faker::Name.first_name,
-    last_name: Faker::Name.last_name,
-    mail: Faker::Internet.unique.free_email,
-    password: password,
-    age: 26
     }])
 end
 
@@ -66,7 +54,7 @@ end
 2.times do
   Tournament.create([{
     name:Faker::StarWars.planet,
-    organizer: Organizer.all.sample.first_name,
+    organizer: Player.all.sample.first_name,
     place: Faker::HarryPotter.location,
     number_team: 4,
     number_date: 3
