@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170515023540) do
+ActiveRecord::Schema.define(version: 20170523195314) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,17 +58,6 @@ ActiveRecord::Schema.define(version: 20170515023540) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "organizers", force: :cascade do |t|
-    t.string   "first_name",      null: false
-    t.string   "last_name",       null: false
-    t.string   "mail",            null: false
-    t.integer  "age",             null: false
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-    t.string   "password_digest"
-    t.index ["mail"], name: "index_organizers_on_mail", unique: true, using: :btree
-  end
-
   create_table "players", force: :cascade do |t|
     t.string   "first_name",      null: false
     t.string   "last_name",       null: false
@@ -78,6 +67,7 @@ ActiveRecord::Schema.define(version: 20170515023540) do
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.string   "password_digest"
+    t.boolean  "is_organizer"
     t.index ["mail"], name: "index_players_on_mail", unique: true, using: :btree
   end
 

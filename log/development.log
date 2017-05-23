@@ -25998,3 +25998,891 @@ app/views/tournaments/index.html.erb:28:in `_app_views_tournaments_index_html_er
   Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
   Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
   Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.0ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6096862881537638385);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to Users (20170523195314)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.1ms)[0m  [1m[35mDROP TABLE "organizers"[0m
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "players" ADD "is_organizer" boolean[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170523195314"]]
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(6096862881537638385)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6096862881537638385);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6096862881537638385)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for 127.0.0.1 at 2017-05-23 16:00:57 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (231.5ms)
+Completed 500 Internal Server Error in 234ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_organizer_path' for #<#<Class:0x007f3445bb80c0>:0x007f3445c0ac30>
+Did you mean?  new_player_path):
+    4:   <ul>
+    5:     <li><%= link_to 'Login', new_sessions_path %></li>
+    6:     <li><%= link_to 'Sign up as player', new_player_path %></li>
+    7:     <li><%= link_to 'Sign up as organizer', new_organizer_path%></li>
+    8:     <li><%= link_to 'Visitor'%></li>
+    9:   </ul>
+   10: </div>
+  
+app/views/static_pages/home.html.erb:7:in `_app_views_static_pages_home_html_erb___3583515979789754357_69931242472640'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.3ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.5ms)
+Started GET "/" for 127.0.0.1 at 2017-05-23 16:01:00 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (302.5ms)
+Completed 500 Internal Server Error in 305ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_organizer_path' for #<#<Class:0x007f3445bb80c0>:0x007f3440b4a4d0>
+Did you mean?  new_player_path):
+    4:   <ul>
+    5:     <li><%= link_to 'Login', new_sessions_path %></li>
+    6:     <li><%= link_to 'Sign up as player', new_player_path %></li>
+    7:     <li><%= link_to 'Sign up as organizer', new_organizer_path%></li>
+    8:     <li><%= link_to 'Visitor'%></li>
+    9:   </ul>
+   10: </div>
+  
+app/views/static_pages/home.html.erb:7:in `_app_views_static_pages_home_html_erb___3583515979789754357_69931200304980'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.5ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (27.8ms)
+Started GET "/" for 127.0.0.1 at 2017-05-23 16:01:02 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (280.5ms)
+Completed 500 Internal Server Error in 288ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_organizer_path' for #<#<Class:0x007f3445bb80c0>:0x007f3444f00f30>
+Did you mean?  new_player_path):
+    4:   <ul>
+    5:     <li><%= link_to 'Login', new_sessions_path %></li>
+    6:     <li><%= link_to 'Sign up as player', new_player_path %></li>
+    7:     <li><%= link_to 'Sign up as organizer', new_organizer_path%></li>
+    8:     <li><%= link_to 'Visitor'%></li>
+    9:   </ul>
+   10: </div>
+  
+app/views/static_pages/home.html.erb:7:in `_app_views_static_pages_home_html_erb___3583515979789754357_69931235809600'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.3ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.8ms)
+Started GET "/" for 127.0.0.1 at 2017-05-23 16:01:20 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.9ms)
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  Rendered layouts/_header_player.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 135ms (Views: 127.9ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/players/new" for 127.0.0.1 at 2017-05-23 16:01:22 -0400
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/_form.html.erb (16.0ms)
+  Rendered players/new.html.erb within layouts/application (17.5ms)
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  Rendered layouts/_header_player.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 73ms (Views: 71.1ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/sessions" for 127.0.0.1 at 2017-05-23 16:01:45 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6wdv/TDafzlRl5SMRTgbS2JUFJKgU+Sy3FvQB088AN/g1nTpbRQTFK2M/zFf1mc+J4ee0GdrCfdQnDc0pgjWpw=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-23 16:01:45 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_header_visitor.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 46ms (Views: 44.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/new" for 127.0.0.1 at 2017-05-23 16:01:47 -0400
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/_form.html.erb (7.4ms)
+  Rendered players/new.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_header_visitor.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 69ms (Views: 67.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/players" for 127.0.0.1 at 2017-05-23 16:02:42 -0400
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m0L4mmk7NvNGEe31cBr473LBi5lQzNu8uJfy04jzbHn078BjAfQfIGOz0oOZHXpqNEHvwnpCTDYAR3N1wUR+zA==", "player"=>{"first_name"=>"carlos", "last_name"=>"asdf", "mail"=>"q@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "age"=>"29", "position"=>"gk", "is_organizer"=>"1"}, "commit"=>"Create Player"}
+Unpermitted parameter: is_organizer
+Completed 500 Internal Server Error in 92ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant PlayersController::Organizer):
+  
+app/controllers/players_controller.rb:33:in `block in create'
+app/controllers/players_controller.rb:32:in `create'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.6ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.9ms)
+Started GET "/players" for 127.0.0.1 at 2017-05-23 16:06:31 -0400
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.8ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered players/index.html.erb within layouts/application (16.6ms)
+  Rendered layouts/_header_visitor.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 67ms (Views: 57.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-23 16:06:34 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_header_visitor.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 57ms (Views: 55.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/edit" for 127.0.0.1 at 2017-05-23 16:09:18 -0400
+  
+ArgumentError (You should not use the `match` method in your router without specifying an HTTP method.
+If you want to expose your action to both GET and POST, add `via: [:get, :post]` option.
+If you want to expose your action to GET, use `get` in the router:
+  Instead of: match "controller#action"
+  Do: get "controller#action"):
+  
+config/routes.rb:14:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.9ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.4ms)
+Started GET "/edit" for 127.0.0.1 at 2017-05-23 16:09:27 -0400
+Processing by StaticPagesController#home as HTML
+  Parameters: {"foo"=>"edit"}
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_header_visitor.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 41ms (Views: 39.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/lkadsflkasdfas" for 127.0.0.1 at 2017-05-23 16:09:33 -0400
+Processing by StaticPagesController#home as HTML
+  Parameters: {"foo"=>"lkadsflkasdfas"}
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_header_visitor.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 65ms (Views: 62.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-23 16:09:43 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header_visitor.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 51ms (Views: 49.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2017-05-23 16:09:55 -0400
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.5ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournaments/index.html.erb within layouts/application (13.3ms)
+  Rendered layouts/_header_visitor.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 81ms (Views: 63.3ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-23 16:10:02 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_header_visitor.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 65ms (Views: 64.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2017-05-23 16:10:06 -0400
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.7ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournaments/index.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_header_visitor.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 58ms (Views: 54.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tournaments/sddfasdf" for 127.0.0.1 at 2017-05-23 16:10:12 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"sddfasdf"}
+  [1m[36mTournament Load (1.0ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 6ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Tournament with 'id'=sddfasdf):
+  
+app/controllers/tournaments_controller.rb:67:in `set_tournament'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.6ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.2ms)
+Started GET "/tournamentsjhn" for 127.0.0.1 at 2017-05-23 16:10:32 -0400
+Processing by StaticPagesController#home as HTML
+  Parameters: {"foo"=>"tournamentsjhn"}
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_header_visitor.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 46ms (Views: 44.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tournamentsfoo" for 127.0.0.1 at 2017-05-23 16:10:41 -0400
+Processing by StaticPagesController#home as HTML
+  Parameters: {"foo"=>"tournamentsfoo"}
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_header_visitor.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 46ms (Views: 44.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-23 16:10:47 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_header_visitor.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 64ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2017-05-23 16:13:39 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_header_visitor.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 58ms (Views: 56.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-23 16:13:40 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_header_visitor.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 62ms (Views: 58.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/new" for 127.0.0.1 at 2017-05-23 16:13:43 -0400
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/_form.html.erb (4.9ms)
+  Rendered players/new.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_header_visitor.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 77ms (Views: 44.4ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-23 16:20:33 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_header_visitor.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 58ms (Views: 54.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-23 16:20:52 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_header_visitor.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 93ms (Views: 90.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-23 16:20:57 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header_visitor.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 75ms (Views: 73.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-23 16:20:59 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_header_visitor.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 63ms (Views: 59.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-23 16:21:38 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_header_visitor.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 60ms (Views: 59.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-23 16:21:48 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_header_visitor.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 67ms (Views: 65.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-23 16:21:58 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_header_visitor.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 60ms (Views: 58.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-23 16:22:00 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header_visitor.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 43ms (Views: 41.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2017-05-23 16:25:27 -0400
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.5ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournaments/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_header_visitor.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 49ms (Views: 47.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tournaments/3" for 127.0.0.1 at 2017-05-23 16:25:30 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTournament Load (0.6ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTournamentteam Load (2.4ms)[0m  [1m[34mSELECT "tournamentteams".* FROM "tournamentteams"[0m
+  Rendered tournaments/show.html.erb within layouts/application (13.0ms)
+  Rendered layouts/_header_visitor.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 67ms (Views: 53.9ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/tournamentteams/new" for 127.0.0.1 at 2017-05-23 16:25:31 -0400
+Processing by TournamentteamsController#new as HTML
+  Rendering tournamentteams/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[36mTournament Load (0.4ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournamentteams/_form.html.erb (47.7ms)
+  Rendered tournamentteams/new.html.erb within layouts/application (50.5ms)
+  Rendered layouts/_header_visitor.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 96ms (Views: 83.5ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/tournaments/3" for 127.0.0.1 at 2017-05-23 16:27:37 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTournament Load (0.4ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTournamentteam Load (0.5ms)[0m  [1m[34mSELECT "tournamentteams".* FROM "tournamentteams"[0m
+  Rendered tournaments/show.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_header_visitor.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 63ms (Views: 57.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tournamentteams/new" for 127.0.0.1 at 2017-05-23 16:27:44 -0400
+Processing by TournamentteamsController#new as HTML
+  Rendering tournamentteams/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[36mTournament Load (0.6ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournamentteams/_form.html.erb (7.4ms)
+  Rendered tournamentteams/new.html.erb within layouts/application (9.3ms)
+  Rendered layouts/_header_visitor.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 67ms (Views: 64.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/tournaments/3" for 127.0.0.1 at 2017-05-23 16:28:23 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTournament Load (0.5ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTournamentteam Load (0.5ms)[0m  [1m[34mSELECT "tournamentteams".* FROM "tournamentteams"[0m
+  Rendered tournaments/show.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_header_visitor.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 61ms (Views: 57.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/tournaments/3" for 127.0.0.1 at 2017-05-23 16:28:25 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTournament Load (0.7ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTournamentteam Load (0.5ms)[0m  [1m[34mSELECT "tournamentteams".* FROM "tournamentteams"[0m
+  Rendered tournaments/show.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_header_visitor.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 71ms (Views: 64.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/tournaments/3" for 127.0.0.1 at 2017-05-23 16:28:25 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTournament Load (0.3ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTournamentteam Load (0.6ms)[0m  [1m[34mSELECT "tournamentteams".* FROM "tournamentteams"[0m
+  Rendered tournaments/show.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_header_visitor.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 62ms (Views: 59.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/tournaments/3" for 127.0.0.1 at 2017-05-23 16:28:26 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTournament Load (0.4ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTournamentteam Load (0.4ms)[0m  [1m[34mSELECT "tournamentteams".* FROM "tournamentteams"[0m
+  Rendered tournaments/show.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_header_visitor.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 57ms (Views: 53.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/tournaments/3" for 127.0.0.1 at 2017-05-23 16:28:26 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTournament Load (0.4ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTournamentteam Load (0.7ms)[0m  [1m[34mSELECT "tournamentteams".* FROM "tournamentteams"[0m
+  Rendered tournaments/show.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_header_visitor.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 61ms (Views: 57.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/tournaments/3" for 127.0.0.1 at 2017-05-23 16:28:26 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTournament Load (0.7ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTournamentteam Load (0.4ms)[0m  [1m[34mSELECT "tournamentteams".* FROM "tournamentteams"[0m
+  Rendered tournaments/show.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_header_visitor.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 60ms (Views: 54.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tournaments/3" for 127.0.0.1 at 2017-05-23 16:28:26 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTournament Load (0.5ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTournamentteam Load (0.5ms)[0m  [1m[34mSELECT "tournamentteams".* FROM "tournamentteams"[0m
+  Rendered tournaments/show.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_header_visitor.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 59ms (Views: 55.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/tournaments/3" for 127.0.0.1 at 2017-05-23 16:28:26 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTournament Load (0.8ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTournamentteam Load (0.6ms)[0m  [1m[34mSELECT "tournamentteams".* FROM "tournamentteams"[0m
+  Rendered tournaments/show.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_header_visitor.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 89ms (Views: 83.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/tournaments/3" for 127.0.0.1 at 2017-05-23 16:28:27 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTournament Load (0.7ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTournamentteam Load (0.5ms)[0m  [1m[34mSELECT "tournamentteams".* FROM "tournamentteams"[0m
+  Rendered tournaments/show.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_header_visitor.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 73ms (Views: 68.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/tournaments/3" for 127.0.0.1 at 2017-05-23 16:28:27 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTournament Load (0.8ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTournamentteam Load (0.6ms)[0m  [1m[34mSELECT "tournamentteams".* FROM "tournamentteams"[0m
+  Rendered tournaments/show.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_header_visitor.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 73ms (Views: 67.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/tournaments/3" for 127.0.0.1 at 2017-05-23 16:28:27 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTournament Load (1.2ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTournamentteam Load (0.4ms)[0m  [1m[34mSELECT "tournamentteams".* FROM "tournamentteams"[0m
+  Rendered tournaments/show.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_header_visitor.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 56ms (Views: 52.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/tournaments/3" for 127.0.0.1 at 2017-05-23 16:28:27 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTournament Load (0.5ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTournamentteam Load (0.4ms)[0m  [1m[34mSELECT "tournamentteams".* FROM "tournamentteams"[0m
+  Rendered tournaments/show.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_header_visitor.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 62ms (Views: 58.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/tournaments/3" for 127.0.0.1 at 2017-05-23 16:28:27 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTournament Load (1.2ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTournamentteam Load (0.7ms)[0m  [1m[34mSELECT "tournamentteams".* FROM "tournamentteams"[0m
+  Rendered tournaments/show.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_header_visitor.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 91ms (Views: 84.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/tournaments/3" for 127.0.0.1 at 2017-05-23 16:28:28 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTournament Load (0.4ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTournamentteam Load (0.4ms)[0m  [1m[34mSELECT "tournamentteams".* FROM "tournamentteams"[0m
+  Rendered tournaments/show.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_header_visitor.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 57ms (Views: 53.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tournaments/3" for 127.0.0.1 at 2017-05-23 16:28:28 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTournament Load (0.5ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTournamentteam Load (0.4ms)[0m  [1m[34mSELECT "tournamentteams".* FROM "tournamentteams"[0m
+  Rendered tournaments/show.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_header_visitor.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 57ms (Views: 52.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/tournaments/3" for 127.0.0.1 at 2017-05-23 16:28:28 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTournament Load (0.4ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTournamentteam Load (0.3ms)[0m  [1m[34mSELECT "tournamentteams".* FROM "tournamentteams"[0m
+  Rendered tournaments/show.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_header_visitor.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 56ms (Views: 53.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tournaments/3" for 127.0.0.1 at 2017-05-23 16:28:28 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTournament Load (0.5ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTournamentteam Load (0.4ms)[0m  [1m[34mSELECT "tournamentteams".* FROM "tournamentteams"[0m
+  Rendered tournaments/show.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header_visitor.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 56ms (Views: 52.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/tournaments/3" for 127.0.0.1 at 2017-05-23 16:28:29 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTournament Load (0.5ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTournamentteam Load (0.4ms)[0m  [1m[34mSELECT "tournamentteams".* FROM "tournamentteams"[0m
+  Rendered tournaments/show.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_header_visitor.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 66ms (Views: 63.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/tournaments/3" for 127.0.0.1 at 2017-05-23 16:28:29 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTournament Load (0.4ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTournamentteam Load (2.4ms)[0m  [1m[34mSELECT "tournamentteams".* FROM "tournamentteams"[0m
+  Rendered tournaments/show.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_header_visitor.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 56ms (Views: 50.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/tournaments/3" for 127.0.0.1 at 2017-05-23 16:28:29 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTournament Load (0.7ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTournamentteam Load (0.4ms)[0m  [1m[34mSELECT "tournamentteams".* FROM "tournamentteams"[0m
+  Rendered tournaments/show.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_header_visitor.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 56ms (Views: 53.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/tournaments/3" for 127.0.0.1 at 2017-05-23 16:28:29 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTournament Load (0.5ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTournamentteam Load (0.5ms)[0m  [1m[34mSELECT "tournamentteams".* FROM "tournamentteams"[0m
+  Rendered tournaments/show.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_header_visitor.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 60ms (Views: 57.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/tournaments/3" for 127.0.0.1 at 2017-05-23 16:28:29 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTournament Load (0.5ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTournamentteam Load (0.4ms)[0m  [1m[34mSELECT "tournamentteams".* FROM "tournamentteams"[0m
+  Rendered tournaments/show.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_header_visitor.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 59ms (Views: 55.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/tournaments/3" for 127.0.0.1 at 2017-05-23 16:28:29 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTournament Load (0.4ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTournamentteam Load (0.4ms)[0m  [1m[34mSELECT "tournamentteams".* FROM "tournamentteams"[0m
+  Rendered tournaments/show.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_header_visitor.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 64ms (Views: 61.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tournaments/3" for 127.0.0.1 at 2017-05-23 16:28:30 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTournament Load (0.5ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTournamentteam Load (0.4ms)[0m  [1m[34mSELECT "tournamentteams".* FROM "tournamentteams"[0m
+  Rendered tournaments/show.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_header_visitor.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 54ms (Views: 51.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/tournaments/3" for 127.0.0.1 at 2017-05-23 16:28:30 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTournament Load (0.5ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTournamentteam Load (0.7ms)[0m  [1m[34mSELECT "tournamentteams".* FROM "tournamentteams"[0m
+  Rendered tournaments/show.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_header_visitor.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 65ms (Views: 62.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/tournaments/3" for 127.0.0.1 at 2017-05-23 16:28:30 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTournament Load (0.4ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTournamentteam Load (0.5ms)[0m  [1m[34mSELECT "tournamentteams".* FROM "tournamentteams"[0m
+  Rendered tournaments/show.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_header_visitor.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 60ms (Views: 56.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/tournaments/3" for 127.0.0.1 at 2017-05-23 16:28:30 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTournament Load (0.3ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTournamentteam Load (0.5ms)[0m  [1m[34mSELECT "tournamentteams".* FROM "tournamentteams"[0m
+  Rendered tournaments/show.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_header_visitor.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 59ms (Views: 56.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tournaments/3" for 127.0.0.1 at 2017-05-23 16:28:30 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTournament Load (3.7ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTournamentteam Load (0.4ms)[0m  [1m[34mSELECT "tournamentteams".* FROM "tournamentteams"[0m
+  Rendered tournaments/show.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_header_visitor.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 53ms (Views: 46.3ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/tournaments/3" for 127.0.0.1 at 2017-05-23 16:28:31 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTournament Load (0.7ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTournamentteam Load (0.5ms)[0m  [1m[34mSELECT "tournamentteams".* FROM "tournamentteams"[0m
+  Rendered tournaments/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header_visitor.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 65ms (Views: 60.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/tournaments/3" for 127.0.0.1 at 2017-05-23 16:28:31 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTournament Load (0.5ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTournamentteam Load (0.6ms)[0m  [1m[34mSELECT "tournamentteams".* FROM "tournamentteams"[0m
+  Rendered tournaments/show.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_header_visitor.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 67ms (Views: 62.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/tournaments/3" for 127.0.0.1 at 2017-05-23 16:28:31 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTournament Load (2.1ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTournamentteam Load (0.4ms)[0m  [1m[34mSELECT "tournamentteams".* FROM "tournamentteams"[0m
+  Rendered tournaments/show.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_header_visitor.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 63ms (Views: 55.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/tournaments/3" for 127.0.0.1 at 2017-05-23 16:28:31 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTournament Load (0.5ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTournamentteam Load (0.5ms)[0m  [1m[34mSELECT "tournamentteams".* FROM "tournamentteams"[0m
+  Rendered tournaments/show.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_header_visitor.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 74ms (Views: 70.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tournaments/3" for 127.0.0.1 at 2017-05-23 16:28:31 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTournament Load (0.4ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTournamentteam Load (0.6ms)[0m  [1m[34mSELECT "tournamentteams".* FROM "tournamentteams"[0m
+  Rendered tournaments/show.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_header_visitor.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 62ms (Views: 58.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tournaments/3" for 127.0.0.1 at 2017-05-23 16:28:31 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTournament Load (0.4ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTournamentteam Load (0.4ms)[0m  [1m[34mSELECT "tournamentteams".* FROM "tournamentteams"[0m
+  Rendered tournaments/show.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_header_visitor.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 57ms (Views: 54.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-23 16:28:34 -0400
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_header_visitor.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 77ms (Views: 72.5ms | ActiveRecord: 0.0ms)
+
+
