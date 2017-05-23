@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_player
   helper_method :current_organizer
+  helper_method :current_tournament
 
   protected
 
@@ -11,14 +12,6 @@ class ApplicationController < ActionController::Base
       return @current_player
     else
       @current_player = session.key?(:user_id) && Player.find(session[:user_id])
-    end
-  end
-
-  def current_organizer
-    if defined?(@current_organizer)
-      return @current_organizer
-    else
-      @current_organizer = session.key?(:user_id) && Organizer.find(session[:user_id])
     end
   end
 end

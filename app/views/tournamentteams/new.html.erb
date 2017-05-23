@@ -1,5 +1,5 @@
-<h1>New Tournamentteam</h1>
+<h1>Agregar equipo a <%= Tournament.find(params[:tournament]).name %></h1>
 
-<%= render 'form', tournamentteam: @tournamentteam %>
+<%= render 'form', tournamentteam: @tournamentteam   %>
 
 <%= link_to 'Back', tournamentteams_path %>
