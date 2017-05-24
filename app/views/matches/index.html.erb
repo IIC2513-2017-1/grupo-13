@@ -17,8 +17,8 @@
     <% Match.all.collect do |match| %>
       <tr>
         <td><%=match.date%></td>
-        <td><%=match.local%></td>
-        <td><%=match.visitor%></td>
+        <td><%=Team.find(match.local).name%></td>
+        <td><%=Team.find(match.visitor).name%></td>
         <td><%=match.tournament_name%></td>
         <td><%= link_to 'Show', match %></td>
         <td><%= link_to 'Edit', edit_match_path(match) %></td>

@@ -24,17 +24,12 @@ class EventsController < ApplicationController
   # POST /events
   # POST /events.json
   def create
-    card = Card.new(tipo:event_params[:tipo],player_id:event_params[:player_id],quantity:event_params[:cards])
-    card.save
-    Card.create([{
-      tipo:event_params[:tipo],
-      player_id:event_params[:player_id],
-      quantity:event_params[:cards]
-      }])
-    Goal.create([{
-      quantity:event_params[:goals],
-      player_id:event_params[:player_id]
-      }])
+    @event = Event.new(event_params)
+    respond_to do |format|
+    if @event.save
+    format.html { redirect_to @event, notice: 'Event was successfully updated.' }
+  end
+  end
   end
 
   # PATCH/PUT /events/1
@@ -69,6 +64,6 @@ class EventsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:player_id,:goals,:cards,:tipo)
+      params.require(:event).permit(:player_id,:goals,:yellow_cards,:red_cards,:match_id)
     end
 end
