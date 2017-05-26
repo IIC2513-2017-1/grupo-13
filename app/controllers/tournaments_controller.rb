@@ -24,7 +24,7 @@ class TournamentsController < ApplicationController
   # POST /tournaments
   # POST /tournaments.json
   def create
-    @tournament = Tournament.new(tournament_params)
+    @tournament = Tournament.new(tournament_params.merge(number_date:(tournament_params[:number_team].to_i-1)))
 
     respond_to do |format|
       if @tournament.save
@@ -69,6 +69,6 @@ class TournamentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tournament_params
-      params.require(:tournament).permit(:name, :bases, :place, :organizer)
+      params.require(:tournament).permit(:name, :bases, :place, :organizer,:number_team)
     end
 end

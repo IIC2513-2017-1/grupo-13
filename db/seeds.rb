@@ -20,8 +20,9 @@ Player.create([{
   mail: 'nijulio@uc.cl',
   password: '123456',
   password_confirmation: '123456',
-  birthday: Time.now - 20.years,
-  position: 'Defensa'
+  birthday: Time.now.to_date - 22.years,
+  position: 'Defensa',
+  is_organizer: true
     }])
 
 30.times do
@@ -33,7 +34,9 @@ Player.create([{
     password: password,
     password_confirmation: password,
     birthday: Time.now.to_date - 25.years,
-    position: positions.sample
+    position: positions.sample,
+    is_organizer: false
+
     }])
 end
 

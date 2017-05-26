@@ -21,12 +21,6 @@
     <%= f.text_field :logo %>
   </div>
 
-  <div class="field">
-    <%=f.label :capitan_id %>
-    <%=f.select :capitan, Player.all.collect{ |organizer| [ organizer.first_name + organizer.last_name ,organizer.id]},
-                                                    {include_blank: true}, {required: true}%>
-  </div>
-
   <div class="actions">
     <%= f.submit %>
   </div>

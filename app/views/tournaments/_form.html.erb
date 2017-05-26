@@ -25,10 +25,12 @@
       <%= f.label :place %>
       <%= f.text_field :place, required: true %>
     </div>
+      <%=f.hidden_field :organizer, value:current_player%>
     <div class="field">
-      <%=f.label :organizer_id %>
-      <%=f.select :organizer, Organizer.all.collect{ |organizer| [ organizer.first_name + organizer.last_name ,organizer]},
-                                                      {include_blank: true}%>
+
+      <%= f.label 'Numero de equipos'%>
+      <%=f.text_field :number_team,required: true%>
+
     </div>
 
   <div class="actions">

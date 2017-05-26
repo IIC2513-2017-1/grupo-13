@@ -26,7 +26,7 @@ class TeamsController < ApplicationController
   # POST /teams
   # POST /teams.json
   def create
-    @team = Team.new(team_params)
+    @team = Team.new(team_params.merge(capitan:current_player.id))
 
     respond_to do |format|
       if @team.save
@@ -71,7 +71,7 @@ class TeamsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def team_params
-      params.require(:team).permit(:name, :capitan, :logo)
+      params.require(:team).permit(:name, :logo)
     end
     def is_capitan
       if Team.find(params[:id]).capitan != current_player.id.to_s

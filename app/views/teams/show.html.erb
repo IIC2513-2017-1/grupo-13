@@ -13,11 +13,15 @@
 <% Teamplayer.all.collect do |player| %>
   <% if player.team_id ==  @team.id.to_s %>
     <tr>
+        <%if Player.exists?(player.player_id)%>
         <td><%= Player.find(player.player_id).first_name %></td>
         <td><%= Player.find(player.player_id).position %></td>
+
         <%if current_player.id.to_s == @team.capitan%>
         <td><%= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <%end%>
+        <%end%>
+
     </tr>
   <%end%>
 <%end%>
