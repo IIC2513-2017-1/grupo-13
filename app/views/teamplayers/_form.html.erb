@@ -15,8 +15,7 @@
     <%= f.select :player_id, Player.all.collect {|x| [x.first_name, x.id]}, {:include_blank => "Select One"} %> </br>
   </div>
   <div class="field">
-    <%= f.label :team_id%>
-    <%= f.select :team_id, Team.all.collect {|x| [x.name, x.id]}, {:include_blank => "Select One"} %> </br>
+    <%= f.hidden_field :team_id, value:params[:team]%>
   </div>
   <div class="actions">
     <%= f.submit %>

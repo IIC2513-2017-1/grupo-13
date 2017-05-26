@@ -32,7 +32,7 @@ Player.create([{
     mail: Faker::Internet.unique.free_email,
     password: password,
     password_confirmation: password,
-    birthday: Time.now - 20.years,
+    birthday: Time.now.to_date - 25.years,
     position: positions.sample
     }])
 end
@@ -40,7 +40,7 @@ end
 5.times do
   Team.create([{
     name: Faker::GameOfThrones.city,
-    capitan: Player.all.sample.first_name,
+    capitan: Player.all.sample.id,
     logo: "Imagen"
     }])
 end

@@ -1,33 +1,43 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Matches</h1>
+<h1><%= Tournament.find(params[:tournament]).name %></h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Fecha<th>
-      <th>Local<th>
-      <th>Visitante<th>
-      <th>Nombre Campeonato<th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+        <%fecha = 0%>
+        <%i = 0%>
 
-  <tbody>
-    <% Match.all.collect do |match| %>
-      <tr>
-        <td><%=match.date%></td>
-        <td><%=Team.find(match.local).name%></td>
-        <td><%=Team.find(match.visitor).name%></td>
-        <td><%=match.tournament_name%></td>
-        <td><%= link_to 'Show', match %></td>
-        <td><%= link_to 'Edit', edit_match_path(match) %></td>
-        <td><%= link_to 'Destroy', match, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+          <%Match.where('tournament_id = ?',params[:tournament]).order(:date).collect do |match|%>
+              <%puts match.date%>
+              <%puts fecha%>
+              <% if fecha != match.date %>
+                  <%i+=1%>
+                  <%puts i%>
+
+                  <%fecha = match.date%>
+                  <h2>Fecha <%=match.date%></h2>
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Local</th>
+                          <th>Visitante</th>
+                          <th colspan="3"></th>
+                        </tr>
+                      </thead>
+                      <body>
+                <%end%>
+                <tr>
+                <td><%=Team.find(match.local).name%></td>
+                <td><%=Team.find(match.visitor).name%></td>
+                <td><%= link_to 'Show', match %></td>
+                <td><%= link_to 'Edit', edit_match_path(match) %></td>
+                <td><%= link_to 'Destroy', match, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+
+
+
+
+
     <% end %>
-  </tbody>
-</table>
 
 <br>
 
-<%= link_to 'New Match', new_match_path(@match) %>
+<%= link_to 'New Match', new_match_path(tournament: params[:tournament]) %>

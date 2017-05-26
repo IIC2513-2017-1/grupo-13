@@ -2,6 +2,7 @@ class TeamsController < ApplicationController
   before_action :set_team, only: [:show, :edit, :update, :destroy]
   before_action :logged_in?, only: %i[:show]
   before_action :is_current_player, only: %i[:show]
+  before_action :is_capitan, only: [:edit,:destroy]
   # GET /teams
   # GET /teams.json
   def index
@@ -71,5 +72,10 @@ class TeamsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def team_params
       params.require(:team).permit(:name, :capitan, :logo)
+    end
+    def is_capitan
+      if Team.find(params[:id]).capitan != current_player.id.to_s
+        redirect_to team_path(params[:id]), notice: 'No tienes permiso para editar este equipo.'
+      end
     end
 end

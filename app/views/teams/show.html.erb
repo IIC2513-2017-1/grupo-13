@@ -15,7 +15,9 @@
     <tr>
         <td><%= Player.find(player.player_id).first_name %></td>
         <td><%= Player.find(player.player_id).position %></td>
+        <%if current_player.id.to_s == @team.capitan%>
         <td><%= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <%end%>
     </tr>
   <%end%>
 <%end%>
@@ -24,5 +26,7 @@
 
 </tbody>
 </table>
-<%= link_to 'Agregar jugador',new_teamplayer_path(@team) %> |
+<%if current_player.id.to_s == @team.capitan%>
+<%= link_to 'Agregar jugador',new_teamplayer_path(team:@team) %>
+<%end%>
 <%= link_to 'Volver', teams_path %>

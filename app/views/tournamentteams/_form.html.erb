@@ -14,13 +14,12 @@
     <%= f.label :team_id%>
     <%= f.select :team_id, Team.all.collect {|x| [x.name, x.id]} %> </br>
   </div>
-  ####No colocar el torneo ####
+
   <div class="field">
-    <%= f.label :tournament_id%>
-    <%= f.select :tournament_id, Tournament.all.collect {|x| [x.name, x.id]} %> </br>
+    <%= f.hidden_field :tournament_id, value: params[:tournament]%>
   </div>
 
-  ####No colocar el torneo ####
+
   <div class="actions">
     <%= f.submit 'Agregar Equipo'%>
 

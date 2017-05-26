@@ -28,7 +28,7 @@ class TournamentteamsController < ApplicationController
     puts '-------------'
     puts @current_tournament
     puts '-------------'
-    @tournamentteam = Tournamentteam.new(tournamentteam_params.merge(:tournament_id => @current_tournament))
+    @tournamentteam = Tournamentteam.new(tournamentteam_params)
 
 
     respond_to do |format|

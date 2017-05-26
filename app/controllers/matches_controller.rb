@@ -27,8 +27,14 @@ class MatchesController < ApplicationController
   # POST /matches.json
   def create
     @match = Match.new(match_params)
-    @match.save
-    redirect_to matches_path
+    if @match.save
+      puts 'aaaaaaaaaaa'
+      puts  match_params[:tournament_id]
+      redirect_to matches_path(tournament: match_params[:tournament_id])
+    else
+      redirect_to root_path
+    end
+
   end
 
   # PATCH/PUT /matches/1
@@ -63,6 +69,6 @@ class MatchesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def match_params
-      params.require(:match).permit(:tournament_name,:local,:visitor,:date)
+      params.require(:match).permit(:tournament_id,:local,:visitor,:date)
     end
 end

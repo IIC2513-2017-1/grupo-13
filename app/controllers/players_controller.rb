@@ -2,6 +2,7 @@ class PlayersController < ApplicationController
   before_action :set_player, only: [:show, :edit, :update, :destroy]
   before_action :logged_in?, only: %i[edit update destroy]
   before_action :is_current_player, only: %i[edit update destroy]
+  
 
 
   # GET /players
@@ -80,4 +81,6 @@ class PlayersController < ApplicationController
     def is_current_player?
       redirect_to(root_path, notice: 'Unauthorized access!') unless @user == current_user
     end
+
+
 end

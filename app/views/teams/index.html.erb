@@ -16,10 +16,12 @@
     <% @teams.each do |team| %>
       <tr>
         <td><%=team.name%></td>
-        <td><%=team.capitan%></td>
+        <td><%=Player.find(team.capitan).first_name%></td>
         <td><%= link_to 'Show', team %></td>
+        <%if current_player.id.to_s == team.capitan%>
         <td><%= link_to 'Edit', edit_team_path(team) %></td>
         <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <%end%>
       </tr>
     <% end %>
   </tbody>
