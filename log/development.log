@@ -7610,3 +7610,997 @@ Processing by PlayersController#show as HTML
 Completed 200 OK in 199ms (Views: 170.6ms | ActiveRecord: 3.7ms)
 
 
+Started GET "/players/154" for 127.0.0.1 at 2017-05-26 18:25:54 -0400
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"154"}
+  [1m[36mPlayer Load (1.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  Rendering players/show.html.erb within layouts/application
+  Rendered players/show.html.erb within layouts/application (0.9ms)
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  Rendered layouts/_header_player.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (2.0ms)
+Completed 200 OK in 131ms (Views: 126.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2017-05-26 18:28:55 -0400
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (117.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 126], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 138], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 137], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 152], ["LIMIT", 1]]
+  [1m[36mPlayer Load (3.6ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  Rendered teams/index.html.erb within layouts/application (285.8ms)
+  Rendered layouts/_header_player.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 411ms (Views: 80.7ms | ActiveRecord: 265.7ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2017-05-26 18:28:57 -0400
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.4ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  Rendered tournaments/index.html.erb within layouts/application (9.2ms)
+  Rendered layouts/_header_player.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 279ms (Views: 216.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2017-05-26 18:33:29 -0400
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (112.7ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  [1m[36mPlayer Load (73.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  Rendered tournaments/index.html.erb within layouts/application (276.8ms)
+  Rendered layouts/_header_player.html.erb (31.0ms)
+  Rendered layouts/_footer.html.erb (26.7ms)
+Completed 200 OK in 983ms (Views: 720.7ms | ActiveRecord: 185.9ms)
+
+
+Started GET "/tournaments/new" for 127.0.0.1 at 2017-05-26 18:35:09 -0400
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mPlayer Load (25.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  Rendered tournaments/_form.html.erb (270.8ms)
+  Rendered tournaments/new.html.erb within layouts/application (301.2ms)
+  Rendered layouts/_header_player.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (1.6ms)
+Completed 200 OK in 580ms (Views: 525.4ms | ActiveRecord: 25.2ms)
+
+
+Started POST "/tournaments" for 127.0.0.1 at 2017-05-26 18:35:16 -0400
+Processing by TournamentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ibvMScgcUZdRYDogUyZjUmKoLvevLXHPuJjmnQOu/SzPitVcQdz6srvjYh4eJXGHAWB7ZqJA0k4JV/lz/nfoUQ==", "tournament"=>{"name"=>"cdcs", "bases"=>"cdsc", "place"=>"csd", "organizer"=>"154", "number_team"=>"10"}, "commit"=>"Create Tournament"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (413.4ms)[0m  [1m[32mINSERT INTO "tournaments" ("name", "organizer", "place", "bases", "created_at", "updated_at", "number_date", "number_team") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "cdcs"], ["organizer", "154"], ["place", "csd"], ["bases", "cdsc"], ["created_at", 2017-05-26 22:35:17 UTC], ["updated_at", 2017-05-26 22:35:17 UTC], ["number_date", 9], ["number_team", 10]]
+  [1m[35m (662.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tournaments/14
+Completed 302 Found in 1587ms (ActiveRecord: 1075.7ms)
+
+
+Started GET "/tournaments/14" for 127.0.0.1 at 2017-05-26 18:35:18 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mTournament Load (125.8ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTournamentteam Load (0.7ms)[0m  [1m[34mSELECT "tournamentteams".* FROM "tournamentteams"[0m
+  Rendered tournaments/show.html.erb within layouts/application (254.6ms)
+  [1m[36mPlayer Load (3.4ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  Rendered layouts/_header_player.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 1149ms (Views: 494.9ms | ActiveRecord: 129.9ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2017-05-26 18:35:25 -0400
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (2.7ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  [1m[36mPlayer Load (0.8ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  Rendered tournaments/index.html.erb within layouts/application (26.0ms)
+  Rendered layouts/_header_player.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 1705ms (Views: 1700.6ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/tournaments/9" for 127.0.0.1 at 2017-05-26 18:36:00 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mTournament Load (568.1ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTournamentteam Load (462.7ms)[0m  [1m[34mSELECT "tournamentteams".* FROM "tournamentteams"[0m
+  [1m[36mTeam Exists (247.4ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mTeam Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mTeam Load (365.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mTeam Exists (4.0ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mTeam Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mTeam Exists (1.8ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Exists (3.9ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  Rendered tournaments/show.html.erb within layouts/application (1103.5ms)
+  [1m[36mPlayer Load (1.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  Rendered layouts/_header_player.html.erb (5.3ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 2073ms (Views: 414.5ms | ActiveRecord: 1656.2ms)
+
+
+Started GET "/tournaments/9" for 127.0.0.1 at 2017-05-26 18:37:05 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mTournament Load (34.0ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTournamentteam Load (4.8ms)[0m  [1m[34mSELECT "tournamentteams".* FROM "tournamentteams"[0m
+  [1m[36mTeam Exists (20.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mTeam Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendered tournaments/show.html.erb within layouts/application (73.1ms)
+Completed 500 Internal Server Error in 113ms (ActiveRecord: 59.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `call' for #<Class:0x007fe7909ecd50>
+Did you mean?  all):
+    18:     <tr>
+    19:         <%if Team.exists?(team.team_id) && Team.exists?(team.team_id)%>
+    20:         <td><%= Team.find(team.team_id).name %></td>
+    21:         <td><%= Player.(Team.find(team.team_id).capitan).name%></td>
+    22:         <td><%= link_to 'Show' , team, method: :show%></td>
+    23:         <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    24: 
+  
+app/views/tournaments/show.html.erb:21:in `block in _app_views_tournaments_show_html_erb___2498871388597208382_70316224059680'
+app/views/tournaments/show.html.erb:16:in `_app_views_tournaments_show_html_erb___2498871388597208382_70316224059680'
+  Rendering /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (71.0ms)
+  Rendering /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (39.6ms)
+  Rendering /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (21.2ms)
+  Rendered /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (340.4ms)
+Started GET "/tournaments/9" for 127.0.0.1 at 2017-05-26 18:37:27 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mTournament Load (30.0ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTournamentteam Load (14.5ms)[0m  [1m[34mSELECT "tournamentteams".* FROM "tournamentteams"[0m
+  [1m[36mTeam Exists (14.4ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mTeam Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mPlayer Load (13.8ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 126], ["LIMIT", 1]]
+  Rendered tournaments/show.html.erb within layouts/application (68.8ms)
+Completed 500 Internal Server Error in 102ms (ActiveRecord: 73.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<Player:0x007fe79dab0860>):
+    18:     <tr>
+    19:         <%if Team.exists?(team.team_id) && Team.exists?(team.team_id)%>
+    20:         <td><%= Team.find(team.team_id).name %></td>
+    21:         <td><%= Player.find(Team.find(team.team_id).capitan).name%></td>
+    22:         <td><%= link_to 'Show' , team, method: :show%></td>
+    23:         <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    24: 
+  
+app/views/tournaments/show.html.erb:21:in `block in _app_views_tournaments_show_html_erb___2498871388597208382_70316379758280'
+app/views/tournaments/show.html.erb:16:in `_app_views_tournaments_show_html_erb___2498871388597208382_70316379758280'
+  Rendering /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (16.2ms)
+  Rendering /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.8ms)
+  Rendering /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (85.0ms)
+Started GET "/tournaments/9" for 127.0.0.1 at 2017-05-26 18:37:39 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mTournament Load (3.3ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTournamentteam Load (5.4ms)[0m  [1m[34mSELECT "tournamentteams".* FROM "tournamentteams"[0m
+  [1m[36mTeam Exists (39.6ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mTeam Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mPlayer Load (24.9ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 126], ["LIMIT", 1]]
+  Rendered tournaments/show.html.erb within layouts/application (100.2ms)
+Completed 500 Internal Server Error in 109ms (ActiveRecord: 73.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `username' for #<Player:0x007fe790ab4828>):
+    18:     <tr>
+    19:         <%if Team.exists?(team.team_id) && Team.exists?(team.team_id)%>
+    20:         <td><%= Team.find(team.team_id).name %></td>
+    21:         <td><%= Player.find(Team.find(team.team_id).capitan).username%></td>
+    22:         <td><%= link_to 'Show' , team, method: :show%></td>
+    23:         <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    24: 
+  
+app/views/tournaments/show.html.erb:21:in `block in _app_views_tournaments_show_html_erb___2498871388597208382_70316270820660'
+app/views/tournaments/show.html.erb:16:in `_app_views_tournaments_show_html_erb___2498871388597208382_70316270820660'
+  Rendering /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (14.3ms)
+  Rendering /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (72.7ms)
+Started GET "/tournaments/9" for 127.0.0.1 at 2017-05-26 18:38:09 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mTournament Load (1184.6ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTournamentteam Load (6.6ms)[0m  [1m[34mSELECT "tournamentteams".* FROM "tournamentteams"[0m
+  [1m[36mTeam Exists (36.6ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mTeam Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.9ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mPlayer Load (4.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 126], ["LIMIT", 1]]
+  [1m[36mTeam Exists (2.6ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mTeam Exists (1.9ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mTeam Load (4.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.9ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 138], ["LIMIT", 1]]
+  [1m[36mTeam Exists (8.9ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Exists (3.6ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  Rendered tournaments/show.html.erb within layouts/application (103.2ms)
+  [1m[36mPlayer Load (2.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  Rendered layouts/_header_player.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 1427ms (Views: 166.4ms | ActiveRecord: 1258.5ms)
+
+
+Started POST "/tournamentteams/38" for 127.0.0.1 at 2017-05-26 18:38:37 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/tournamentteams/38"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered collection of /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [56 times] (3078.0ms)
+  Rendered /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendering /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.8ms)
+  Rendered /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (3515.1ms)
+Started GET "/teams" for 127.0.0.1 at 2017-05-26 18:39:29 -0400
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (1.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 126], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 138], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 137], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 152], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  Rendered teams/index.html.erb within layouts/application (27.0ms)
+  Rendered layouts/_header_player.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 314ms (Views: 176.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/teams/21" for 127.0.0.1 at 2017-05-26 18:39:31 -0400
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mTeamplayer Load (127.1ms)[0m  [1m[34mSELECT "teamplayers".* FROM "teamplayers"[0m
+  [1m[36mPlayer Exists (4.3ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 135], ["LIMIT", 1]]
+  [1m[36mPlayer Load (2.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 135], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 135], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  Rendered teams/show.html.erb within layouts/application (305.5ms)
+  Rendered layouts/_header_player.html.erb (4.4ms)
+  Rendered layouts/_footer.html.erb (1.9ms)
+Completed 200 OK in 508ms (Views: 298.1ms | ActiveRecord: 134.5ms)
+
+
+Started GET "/teams/24" for 127.0.0.1 at 2017-05-26 18:39:59 -0400
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mTeamplayer Load (28.9ms)[0m  [1m[34mSELECT "teamplayers".* FROM "teamplayers"[0m
+  [1m[36mPlayer Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 126], ["LIMIT", 1]]
+  [1m[36mPlayer Load (2.8ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 126], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 126], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  [1m[36mPlayer Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 129], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 129], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 129], ["LIMIT", 1]]
+  [1m[36mPlayer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 132], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 132], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 132], ["LIMIT", 1]]
+  [1m[36mPlayer Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 139], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 139], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 139], ["LIMIT", 1]]
+  [1m[36mPlayer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 140], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 140], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 140], ["LIMIT", 1]]
+  [1m[36mPlayer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 146], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 146], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 146], ["LIMIT", 1]]
+  [1m[36mPlayer Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 148], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 148], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 148], ["LIMIT", 1]]
+  Rendered teams/show.html.erb within layouts/application (111.8ms)
+  Rendered layouts/_header_player.html.erb (326.8ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 562ms (Views: 522.0ms | ActiveRecord: 38.4ms)
+
+
+Started GET "/teams/24" for 127.0.0.1 at 2017-05-26 18:40:11 -0400
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mTeam Load (1.6ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mTeamplayer Load (0.6ms)[0m  [1m[34mSELECT "teamplayers".* FROM "teamplayers"[0m
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 126], ["LIMIT", 1]]
+  [1m[36mPlayer Load (24.7ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 126], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 126], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  [1m[36mPlayer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 129], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 129], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 129], ["LIMIT", 1]]
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 132], ["LIMIT", 1]]
+  [1m[36mPlayer Load (1.6ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 132], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 132], ["LIMIT", 1]]
+  [1m[36mPlayer Exists (2.5ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 139], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 139], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 139], ["LIMIT", 1]]
+  [1m[36mPlayer Exists (2.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 140], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 140], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 140], ["LIMIT", 1]]
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 146], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 146], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 146], ["LIMIT", 1]]
+  [1m[36mPlayer Exists (5.2ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 148], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 148], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 148], ["LIMIT", 1]]
+  Rendered teams/show.html.erb within layouts/application (69.2ms)
+  Rendered layouts/_header_player.html.erb (39.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 338ms (Views: 293.7ms | ActiveRecord: 42.9ms)
+
+
+Started GET "/teams/26" for 127.0.0.1 at 2017-05-26 18:40:15 -0400
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mTeam Load (1.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mTeamplayer Load (49.7ms)[0m  [1m[34mSELECT "teamplayers".* FROM "teamplayers"[0m
+  [1m[36mPlayer Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 140], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 140], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 140], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 138], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 138], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 138], ["LIMIT", 1]]
+  Rendered teams/show.html.erb within layouts/application (62.1ms)
+  Rendered layouts/_header_player.html.erb (6.6ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 197ms (Views: 141.7ms | ActiveRecord: 52.4ms)
+
+
+Started DELETE "/teamplayers/156" for 127.0.0.1 at 2017-05-26 18:40:20 -0400
+Processing by TeamplayersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"xxF8pplepcHdJ0e665cSMikpf2zsvOmQZoYNVYL1T9DCCI6eEb78XGA4/W3+lwRQcYvitDCbXdISl63t72+Alg==", "id"=>"156"}
+  [1m[36mTeamplayer Load (0.3ms)[0m  [1m[34mSELECT  "teamplayers".* FROM "teamplayers" WHERE "teamplayers"."id" = $1 LIMIT $2[0m  [["id", 156], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (127.4ms)[0m  [1m[31mDELETE FROM "teamplayers" WHERE "teamplayers"."id" = $1[0m  [["id", 156]]
+  [1m[35m (16.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/teamplayers
+Completed 302 Found in 164ms (ActiveRecord: 144.4ms)
+
+
+Started GET "/teamplayers" for 127.0.0.1 at 2017-05-26 18:40:20 -0400
+Processing by TeamplayersController#index as HTML
+  Rendering teamplayers/index.html.erb within layouts/application
+  [1m[36mTeamplayer Load (0.6ms)[0m  [1m[34mSELECT "teamplayers".* FROM "teamplayers"[0m
+  Rendered teamplayers/index.html.erb within layouts/application (23.0ms)
+  [1m[36mPlayer Load (59.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  Rendered layouts/_header_player.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 229ms (Views: 146.2ms | ActiveRecord: 59.8ms)
+
+
+Started DELETE "/teamplayers/156" for 127.0.0.1 at 2017-05-26 18:40:27 -0400
+Processing by TeamplayersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"xxF8pplepcHdJ0e665cSMikpf2zsvOmQZoYNVYL1T9DCCI6eEb78XGA4/W3+lwRQcYvitDCbXdISl63t72+Alg==", "id"=>"156"}
+  [1m[36mTeamplayer Load (0.4ms)[0m  [1m[34mSELECT  "teamplayers".* FROM "teamplayers" WHERE "teamplayers"."id" = $1 LIMIT $2[0m  [["id", 156], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Teamplayer with 'id'=156):
+  
+app/controllers/teamplayers_controller.rb:67:in `set_teamplayer'
+  Rendering /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (13.5ms)
+  Rendering /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.3ms)
+  Rendering /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.7ms)
+  Rendered /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (68.7ms)
+Started GET "/teams" for 127.0.0.1 at 2017-05-26 18:40:34 -0400
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (3.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[36mPlayer Load (4.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 126], ["LIMIT", 1]]
+  [1m[36mPlayer Load (1.4ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  [1m[36mPlayer Load (1.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 138], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 137], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.8ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 152], ["LIMIT", 1]]
+  [1m[36mPlayer Load (1.9ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  Rendered teams/index.html.erb within layouts/application (35.0ms)
+  Rendered layouts/_header_player.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (178.0ms)
+Completed 200 OK in 372ms (Views: 356.4ms | ActiveRecord: 14.1ms)
+
+
+Started GET "/teams/26" for 127.0.0.1 at 2017-05-26 18:40:37 -0400
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mTeam Load (1.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mTeamplayer Load (2.2ms)[0m  [1m[34mSELECT "teamplayers".* FROM "teamplayers"[0m
+  [1m[36mPlayer Exists (6.5ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 138], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 138], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 138], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  Rendered teams/show.html.erb within layouts/application (26.4ms)
+  Rendered layouts/_header_player.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 159ms (Views: 142.9ms | ActiveRecord: 10.9ms)
+
+
+Started DELETE "/teamplayers/157" for 127.0.0.1 at 2017-05-26 18:41:59 -0400
+Processing by TeamplayersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Ds8/Jwq8Th+QBERqCWmUx4dWIlDJbTz1JBcD/XNMQb4L1s0fglwXgi0b/r0caYKl3/S/iBVKiLdQBqNFHtaO+A==", "id"=>"157"}
+  [1m[36mTeamplayer Load (0.4ms)[0m  [1m[34mSELECT  "teamplayers".* FROM "teamplayers" WHERE "teamplayers"."id" = $1 LIMIT $2[0m  [["id", 157], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (41.8ms)[0m  [1m[31mDELETE FROM "teamplayers" WHERE "teamplayers"."id" = $1[0m  [["id", 157]]
+  [1m[35m (27.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 400 Bad Request in 667ms (ActiveRecord: 636.3ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: teamplayer):
+  
+app/controllers/teamplayers_controller.rb:72:in `teamplayer_params'
+app/controllers/teamplayers_controller.rb:59:in `block (2 levels) in destroy'
+app/controllers/teamplayers_controller.rb:58:in `destroy'
+  Rendering /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (29.0ms)
+  Rendering /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.7ms)
+  Rendering /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (78.5ms)
+Started GET "/teams" for 127.0.0.1 at 2017-05-26 18:43:12 -0400
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (4.0ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[36mPlayer Load (3.6ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 126], ["LIMIT", 1]]
+  [1m[36mPlayer Load (1.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  [1m[36mPlayer Load (2.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 138], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 137], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 152], ["LIMIT", 1]]
+  [1m[36mPlayer Load (5.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  Rendered teams/index.html.erb within layouts/application (622.7ms)
+  Rendered layouts/_header_player.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 833ms (Views: 244.2ms | ActiveRecord: 521.5ms)
+
+
+Started GET "/teams/26" for 127.0.0.1 at 2017-05-26 18:43:15 -0400
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mTeam Load (88.7ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mTeamplayer Load (2.3ms)[0m  [1m[34mSELECT "teamplayers".* FROM "teamplayers"[0m
+  [1m[36mPlayer Load (2.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  Rendered teams/show.html.erb within layouts/application (10.7ms)
+  Rendered layouts/_header_player.html.erb (5.8ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 227ms (Views: 131.6ms | ActiveRecord: 93.1ms)
+
+
+Started GET "/teamplayers/new?team=26" for 127.0.0.1 at 2017-05-26 18:43:17 -0400
+Processing by TeamplayersController#new as HTML
+  Parameters: {"team"=>"26"}
+  Rendering teamplayers/new.html.erb within layouts/application
+  [1m[36mPlayer Load (435.1ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered teamplayers/_form.html.erb (439.8ms)
+  Rendered teamplayers/new.html.erb within layouts/application (441.8ms)
+  [1m[36mPlayer Load (2.4ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  Rendered layouts/_header_player.html.erb (5.7ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 1982ms (Views: 149.6ms | ActiveRecord: 437.5ms)
+
+
+Started POST "/teamplayers" for 127.0.0.1 at 2017-05-26 18:43:44 -0400
+Processing by TeamplayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"esFHfCpvnPHKSWGPGNVZES3lrnmY1zUOg0C31v3xpwHItzT4XIsLlWJ8tjS56tBTye+sIKFWrDlRgtI6ARmxpA==", "teamplayer"=>{"player_id"=>"124", "team_id"=>"26"}, "commit"=>"Agregar"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (132.0ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "124"], ["team_id", "26"], ["created_at", 2017-05-26 22:43:44 UTC], ["updated_at", 2017-05-26 22:43:44 UTC]]
+  [1m[35m (101.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/teams/26
+Completed 302 Found in 245ms (ActiveRecord: 234.0ms)
+
+
+Started GET "/teams/26" for 127.0.0.1 at 2017-05-26 18:43:44 -0400
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mTeamplayer Load (0.5ms)[0m  [1m[34mSELECT "teamplayers".* FROM "teamplayers"[0m
+  [1m[36mPlayer Exists (7.1ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  Rendered teams/show.html.erb within layouts/application (20.7ms)
+  Rendered layouts/_header_player.html.erb (4.3ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 170ms (Views: 157.6ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/teamplayers/new?team=26" for 127.0.0.1 at 2017-05-26 18:43:47 -0400
+Processing by TeamplayersController#new as HTML
+  Parameters: {"team"=>"26"}
+  Rendering teamplayers/new.html.erb within layouts/application
+  [1m[36mPlayer Load (237.4ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered teamplayers/_form.html.erb (245.2ms)
+  Rendered teamplayers/new.html.erb within layouts/application (246.3ms)
+  [1m[36mPlayer Load (1.7ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  Rendered layouts/_header_player.html.erb (101.2ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 482ms (Views: 238.6ms | ActiveRecord: 239.1ms)
+
+
+Started POST "/teamplayers" for 127.0.0.1 at 2017-05-26 18:43:52 -0400
+Processing by TeamplayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uWVX5DLf7cp62pXgK9kV88sPZx1+pCwlyrhlOJc2Y2QLEyRgRDt6rtLvQluK5pyxLwVlREcltRIYegDUa951wQ==", "teamplayer"=>{"player_id"=>"127", "team_id"=>"26"}, "commit"=>"Agregar"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.9ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "127"], ["team_id", "26"], ["created_at", 2017-05-26 22:43:52 UTC], ["updated_at", 2017-05-26 22:43:52 UTC]]
+  [1m[35m (393.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/teams/26
+Completed 302 Found in 399ms (ActiveRecord: 395.3ms)
+
+
+Started GET "/teams/26" for 127.0.0.1 at 2017-05-26 18:43:53 -0400
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mTeamplayer Load (2.9ms)[0m  [1m[34mSELECT "teamplayers".* FROM "teamplayers"[0m
+  [1m[36mPlayer Exists (2.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mPlayer Load (5.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  [1m[36mPlayer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 127], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 127], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 127], ["LIMIT", 1]]
+  Rendered teams/show.html.erb within layouts/application (23.5ms)
+  Rendered layouts/_header_player.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 181ms (Views: 166.4ms | ActiveRecord: 11.9ms)
+
+
+Started GET "/teamplayers/new?team=26" for 127.0.0.1 at 2017-05-26 18:43:58 -0400
+Processing by TeamplayersController#new as HTML
+  Parameters: {"team"=>"26"}
+  Rendering teamplayers/new.html.erb within layouts/application
+  [1m[36mPlayer Load (3.9ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered teamplayers/_form.html.erb (16.4ms)
+  Rendered teamplayers/new.html.erb within layouts/application (19.0ms)
+  [1m[36mPlayer Load (2.7ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  Rendered layouts/_header_player.html.erb (4.9ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 181ms (Views: 172.8ms | ActiveRecord: 6.6ms)
+
+
+Started POST "/teamplayers" for 127.0.0.1 at 2017-05-26 18:44:01 -0400
+Processing by TeamplayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fNwJWwS0dAr9INulvC5beZJgoAZ9y6//laL+Dz9fu9jOqnrfclDjblUVDB4dEdI7dmqiX0RKNshHYJvjw7etfQ==", "teamplayer"=>{"player_id"=>"131", "team_id"=>"26"}, "commit"=>"Agregar"}
+  [1m[35m (1.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (25.2ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "131"], ["team_id", "26"], ["created_at", 2017-05-26 22:44:01 UTC], ["updated_at", 2017-05-26 22:44:01 UTC]]
+  [1m[35m (94.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/teams/26
+Completed 302 Found in 126ms (ActiveRecord: 122.0ms)
+
+
+Started GET "/teams/26" for 127.0.0.1 at 2017-05-26 18:44:01 -0400
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mTeam Load (54.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mTeamplayer Load (0.4ms)[0m  [1m[34mSELECT "teamplayers".* FROM "teamplayers"[0m
+  [1m[36mPlayer Exists (3.0ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mPlayer Load (2.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  [1m[36mPlayer Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 127], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 127], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 127], ["LIMIT", 1]]
+  [1m[36mPlayer Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 131], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 131], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 131], ["LIMIT", 1]]
+  Rendered teams/show.html.erb within layouts/application (32.1ms)
+  Rendered layouts/_header_player.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 223ms (Views: 158.6ms | ActiveRecord: 62.4ms)
+
+
+Started GET "/teamplayers/new?team=26" for 127.0.0.1 at 2017-05-26 18:44:03 -0400
+Processing by TeamplayersController#new as HTML
+  Parameters: {"team"=>"26"}
+  Rendering teamplayers/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered teamplayers/_form.html.erb (12.2ms)
+  Rendered teamplayers/new.html.erb within layouts/application (13.9ms)
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  Rendered layouts/_header_player.html.erb (4.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 133ms (Views: 131.1ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/teamplayers" for 127.0.0.1 at 2017-05-26 18:44:06 -0400
+Processing by TeamplayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kiu4tzhstyQXZS+VYjaEKcVvEhA/C5odZTr4tylaI1IgXcszToggQL9Q+C7DCQ1rIWUQSQaKAyq3+J1b1bI19w==", "teamplayer"=>{"player_id"=>"130", "team_id"=>"26"}, "commit"=>"Agregar"}
+  [1m[35m (2.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (249.5ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "130"], ["team_id", "26"], ["created_at", 2017-05-26 22:44:06 UTC], ["updated_at", 2017-05-26 22:44:06 UTC]]
+  [1m[35m (29.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/teams/26
+Completed 302 Found in 288ms (ActiveRecord: 280.9ms)
+
+
+Started GET "/teams/26" for 127.0.0.1 at 2017-05-26 18:44:06 -0400
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mTeamplayer Load (1.9ms)[0m  [1m[34mSELECT "teamplayers".* FROM "teamplayers"[0m
+  [1m[36mPlayer Exists (1.8ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  [1m[36mPlayer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 127], ["LIMIT", 1]]
+  [1m[36mPlayer Load (1.6ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 127], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 127], ["LIMIT", 1]]
+  [1m[36mPlayer Exists (2.5ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 131], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 131], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 131], ["LIMIT", 1]]
+  [1m[36mPlayer Exists (7.7ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 130], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.7ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 130], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 130], ["LIMIT", 1]]
+  Rendered teams/show.html.erb within layouts/application (52.2ms)
+  Rendered layouts/_header_player.html.erb (13.5ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 275ms (Views: 255.3ms | ActiveRecord: 18.0ms)
+
+
+Started GET "/teamplayers/new?team=26" for 127.0.0.1 at 2017-05-26 18:44:08 -0400
+Processing by TeamplayersController#new as HTML
+  Parameters: {"team"=>"26"}
+  Rendering teamplayers/new.html.erb within layouts/application
+  [1m[36mPlayer Load (22.9ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered teamplayers/_form.html.erb (27.2ms)
+  Rendered teamplayers/new.html.erb within layouts/application (50.9ms)
+  [1m[36mPlayer Load (3.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  Rendered layouts/_header_player.html.erb (5.6ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 177ms (Views: 149.7ms | ActiveRecord: 26.0ms)
+
+
+Started GET "/teamplayers" for 127.0.0.1 at 2017-05-26 18:44:10 -0400
+Processing by TeamplayersController#index as HTML
+  Rendering teamplayers/index.html.erb within layouts/application
+  [1m[36mTeamplayer Load (4.8ms)[0m  [1m[34mSELECT "teamplayers".* FROM "teamplayers"[0m
+  Rendered teamplayers/index.html.erb within layouts/application (29.2ms)
+  [1m[36mPlayer Load (1.9ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  Rendered layouts/_header_player.html.erb (4.9ms)
+  Rendered layouts/_footer.html.erb (27.6ms)
+Completed 200 OK in 190ms (Views: 182.6ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/teamplayers/new?team=26" for 127.0.0.1 at 2017-05-26 18:44:55 -0400
+Processing by TeamplayersController#new as HTML
+  Parameters: {"team"=>"26"}
+  Rendering teamplayers/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered teamplayers/_form.html.erb (62.9ms)
+  Rendered teamplayers/new.html.erb within layouts/application (64.4ms)
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  Rendered layouts/_header_player.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 177ms (Views: 174.6ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/teamplayers" for 127.0.0.1 at 2017-05-26 18:44:59 -0400
+Processing by TeamplayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B7xRdYvmqMp5LiheRZhgItCIkrE6B9IBzV6mcoBgJkECpaNNAwbxV8QxkolQmHZAiCoPaeYgZkO5TwbK7frpBw==", "teamplayer"=>{"player_id"=>"124", "team_id"=>"26"}, "commit"=>"Agregar"}
+  [1m[35m (4.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "teamplayers" ("player_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["player_id", "124"], ["team_id", "26"], ["created_at", 2017-05-26 22:44:59 UTC], ["updated_at", 2017-05-26 22:44:59 UTC]]
+  [1m[35m (21.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/teams/26
+Completed 302 Found in 29ms (ActiveRecord: 25.7ms)
+
+
+Started GET "/teams/26" for 127.0.0.1 at 2017-05-26 18:44:59 -0400
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mTeamplayer Load (2.1ms)[0m  [1m[34mSELECT "teamplayers".* FROM "teamplayers"[0m
+  [1m[36mPlayer Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mPlayer Load (2.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mPlayer Load (3.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  [1m[36mPlayer Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 127], ["LIMIT", 1]]
+  [1m[36mPlayer Load (4.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 127], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 127], ["LIMIT", 1]]
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 131], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 131], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 131], ["LIMIT", 1]]
+  [1m[36mPlayer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 130], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 130], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 130], ["LIMIT", 1]]
+  [1m[36mPlayer Exists (5.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  Rendered teams/show.html.erb within layouts/application (50.2ms)
+  Rendered layouts/_header_player.html.erb (14.1ms)
+  Rendered layouts/_footer.html.erb (2.8ms)
+Completed 200 OK in 221ms (Views: 195.3ms | ActiveRecord: 22.5ms)
+
+
+Started GET "/teamplayers/new?team=26" for 127.0.0.1 at 2017-05-26 18:45:01 -0400
+Processing by TeamplayersController#new as HTML
+  Parameters: {"team"=>"26"}
+  Rendering teamplayers/new.html.erb within layouts/application
+  [1m[36mPlayer Load (4.8ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered teamplayers/_form.html.erb (8.5ms)
+  Rendered teamplayers/new.html.erb within layouts/application (11.7ms)
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  Rendered layouts/_header_player.html.erb (5.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 149ms (Views: 142.7ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/teams/26" for 127.0.0.1 at 2017-05-26 18:45:02 -0400
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mTeam Load (2.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mTeamplayer Load (2.5ms)[0m  [1m[34mSELECT "teamplayers".* FROM "teamplayers"[0m
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mPlayer Load (3.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  [1m[36mPlayer Exists (3.5ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 127], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 127], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 127], ["LIMIT", 1]]
+  [1m[36mPlayer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 131], ["LIMIT", 1]]
+  [1m[36mPlayer Load (2.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 131], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 131], ["LIMIT", 1]]
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 130], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 130], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 130], ["LIMIT", 1]]
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  Rendered teams/show.html.erb within layouts/application (38.5ms)
+  Rendered layouts/_header_player.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (4.9ms)
+Completed 200 OK in 258ms (Views: 232.2ms | ActiveRecord: 17.6ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2017-05-26 18:45:06 -0400
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (1.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[36mPlayer Load (0.8ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 126], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 138], ["LIMIT", 1]]
+  [1m[36mPlayer Load (4.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 137], ["LIMIT", 1]]
+  [1m[36mPlayer Load (2.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mPlayer Load (1.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 152], ["LIMIT", 1]]
+  [1m[36mPlayer Load (1.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  Rendered teams/index.html.erb within layouts/application (36.2ms)
+  Rendered layouts/_header_player.html.erb (4.5ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 171ms (Views: 158.4ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/teams/26" for 127.0.0.1 at 2017-05-26 18:45:08 -0400
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mTeamplayer Load (4.9ms)[0m  [1m[34mSELECT "teamplayers".* FROM "teamplayers"[0m
+  [1m[36mPlayer Exists (2.1ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mPlayer Load (1.7ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mPlayer Load (1.9ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  [1m[36mPlayer Exists (6.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 127], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 127], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 127], ["LIMIT", 1]]
+  [1m[36mPlayer Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 131], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 131], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 131], ["LIMIT", 1]]
+  [1m[36mPlayer Exists (3.1ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 130], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 130], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 130], ["LIMIT", 1]]
+  [1m[36mPlayer Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  Rendered teams/show.html.erb within layouts/application (45.9ms)
+  Rendered layouts/_header_player.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 177ms (Views: 151.8ms | ActiveRecord: 23.5ms)
+
+
+Started DELETE "/teamplayers/163" for 127.0.0.1 at 2017-05-26 18:45:12 -0400
+Processing by TeamplayersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"jk+D/8ZfJPCLZaQJRn43M/+j4vdXtfhHmo2sNCRuOQqLVnHHTr99bTZ6Ht5TfiFRpwF/L4uSTAXunAyMSfT2TA==", "id"=>"163"}
+  [1m[36mTeamplayer Load (0.4ms)[0m  [1m[34mSELECT  "teamplayers".* FROM "teamplayers" WHERE "teamplayers"."id" = $1 LIMIT $2[0m  [["id", 163], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (30.0ms)[0m  [1m[31mDELETE FROM "teamplayers" WHERE "teamplayers"."id" = $1[0m  [["id", 163]]
+  [1m[35m (17.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 400 Bad Request in 52ms (ActiveRecord: 48.2ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: teamplayer):
+  
+app/controllers/teamplayers_controller.rb:72:in `teamplayer_params'
+app/controllers/teamplayers_controller.rb:59:in `block (2 levels) in destroy'
+app/controllers/teamplayers_controller.rb:58:in `destroy'
+  Rendering /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.9ms)
+  Rendering /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.9ms)
+  Rendered /home/nicolas/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (62.6ms)
+Started DELETE "/teamplayers/164" for 127.0.0.1 at 2017-05-26 18:46:28 -0400
+Processing by TeamplayersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"jk+D/8ZfJPCLZaQJRn43M/+j4vdXtfhHmo2sNCRuOQqLVnHHTr99bTZ6Ht5TfiFRpwF/L4uSTAXunAyMSfT2TA==", "id"=>"164"}
+  [1m[36mTeamplayer Load (0.9ms)[0m  [1m[34mSELECT  "teamplayers".* FROM "teamplayers" WHERE "teamplayers"."id" = $1 LIMIT $2[0m  [["id", 164], ["LIMIT", 1]]
+  [1m[35m (3.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "teamplayers" WHERE "teamplayers"."id" = $1[0m  [["id", 164]]
+  [1m[35m (24.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/teams/26
+Completed 302 Found in 269ms (ActiveRecord: 220.1ms)
+
+
+Started GET "/teams/26" for 127.0.0.1 at 2017-05-26 18:46:28 -0400
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mTeam Load (2.9ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mTeamplayer Load (7.9ms)[0m  [1m[34mSELECT "teamplayers".* FROM "teamplayers"[0m
+  [1m[36mPlayer Exists (3.3ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.8ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mPlayer Load (2.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  [1m[36mPlayer Exists (4.3ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 127], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 127], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 127], ["LIMIT", 1]]
+  [1m[36mPlayer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  Rendered teams/show.html.erb within layouts/application (85.2ms)
+  Rendered layouts/_header_player.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 265ms (Views: 209.2ms | ActiveRecord: 21.8ms)
+
+
+Started DELETE "/teamplayers/162" for 127.0.0.1 at 2017-05-26 18:46:33 -0400
+Processing by TeamplayersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"SxMUcLMAJ5cB02WuIOmFygfugaPptOEwVBFsJXnOXWxOCuZIO+B+CrzM33k16ZOoX0wcezWTVXIgAMydFFSSKg==", "id"=>"162"}
+  [1m[36mTeamplayer Load (1.6ms)[0m  [1m[34mSELECT  "teamplayers".* FROM "teamplayers" WHERE "teamplayers"."id" = $1 LIMIT $2[0m  [["id", 162], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (34.4ms)[0m  [1m[31mDELETE FROM "teamplayers" WHERE "teamplayers"."id" = $1[0m  [["id", 162]]
+  [1m[35m (15.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/teams/26
+Completed 302 Found in 58ms (ActiveRecord: 52.0ms)
+
+
+Started GET "/teams/26" for 127.0.0.1 at 2017-05-26 18:46:33 -0400
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mTeamplayer Load (0.4ms)[0m  [1m[34mSELECT "teamplayers".* FROM "teamplayers"[0m
+  [1m[36mPlayer Exists (2.3ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  [1m[36mPlayer Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  Rendered teams/show.html.erb within layouts/application (61.9ms)
+  Rendered layouts/_header_player.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 201ms (Views: 193.6ms | ActiveRecord: 5.7ms)
+
+
+Started DELETE "/teamplayers/165" for 127.0.0.1 at 2017-05-26 18:46:37 -0400
+Processing by TeamplayersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"mXWHeyaVoMuS8R37BWKX1qVhpmsZWzYFnwiS5U86dY+cbHVDrnX5Vi/upywQYoG0/cM7s8V8gkfrGTJdIqC6yQ==", "id"=>"165"}
+  [1m[36mTeamplayer Load (2.1ms)[0m  [1m[34mSELECT  "teamplayers".* FROM "teamplayers" WHERE "teamplayers"."id" = $1 LIMIT $2[0m  [["id", 165], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[31mDELETE FROM "teamplayers" WHERE "teamplayers"."id" = $1[0m  [["id", 165]]
+  [1m[35m (41.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/teams/26
+Completed 302 Found in 49ms (ActiveRecord: 45.5ms)
+
+
+Started GET "/teams/26" for 127.0.0.1 at 2017-05-26 18:46:37 -0400
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mTeamplayer Load (2.8ms)[0m  [1m[34mSELECT "teamplayers".* FROM "teamplayers"[0m
+  [1m[36mPlayer Exists (3.8ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  Rendered teams/show.html.erb within layouts/application (16.6ms)
+  Rendered layouts/_header_player.html.erb (7.7ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 144ms (Views: 134.6ms | ActiveRecord: 7.6ms)
+
+

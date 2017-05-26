@@ -18,18 +18,17 @@
         <td><%=tournament.name%></td>
         <td><%=tournament.place%></td>
         <td><%= link_to 'Show', tournament %></td>
+        <%if tournament.organizer.to_s == current_player.id.to_s%>
         <td><%= link_to 'Edit', edit_tournament_path(tournament) %></td>
         <td><%= link_to 'Destroy', tournament, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <%end%>
       </tr>
     <% end %>
   </tbody>
 </table>
 
   <% if current_player.is_organizer %>
-    <%= link_to 'Agregar incidencia', new_event_path %>
-
+    <%= link_to 'New Tournament', new_tournament_path %>
   <%end%>
 
 <br>
-
-<%= link_to 'New Tournament', new_tournament_path %>

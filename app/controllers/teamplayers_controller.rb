@@ -28,7 +28,7 @@ class TeamplayersController < ApplicationController
 
     respond_to do |format|
       if @teamplayer.save
-        format.html { redirect_to team_path(teamplayer_params[:team_id]), notice: 'Teamplayer was successfully created.' }
+        format.html { redirect_to team_path(teamplayer_params[:team_id]), notice: 'Jugador agregado exitosamente.' }
         format.json { render :show, status: :created, location: @teamplayer }
       else
         format.html { render :new }
@@ -54,9 +54,11 @@ class TeamplayersController < ApplicationController
   # DELETE /teamplayers/1
   # DELETE /teamplayers/1.json
   def destroy
+    team = @teamplayer.team_id
     @teamplayer.destroy
+
     respond_to do |format|
-      format.html { redirect_to teamplayers_url, notice: 'Teamplayer was successfully destroyed.' }
+      format.html { redirect_to team_path(team), notice: 'Jugador eliminado de la nomina.' }
       format.json { head :no_content }
     end
   end

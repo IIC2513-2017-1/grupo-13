@@ -25,7 +25,7 @@
       <%= f.label :place %>
       <%= f.text_field :place, required: true %>
     </div>
-      <%=f.hidden_field :organizer, value:current_player%>
+      <%=f.hidden_field :organizer, value:current_player.id%>
     <div class="field">
 
       <%= f.label 'Numero de equipos'%>

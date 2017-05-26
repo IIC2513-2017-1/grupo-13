@@ -18,8 +18,8 @@
     <tr>
         <%if Team.exists?(team.team_id) && Team.exists?(team.team_id)%>
         <td><%= Team.find(team.team_id).name %></td>
-        <td><%= Team.find(team.team_id).capitan%></td>
-        <td><%= link_to 'Show' , team, method: :show%></td>
+        <td><%= Player.find(Team.find(team.team_id).capitan).first_name%></td>
+        <td><%= link_to 'Show' , , method: :show%></td>
         <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 
   <%end%>
