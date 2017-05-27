@@ -1,4 +1,4 @@
-<%= form_for(nominate_path, method: :post) do |f| %>
+<%= form_for(nominate) do |f| %>
   <% if nominate.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(nominate.errors.count, "error") %> prohibited this nominate from being saved:</h2>
@@ -10,7 +10,6 @@
       </ul>
     </div>
   <% end %>
-
 
   <div class="field">
     <%= f.label :GoalKeaper %>
