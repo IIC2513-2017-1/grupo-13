@@ -5,7 +5,7 @@
         <%fecha = 0%>
         <%i = 0%>
 
-          <%Match.where('tournament_id = ?',params[:tournament]).order(:date).collect do |match|%>
+          <%= Match.where('tournament_id = ?',params[:tournament]).order(:date).collect do |match|%>
               <%puts match.date%>
               <%puts fecha%>
               <% if fecha != match.date %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170527030605) do
+ActiveRecord::Schema.define(version: 20170527074159) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,10 +30,9 @@ ActiveRecord::Schema.define(version: 20170527030605) do
     t.string   "local",         null: false
     t.string   "visitor",       null: false
     t.integer  "date",          null: false
+    t.string   "tournament_id", null: false
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
-    t.integer  "tournament_id"
-    t.index ["local", "visitor", "date"], name: "index_matches_on_local_and_visitor_and_date", unique: true, using: :btree
   end
 
   create_table "nominates", force: :cascade do |t|

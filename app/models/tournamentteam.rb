@@ -1,3 +1,3 @@
 class Tournamentteam < ApplicationRecord
-  validates :team_id, presence: true, uniqueness: true
+  validates :team_id, presence: true
 end

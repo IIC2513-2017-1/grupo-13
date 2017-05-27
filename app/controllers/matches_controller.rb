@@ -1,17 +1,15 @@
-
-
 class MatchesController < ApplicationController
   before_action :set_match, only: [:show, :edit, :update, :destroy]
 
   # GET /matches
   # GET /matches.json
   def index
-    @matches = Match.all
   end
 
   # GET /matches/1
   # GET /matches/1.json
   def show
+    @matches = Match.all
   end
 
   # GET /matches/new
@@ -28,8 +26,6 @@ class MatchesController < ApplicationController
   def create
     @match = Match.new(match_params)
     if @match.save
-      puts 'aaaaaaaaaaa'
-      puts  match_params[:tournament_id]
       redirect_to matches_path(tournament: match_params[:tournament_id])
     else
       redirect_to root_path
