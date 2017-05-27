@@ -12,26 +12,23 @@
   <% end %>
   <div class="field">
     <%= f.label :player_id%>
-    <%= f.select :player_id, Player.all.collect {|x| [x.first_name, x.id]}, {:include_blank => "Select One"} %> </br>
+    <%= f.select :player_id, (Teamplayer.where('team_id = ?',params[:local]) +Teamplayer.where('team_id = ?',params[:visitor])).collect  {|player| [Player.find(player.player_id).first_name,player.player_id]}, {:include_blank => "Select One"} %> </br>
   </div>
   <div class="field">
     <%= f.label :yellow_cards %>
-    <%= f.select :yellow_cards, [0,1]%>
+    <%= f.select :yellow_cards, [0,1,2]%>
   </div>
   <div class="field">
     <%= f.label :red_cards%>
-    <%= f.select :red_cards, [0,1,2] %>
+    <%= f.select :red_cards, [0,1] %>
 
   <div class="field">
     <%= f.label :goals %>
-    <%= f.select :goals, Array.new(30){|a| a } %>
+    <%= f.select :goals, Array.new(30){|a| a.to_i } %>
   </div>
-  ### Agregar id del partido
   <div class="field">
-    <%= f.label :match_id %>
-    <%= f.select :match_id, Array.new(30){|a| a.to_s*3 }%>
+    <%= f.hidden_field :match_id, value:params[:match] %>
   </div>
-### Agregar id del partido
 
   <div class="actions">
     <%= f.submit %>

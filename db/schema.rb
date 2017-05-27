@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170527015012) do
+ActiveRecord::Schema.define(version: 20170527030605) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20170527015012) do
     t.integer  "yellow_cards"
     t.integer  "red_cards"
     t.string   "match_id"
+    t.index ["player_id", "match_id"], name: "index_events_on_player_id_and_match_id", unique: true, using: :btree
   end
 
   create_table "matches", force: :cascade do |t|
@@ -32,6 +33,7 @@ ActiveRecord::Schema.define(version: 20170527015012) do
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
     t.integer  "tournament_id"
+    t.index ["local", "visitor", "date"], name: "index_matches_on_local_and_visitor_and_date", unique: true, using: :btree
   end
 
   create_table "nominates", force: :cascade do |t|
@@ -40,6 +42,7 @@ ActiveRecord::Schema.define(version: 20170527015012) do
     t.string   "player_id",  null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["player_id", "team_id", "match_id"], name: "index_nominates_on_player_id_and_team_id_and_match_id", unique: true, using: :btree
   end
 
   create_table "players", force: :cascade do |t|
@@ -61,6 +64,7 @@ ActiveRecord::Schema.define(version: 20170527015012) do
     t.integer  "visitor",    null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["match_id", "local", "visitor"], name: "index_results_on_match_id_and_local_and_visitor", unique: true, using: :btree
   end
 
   create_table "teamplayers", force: :cascade do |t|
@@ -68,6 +72,7 @@ ActiveRecord::Schema.define(version: 20170527015012) do
     t.string   "team_id",    null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["team_id", "player_id"], name: "index_teamplayers_on_team_id_and_player_id", unique: true, using: :btree
   end
 
   create_table "teams", force: :cascade do |t|
@@ -96,6 +101,7 @@ ActiveRecord::Schema.define(version: 20170527015012) do
     t.string   "team_id",       null: false
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.index ["tournament_id", "team_id"], name: "index_tournamentteams_on_tournament_id_and_team_id", unique: true, using: :btree
   end
 
 end
