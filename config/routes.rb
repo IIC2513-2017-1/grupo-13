@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :results
   resources :events, only:[:new,:create]
   root 'static_pages#home'
   get '/about', to: 'static_pages#about'

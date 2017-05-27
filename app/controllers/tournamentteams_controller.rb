@@ -25,9 +25,6 @@ class TournamentteamsController < ApplicationController
   # POST /tournamentteams
   # POST /tournamentteams.json
   def create
-    puts '-------------'
-    puts @current_tournament
-    puts '-------------'
     @tournamentteam = Tournamentteam.new(tournamentteam_params)
 
 
@@ -35,7 +32,7 @@ class TournamentteamsController < ApplicationController
       #if total_team >= Tournament.find(@tournamentteam.tournament_id).number_team
         #return :false
       if @tournamentteam.save
-        format.html { redirect_to @tournamentteam, notice: 'Tournamentteam was successfully created.' }
+        format.html { redirect_to tournament_path(tournamentteam_params[:tournament_id]), notice: 'Tournamentteam was successfully created.' }
         format.json { render :show, status: :created, location: @tournamentteam }
         #if (total_team + 1) == Tournament.find(@tournamentteam.tournament_id).number_team
         #  format.html { redirect_to tournaments_path, notice: 'Se completo el torneo, se creo el fixture.' }

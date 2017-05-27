@@ -1,0 +1,27 @@
+<%= form_for(result) do |f| %>
+  <% if result.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(result.errors.count, "error") %> prohibited this result from being saved:</h2>
+
+      <ul>
+      <% result.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label Team.find(params[:local]).name %>
+    <%= f.text_field :local,required: true %>
+  </div>
+  <div class="field">
+  <%= f.label Team.find(params[:visitor]).name %>
+    <%= f.text_field :visitor,required: true %>
+  </div>
+  <%= f.hidden_field :match_id,value:params[:match] %>
+  <%= f.hidden_field :tournament,value:params[:tournament] %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
