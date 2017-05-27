@@ -1,0 +1,50 @@
+<%= form_for(nominate_path, method: :post) do |f| %>
+  <% if nominate.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(nominate.errors.count, "error") %> prohibited this nominate from being saved:</h2>
+
+      <ul>
+      <% nominate.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="field">
+    <%= f.label :GoalKeaper %>
+    <%= f.text_field :gk,required: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Defensa 1" %>
+    <%= f.text_field :df1,required: true %>
+  </div>
+  <div class="field">
+    <%= f.label 'Defensa 2' %>
+    <%= f.text_field :df2,required: true %>
+  </div>
+  <div class="field">
+    <%= f.label 'Defensa 3' %>
+    <%= f.text_field :df3,required: true %>
+  </div>
+  <div class="field">
+    <%= f.label 'Medio campista 1' %>
+    <%= f.text_field :md1,required: true %>
+  </div>
+  <div class="field">
+    <%= f.label 'Delantero 1' %>
+    <%= f.text_field :dl1,required: true %>
+  </div>
+  <div class="field">
+    <%= f.label 'Delantero 2' %>
+    <%= f.text_field :dl2,required: true %>
+  </div>
+
+
+
+  <div class="actions">
+    <%= f.submit 'Guardar nomina'%>
+  </div>
+<% end %>
