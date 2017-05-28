@@ -1,5 +1,5 @@
-<h1>New Result</h1>
+<h1>¿Como finalizo este partido?</h1>
 
 <%= render 'form', result: @result %>
 
-<%= link_to 'Back', results_path %>
+<%= link_to 'Back', matches_path(tournament:params[:tournament]) %>

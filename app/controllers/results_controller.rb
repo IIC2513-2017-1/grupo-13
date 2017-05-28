@@ -27,11 +27,12 @@ class ResultsController < ApplicationController
     @result = Result.new(local:result_params[:local],visitor:result_params[:visitor],match_id:result_params[:match_id])
 
     respond_to do |format|
-      if @result.save
-        format.html { redirect_to matches_path(tournament:result_params[:tournament]), notice: 'Result was successfully created.' }
+      if !Result.exists?(match_id:result_params[:match_id])
+        @result.save
+        format.html { redirect_to match_path(tournament:result_params[:tournament]), notice: 'Result was successfully created.' }
         format.json { render :show, status: :created, location: @result }
       else
-        format.html { render :new }
+        format.html { redirect_to matches_path(tournament:result_params[:tournament]), notice: 'Este partido ya termino. No se puede modificar' }
         format.json { render json: @result.errors, status: :unprocessable_entity }
       end
     end

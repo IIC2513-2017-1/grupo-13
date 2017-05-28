@@ -52,7 +52,7 @@ class MatchesController < ApplicationController
   def destroy
     @match.destroy
     respond_to do |format|
-      format.html { redirect_to matches_url, notice: 'Match was successfully destroyed.' }
+      format.html { redirect_to matches_path(tournament: match_params[:tournament_id]), notice: 'Match was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

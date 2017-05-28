@@ -1,5 +1,78 @@
-<h1>New Nominate</h1>
+<h1>Nueva nomina de <%= Team.find(params[:team]).name%></h1>
+
+<table>
+  <thead>
+    <th>Arquero</th>
+    <th colspan="1"></th>
+  </thead>
+  <tbody>
+    <% i = 0 %>
+    <% Nominate.where('match_id = ? AND team_id = ?',params[:match],params[:team]).collect do |player| %>
+      <% if i == 0 %>
+      <% if Player.find(player.player_id).position == 'Arquero' %>
+        <td><%=Player.find(player.player_id).first_name%></td>
+        <td><%=Player.find(player.player_id).last_name%></td>
+        <% i = 1 %>
+        <%end%>
+      <%end%>
+    <%end%>
+  </tbody>
+</table>
+<table>
+  <thead>
+    <th>Defensas</th>
+    <th colspan="1"></th>
+  </thead>
+  <tbody>
+
+    <% Nominate.where('match_id = ? AND team_id = ?',params[:match],params[:team]).collect do |player| %>
+
+      <% if Player.find(player.player_id).position == 'Defensa' %>
+      <td><%=Player.find(player.player_id).first_name%></td>
+      <td><%=Player.find(player.player_id).last_name%></td>
+
+
+      <%end%>
+    <%end%>
+  </tbody>
+</table>
+<table>
+  <thead>
+    <th>Medio Campistas</th>
+    <th colspan="1"></th>
+  </thead>
+  <tbody>
+
+    <% Nominate.where('match_id = ? AND team_id = ?',params[:match],params[:team]).collect do |player| %>
+
+      <% if Player.find(player.player_id).position == 'Mediocampista' %>
+      <td><%=Player.find(player.player_id).first_name%></td>
+      <td><%=Player.find(player.player_id).last_name%></td>
+
+
+      <%end%>
+    <%end%>
+  </tbody>
+</table>
+<table>
+  <thead>
+    <th>Delanteros</th>
+    <th colspan="1"></th>
+  </thead>
+  <tbody>
+
+    <% Nominate.where('match_id = ? AND team_id = ?',params[:match],params[:team]).collect do |player| %>
+
+      <% if Player.find(player.player_id).position == 'Delantero' %>
+      <td><%=Player.find(player.player_id).first_name%></td>
+      <td><%=Player.find(player.player_id).last_name%></td>
+
+        <%end%>
+
+    <%end%>
+  </tbody>
+</table>
 
 <%= render 'form', nominate: @nominate %>
 
-<%= link_to 'Back', nominates_path %>
+<%= link_to 'Finish', matches_path(tournament:params[:tournament]) %>

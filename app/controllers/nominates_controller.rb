@@ -24,14 +24,16 @@ class NominatesController < ApplicationController
   # POST /nominates
   # POST /nominates.json
   def create
-    @nominate = Nominate.new(nominate_params)
+    @nominate = Nominate.new(match_id:nominate_params[:match_id],player_id:nominate_params[:player_id],team_id:nominate_params[:team_id])
 
     respond_to do |format|
-      if @nominate.save
-        format.html { redirect_to @nominate, notice: 'Nominate was successfully created.' }
+
+      if !Nominate.exists?(match_id:nominate_params[:match_id],player_id:nominate_params[:player_id],team_id:nominate_params[:team_id])
+        @nominate.save
+        format.html { redirect_to new_nominate_path(match:nominate_params[:match_id],team:nominate_params[:team_id],tournament:nominate_params[:tournament]), notice: 'Agregado a la nomina de este partido' }
         format.json { render :show, status: :created, location: @nominate }
       else
-        format.html { render :new }
+        format.html { redirect_to new_nominate_path(match:nominate_params[:match_id],team:nominate_params[:team_id],tournament:nominate_params[:tournament]), notice: 'No se pudo agregar a la nomina de este partido' }
         format.json { render json: @nominate.errors, status: :unprocessable_entity }
       end
     end
@@ -69,6 +71,6 @@ class NominatesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def nominate_params
-      params.require(:nominate).permit(:match_id,:player_id,:team_id)
+      params.require(:nominate).permit(:match_id,:player_id,:team_id,:tournament)
     end
 end
