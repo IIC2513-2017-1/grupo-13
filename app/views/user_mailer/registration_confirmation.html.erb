@@ -1,0 +1,5 @@
+Hi <%= @player.first_name %>,
+
+Thanks for registering! To confirm your registration click the URL below.
+
+<%= confirm_email_player_url(@player.confirm_token) %>

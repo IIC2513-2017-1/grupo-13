@@ -2,7 +2,7 @@ class PlayersController < ApplicationController
   before_action :set_player, only: [:show, :edit, :update, :destroy]
   before_action :logged_in?, only: %i[edit update destroy]
   before_action :is_current_player, only: %i[edit update destroy]
-  
+
 
 
   # GET /players
@@ -32,11 +32,16 @@ class PlayersController < ApplicationController
 
       respond_to do |format|
         if @player.save
+          UserMailer.registration_confirmation(@player).deliver
+          flash[:success] = "Please confirm your email address to continue"
           format.html { redirect_to @player, notice: 'Player was successfully created.' }
           format.json { render :show, status: :created, location: @player }
+          redirect_to root_url
         else
           format.html { render :new }
           format.json { render json: @player.errors, status: :unprocessable_entity }
+          flash[:error] = "Ooooppss, something went wrong!"
+          render 'new'
         end
       end
   end
@@ -64,6 +69,20 @@ class PlayersController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def confirm_email
+      player = Player.find_by_confirm_token(params[:id])
+      if player
+        player.email_activate
+        flash[:success] = "Bienvenido a ChampionsLiga! Tu email ha sido confirmado!
+        Por favor inicia sesión para continuar."
+        redirect_to signin_url
+      else
+        flash[:error] = "Sorry. User does not exist"
+        redirect_to root_url
+      end
+  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
