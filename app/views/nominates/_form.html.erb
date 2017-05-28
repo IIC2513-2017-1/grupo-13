@@ -12,38 +12,14 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :GoalKeaper %>
-    <%= f.text_field :gk,required: true %>
+    <%= f.label :player %>
+    <%= f.select :player_id,Teamplayer.where('team_id = ?',params[:team]).collect {|x| [Player.find(x.player_id).first_name,x.player_id]}, autfocus: true %>
   </div>
-
-  <div class="field">
-    <%= f.label "Defensa 1" %>
-    <%= f.text_field :df1,required: true %>
-  </div>
-  <div class="field">
-    <%= f.label 'Defensa 2' %>
-    <%= f.text_field :df2,required: true %>
-  </div>
-  <div class="field">
-    <%= f.label 'Defensa 3' %>
-    <%= f.text_field :df3,required: true %>
-  </div>
-  <div class="field">
-    <%= f.label 'Medio campista 1' %>
-    <%= f.text_field :md1,required: true %>
-  </div>
-  <div class="field">
-    <%= f.label 'Delantero 1' %>
-    <%= f.text_field :dl1,required: true %>
-  </div>
-  <div class="field">
-    <%= f.label 'Delantero 2' %>
-    <%= f.text_field :dl2,required: true %>
-  </div>
-
-
+    <%= f.hidden_field :match_id, value:params[:match] %>
+    <%= f.hidden_field :team_id, value:params[:team] %>
+    <%= f.hidden_field :tournament, value:params[:tournament] %>
 
   <div class="actions">
-    <%= f.submit 'Guardar nomina'%>
+    <%= f.submit 'Agregar a nomina'%>
   </div>
 <% end %>
