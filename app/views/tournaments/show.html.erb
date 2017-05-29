@@ -1,6 +1,8 @@
 <h1> <%= @tournament.name%></h1>
 
 <%= link_to "Ver fechas", matches_path(tournament:@tournament.id)%>
+<%= link_to "Ver Estadisticas", stadistic_path(tournament:@tournament.id)%>
+
 
 <table>
 <thead>

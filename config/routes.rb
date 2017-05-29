@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resources :tournaments
   resources :players
   resource :sessions, only: [:new, :create, :destroy]
+  get 'stadistic', to: 'tournaments#stadistic'
   #get '*foo' => 'static_pages#home'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

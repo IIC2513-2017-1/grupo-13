@@ -25,14 +25,13 @@ class EventsController < ApplicationController
   # POST /events.json
   def create
     @event = Event.new(player_id:event_params[:player_id],goals:event_params[:goals],yellow_cards:event_params[:yellow_cards],red_cards:event_params[:red_cards],match_id:event_params[:match_id])
-    respond_to do |format|
-      if !Event.exists?(player_id:event_params[:player_id],match_id:event_params[:match])
+
+      if !Event.exists?(player_id:event_params[:player_id],match_id:event_params[:match_id])
       @event.save
-      format.html { redirect_to new_event_path(match:event_params[:match],tournment:event_params[:tournament],local:event_params[:local],visitor:event_params[:visitor]), notice: '¿Que mas sucedio?.' }
+      redirect_to new_event_path(match:event_params[:match_id],tournament:event_params[:tournament],local:event_params[:local],visitor:event_params[:visitor]), notice: '¿Que mas sucedio?.'
       else
-        redirect_to new_event_path(match:event_params[:match],tournment:event_params[:tournament],local:event_params[:local],visitor:event_params[:visitor]), notice: 'No se puede agregar ¿Que mas sucedio?.'
+        redirect_to new_event_path(match:event_params[:match_id],tournament:event_params[:tournament],local:event_params[:local],visitor:event_params[:visitor]), notice: 'No se puede agregar ¿Que mas sucedio?.'
       end
-    end
   end
 
   # PATCH/PUT /events/1

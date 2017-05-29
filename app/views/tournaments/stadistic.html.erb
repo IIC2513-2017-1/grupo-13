@@ -1,0 +1,85 @@
+<h1> Estadisticas del torneo  <%= Tournament.find(params[:tournament]).name %>
+
+<td>
+  <div>
+<table>
+  <thead>
+    <tr>
+      <td>Jugador</td>
+      <td>Cantidad de goles </td>
+  </thead>
+  <tbody>
+    <% goleadores = {}%>
+    <%Event.all.order(:goals).collect do |event|%>
+      <% if Match.exists?(id:event.match_id)%>
+      <% if Match.find(event.match_id).tournament_id == params[:tournament] %>
+          <% if !goleadores.key?(event.player_id) && event.goals != 0%>
+          <% goleadores[event.player_id] = event.goals%>
+          <%elsif event.goals != 0%>
+          <% goleadores[event.player_id] = goleadores[event.player_id] + event.goals %>
+          <%end%>
+      <%end%>
+      <%end%>
+    <%end%>
+    <% goleadores.each do |player,goleador| %>
+        <tr>
+        <td><%= Player.find(player).first_name%></td>
+        <td><%=goleador %></td>
+        </tr>
+    <%end%>
+  </tbody>
+</table>
+</div>
+</td>
+
+
+<td>
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <td>Jugador</td>
+          <td>Tarjetas amarillas </td>
+          <td>Tarjetas Rojas </td>
+      </thead>
+      <tbody>
+        <% amarillas = {}%>
+        <% rojas = {}%>
+        <%Event.all.collect do |event|%>
+          <% if Match.exists?(id:event.match_id)%>
+          <% if Match.find(event.match_id).tournament_id == params[:tournament] %>
+              <% if !amarillas.key?(event.player_id) && event.yellow_cards != 0%>
+              <% amarillas[event.player_id] = event.yellow_cards%>
+              <%elsif event.yellow_cards != 0%>
+              <% amarilas[event.player_id] = amarilas[event.player_id] + event.yellow_cards %>
+              <%end%>
+              <% if !rojas.key?(event.player_id) && event.red_cards != 0%>
+              <% rojas[event.player_id] = event.red_cards%>
+              <%elsif event.red_cards != 0%>
+              <% rojas[event.player_id] = rojas[event.player_id] + event.red_cards %>
+              <%end%>
+          <%end%>
+          <%end%>
+        <%end%>
+        <% amarillas.each do |player,tarjeta| %>
+            <tr>
+            <td><%= Player.find(player).first_name%></td>
+            <td><%=tarjeta %></td>
+            <% if rojas.key?(player)%>
+            <td><%rojas[player]%></td>
+            <%else%>
+            <td>0</td>
+            <%end%>
+
+
+          </tr>
+
+
+
+
+
+        <%end%>
+        </tbody>
+</table>
+</div>
+</td>
