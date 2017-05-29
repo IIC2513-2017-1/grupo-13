@@ -1,2 +1,15 @@
 ~/rails_project/web_semestre/tmp
+<<<<<<< HEAD
+*.cache
+=======
 /home/nicolas/UC/2017-1/Tec y App/grupo-13/tmp
+>>>>>>> 629a1f78c57ea6761109eddc01e3c268aecf2f3d
+
+# Ignore bundler config.
+/.bundle
+
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
