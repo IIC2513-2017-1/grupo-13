@@ -1,5 +1,7 @@
 <h1> Estadisticas del torneo  <%= Tournament.find(params[:tournament]).name %>
-
+<br/>
+<br/>
+<br/>
 <td>
   <div>
 <table>
@@ -32,7 +34,7 @@
 </div>
 </td>
 
-
+<br/>
 <td>
   <div>
     <table>
@@ -83,3 +85,4 @@
 </table>
 </div>
 </td>
+<td><%= link_to "volver", tournament_path(params[:tournament])%></td>
