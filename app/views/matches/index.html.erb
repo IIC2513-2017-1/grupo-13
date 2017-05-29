@@ -36,14 +36,11 @@
               </tr>
               <%end%>
               <%end%>
-
-
-
-
-
     <% end %>
 
 <br>
+<% if current_player.is_organizer %>
+  <td><%= link_to 'New Match', new_match_path(tournament: params[:tournament]) %></td>
+<% end %>
 
-<td><%= link_to 'New Match', new_match_path(tournament: params[:tournament]) %></td>
 <td><%= link_to 'Back',tournament_path(params[:tournament])%></td>
