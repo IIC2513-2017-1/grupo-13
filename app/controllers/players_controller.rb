@@ -32,7 +32,7 @@ class PlayersController < ApplicationController
 
       respond_to do |format|
         if @player.save
-          UserMailer.registration_confirmation(@player).deliver
+          PlayerMailer.registration_confirmation(@player).deliver
           flash[:success] = "Please confirm your email address to continue"
           format.html { redirect_to @player, notice: 'Player was successfully created.' }
           format.json { render :show, status: :created, location: @player }

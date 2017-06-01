@@ -1,4 +1,4 @@
-class UserMailer < ActionMailer::Base
+class PlayerMailer < ActionMailer::Base
     default :from => "me@mydomain.com"
 
  def registration_confirmation(player)

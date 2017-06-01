@@ -11,11 +11,7 @@ Rails.application.routes.draw do
   resources :teamplayers
   resources :teams
   resources :tournaments
-  resources :players do
-    member do
-      get :confirm:email
-    end
-  end
+  resources :players
   resource :sessions, only: [:new, :create, :destroy]
   #get '*foo' => 'static_pages#home'
 
