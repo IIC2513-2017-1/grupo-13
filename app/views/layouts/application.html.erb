@@ -8,9 +8,7 @@
   </head>
 
   <body>
-    <div id="user-bar">
       <%= render 'layouts/header_player' %>
-    </div>
     <main>
       <% [:alert, :notice].each do |flash_type| %>
         <% if (flash_message = flash[flash_type]).present? %>
@@ -20,7 +18,7 @@
     </main>
     <%= yield %>
   </body>
-  <footer id=footer>
+  <footer>
       <%= render 'layouts/footer' %>
   </footer>
 </html>

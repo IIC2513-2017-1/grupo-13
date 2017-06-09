@@ -1,7 +1,14 @@
-html, body {
-  margin: 0;
-  padding: 0;
+html {
+  height: 100%;
+  box-sizing: border-box;
 }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 
 body {
   background-color: #fff;
@@ -9,20 +16,10 @@ body {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 30px;
   line-height: 18px;
-  margin: 33px;
+  margin: 0;
   position: relative;
   padding-bottom: 6rem;
   min-height: 100%;
-}
-
-
-#perfil{
-font-size: 20px;
-color: green;
-position: absolute;
-top: 15px;
-width: 150px;
-left: 87%;
 }
 
 header {
@@ -41,11 +38,11 @@ header {
     padding: 1em;
     text-decoration: none;
     background: #333333;
-    opacity: 0.7;
+    opacity: 0.8;
     color: white;
     &:hover,&:active {
       background: #990000;
-      opacity: 0.7;
+      opacity: 0.8;
     }
   }
   .brand {
@@ -53,7 +50,7 @@ header {
     text-align: center;
     padding: 0.5em;
     background: #333333;
-    opacity: 0.7;
+    opacity: 0.8;
     color: white;
   }
   .toggle {
@@ -99,6 +96,16 @@ header {
   }
   div {
     display: block;
+    }
   }
 }
+
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
 }
