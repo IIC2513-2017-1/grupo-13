@@ -14,41 +14,8 @@ body {
   padding-bottom: 6rem;
   min-height: 100%;
 }
-.nav li ul {
-				display:none;
-				position:absolute;
-      }
-.nav li:hover > ul {
-      				display:block;
-      }
 
-nav#main-menu, #logo {
-  display: inline-block;
-  vertical-align: middle;
-}
 
-nav#main-menu {
-  margin-left: 1%;
-  a {
-    border-radius: 13px;
-    color: #ffffff;
-    background-color: #00319c;
-    padding: 20px;
-    text-decoration: none;
-    font-size: 18px;
-    border-right: 1px solid #aaa;
-  }
-  a:hover {
-    color: #1b95e0;
-  }
-
-}
-nav#logout {
-
-}
-#logo img{
-  width: 70px
-}
 #perfil{
 font-size: 20px;
 color: green;
@@ -56,6 +23,82 @@ position: absolute;
 top: 15px;
 width: 150px;
 left: 87%;
+}
 
+header {
+  padding: 1em;
+}
 
+.navbar {
+  background: #e2e2e2;
+  .toggle, .brand {
+    display: inline-block;
+  }
+  .link {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1em;
+    text-decoration: none;
+    background: #333333;
+    opacity: 0.7;
+    color: white;
+    &:hover,&:active {
+      background: #990000;
+      opacity: 0.7;
+    }
+  }
+  .brand {
+    width: 10em;
+    text-align: center;
+    padding: 0.5em;
+    background: #333333;
+    opacity: 0.7;
+    color: white;
+  }
+  .toggle {
+    padding: 1em;
+    color: black;
+    vertical-align: middle;
+  }
+}
+
+@media (min-width: 48em) {
+    .navbar {
+      display: flex;
+      .left,.right {
+        display: flex;
+        flex: 1;
+      }
+      .link {
+          width: auto;
+      }
+      .right {
+        justify-content: flex-end;
+      }
+      .toggle {
+        display: none;
+      }
+    }
+}
+
+.navbar {
+  div {
+    display: none;
+    @media (min-width: 48em) {
+      display: flex;
+    }
+  }
+}
+
+@media (max-width: 48em) {
+.navbar.active {
+  .toggle {
+    background: seagreen;
+    color: white;
+  }
+  div {
+    display: block;
+  }
+}
 }

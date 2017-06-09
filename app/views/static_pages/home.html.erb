@@ -2,7 +2,7 @@
 <div id="home">
   <h1>Welcome to champions liga</h1>
   <%if !session.key?(:user_id) %>
-  <ul>
+  <ul class="home-list">
     <li><%= link_to 'Login', new_sessions_path %></li>
     <li><%= link_to 'Sign up as player', new_player_path %></li>
     <li><%= link_to 'Visitor'%></li>

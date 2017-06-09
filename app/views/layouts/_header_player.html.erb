@@ -1,7 +1,21 @@
+<header>
+  <nav class="navbar">
+      <a href="#" class="toggle"><i class="fa fa-reorder"></i></a>
+      <%= link_to image_tag("la_liga_icon.png"), root_path, class:"brand" %>
+      <div class="left">
+        <% if current_player %>
+          <%= link_to 'Teams', teams_path, class:"link" %>
+          <%= link_to 'Tournaments', tournaments_path, class:"link" %>
+        <% else %>
+          <%= link_to 'News', "http://www.fifa.com/", class:"link" %>
+        <% end %>
+      </div>
+      <div class="right">
+        <% if current_player %>
+          <%=link_to 'Perfil', current_player, class:"link"%>
+          <%= link_to 'Logout', sessions_path, method: :delete, class: "link" %>
+        <% end %>
 
-<nav id="main-menu" >
-  <%= link_to 'Teams', teams_path %>
-  <%= link_to 'Tournaments', tournaments_path %>
-  <span id="logout"><%= link_to 'Logout', sessions_path, method: :delete %></span>
-</nav >
-  <p id="perfil"><%=link_to 'Perfil '+current_player.first_name, current_player%></p>
+      </div>
+  </nav>
+</header>

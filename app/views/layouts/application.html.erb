@@ -8,25 +8,9 @@
   </head>
 
   <body>
-
     <div id="user-bar">
-      <header>
-        <div id="logo">
-          <%= link_to root_path do %>
-          <img src="https://pbs.twimg.com/profile_images/616969183948054528/mF1Oxcly.jpg"/>
-          <% end %>
-          </div>
-
-        <% if current_player %>
-          <%= render 'layouts/header_player' %>
-
-        <% else %>
-          <%= render 'layouts/header_visitor' %>
-        <% end %>
-        <hr>
-      </header>
+      <%= render 'layouts/header_player' %>
     </div>
-
     <main>
       <% [:alert, :notice].each do |flash_type| %>
         <% if (flash_message = flash[flash_type]).present? %>
