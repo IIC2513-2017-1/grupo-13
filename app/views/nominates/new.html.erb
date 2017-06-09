@@ -1,5 +1,6 @@
-<h1>Nueva nomina de <%= Team.find(params[:team]).name%></h1>
-
+<h1 id='nombre'><%= Team.find(params[:team]).name%></h1>
+<h1>Nueva nomina </h1>
+<div id='tablas'>
 <table>
   <thead>
     <th>Arquero</th>
@@ -76,3 +77,22 @@
 <%= render 'form', nominate: @nominate %>
 
 <%= link_to 'Finish', matches_path(tournament:params[:tournament]) %>
+</div>
+<div id='cancha'>
+  <% Nominate.where('match_id = ? AND team_id = ?',params[:match],params[:team]).collect do |player| %>
+  <%if Player.find(player.player_id).position == 'Delantero'%>
+  <td id ='delantero' >
+  <%elsif Player.find(player.player_id).position == 'Defensa'%>
+  <td id='defensa'>
+    <%elsif Player.find(player.player_id).position == 'Mediocampista'%>
+    <td id='mediocampista'>
+      <%elsif Player.find(player.player_id).position == 'Arquero'%>
+      <td id='arquero'>
+    <%end%>
+    <%=Player.find(player.player_id).first_name%></td>
+    <%end%>
+
+
+
+<img src="https://pbs.twimg.com/profile_images/616969183948054528/mF1Oxcly.jpg"/>
+</div>

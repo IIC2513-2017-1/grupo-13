@@ -1,4 +1,4 @@
-<h1> <%= @tournament.name%></h1>
+<h1 id='nombre'> <%= @tournament.name%></h1>
 
 <%= link_to "Ver fechas", matches_path(tournament:@tournament.id)%>
 <%= link_to "Ver Estadisticas", stadistic_path(tournament:@tournament.id)%>
@@ -32,5 +32,7 @@
 
 </tbody>
 </table>
-<%= link_to 'Agregar equipo',new_tournamentteam_path(tournament:@tournament) %> |
+<% if @tournament.organizer.to_i == current_player.id%>
+<%= link_to 'Agregar equipo',new_tournamentteam_path(tournament:@tournament) %>
+<%end%>
 <%= link_to 'Volver', tournaments_path %>

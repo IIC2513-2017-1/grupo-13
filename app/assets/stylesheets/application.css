@@ -13,11 +13,15 @@
  *= require_tree .
  *= require_self
  */
+
+ tbody>tr:hover {
+   background-color: #9494b8;
+ }
  thead{
  background-color: #4CAF50;
      color: white;
+   }
 
-  }
   td {
       padding: 15px;
       text-align: left;
@@ -27,6 +31,18 @@ table {
     border: 1px solid black;
 
   }
+
   table, td {
     border: 1px solid black;
+
 }
+
+h1#nombre{
+  text-align:center;
+  color:blue;
+  text-transform: capitalize;
+  text-shadow: 2px 1px black;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 40px;
+}
+                  																					         					

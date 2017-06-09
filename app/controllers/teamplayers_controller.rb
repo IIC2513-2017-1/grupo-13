@@ -25,7 +25,7 @@ class TeamplayersController < ApplicationController
   # POST /teamplayers.json
   def create
     @teamplayer = Teamplayer.new(teamplayer_params)
-
+    if !Teamplayer.exists?(player_id:teamplayer_params[:player_id],team_id:teamplayer_params[:team_id])
     respond_to do |format|
       if @teamplayer.save
         format.html { redirect_to team_path(teamplayer_params[:team_id]), notice: 'Jugador agregado exitosamente.' }
@@ -34,6 +34,9 @@ class TeamplayersController < ApplicationController
         format.html { render :new }
         format.json { render json: @teamplayer.errors, status: :unprocessable_entity }
       end
+    end
+    else
+      redirect_to team_path(teamplayer_params[:team_id]), notice: 'Jugador ya pertenece al equipo.'
     end
   end
 

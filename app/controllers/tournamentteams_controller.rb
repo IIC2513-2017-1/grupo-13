@@ -26,7 +26,9 @@ class TournamentteamsController < ApplicationController
   # POST /tournamentteams.json
   def create
     @tournamentteam = Tournamentteam.new(tournamentteam_params)
-    respond_to do |format|
+
+      if !Tournamentteam.exists?(tournament_id:tournamentteam_params[:tournament_id],team_id:tournamentteam_params[:team_id])
+      respond_to do |format|
       if @tournamentteam.save
         format.html { redirect_to tournament_path(tournamentteam_params[:tournament_id]), notice: 'Equipo agregado correctamente.' }
         format.json { render :show, status: :created, location: @tournamentteam }
@@ -36,8 +38,12 @@ class TournamentteamsController < ApplicationController
         format.html { redirect_to  new_tournamentteam_path(tournament:tournamentteam_params[:tournament_id]),notice: 'No se puede agregar el equipo al torneo.' }
         format.json { render json: @tournamentteam.errors, status: :unprocessable_entity }
       end
-
+      end
+    else
+      redirect_to  new_tournamentteam_path(tournament:tournamentteam_params[:tournament_id]),notice: 'Equipo ta fue agregado al torneo.'
     end
+
+
   end
 
   # PATCH/PUT /tournamentteams/1

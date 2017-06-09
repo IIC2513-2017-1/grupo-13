@@ -7,8 +7,8 @@ Rails.application.routes.draw do
   get '/contact', to: 'static_pages#contact'
   resource :nominate , only: [:new,:create,:show]
   resources :matches
-  resources :tournamentteams
-  resources :teamplayers
+  resources :tournamentteams, only:[:new,:create,:destroy]
+  resources :teamplayers, only:[:new,:create,:destroy]
   resources :teams
   resources :tournaments
   resources :players do

@@ -25,10 +25,18 @@ class MatchesController < ApplicationController
   # POST /matches.json
   def create
     @match = Match.new(match_params)
-    if @match.save
-      redirect_to matches_path(tournament: match_params[:tournament_id])
+    if !Match.exists?(local:match_params[:local],visitor:match_params[:visitor])
+      if @match.save
+        redirect_to matches_path(tournament: match_params[:tournament_id]),notice:'Se creo correctamente el partido'
+      else
+        redirect_to matches_path(tournament: match_params[:tournament_id]),notice:'No se pudo crear correctamente el partido.'
+      end
+    elsif match_params[:local] == match_params[:visitor]
+      redirect_to new_match_path(tournament: match_params[:tournament_id]), notice:'Los equipos deben ser diferentes.'
+    elsif !Match.exists?(local:match_params[:local],date:match_params[:date]) || !Match.exists?(visitor:match_params[:visitor],date:match_params[:date])
+      redirect_to new_match_path(tournament: match_params[:tournament_id]), notice:'Uno de los equipos ya jugo en esta fecha.'
     else
-      redirect_to root_path
+      redirect_to new_match_path(tournament: match_params[:tournament_id]), notice:'Estos equipos ya se enfrentaron.'
     end
 
   end
