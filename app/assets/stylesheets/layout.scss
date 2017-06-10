@@ -1,7 +1,14 @@
-html, body {
-  margin: 0;
-  padding: 0;
+html {
+  height: 100%;
+  box-sizing: border-box;
 }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 
 body {
   background-color: #fff;
@@ -9,53 +16,96 @@ body {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 30px;
   line-height: 18px;
-  margin: 33px;
+  margin: 0;
   position: relative;
   padding-bottom: 6rem;
   min-height: 100%;
 }
-.nav li ul {
-				display:none;
-				position:absolute;
-      }
-.nav li:hover > ul {
-      				display:block;
-      }
 
-nav#main-menu, #logo {
-  display: inline-block;
-  vertical-align: middle;
+header {
+  padding: 1em;
 }
 
-nav#main-menu {
-  margin-left: 1%;
-  a {
-    border-radius: 13px;
-    color: #ffffff;
-    background-color: #00319c;
-    padding: 20px;
+.navbar {
+  background: #e2e2e2;
+  .toggle, .brand {
+    display: inline-block;
+  }
+  .link {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1em;
     text-decoration: none;
-    font-size: 18px;
-    border-right: 1px solid #aaa;
+    background: #333333;
+    opacity: 0.8;
+    color: white;
+    &:hover,&:active {
+      background: #990000;
+      opacity: 0.8;
+    }
   }
-  a:hover {
-    color: #1b95e0;
+  .brand {
+    width: 10em;
+    text-align: center;
+    padding: 0.5em;
+    background: #333333;
+    opacity: 0.8;
+    color: white;
   }
-
+  .toggle {
+    padding: 1em;
+    color: black;
+    vertical-align: middle;
+  }
 }
-nav#logout {
 
+@media (min-width: 48em) {
+    .navbar {
+      display: flex;
+      .left,.right {
+        display: flex;
+        flex: 1;
+      }
+      .link {
+          width: auto;
+      }
+      .right {
+        justify-content: flex-end;
+      }
+      .toggle {
+        display: none;
+      }
+    }
 }
-#logo img{
-  width: 70px
+
+.navbar {
+  div {
+    display: none;
+    @media (min-width: 48em) {
+      display: flex;
+    }
+  }
 }
-#perfil{
-font-size: 20px;
-color: green;
-position: absolute;
-top: 15px;
-width: 150px;
-left: 87%;
 
+@media (max-width: 48em) {
+.navbar.active {
+  .toggle {
+    background: seagreen;
+    color: white;
+  }
+  div {
+    display: block;
+    }
+  }
+}
 
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
 }

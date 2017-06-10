@@ -2,7 +2,7 @@ class PlayersController < ApplicationController
   before_action :set_player, only: [:show, :edit, :update, :destroy]
   before_action :logged_in?, only: %i[edit update destroy]
   before_action :is_current_player, only: %i[edit update destroy]
-  
+
 
 
   # GET /players
@@ -32,6 +32,7 @@ class PlayersController < ApplicationController
 
       respond_to do |format|
         if @player.save
+          WelcomeMailer.notify(@player).deliver_now
           format.html { redirect_to @player, notice: 'Player was successfully created.' }
           format.json { render :show, status: :created, location: @player }
         else

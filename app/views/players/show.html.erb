@@ -1,25 +1,23 @@
 <p id="notice"><%= notice %></p>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<p>
-  <strong>First name:</strong>
-  <%= @player.first_name %>
-</p>
-
-<p>
-  <strong>Last name:</strong>
-  <%= @player.last_name %>
-</p>
-
-<p>
-  <strong>Mail:</strong>
-  <%= @player.mail %>
-</p>
-
-<p>
-  <strong>Password:</strong>
-  <%= @player.password %>
-</p>
+<div class="profile-card">
+  <img src="img.jpg" alt="nombre" style="width:100%">
+  <div class="profile-container">
+    <h1><%= @player.first_name %> <%= @player.last_name %></h1>
+    <p class="profile-position"><%= @player.position %></p>
+    <p>Edad: <%= Date.today.year- @player.birthday.year.to_i %></p>
+    <a href="#"><i class="fa fa-dribbble"></i></a> 
+    <a href="#"><i class="fa fa-twitter"></i></a> 
+    <a href="#"><i class="fa fa-linkedin"></i></a> 
+    <a href="#"><i class="fa fa-facebook"></i></a> 
+    <p><button>Contact</button></p>
+  </div>
+</div>
 
 <%= link_to 'Edit', edit_player_path(@player) %> |
 <%= link_to 'Back', root_path %>
+
+
+
