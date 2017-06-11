@@ -38,11 +38,17 @@ Rails.application.configure do
   config.active_record.migration_error = :page_load
 
   #mailer
-  config.action_mailer.default_url_options = {host:'example.com'}
+  config.action_mailer.perform_caching = false
+
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-  address: 'localhost' ,
-  port: 1025,
+    address: 'smtp.gmail.com',
+    port: 1025,
+    user_name: ENV['SMTP_USER'],
+    password: ENV['SMTP_PASSWORD']
+  }
+  config.action_mailer.default_url_options = {
+    host: 'localhost'
   }
 
   # Debug mode disables concatenation and preprocessing of assets.
