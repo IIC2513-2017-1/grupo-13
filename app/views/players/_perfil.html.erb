@@ -1,0 +1,11 @@
+<div class="w3-modal-content w3-animate-top w3-card-4">
+  <div class="profile-card">
+    <%= image_tag Player.find(player.player_id).avatar.url, alt: "nombre", style:"width:100%" %>
+    <div class="profile-container">
+      <h1><%= Player.find(player.player_id).first_name %> <%= Player.find(player.player_id).last_name %></h1>
+      <p class="profile-position"><%= Player.find(player.player_id).position %></p>
+      <p class="profile-position"><%= Team.find(Teamplayer.find(player.player_id).team_id).name %></p>
+      <p>Edad: <%= Date.today.year- Player.find(player.player_id).birthday.year.to_i %></p>
+    </div>
+</div>
+</div>

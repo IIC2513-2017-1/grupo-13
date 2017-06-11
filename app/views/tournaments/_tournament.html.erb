@@ -1,0 +1,24 @@
+<table id='tabla'>
+  <thead>
+
+    <tr>
+      <th>Nombre del torneo</th>
+      <th>Lugar</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% Tournament.all.collect do |tournament| %>
+      <tr>
+        <td><%=tournament.name%></td>
+        <td><%=tournament.place%></td>
+        <td><%= link_to 'Show', tournament %></td>
+        <%if tournament.organizer.to_s == current_player.id.to_s%>
+        <td><%= link_to 'Edit', edit_tournament_path(tournament) %></td>
+        <td><%= link_to 'Destroy', tournament, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <%end%>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

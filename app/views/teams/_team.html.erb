@@ -1,0 +1,12 @@
+<div class="container-teams">
+  <% Team.all.collect do |team| %>
+  <div class="card-team">
+    <%= image_tag("real_madrid.jpg")%>
+    <div class="text">
+      <h2><%=team.name%></h2>
+       <p>Nombre Capitan :<%=Player.find(team.capitan).first_name%></p>
+       <%= link_to 'Show', team, class: "button" %>
+    </div>
+    </div>
+    <% end %>
+</div>

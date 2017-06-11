@@ -1,0 +1,50 @@
+<%= form_for player, html: {multipart: true} do |f| %>
+  <% if player.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(player.errors.count, "error") %> prohibited this player from being saved:</h2>
+
+      <ul>
+      <% player.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="field">
+    <%= f.label :First_name %>
+    <%= f.text_field :first_name,required: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Last_name %>
+    <%= f.text_field :last_name, required: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Update_email %>
+    <%= f.email_field :mail, required: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Password %>
+    <%= f.password_field :password, required: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Password %>
+    <%= f.password_field :password_confirmation, required: true %>
+  </div>
+
+<div class="field">
+    <%= f.label :Update_avatar %>
+    <%= f.file_field :avatar, as: :file %>
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+  <% end %>

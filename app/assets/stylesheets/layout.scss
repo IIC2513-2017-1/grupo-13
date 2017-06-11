@@ -11,7 +11,7 @@ html {
 
 
 body {
-  background-color: #fff;
+  background-color: #dcdcdc;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 30px;
@@ -108,4 +108,13 @@ footer {
   padding: 1rem;
   background-color: #efefef;
   text-align: center;
+}
+
+#toolh{
+  position:absolute;
+
+  margin-left:50%;
+  bottom:18px;
+  color: black;
+  font-size: 20px;
 }

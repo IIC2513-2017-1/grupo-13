@@ -1,11 +1,17 @@
 <header>
   <nav class="navbar">
+
       <a href="#" class="toggle"><i class="fa fa-reorder"></i></a>
       <%= link_to image_tag("la_liga_icon.png"), root_path, class:"brand" %>
+
+
+
       <div class="left">
         <% if current_player %>
+          <div class="tab">
           <%= link_to 'Teams', teams_path, class:"link" %>
           <%= link_to 'Tournaments', tournaments_path, class:"link" %>
+
         <% else %>
           <%= link_to 'News', "http://www.fifa.com/", class:"link" %>
         <% end %>
