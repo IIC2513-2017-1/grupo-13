@@ -56,7 +56,7 @@ end
   Team.create([{
     name: Faker::GameOfThrones.city,
     capitan: Player.all.sample.id,
-    logo: "Imagen"
+    logo: ""
     }])
 end
 
