@@ -2,7 +2,7 @@
 
 <h1>Tournaments</h1>
 
-<table id='tabla'>
+<table class="flat-table">
   <thead>
 
     <tr>
@@ -15,7 +15,7 @@
   <tbody>
     <% @tournaments.each do |tournament| %>
       <tr>
-        <td><p><%=tournament.name%></p></td>
+        <td><%=tournament.name%></td>
         <td><%=tournament.place%></td>
         <td><%= link_to 'Show', tournament %></td>
         <%if tournament.organizer.to_s == current_player.id.to_s%>

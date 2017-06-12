@@ -4,17 +4,15 @@
 <%= link_to "Ver Estadisticas", stadistic_path(tournament:@tournament.id)%>
 
 
-<table>
+<table class="flat-table">
 <thead>
 <tr>
     <th>Nombre Equipo</th>
     <th>Nombre capitan</th>
-    <th colspan="1"></th>
 </tr>
   </thead>
 
-  <tbody>
-
+<tbody>
 <% Tournamentteam.all.collect do |team| %>
   <% if team.tournament_id ==  @tournament.id.to_s %>
     <tr>
