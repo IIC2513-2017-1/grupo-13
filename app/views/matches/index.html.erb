@@ -2,11 +2,11 @@
 <h1 id='nombre'><%= Tournament.find(params[:tournament]).name %></h1>
 
 <div class="tabs">
-  <%if Match.where('tournament_id = ?',params[:tournament]).exists?(date:1)%>
+
 <input type="radio" name="tabs" id="1" checked="checked">
 <label for="1">Fecha 1</label>
 <div class="tab">
-<table>
+  <table>
   <thead>
     <tr>
       <th colspan="2"></th>
@@ -15,9 +15,9 @@
       <th colspan="4"></th>
     </tr>
   </thead>
-<body>
+  <tbody>
 
-<% Match.where('tournament_id = ? AND date = ?',params[:tournament],1 ).collect do |match| %>
+  <% Match.where('tournament_id = ? AND date = ?',params[:tournament],1 ).collect do |match| %>
 
     <tr>
       <%if Team.find(match.local).capitan == current_player.id.to_s && !Result.exists?(match_id:match.id)%>
@@ -48,16 +48,14 @@
 
   </tr>
   <%end%>
-</body>
-</table>
-<%end%>
-
-
+  </tbody>
+  </table>
 </div>
-  <%if Match.where('tournament_id = ?',params[:tournament]).exists?(date:2)%>
-<input type="radio" name="tabs" id="2" checked="checked">
+
+<input type="radio" name="tabs" id="2" >
 <label for="2">Fecha 2</label>
 <div class="tab">
+
   <table>
   <thead>
     <tr>
@@ -67,7 +65,7 @@
       <th colspan="4"></th>
     </tr>
   </thead>
-  <body>
+  <tbody>
 
   <% Match.where('tournament_id = ? AND date = ?',params[:tournament],2 ).collect do |match| %>
 
@@ -100,13 +98,11 @@
 
   </tr>
   <%end%>
-  </body>
+  </tbody>
   </table>
-  <%end%>
-
 </div>
-  <%if Match.where('tournament_id = ?',params[:tournament]).exists?(date:3)%>
-<input type="radio" name="tabs" id="3" checked="checked">
+
+<input type="radio" name="tabs" id="3" >
 <label for="3">Fecha 3</label>
 <div class="tab">
   <table>
@@ -118,7 +114,7 @@
       <th colspan="4"></th>
     </tr>
   </thead>
-  <body>
+  <tbody>
 
   <% Match.where('tournament_id = ? AND date = ?',params[:tournament],3 ).collect do |match| %>
 
@@ -151,15 +147,14 @@
 
   </tr>
   <%end%>
-  </body>
+</tbody>
   </table>
-  <%end%>
-
 </div>
-  <%if Match.where('tournament_id = ?',params[:tournament]).exists?(date:4)%>
-<input type="radio" name="tabs" id="4" checked="checked">
+
+<input type="radio" name="tabs" id="4" >
 <label for="4">Fecha 4</label>
 <div class="tab">
+
   <table>
   <thead>
     <tr>
@@ -169,7 +164,7 @@
       <th colspan="4"></th>
     </tr>
   </thead>
-  <body>
+  <tbody>
 
   <% Match.where('tournament_id = ? AND date = ?',params[:tournament],4 ).collect do |match| %>
 
@@ -202,13 +197,10 @@
 
   </tr>
   <%end%>
-  </body>
+  </tbody>
   </table>
-  <%end%>
-
 </div>
-  <%if Match.where('tournament_id = ?',params[:tournament]).exists?(date:5)%>
-<input type="radio" name="tabs" id="5" checked="checked">
+<input type="radio" name="tabs" id="5" >
 <label for="5">Fecha 5</label>
 <div class="tab">
   <table>
@@ -220,7 +212,7 @@
       <th colspan="4"></th>
     </tr>
   </thead>
-  <body>
+  <tbody>
 
   <% Match.where('tournament_id = ? AND date = ?',params[:tournament],5 ).collect do |match| %>
 
@@ -253,13 +245,14 @@
 
   </tr>
   <%end%>
-  </body>
+</tbody>
   </table>
-  <%end%>
+
 
 </div>
-  <%if Match.where('tournament_id = ?',params[:tournament]).exists?(date:6)%>
-<input type="radio" name="tabs" id="6" checked="checked">
+
+
+<input type="radio" name="tabs" id="6" >
 <label for="6">Fecha 6</label>
 <div class="tab">
   <table>
@@ -271,7 +264,7 @@
       <th colspan="4"></th>
     </tr>
   </thead>
-  <body>
+  <tbody>
 
   <% Match.where('tournament_id = ? AND date = ?',params[:tournament],6 ).collect do |match| %>
 
@@ -304,9 +297,9 @@
 
   </tr>
   <%end%>
-  </body>
+</tbody>
   </table>
-  <%end%>
+
 
 </div>
 </div>

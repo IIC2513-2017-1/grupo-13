@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= f.label :date %>
-    <%= f.select :date , [1,2,3,4,5,6]%>
+    <%= f.select :date , [1,2,3,4,5,6].collect{|x| [x,x]}%>
   </div>
   <div class="field">
     <%= f.hidden_field :tournament_id, value:params[:tournament]%>
