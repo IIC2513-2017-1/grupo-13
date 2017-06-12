@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20170611013906) do
+=======
+ActiveRecord::Schema.define(version: 20170612023504) do
+>>>>>>> 13de362a6bb07488c079a1a80a35a78a406adc23
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -84,12 +88,17 @@ ActiveRecord::Schema.define(version: 20170611013906) do
     t.string   "name"
     t.string   "capitan"
     t.string   "logo"
+<<<<<<< HEAD
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+=======
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+>>>>>>> 13de362a6bb07488c079a1a80a35a78a406adc23
     t.string   "logo_file_name"
     t.string   "logo_content_type"
     t.integer  "logo_file_size"

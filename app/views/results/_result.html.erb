@@ -12,22 +12,30 @@
   </thead>
 
   <tbody>
-    <% Teamplayer.where('player_id = ?', current_player.id.to_s).collect do |team| %>
+    <% Teamplayer.where('player_id = ?', current_player.id.to_s ).collect do |team| %>
 
-    <% Result.where('local = ? OR visitor = ?',team.team_id,team.team_id) do |result| %>
-      <tr>
-        <td><%=tournament.name%></td>
-        <td><%=tournament.place%></td>
-        <td><%= Team.find(team.team_id).name%></td>
-        <td><%= link_to 'Show', tournament %></td>
-        <%if tournament.organizer.to_s == current_player.id.to_s%>
-        <td><%= link_to 'Edit', edit_tournament_path(tournament) %></td>
-        <td><%= link_to 'Destroy', tournament, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% Match.where('local = ? OR visitor = ?',team.team_id,team.team_id).collect do |match| %>
+        <tr>
+        <td><%=Tournament.find(match.tournament_id).name%></td>
+        <td><%=match.date%></td>
+        <%if Result.exists?(match_id:match.id)%>
+        <td><%=Result.find(match.id).local%></td>
+        <%else%>
+        <td>-</td>
         <%end%>
+        <td><%=Team.find(match.local).name%></td>
+        <td><%=Team.find(match.visitor).name%></td>
+        <%if Result.exists?(match_id:match.id)%>
+        <td><%=Result.find(match.id).visitor%></td>
+        <%else%>
+        <td>-</td>
+        <%end%>
+
 
       </tr>
       <%end%>
-    <% end %>
-    <%end%>
+      <%end%>
+
+
   </tbody>
 </table>
