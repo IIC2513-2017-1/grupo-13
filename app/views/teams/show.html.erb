@@ -1,8 +1,6 @@
 <p id="notice"><%= notice %></p>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<h1 id='nombre'>Equipo <%= @team.name%></h1>
-<br />
-<h2>Equipo <%= @team.name%></h2>
+<h1 id='nombre/team'>Equipo <%= @team.name%></h1>
 <br />
 <h3>Lista de jugadores</h3>
 
@@ -10,14 +8,13 @@
 <%= link_to 'Agregar jugador',new_teamplayer_path(team:@team) %>
 <%end%>
 
-
 <div class="container-teams">
 <% Teamplayer.all.collect do |player| %>
  <% if player.team_id ==  @team.id.to_s %>
-  	<div class="card open">
+  	<div class="card" style="background: url(<%= Player.find(player.player_id).avatar.url %>) bottom left no-repeat">
       <div class="flip">
         <div class="tile front">
-          <div class="tile outside">
+          <div class="tile outside" style="background: url(<%= Player.find(player.player_id).avatar.url %>) bottom left no-repeat">
           </div>
           <div class="tile inside">
             <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black"><%= Player.find(player.player_id).first_name %></button>
@@ -35,7 +32,7 @@
         <div class="profile-container">
           <h1><%= Player.find(player.player_id).first_name %> <%= Player.find(player.player_id).last_name %></h1>
           <p class="profile-position"><%= Player.find(player.player_id).position %></p>
-          <p class="profile-position"><%= Team.find(Teamplayer.find(player.player_id).team_id).name %></p>
+          <p class="profile-position"><%= @team.name %></p>
           <p>Edad: <%= Date.today.year- Player.find(player.player_id).birthday.year.to_i %></p>
         </div>
     </div>

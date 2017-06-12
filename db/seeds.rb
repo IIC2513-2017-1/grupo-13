@@ -25,6 +25,18 @@ Player.create([{
   is_organizer: true
     }])
 
+Player.create([{
+  first_name: 'Cristobal',
+  last_name: 'Abarca',
+  mail: 'caabarca@uc.cl',
+  password: '123456',
+  password_confirmation: '123456',
+  birthday: Time.now.to_date - 22.years,
+  position: 'Defensa',
+  is_organizer: false
+    }])
+
+
 30.times do
   password = Faker::Internet.password(6,15)
   Player.create([{
