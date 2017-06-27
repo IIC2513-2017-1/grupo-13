@@ -21,5 +21,13 @@ Rails.application.routes.draw do
   get 'stadistic', to: 'tournaments#stadistic'
   get '*foo' => 'static_pages#home'
 
+  namespace :api do
+    namespace :v1 do
+      resources :teams, only: [:index, :create]
+    end
+  end
+  
+  
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
