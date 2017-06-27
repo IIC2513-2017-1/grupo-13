@@ -1,26 +1,24 @@
 <header>
   <nav class="navbar">
 
-      <a href="#" class="toggle"><i class="fa fa-reorder"></i></a>
-      <%= link_to image_tag("la_liga_icon.png"), root_path, class:"brand" %>
-
-
+    <a href="#" class="toggle"><i class="fa fa-reorder"></i></a>
+    <%= link_to image_tag("la_liga_icon.png"), root_path, class:"brand" %>
 
       <div class="left">
         <% if current_player %>
 
           <%= link_to 'Equipos', teams_path, class:"link" %>
-          <%= link_to 'Torneos', tournaments_path, class:"link" %>
-
-        <% else %>
-          <%= link_to 'Noticias', "http://www.fifa.com/", class:"link" %>
-        <% end %>
+            <%= link_to 'Torneos', tournaments_path, class:"link" %>
+              <%= link_to 'Noticias',leagues_news_path, class:"link" %>
+              <% else %>
+                <%= link_to 'Noticias', "http://www.fifa.com/", class:"link" %>
+                  <% end %>
       </div>
       <div class="right">
         <% if current_player %>
           <%=link_to 'Perfil', current_player, class:"link"%>
-          <%= link_to 'Cerrar sesión', sessions_path, method: :delete, class: "link" %>
-        <% end %>
+            <%= link_to 'Cerrar sesión', sessions_path, method: :delete, class: "link" %>
+              <% end %>
 
       </div>
   </nav>

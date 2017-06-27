@@ -17,6 +17,7 @@ Rails.application.routes.draw do
     end
   end
   resource :sessions, only: [:new, :create, :destroy]
+  get '/leagues_news', to: 'tournaments#leagues_news'
   get 'stadistic', to: 'tournaments#stadistic'
   get '*foo' => 'static_pages#home'
 

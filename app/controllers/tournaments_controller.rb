@@ -5,6 +5,11 @@ class TournamentsController < ApplicationController
   # GET /tournaments.json
   def stadistic
   end
+
+  def leagues_news
+  end
+  
+
   def index
     @tournaments = Tournament.all
   end

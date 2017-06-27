@@ -1,35 +1,38 @@
-
-
-  <%if !session.key?(:user_id) %>
+<%if !session.key?(:user_id) %>
   <div id="home">
     <h1>Welcome to champions liga</h1>
-  </div>
-  <ul class="home-list">
-    <li><%= link_to 'Login', new_sessions_path %></li>
-    <li><%= link_to 'Sign up as player', new_player_path %></li>
-    <li><%= link_to 'Visitor'%></li>
-  </ul>
-  <%else%>
+    <ul class="home-list">
+      <li>
+        <%= link_to 'Login', new_sessions_path %>
+      </li>
+      <li>
+        <%= link_to 'Sign up as player', new_player_path %>
+      </li>
+      <li>
+        <%= link_to 'Visitor'%>
+      </li>
+    </ul>
+      </div>
 
+    <%else%>
+      <div class="tabs">
+        <input type="radio" name="tabs" id="tabone" checked="checked">
+        <label for="tabone">My result</label>
+        <div class="tab">
+          <%= render "results/result"%>
+        </div>
 
-    <div class="tabs">
-  <input type="radio" name="tabs" id="tabone" checked="checked">
-  <label for="tabone">My result</label>
-  <div class="tab">
-    <%= render "results/result"%>
-  </div>
+        <input type="radio" name="tabs" id="tabtwo">
+        <label for="tabtwo">My tems</label>
+        <div class="tab">
+          <%= render "teams/team"%>
+        </div>
 
-  <input type="radio" name="tabs" id="tabtwo">
-  <label for="tabtwo">My tems</label>
-  <div class="tab">
-    <%= render "teams/team"%>
-  </div>
+        <input type="radio" name="tabs" id="tabthree">
+        <label for="tabthree">My tournaments</label>
+        <div class="tab">
+          <%= render "tournaments/tournament"%>
+        </div>
+      </div>
 
-  <input type="radio" name="tabs" id="tabthree">
-  <label for="tabthree">My tournaments</label>
-  <div class="tab">
-    <%= render "tournaments/tournament"%>
-  </div>
-</div>
-
-  <%end%>
+      <%end%>
