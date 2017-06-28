@@ -13,16 +13,19 @@ class Player < ApplicationRecord
   validate :validate_dated_around_now
   has_many :teams
 
-  private
-  def validate_dated_around_now
-  self.errors.add(:birthday, "is not valid") unless ((Time.now.to_date - 99.years)..(Time.now.to_date - 18.years)).include?(self.birthday)
-end
-
 
   def generate_token_and_save
     loop do 
       self.token = SecureRandom.hex(64)
       break if save
     end
-  end
+  end 
+
+  private
+  def validate_dated_around_now
+  self.errors.add(:birthday, "is not valid") unless ((Time.now.to_date - 99.years)..(Time.now.to_date - 18.years)).include?(self.birthday)
+end
+
+
+
 end

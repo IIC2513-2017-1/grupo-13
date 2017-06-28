@@ -14,7 +14,7 @@ Tournament.delete_all
 
 positions = ["Delantero", "Arquero", "Defensa","Mediocampista"]
 
-Player.create([{
+p1 = Player.create(
   first_name: 'Nicolas',
   last_name: 'Julio',
   mail: 'nijulio@uc.cl',
@@ -23,9 +23,11 @@ Player.create([{
   birthday: Time.now.to_date - 22.years,
   position: 'Defensa',
   is_organizer: true
-    }])
+    )
+p1.generate_token_and_save
 
-Player.create([{
+
+p2 = Player.create(
   first_name: 'Cristobal',
   last_name: 'Abarca',
   mail: 'caabarca@uc.cl',
@@ -34,8 +36,9 @@ Player.create([{
   birthday: Time.now.to_date - 22.years,
   position: 'Defensa',
   is_organizer: false
-    }])
+    )
 
+p2.generate_token_and_save
 
 30.times do
   password = Faker::Internet.password(6,15)

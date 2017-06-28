@@ -6,16 +6,20 @@ module Api::V1
         end
 
         def create
-            @team = Team.new(team_params)
+            @team = @current_player.teams.build(teams_params.merge(capitan:@current_player.id))
             return if @tweet.save
                 render json: {errors: @team.errors}, status: :unprocessable_entity
             end
         end
+
+        def show
+            @teams = Teams.find(params[:id])
+        end
+        
         
 
         private
         def team_params
-            params.require(:team).permit(:name, :capitan)
+            params.require(:team).permit(:name)
         end
-    end
 end

@@ -19,11 +19,12 @@ Rails.application.routes.draw do
   resource :sessions, only: [:new, :create, :destroy]
   get '/leagues_news', to: 'tournaments#leagues_news'
   get 'stadistic', to: 'tournaments#stadistic'
-  get '*foo' => 'static_pages#home'
+  # get '*foo' => 'static_pages#home'
 
   namespace :api do
     namespace :v1 do
-      resources :teams, only: [:index, :create]
+      resources :teams, only: [:index, :create, :show]
+      resources :players, only: [:show]
     end
   end
   

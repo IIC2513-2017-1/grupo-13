@@ -8,6 +8,7 @@
     <h1><%= @player.first_name %> <%= @player.last_name %></h1>
     <p class="profile-position"><%= @player.position %></p>
     <p>Edad: <%= Date.today.year- @player.birthday.year.to_i %></p>
+    <p>Token: <%= @player.token if @player == current_player%> </p>
     <a href="#"><i class="fa fa-dribbble"></i></a> 
     <a href="#"><i class="fa fa-twitter"></i></a> 
     <a href="#"><i class="fa fa-linkedin"></i></a> 

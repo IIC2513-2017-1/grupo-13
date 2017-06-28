@@ -32,11 +32,18 @@ gem 'jbuilder', '~> 2.5'
 gem 'backports'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
+
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+
+# Para la creacion de textos falsos
 gem 'faker', '~> 1.7', '>= 1.7.3'
+# Para el manejo de imagenes de perfil
 gem 'paperclip', '~> 5.0.0'
+# Para la ejecucion de jquery ( no se porque no funciona jquery sin esta libreria)
 gem 'jquery-turbolinks'
+# Middleware that will make Rack-based apps CORS compatible.
+gem 'rack-cors', '~> 0.4.1'
 
 
 gem 'httparty'
