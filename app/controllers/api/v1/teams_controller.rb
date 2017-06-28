@@ -8,7 +8,7 @@ module Api::V1
         end     
         
         def create
-            @team = @current_player.team.build(team_params.merge(capitan:@current_player.id))
+            @team = Team.new(team_params.merge(capitan:@current_player.id))
             return if @team.save
             render json: {errors: @team.errors}, status: :unprocessable_entity
         end     
