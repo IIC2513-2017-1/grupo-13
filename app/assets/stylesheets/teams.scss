@@ -122,3 +122,11 @@ display: block;
   #team-nombre {
     color: black;
   }
+  .show {
+    text-align:center; 
+    &:visited{
+      color:white;
+      
+    }
+    
+  }

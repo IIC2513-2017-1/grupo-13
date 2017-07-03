@@ -19,6 +19,10 @@ Rails.application.routes.draw do
   resource :sessions, only: [:new, :create, :destroy]
   get '/leagues_news', to: 'tournaments#leagues_news'
   get 'stadistic', to: 'tournaments#stadistic'
+  get 'invitacion', to: 'tournamentteams#invitacion'
+  get 'aceptar', to: 'tournamentteams#aceptar'
+  post 'invitacion', to: 'tournamentteams#ingresar'
+  get 'ingresarform', to: 'tournamentteams#ingresarform'
   # get '*foo' => 'static_pages#home'
 
   namespace :api do
@@ -27,8 +31,8 @@ Rails.application.routes.draw do
       resources :players, only: [:show]
     end
   end
-  
-  
+
+
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

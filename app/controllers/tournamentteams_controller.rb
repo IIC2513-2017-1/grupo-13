@@ -22,11 +22,23 @@ class TournamentteamsController < ApplicationController
   def edit
   end
 
+
+  def invitacion
+  end
+  def aceptar
+    team = Tournamentteam.where('team_id = ? AND tournament_id = ?',params[:team],params[:tournament])
+    team.update(i_team:true,i_tournament:true)
+    redirect_to invitacion_path
+  end
+
   # POST /tournamentteams
   # POST /tournamentteams.json
   def create
-    @tournamentteam = Tournamentteam.new(tournamentteam_params)
-
+      if params[:solicitar]
+        @tournamentteam = Tournamentteam.new(tournamentteam_params.merge(i_team:true))
+      else
+        @tournamentteam = Tournamentteam.new(tournamentteam_params.merge(i_tournament:true))
+      end
       if !Tournamentteam.exists?(tournament_id:tournamentteam_params[:tournament_id],team_id:tournamentteam_params[:team_id])
       respond_to do |format|
       if @tournamentteam.save
@@ -40,7 +52,7 @@ class TournamentteamsController < ApplicationController
       end
       end
     else
-      redirect_to  new_tournamentteam_path(tournament:tournamentteam_params[:tournament_id]),notice: 'Equipo ta fue agregado al torneo.'
+      redirect_to  new_tournamentteam_path(tournament:tournamentteam_params[:tournament_id]),notice: 'Equipo ya fue agregado al torneo.'
     end
 
 

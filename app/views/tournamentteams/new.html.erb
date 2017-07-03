@@ -1,5 +1,10 @@
+<%if params[:solicitar]%>
+<h1>Con cual equipo deseas solicitar el ingreso a <%= Tournament.find(params[:tournament]).name %></h1>
+
+<%= render 'form1', tournamentteam: @tournamentteam   %>
+<%else%>
 <h1>Agregar equipo a <%= Tournament.find(params[:tournament]).name %></h1>
 
 <%= render 'form', tournamentteam: @tournamentteam   %>
-
+<%end%>
 <%= link_to 'Back', tournament_path(params[:tournament]) %>

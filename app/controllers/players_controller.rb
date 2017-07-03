@@ -34,10 +34,7 @@ class PlayersController < ApplicationController
       @player = Player.new(player_params)
 
       respond_to do |format|
-
         if @player.save
-          WelcomeMailer.notify(@player).deliver_later(wait: 10.second)  
-
           format.html { redirect_to @player, notice: 'Player was successfully created.' }
           format.json { render :show, status: :created, location: @player }
         else

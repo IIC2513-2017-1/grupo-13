@@ -1,0 +1,29 @@
+
+<%= form_for(tournamentteam) do |f| %>
+  <% if tournamentteam.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tournamentteam.errors.count, "error") %> prohibited this tournamentteam from being saved:</h2>
+
+      <ul>
+      <% tournamentteam.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :team_id%>
+    <%= f.select :team_id, Team.where('capitan = ?', current_player.id.to_s).collect {|x| [x.name, x.id]} %> </br>
+  </div>
+
+  <div class="field">
+    <%= f.hidden_field :tournament_id, value: params[:tournament]%>
+    <%= f.hidden_field :solicitar, value: true %>
+
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit 'Solicitar'%>
+  </div>
+<%end %>

@@ -1,3 +1,4 @@
+
 <%= form_for(tournamentteam) do |f| %>
   <% if tournamentteam.errors.any? %>
     <div id="error_explanation">
@@ -17,11 +18,11 @@
 
   <div class="field">
     <%= f.hidden_field :tournament_id, value: params[:tournament]%>
+    <%= f.hidden_field :solicitar, value: false%>
   </div>
 
 
   <div class="actions">
     <%= f.submit 'Agregar Equipo'%>
-
   </div>
 <% end %>

@@ -1,0 +1,9 @@
+<%= form_tag invitacion_path, method: :post do %>
+  <td>
+  <div class="ui form" style="width: 300px;">
+    <%= select_tag :team, options_from_collection_for_select(Team.where('capitan = ?', current_player.id.to_s), "id", "name", params[:team]), prompt: "select one"%>
+    <% hidden_field_tag :tournament_id, value: params[:tournament_id]%>
+</br>
+  </td>
+  <td><%= submit_tag "Solicitar", class: 'btn' %></td>
+<%end%>

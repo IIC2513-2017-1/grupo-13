@@ -12,8 +12,12 @@
     <td>Dif</td>
   </thead>
   <% equipos = {} %>
+  <%equipos_id = [] %>
   <% Tournamentteam.where('tournament_id = ?', params[:tournament]).collect do |team| %>
   <% equipos[team.team_id] = [0,0,0,0,0,0,0] %>
+  <% equipos_id.push[team.team_id.to_i] %>
+  <%puts equipos%>
+  <%puts equipos_id%>
   <% end %>
   <% Result.all.collect do |result| %>
     <% if Match.find(result.match_id).tournament_id == params[:tournament] %>
@@ -44,22 +48,55 @@
 
   <tbody>
     <% i = 1 %>
-    <% equipos.each do |team, lista| %>
-      <tr>
-        <td><%= i %></td>
-        <td><%= Team.find(team).name %></td>
-        <td><%= lista[0] %></td>
-        <td><%= lista[1] %></td>
-        <td><%= lista[2]%></td>
-        <td><%= lista[3]%></td>
-        <td><%= lista[4]%></td>
-        <td><%= lista[5]%></td>
-        <td><%= lista[6]%></td>
-        <td><%= lista[5]-lista[6] %></td>
-        <% i += 1 %>
+    <% while equipos_id.length <= i%>
 
-      </tr>
+    <% mayor = equipos_id.first.to_s %>
+    <% equipos.each do |team2, lista2| %>
+      <% if equipos[mayor][0]<equipos[team2][0]%>
+        <% mayor = team2 %>
+
+      <% elsif equipos[mayor][0]==equipos[team2][0]%>
+          <% if (equipos[mayor][5]-equipos[mayor][6])<(equipos[team2][5]-equipos[team2][6])%>
+            <% mayor = team2 %>
+
+          <% elsif equipos[mayor][0]==equipos[team2][0]%>
+              <% if equipos[mayor][2]<equipos[team2][2]%>
+                <% mayor = team2 %>
+
+              <% elsif equipos[mayor][0]==equipos[team2][0]%>
+                  <% if equipos[mayor][5]<equipos[team2][5]%>
+                    <% mayor = team2 %>
+
+                  <%end%>
+              <%end%>
+          <%end%>
       <%end%>
+
+    <%end%>
+    <tr>
+      <td><%= i %></td>
+      <td><%= Team.find(mayor).name %></td>
+      <td><%= equipos[mayor][0] %></td>
+      <td><%= equipos[mayor][1] %></td>
+      <td><%= equipos[mayor][2]%></td>
+      <td><%= equipos[mayor][3]%></td>
+      <td><%= equipos[mayor][4]%></td>
+      <td><%= equipos[mayor][5]%></td>
+      <td><%= equipos[mayor][6]%></td>
+      <td><%= equipos[mayor][5]-equipos[mayor][6] %></td>
+      <% i += 1 %>
+      <% #######eliminar equipo ##### %>
+      <% index = 0 %>
+      <% equipos_id.each do |team_id| %>
+        <% if team_id == mayor %>
+          <%  equipos_id.delete_at(idex) %>
+        <% index += 1 %>
+        <%end%>
+      <%end%>
+
+
+    </tr>
+  <%end%>
   </tbody>
 
 </table>
