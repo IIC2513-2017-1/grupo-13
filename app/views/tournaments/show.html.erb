@@ -30,8 +30,8 @@
 </tbody>
 </table>
 <% if @tournament.organizer.to_i == current_player.id%>
-<%= link_to 'Agregar equipo',new_tournamentteam_path(tournament:@tournament) %>
+<%= link_to 'Agregar equipo',new_tournamentteam_path(tournament:@tournament), class: "btn" %>
 <%end%>
-<%= link_to "Ver fechas", matches_path(tournament:@tournament.id)%>
-<%= link_to "Ver Estadisticas", stadistic_path(tournament:@tournament.id)%>
-<%= link_to 'Volver', tournaments_path %>
+<%= link_to "Ver fechas", matches_path(tournament:@tournament.id), class: "btn"%>
+<%= link_to "Ver Estadisticas", stadistic_path(tournament:@tournament.id), class: "btn"%>
+<%= link_to 'Volver', tournaments_path, class: "btn" %>

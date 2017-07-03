@@ -1,15 +1,13 @@
 <h1 id='nombre'><%= Tournament.find(params[:tournament]).name %></h1>
-<h2> Estadisticas del torneo </h2>
 <br/>
-<br/>
-<br/>
+<h2> Goleadores</h2>
 <td>
   <div>
-<table>
+<table class="flat-table">
   <thead>
     <tr>
-      <td>Jugador</td>
-      <td>Cantidad de goles </td>
+      <th>Jugador</th>
+      <th>Cantidad de goles </th>
   </thead>
   <tbody>
     <% goleadores = {}%>
@@ -36,14 +34,16 @@
 </td>
 
 <br/>
+<h2> Amonestaciones </h2>
+
 <td>
   <div>
-    <table>
+    <table class="flat-table">
       <thead>
         <tr>
-          <td>Jugador</td>
-          <td>Tarjetas amarillas </td>
-          <td>Tarjetas Rojas </td>
+          <th>Jugador</th>
+          <th>Tarjetas amarillas </th>
+          <th>Tarjetas Rojas </th>
       </thead>
       <tbody>
         <% amarillas = {}%>
@@ -82,4 +82,4 @@
 </table>
 </div>
 </td>
-<td><%= link_to "volver", tournament_path(params[:tournament])%></td>
+<td><%= link_to "Volver", tournament_path(params[:tournament]), class:"btn" %></td>

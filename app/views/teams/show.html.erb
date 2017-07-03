@@ -11,10 +11,10 @@
 <div class="container-teams">
 <% Teamplayer.all.collect do |player| %>
  <% if player.team_id ==  @team.id.to_s %>
-  	<div class="card" style="background: url(<%= Player.find(player.player_id).avatar.url %>) bottom left no-repeat">
+  	<div class="card" style="background:url(<%= Player.find(player.player_id).avatar.url %>) bottom left no-repeat">
       <div class="flip">
         <div class="tile front">
-          <div class="tile outside" style="background: url(<%= Player.find(player.player_id).avatar.url %>) bottom left no-repeat">
+          <div class="tile outside" style="background:url(<%= Player.find(player.player_id).avatar.url %>) bottom left no-repeat">
           </div>
           <div class="tile inside">
             <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black"><%= Player.find(player.player_id).first_name %></button>
@@ -38,20 +38,20 @@
     </div>
   </div>
   </div>
+  <% end %>
+  <% end %>
+
 
   <script>
 // Get the modal
-var modal = document.getElementById('id01');
+// var modal = document.getElementById('id01');
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+// // When the user clicks anywhere outside of the modal, close it
+// window.onclick = function(event) {
+//     if (event.target == modal) {
+//         modal.style.display = "none";
+//     }
+// }
 </script>
-
-  <% end %>
-  <% end %>
 </div>
 <%= link_to 'Volver', teams_path, style:"text-align:center;" %>

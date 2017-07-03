@@ -292,8 +292,8 @@
       <%else%>
         <td>Agregar planilla</td>
       <%end%>
-    <td><%= link_to 'Resultado',new_result_path(match:match.id,local:match.local,visitor:match.visitor,tournament:params[:tournament]) %>
-    <td><%= link_to 'Incidencias',new_event_path(match:match.id,local:match.local,visitor:match.visitor,tournament:params[:tournament]) %>
+    <td><%= link_to 'Resultado',new_result_path(match:match.id,local:match.local,visitor:match.visitor,tournament:params[:tournament]), class:"btn" %>
+    <td><%= link_to 'Incidencias',new_event_path(match:match.id,local:match.local,visitor:match.visitor,tournament:params[:tournament]), class:"btn" %>
 
   </tr>
   <%end%>
@@ -305,7 +305,7 @@
 </div>
 <br>
 <% if current_player.id.to_s == Tournament.find(params[:tournament]).organizer %>
-  <td><%= link_to 'New Match', new_match_path(tournament: params[:tournament]) %></td>
+  <td><%= link_to 'New Match', new_match_path(tournament: params[:tournament]),class:"btn" %></td>
 <% end %>
 
 <td><%= link_to 'Back',tournament_path(params[:tournament])%></td>

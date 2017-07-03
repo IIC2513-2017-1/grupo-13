@@ -8,8 +8,8 @@
   <%= image_tag team.logo.url, alt: "imagen", style:"width:100%" %>
     <div class="text">
       <h2><%=team.name%></h2>
-       <p>Nombre Capitan :<%=Player.find(team.capitan).first_name%></p>          
-       <%= link_to 'Show', team, class: "button" %>
+       <h3>Capitan: <%=Player.find(team.capitan).first_name%></h3>          
+       <%= link_to 'Show', team, class: "show" %>
     </div>
     </div>
     <% end %>  
