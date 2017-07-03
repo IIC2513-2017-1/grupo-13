@@ -29,7 +29,7 @@ class ResultsController < ApplicationController
     respond_to do |format|
       if !Result.exists?(match_id:result_params[:match_id])
         @result.save
-        format.html { redirect_to match_path(tournament:result_params[:tournament]), notice: 'Result was successfully created.' }
+        format.html { redirect_to matches_path(tournament:result_params[:tournament]), notice: 'Result was successfully created.' }
         format.json { render :show, status: :created, location: @result }
       else
         format.html { redirect_to matches_path(tournament:result_params[:tournament]), notice: 'Este partido ya termino. No se puede modificar' }

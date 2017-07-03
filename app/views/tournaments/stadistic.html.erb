@@ -27,7 +27,7 @@
     <% goleadores.each do |player,goleador| %>
         <tr>
         <td><%= Player.find(player).first_name%></td>
-        <td><%=goleador %></td>
+        <td><%= goleador %></td>
         </tr>
     <%end%>
   </tbody>
@@ -48,7 +48,7 @@
       <tbody>
         <% amarillas = {}%>
         <% rojas = {}%>
-        <%Event.all.collect do |event|%>
+        <% Event.all.collect do |event| %>
           <% if Match.exists?(id:event.match_id)%>
           <% if Match.find(event.match_id).tournament_id == params[:tournament] %>
               <% if !amarillas.key?(event.player_id) && event.yellow_cards != 0%>
@@ -82,4 +82,5 @@
 </table>
 </div>
 </td>
+<%= render 'table_position' %>
 <td><%= link_to "volver", tournament_path(params[:tournament])%></td>

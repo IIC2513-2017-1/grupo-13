@@ -1,0 +1,65 @@
+<table>
+  <thead>
+    <td>Position</td>
+    <td>Equipo</td>
+    <td>Pts</td>
+    <td>PJ</td>
+    <td>PG</td>
+    <td>PE</td>
+    <td>PP</td>
+    <td>GF</td>
+    <td>GC</td>
+    <td>Dif</td>
+  </thead>
+  <% equipos = {} %>
+  <% Tournamentteam.where('tournament_id = ?', params[:tournament]).collect do |team| %>
+  <% equipos[team.team_id] = [0,0,0,0,0,0,0] %>
+  <% end %>
+  <% Result.all.collect do |result| %>
+    <% if Match.find(result.match_id).tournament_id == params[:tournament] %>
+      <% local = Match.find(result.match_id).local %>
+      <% visitor = Match.find(result.match_id).visitor %>
+      <% if result.local > result.visitor %>
+      <%    equipos[local][0] += 3 %>
+      <%    equipos[local][2] += 1 %>
+      <%    equipos[visitor][4] += 1 %>
+      <% elsif result.local < result.visitor %>
+        <% equipos[visitor][0] += 3 %>
+        <% equipos[visitor][2] += 1 %>
+        <% equipos[local][4] += 1 %>
+      <% else %>
+        <% equipos[visitor][3] += 1 %>
+        <% equipos[local][3] += 1 %>
+        <% equipos[local][0] += 1 %>
+        <% equipos[visitor][0] += 1 %>
+      <% end %>
+      <% equipos[visitor][1] += 1 %>
+      <% equipos[local][1] += 1 %>
+      <% equipos[visitor][5] += result.visitor %>
+      <% equipos[visitor][6] += result.local %>
+      <% equipos[local][5] += result.local %>
+      <% equipos[local][6] += result.visitor%>
+    <% end %>
+  <% end %>
+
+  <tbody>
+    <% i = 1 %>
+    <% equipos.each do |team, lista| %>
+      <tr>
+        <td><%= i %></td>
+        <td><%= Team.find(team).name %></td>
+        <td><%= lista[0] %></td>
+        <td><%= lista[1] %></td>
+        <td><%= lista[2]%></td>
+        <td><%= lista[3]%></td>
+        <td><%= lista[4]%></td>
+        <td><%= lista[5]%></td>
+        <td><%= lista[6]%></td>
+        <td><%= lista[5]-lista[6] %></td>
+        <% i += 1 %>
+
+      </tr>
+      <%end%>
+  </tbody>
+
+</table>
