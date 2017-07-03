@@ -31,15 +31,15 @@
         <%= image_tag Player.find(player.player_id).avatar.url, alt: "nombre", style:"width:100%" %>
         <div class="profile-container">
           <h1><%= Player.find(player.player_id).first_name %> <%= Player.find(player.player_id).last_name %></h1>
-          <p class="profile-position"><%= Player.find(player.player_id).position %></p>
+          <p class="profile-position"><%= Player.find(player.player_id).position %><%= player.id %></p>
           <p class="profile-position"><%= @team.name %></p>
           <p>Edad: <%= Date.today.year- Player.find(player.player_id).birthday.year.to_i %></p>
         </div>
     </div>
   </div>
   </div>
-  <script>
 
+  <script>
 // Get the modal
 var modal = document.getElementById('id01');
 
@@ -54,4 +54,4 @@ window.onclick = function(event) {
   <% end %>
   <% end %>
 </div>
-<%= link_to 'Volver', teams_path %>
+<%= link_to 'Volver', teams_path, style:"text-align:center;" %>

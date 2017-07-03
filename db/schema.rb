@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20170611013906) do
-=======
-ActiveRecord::Schema.define(version: 20170612023504) do
->>>>>>> 13de362a6bb07488c079a1a80a35a78a406adc23
+ActiveRecord::Schema.define(version: 20170703062905) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -64,7 +60,9 @@ ActiveRecord::Schema.define(version: 20170612023504) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.string   "token"
     t.index ["mail"], name: "index_players_on_mail", unique: true, using: :btree
+    t.index ["token"], name: "index_players_on_token", unique: true, using: :btree
   end
 
   create_table "results", force: :cascade do |t|
@@ -77,10 +75,12 @@ ActiveRecord::Schema.define(version: 20170612023504) do
   end
 
   create_table "teamplayers", force: :cascade do |t|
-    t.string   "player_id",  null: false
-    t.string   "team_id",    null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "player_id",                  null: false
+    t.string   "team_id",                    null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.boolean  "i_team",     default: false
+    t.boolean  "i_player",   default: false
     t.index ["team_id", "player_id"], name: "index_teamplayers_on_team_id_and_player_id", unique: true, using: :btree
   end
 
@@ -88,16 +88,12 @@ ActiveRecord::Schema.define(version: 20170612023504) do
     t.string   "name"
     t.string   "capitan"
     t.string   "logo"
-
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
-
     t.string   "logo_file_name"
     t.string   "logo_content_type"
     t.integer  "logo_file_size"
@@ -118,10 +114,12 @@ ActiveRecord::Schema.define(version: 20170612023504) do
   end
 
   create_table "tournamentteams", force: :cascade do |t|
-    t.string   "tournament_id", null: false
-    t.string   "team_id",       null: false
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.string   "tournament_id",                 null: false
+    t.string   "team_id",                       null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.boolean  "i_tournament",  default: false
+    t.boolean  "i_team",        default: false
     t.index ["tournament_id", "team_id"], name: "index_tournamentteams_on_tournament_id_and_team_id", unique: true, using: :btree
   end
 

@@ -1,4 +1,6 @@
 class Matches < ApplicationRecord
-  validates [:local,:visitor,:date], presence: true
+  validates :local, presence: true
+  validates :visitor, presence: true
+  validates :date, presence: true
    has_many :teams
 end
