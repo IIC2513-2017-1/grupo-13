@@ -24,11 +24,3 @@ label {
 
  
 
-h1#nombre{
-  text-align:center;
-  color:blue;
-  text-transform: capitalize;
-  text-shadow: 2px 1px black;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 40px;
-}
