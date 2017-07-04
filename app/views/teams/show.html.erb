@@ -5,7 +5,7 @@
 <h3>Lista de jugadores</h3>
 
 <%if current_player.id.to_s == @team.capitan%>
-<%= link_to 'Agregar jugador',new_teamplayer_path(team:@team) %>
+<%= link_to 'Agregar jugador',new_teamplayer_path(team:@team), class: "btn" %>
 <%end%>
 
 <div class="container-teams">
@@ -54,4 +54,4 @@
 // }
 </script>
 </div>
-<%= link_to 'Volver', teams_path, style:"text-align:center;" %>
+<%= link_to 'Volver', teams_path, style:"text-align:center;", class: "btn" %>

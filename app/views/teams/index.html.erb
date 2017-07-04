@@ -1,6 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Teams</h1>
+<h1>Teams
+  <span><%= link_to 'Nuevo equipo', new_team_path, class: "btn", style: "float:right" %></span>
+</h1>
 
 <div class="container-teams">
   <% @teams.each do |team| %>
@@ -14,5 +16,4 @@
     </div>
     <% end %>  
 </div>
-<%= link_to 'New Team', new_team_path %>
 
