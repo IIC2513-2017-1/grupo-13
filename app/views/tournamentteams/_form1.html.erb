@@ -1,4 +1,6 @@
-
+<% if Team.where('capitan = ?', current_player.id.to_s).count == 0%>
+<p> Aun no has creado ningun equipo </p>
+<%else%>
 <%= form_for(tournamentteam) do |f| %>
   <% if tournamentteam.errors.any? %>
     <div id="error_explanation">
@@ -26,4 +28,5 @@
   <div class="actions">
     <%= f.submit 'Solicitar'%>
   </div>
-<%end %>
+<% end %>
+<% end %>

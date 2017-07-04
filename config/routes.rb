@@ -23,7 +23,9 @@ Rails.application.routes.draw do
   get 'aceptar', to: 'tournamentteams#aceptar'
   post 'invitacion', to: 'tournamentteams#ingresar'
   get 'ingresarform', to: 'tournamentteams#ingresarform'
-  # get '*foo' => 'static_pages#home'
+  get 'crear', to: 'teamplayers#crear'
+  get '*foo' => 'static_pages#home'
+  get 'aceptar_player', to: 'teamplayers#aceptar'
 
   namespace :api do
     namespace :v1 do

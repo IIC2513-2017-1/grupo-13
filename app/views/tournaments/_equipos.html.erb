@@ -1,0 +1,14 @@
+<div class="container-teams">
+  <%Team.all.collect do |team|%>
+  <% if Tournamentteam.exists?(team_id:team.id,tournament_id:@tournament.id,i_team:true,i_tournament:true)%>
+  <div class="card-team">
+  <%= image_tag Team.find(team.id).logo.url, alt: "imagen", style:"width:100%" %>
+    <div class="text">
+      <h2><%=Team.find(team.id).name%></h2>
+       <h3>Capitan: <%=Player.find(Team.find(team.id).capitan).first_name%></h3>
+       <%= link_to 'Ver jugadores', teams_path(team.id), class: "show" %>
+    </div>
+    </div>
+    <% end %>
+    <%end%>
+</div>

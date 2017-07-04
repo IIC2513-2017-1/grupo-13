@@ -2,15 +2,19 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <h1 id='nombre/team'>Equipo <%= @team.name%></h1>
 <br />
-<h3>Lista de jugadores</h3>
-
+<h3>Lista de jugadores
 <%if current_player.id.to_s == @team.capitan%>
-<%= link_to 'Agregar jugador',new_teamplayer_path(team:@team) %>
+<%= link_to '+Agregar jugador',new_teamplayer_path(team:@team), class: "btn" , style: "float:right" %>
+<%= link_to 'Eliminar equipo', @team, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn" , style: "float:right" %>
+<%else%>
+<%= link_to 'Solicitar ingreso', crear_path(team:@team), class: "btn" , style: "float:right" %>
 <%end%>
+</span>
+</h3>
 
 <div class="container-teams">
 <% Teamplayer.all.collect do |player| %>
- <% if player.team_id ==  @team.id.to_s %>
+ <% if player.team_id ==  @team.id.to_s && player.i_team && player.i_player%>
   	<div class="card" style="background:url(<%= Player.find(player.player_id).avatar.url %>) bottom left no-repeat">
       <div class="flip">
         <div class="tile front">
@@ -31,7 +35,7 @@
         <%= image_tag Player.find(player.player_id).avatar.url, alt: "nombre", style:"width:100%" %>
         <div class="profile-container">
           <h1><%= Player.find(player.player_id).first_name %> <%= Player.find(player.player_id).last_name %></h1>
-          <p class="profile-position"><%= Player.find(player.player_id).position %><%= player.id %></p>
+          <p class="profile-position"><%= Player.find(player.player_id).position %></p>
           <p class="profile-position"><%= @team.name %></p>
           <p>Edad: <%= Date.today.year- Player.find(player.player_id).birthday.year.to_i %></p>
         </div>
@@ -54,4 +58,4 @@
 // }
 </script>
 </div>
-<%= link_to 'Volver', teams_path, style:"text-align:center;" %>
+<%= link_to 'Volver', teams_path, style:"text-align:center;", class: "btn" %>

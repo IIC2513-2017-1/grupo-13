@@ -8,6 +8,10 @@ $(document).on('turbolinks:load', function() {
     $( this ).removeClass( "open" );
   }
 );
+    $("#token").hide();
+    $("#token-button").click(function () {
+        $("#token").toggle();
+    });
 });
 
 $(document).on('turbolinks:load', function() {

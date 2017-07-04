@@ -2,7 +2,7 @@
   <% Team.all.collect do |team| %>
    <% if Teamplayer.exists?(team_id:team.id.to_s, player_id:current_player.id.to_s)%>
   <div class="card-team">
-    <%= image_tag("real_madrid.jpg")%>
+  <%= image_tag team.logo.url, alt: "imagen", style:"width:100%" %>
     <div class="text">
       <h2><%=team.name%></h2>
        <p>Nombre Capitan :<%=Player.find(team.capitan).first_name%></p>

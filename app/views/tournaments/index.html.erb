@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Torneos</h1>
+<h1>Torneos
+  <span>
+<% if current_player.is_organizer %>
+  <%= link_to '+Crear Torneo', new_tournament_path, class:"btn" , style: "float:right"%>
+<%end%>
+</h1>
 
 <table class="flat-table">
   <thead>
@@ -27,8 +32,6 @@
   </tbody>
 </table>
 
-  <% if current_player.is_organizer %>
-    <%= link_to 'New Tournament', new_tournament_path, class:"btn" %>
-  <%end%>
+
 
 <br>

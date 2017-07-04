@@ -1,24 +1,51 @@
+<div>
 <% if Player.find(current_player.id).is_organizer %>
   <% Tournament.where('organizer = ?', current_player.id.to_s).collect do |tournament| %>
     <% Tournamentteam.where('tournament_id = ?', tournament.id.to_s).order('created_at DESC').collect do |team| %>
       <% if team.i_team && !team.i_tournament %>
         <p>Esperando confirmacion de <%= Team.find(team.team_id).name %> </p>
       <% elsif !team.i_team && team.i_tournament %>
-        <p> <%= Team.find(team.team_id).name %> Solicitó entrar al torneo <%= Tournament.find(team.tournament_id).name %> <%= link_to 'Aceptar' ,aceptar_path(team:team.team_id,tournament:team.tournament_id) %></p>
+        <p> <%= Team.find(team.team_id).name %> Solicitó entrar al torneo <%= Tournament.find(team.tournament_id).name %> <%= link_to 'Aceptar' ,aceptar_path(team:team.team_id,tournament:team.tournament_id) ,class:'btn'%></p>
       <%else%>
         <p> <%= Team.find(team.team_id).name%> dentro del torneo <%= Tournament.find(team.tournament_id).name %> </p>
         <% end %>
     <%end%>
   <%end%>
 <%end%>
-<%Team.where('capitan = ? ',"33").collect do |team| %>
-  <%puts team%>
+</div>
+<div>
+<%Team.where('capitan = ? ',current_player.id.to_s).collect do |team| %>
   <% Tournamentteam.where('team_id = ?', team.id.to_s).order('created_at DESC').collect do |team| %>
     <% if !team.i_team && team.i_tournament %>
-      <p> <%= Player.find(Tournament.find(team.tournament_id).organizer).first_name %> Te invitó a participar en el torneo <%= Tournament.find(team.tournament_id).name %>   <%= link_to 'Aceptar' ,aceptar_path(team:team.team_id,tournament:team.tournament_id) %></p>
+      <p> <%= Player.find(Tournament.find(team.tournament_id).organizer).first_name %> Te invitó a participar en el torneo <%= Tournament.find(team.tournament_id).name %>   <%= link_to 'Aceptar' ,aceptar_path(team:team.team_id,tournament:team.tournament_id) ,class:'btn'%></p>
       <% end %>
+      <% if team.i_team && !team.i_tournament %>
+        <p> Esperando confirmacion de <%= Player.find(Tournament.find(team.tournament_id).organizer).first_name %></p>
+        <% end %>
     <%if team.i_team && team.i_tournament%>
-      <p> <%= Team.find(team.team_id).name%> está dentro del torneo <%= Tournament.find(team.tournament_id).name %> </p>
+      <p> Tu equipo <%= Team.find(team.team_id).name%> esta dentro del torneo <%= Tournament.find(team.tournament_id).name %> </p>
       <% end %>
       <%end%>
+      <% Teamplayer.where('team_id = ?', team.id.to_s).order('created_at DESC').collect do |team| %>
+          <% if !team.i_team && team.i_player %>
+          <p> <%= Player.find(team.player_id).first_name %> quiere jugar en tu equipo <%= link_to 'Aceptar' ,aceptar_path(team:team.team_id,tournament:team.tournament_id),class:'btn' %></p>
+          <%end%>
+          <% if team.i_team && !team.i_player %>
+          <p> Esperando confirmación de <%= Team.find(team.team_id).name %></p>
+          <%end%>
+          <% if team.i_team && team.i_player %>
+          <p> <%= Player.find(team.player_id).first_name %> Es parte del equipo </p>
+          <%end%>
+
+      <%end%>
     <%end%>
+</div>
+
+<% Teamplayer.where('player_id = ?', current_player.id.to_s).order('created_at DESC').collect do |team| %>
+    <% if team.i_team && !team.i_player %>
+    <p> <%= Team.find(team.team_id).name %> Te invito a jugar en el equipo  <%= link_to 'Aceptar' ,aceptar_path(team:team.team_id,tournament:team.tournament_id),class:'btn' %></p>
+    <%end%>
+    <% if team.i_team && team.i_player %>
+    <p>  Eres parte del equipo <%= Team.find(team.team_id).name %> </p>
+    <%end%>
+<%end%>

@@ -67,9 +67,9 @@
         <% amarillas.each do |player,tarjeta| %>
             <tr>
             <td><%= Player.find(player).first_name%></td>
-            <td><%=tarjeta %></td>
-            <% if rojas.key?(player)%>
-            <td><%rojas[player]%></td>
+            <td><%= tarjeta %></td>
+            <%= if rojas.key?(player)%>
+            <td><%=rojas[player]%></td>
             <%else%>
             <td>0</td>
             <%end%>
@@ -82,9 +82,7 @@
 </table>
 </div>
 </td>
-<<<<<<< HEAD
-<%= render 'table_position' %>
-<td><%= link_to "volver", tournament_path(params[:tournament])%></td>
-=======
+
+
+
 <td><%= link_to "Volver", tournament_path(params[:tournament]), class:"btn" %></td>
->>>>>>> 7bf1fa91f1bc6d842fcf1aafb9e12d1473cb3f0c

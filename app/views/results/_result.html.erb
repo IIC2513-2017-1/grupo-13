@@ -1,4 +1,4 @@
-<table id='tabla'>
+<table class='flat-table'>
   <thead>
 
     <tr>
@@ -19,16 +19,16 @@
         <td><%=Tournament.find(match.tournament_id).name%></td>
         <td><%=match.date%></td>
         <%if Result.exists?(match_id:match.id)%>
-        <td><%=Result.find(match.id).local%></td>
+        <td><%=Result.find_by(match_id:match.id).local%></td>
         <%else%>
-        <td>-</td>
+        <td> - </td>
         <%end%>
         <td><%=Team.find(match.local).name%></td>
         <td><%=Team.find(match.visitor).name%></td>
         <%if Result.exists?(match_id:match.id)%>
-        <td><%=Result.find(match.id).visitor%></td>
+        <td><%=Result.find_by(match_id:match.id).visitor%></td>
         <%else%>
-        <td>-</td>
+        <td> - </td>
         <%end%>
 
 

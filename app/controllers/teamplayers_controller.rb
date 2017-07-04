@@ -21,6 +21,19 @@ class TeamplayersController < ApplicationController
   def edit
   end
 
+  def crear
+    if !Teamplayer.exists?(player_id:current_player.id,team_id:params[:team])
+    Teamplayer.create(player_id:current_player.id,team_id:params[:team],i_player:true)
+
+  end
+  redirect_to team_path(params[:team])
+  end
+
+  def aceptar
+    team = Teamplayer.where('team_id = ? AND player_id = ?',params[:team],params[:player])
+    team.update(i_team:true,i_player:true)
+    redirect_to invitacion_path
+  end
   # POST /teamplayers
   # POST /teamplayers.json
   def create

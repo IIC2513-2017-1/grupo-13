@@ -1,26 +1,23 @@
-<table>
+<table class="flat-table">
   <thead>
-    <td>Position</td>
-    <td>Equipo</td>
-    <td>Pts</td>
-    <td>PJ</td>
-    <td>PG</td>
-    <td>PE</td>
-    <td>PP</td>
-    <td>GF</td>
-    <td>GC</td>
-    <td>Dif</td>
+    <th>Position</th>
+    <th>Equipo</th>
+    <th>Pts</th>
+    <th>PJ</th>
+    <th>PG</th>
+    <th>PE</th>
+    <th>PP</th>
+    <th>GF</th>
+    <th>GC</th>
+    <th>Dif</th>
   </thead>
   <% equipos = {} %>
   <%equipos_id = [] %>
-  <% Tournamentteam.where('tournament_id = ?', params[:tournament]).collect do |team| %>
-  <% equipos[team.team_id] = [0,0,0,0,0,0,0] %>
-  <% equipos_id.push[team.team_id.to_i] %>
-  <%puts equipos%>
-  <%puts equipos_id%>
+  <% Tournamentteam.where('tournament_id = ? AND i_team = ? AND i_tournament = ?', @tournament.id.to_s, true,true).collect do |team| %>
+  <% equipos[team.team_id] = [0,0,0,0,0,0,0,false] %>
   <% end %>
   <% Result.all.collect do |result| %>
-    <% if Match.find(result.match_id).tournament_id == params[:tournament] %>
+    <% if Match.find(result.match_id).tournament_id ==  @tournament.id.to_s%>
       <% local = Match.find(result.match_id).local %>
       <% visitor = Match.find(result.match_id).visitor %>
       <% if result.local > result.visitor %>
@@ -48,23 +45,21 @@
 
   <tbody>
     <% i = 1 %>
-    <% while equipos_id.length <= i%>
-
-    <% mayor = equipos_id.first.to_s %>
+    <% equipos.each do |team,lista| %>
+      <% mayor = team %>
     <% equipos.each do |team2, lista2| %>
-      <% if equipos[mayor][0]<equipos[team2][0]%>
+      <% if ((equipos[mayor][0]<equipos[team2][0]) || equipos[team][7]) && !equipos[team2][7] %>
         <% mayor = team2 %>
-
-      <% elsif equipos[mayor][0]==equipos[team2][0]%>
-          <% if (equipos[mayor][5]-equipos[mayor][6])<(equipos[team2][5]-equipos[team2][6])%>
+      <% elsif (equipos[mayor][0]==equipos[team2][0] || equipos[team][7]) && !equipos[team2][7]%>
+          <% if ((equipos[mayor][5]-equipos[mayor][6])<(equipos[team2][5]-equipos[team2][6]) || equipos[team][7]) && !equipos[team2][7]%>
             <% mayor = team2 %>
 
-          <% elsif equipos[mayor][0]==equipos[team2][0]%>
-              <% if equipos[mayor][2]<equipos[team2][2]%>
+          <% elsif (equipos[mayor][0]==equipos[team2][0]|| equipos[team][7]) && !equipos[team2][7]%>
+              <% if (equipos[mayor][2]<equipos[team2][2] || equipos[team][7]) && !equipos[team2][7]%>
                 <% mayor = team2 %>
 
-              <% elsif equipos[mayor][0]==equipos[team2][0]%>
-                  <% if equipos[mayor][5]<equipos[team2][5]%>
+              <% elsif (equipos[mayor][0]==equipos[team2][0] || equipos[team][7]) && !equipos[team2][7]%>
+                  <% if (equipos[mayor][5]<equipos[team2][5] || equipos[team][7]) && !equipos[team2][7]%>
                     <% mayor = team2 %>
 
                   <%end%>
@@ -85,14 +80,10 @@
       <td><%= equipos[mayor][6]%></td>
       <td><%= equipos[mayor][5]-equipos[mayor][6] %></td>
       <% i += 1 %>
-      <% #######eliminar equipo ##### %>
-      <% index = 0 %>
-      <% equipos_id.each do |team_id| %>
-        <% if team_id == mayor %>
-          <%  equipos_id.delete_at(idex) %>
-        <% index += 1 %>
-        <%end%>
-      <%end%>
+
+
+      <% equipos[mayor][7] = true %>
+
 
 
     </tr>

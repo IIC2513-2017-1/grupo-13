@@ -6,7 +6,7 @@
 <input type="radio" name="tabs" id="1" checked="checked">
 <label for="1">Fecha 1</label>
 <div class="tab">
-  <table>
+  <table class='tabla'>
   <thead>
     <tr>
       <th colspan="2"></th>
@@ -29,22 +29,27 @@
     <%if Result.exists?(match_id:match.id)%>
     <td><%= Result.find_by(match_id:match.id).local%>
       <%else%>
-    <td colspan="1"></td>
+    <td > - </td>
     <%end%>
     <td><%=Team.find(match.local).name%></td>
     <td><%=Team.find(match.visitor).name%></td>
     <%if Result.exists?(match_id:match.id)%>
     <td><%= Result.find_by(match_id:match.id).visitor%>
       <%else%>
-    <td colspan="1"></td>
+    <td > - </td>
     <%end%>
     <%if Team.find(match.visitor).capitan == current_player.id.to_s && !Result.exists?(match_id:match.id)%>
     <td><%= link_to 'Agregar planilla',new_nominate_path(match:match.id,team:match.visitor,tournament:params[:tournament])%>
       <%else%>
         <td>Agregar planilla</td>
       <%end%>
+    <%if Tournament.find(params[:tournament]).organizer.to_s == current_player.id.to_s %>
     <td><%= link_to 'Resultado',new_result_path(match:match.id,local:match.local,visitor:match.visitor,tournament:params[:tournament]) %>
     <td><%= link_to 'Incidencias',new_event_path(match:match.id,local:match.local,visitor:match.visitor,tournament:params[:tournament]) %>
+      <%else%>
+      <td>Resultado</td>
+      <td>Incidencias</td>
+      <%end%>
 
   </tr>
   <%end%>
@@ -56,7 +61,7 @@
 <label for="2">Fecha 2</label>
 <div class="tab">
 
-  <table>
+  <table >
   <thead>
     <tr>
       <th colspan="2"></th>
@@ -79,23 +84,27 @@
     <%if Result.exists?(match_id:match.id)%>
     <td><%= Result.find_by(match_id:match.id).local%>
       <%else%>
-    <td colspan="1"></td>
+    <td > - </td>
     <%end%>
     <td><%=Team.find(match.local).name%></td>
     <td><%=Team.find(match.visitor).name%></td>
     <%if Result.exists?(match_id:match.id)%>
     <td><%= Result.find_by(match_id:match.id).visitor%>
       <%else%>
-    <td colspan="1"></td>
+    <td> - </td>
     <%end%>
     <%if Team.find(match.visitor).capitan == current_player.id.to_s && !Result.exists?(match_id:match.id)%>
     <td><%= link_to 'Agregar planilla',new_nominate_path(match:match.id,team:match.visitor,tournament:params[:tournament])%>
       <%else%>
         <td>Agregar planilla</td>
       <%end%>
-    <td><%= link_to 'Resultado',new_result_path(match:match.id,local:match.local,visitor:match.visitor,tournament:params[:tournament]) %>
-    <td><%= link_to 'Incidencias',new_event_path(match:match.id,local:match.local,visitor:match.visitor,tournament:params[:tournament]) %>
-
+      <%if Tournament.find(params[:tournament]).organizer.to_s == current_player.id.to_s %>
+      <td><%= link_to 'Resultado',new_result_path(match:match.id,local:match.local,visitor:match.visitor,tournament:params[:tournament]) %>
+      <td><%= link_to 'Incidencias',new_event_path(match:match.id,local:match.local,visitor:match.visitor,tournament:params[:tournament]) %>
+        <%else%>
+        <td>Resultado</td>
+        <td>Incidencias</td>
+        <%end%>
   </tr>
   <%end%>
   </tbody>
@@ -302,8 +311,154 @@
 
 
 </div>
-</div>
+
 <br>
+
+<input type="radio" name="tabs" id="7">
+<label for="7">Fecha 7</label>
+<div class="tab">
+  <table>
+  <thead>
+    <tr>
+      <th colspan="2"></th>
+      <th>Local</th>
+      <th>Visitante</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+  <tbody>
+
+  <% Match.where('tournament_id = ? AND date = ?',params[:tournament],7 ).collect do |match| %>
+
+    <tr>
+      <%if Team.find(match.local).capitan == current_player.id.to_s && !Result.exists?(match_id:match.id)%>
+    <td><%= link_to 'Agregar planilla',new_nominate_path(match:match.id,team:match.local,tournament:params[:tournament])%>
+      <%else%>
+        <td>Agregar planilla</td>
+      <%end%>
+
+    <%if Result.exists?(match_id:match.id)%>
+    <td><%= Result.find_by(match_id:match.id).local%>
+      <%else%>
+    <td colspan="1"></td>
+    <%end%>
+    <td><%=Team.find(match.local).name%></td>
+    <td><%=Team.find(match.visitor).name%></td>
+    <%if Result.exists?(match_id:match.id)%>
+    <td><%= Result.find_by(match_id:match.id).visitor%>
+      <%else%>
+    <td colspan="1"></td>
+    <%end%>
+    <%if Team.find(match.visitor).capitan == current_player.id.to_s && !Result.exists?(match_id:match.id)%>
+    <td><%= link_to 'Agregar planilla',new_nominate_path(match:match.id,team:match.visitor,tournament:params[:tournament])%>
+      <%else%>
+        <td>Agregar planilla</td>
+      <%end%>
+    <td><%= link_to 'Resultado',new_result_path(match:match.id,local:match.local,visitor:match.visitor,tournament:params[:tournament]) %>
+    <td><%= link_to 'Incidencias',new_event_path(match:match.id,local:match.local,visitor:match.visitor,tournament:params[:tournament]) %>
+
+  </tr>
+  <%end%>
+  </tbody>
+  </table>
+</div>
+<input type="radio" name="tabs" id="8" >
+<label for="8">Fecha 8</label>
+<div class="tab">
+  <table>
+  <thead>
+    <tr>
+      <th colspan="2"></th>
+      <th>Local</th>
+      <th>Visitante</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+  <tbody>
+
+  <% Match.where('tournament_id = ? AND date = ?',params[:tournament],8 ).collect do |match| %>
+
+    <tr>
+      <%if Team.find(match.local).capitan == current_player.id.to_s && !Result.exists?(match_id:match.id)%>
+    <td><%= link_to 'Agregar planilla',new_nominate_path(match:match.id,team:match.local,tournament:params[:tournament])%>
+      <%else%>
+        <td>Agregar planilla</td>
+      <%end%>
+
+    <%if Result.exists?(match_id:match.id)%>
+    <td><%= Result.find_by(match_id:match.id).local%>
+      <%else%>
+    <td colspan="1"></td>
+    <%end%>
+    <td><%=Team.find(match.local).name%></td>
+    <td><%=Team.find(match.visitor).name%></td>
+    <%if Result.exists?(match_id:match.id)%>
+    <td><%= Result.find_by(match_id:match.id).visitor%>
+      <%else%>
+    <td colspan="1"></td>
+    <%end%>
+    <%if Team.find(match.visitor).capitan == current_player.id.to_s && !Result.exists?(match_id:match.id)%>
+    <td><%= link_to 'Agregar planilla',new_nominate_path(match:match.id,team:match.visitor,tournament:params[:tournament])%>
+      <%else%>
+        <td>Agregar planilla</td>
+      <%end%>
+    <td><%= link_to 'Resultado',new_result_path(match:match.id,local:match.local,visitor:match.visitor,tournament:params[:tournament]) %>
+    <td><%= link_to 'Incidencias',new_event_path(match:match.id,local:match.local,visitor:match.visitor,tournament:params[:tournament]) %>
+
+  </tr>
+  <%end%>
+  </tbody>
+  </table>
+</div>
+<input type="radio" name="tabs" id="9" >
+<label for="9">Fecha 9</label>
+<div class="tab">
+  <table>
+  <thead>
+    <tr>
+      <th colspan="2"></th>
+      <th>Local</th>
+      <th>Visitante</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+  <tbody>
+
+  <% Match.where('tournament_id = ? AND date = ?',params[:tournament],9).collect do |match| %>
+
+    <tr>
+      <%if Team.find(match.local).capitan == current_player.id.to_s && !Result.exists?(match_id:match.id)%>
+    <td><%= link_to 'Agregar planilla',new_nominate_path(match:match.id,team:match.local,tournament:params[:tournament])%>
+      <%else%>
+        <td>Agregar planilla</td>
+      <%end%>
+
+    <%if Result.exists?(match_id:match.id)%>
+    <td><%= Result.find_by(match_id:match.id).local%>
+      <%else%>
+    <td colspan="1"></td>
+    <%end%>
+    <td><%=Team.find(match.local).name%></td>
+    <td><%=Team.find(match.visitor).name%></td>
+    <%if Result.exists?(match_id:match.id)%>
+    <td><%= Result.find_by(match_id:match.id).visitor%>
+      <%else%>
+    <td colspan="1"></td>
+    <%end%>
+    <%if Team.find(match.visitor).capitan == current_player.id.to_s && !Result.exists?(match_id:match.id)%>
+    <td><%= link_to 'Agregar planilla',new_nominate_path(match:match.id,team:match.visitor,tournament:params[:tournament])%>
+      <%else%>
+        <td>Agregar planilla</td>
+      <%end%>
+    <td><%= link_to 'Resultado',new_result_path(match:match.id,local:match.local,visitor:match.visitor,tournament:params[:tournament]) %>
+    <td><%= link_to 'Incidencias',new_event_path(match:match.id,local:match.local,visitor:match.visitor,tournament:params[:tournament]) %>
+
+  </tr>
+  <%end%>
+  </tbody>
+  </table>
+</div>
+</div>
 <% if current_player.id.to_s == Tournament.find(params[:tournament]).organizer %>
   <td><%= link_to 'New Match', new_match_path(tournament: params[:tournament]),class:"btn" %></td>
 <% end %>

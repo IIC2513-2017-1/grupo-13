@@ -1,37 +1,31 @@
 <h1 id='nombre'> <%= @tournament.name%></h1>
-<%= link_to "Solicitar ingresar", new_tournamentteam_path(solicitar:true,tournament:@tournament.id), class: "btn"%>
+<%= link_to "Solicitar ingresar", new_tournamentteam_path(solicitar:true,tournament:@tournament.id), class: "btn", style: "float:right"%>
 
-
-<table class="flat-table">
-<thead>
-<tr>
-    <th>Nombre Equipo</th>
-    <th>Nombre capitan</th>
-</tr>
-  </thead>
-
-<tbody>
-<% Tournamentteam.all.collect do |team| %>
-  <% if team.tournament_id ==  @tournament.id.to_s && team.i_team && team.i_tournament%>
-
-    <tr>
-        <%if Team.exists?(team.team_id) && Team.exists?(team.team_id)%>
-        <td><%= Team.find(team.team_id).name %></td>
-        <td><%= Player.find(Team.find(team.team_id).capitan).first_name%></td>
-        <td><%= link_to 'Show' ,team_path(team.team_id)%></td>
-        <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-
-  <%end%>
-  <%end%>
-<%end%>
-
-
-
-</tbody>
-</table>
+<span>
 <% if @tournament.organizer.to_i == current_player.id%>
-<%= link_to 'Agregar equipo',new_tournamentteam_path(tournament:@tournament), class: "btn" %>
+<%= link_to 'Agregar equipo',new_tournamentteam_path(tournament:@tournament), class: "btn", style: "float:right" %>
 <%end%>
-<%= link_to "Ver fechas", matches_path(tournament:@tournament.id), class: "btn"%>
-<%= link_to "Ver Estadisticas", stadistic_path(tournament:@tournament.id), class: "btn"%>
+<%= link_to "Ver fechas", matches_path(tournament:@tournament.id), class: "btn", style: "float:right"%>
+</span>
+
+
+<div class="tabs">
+  <input type="radio" name="tabs" id="tabone" checked="checked">
+  <label for="tabone">Tabla</label>
+  <div class="tab">
+    <%= render "table_position"%>
+  </div>
+
+  <input type="radio" name="tabs" id="tabtwo">
+  <label for="tabtwo">Equipos</label>
+  <div class="tab">
+    <%= render "equipos"%>
+  </div>
+
+  <input type="radio" name="tabs" id="tabthree">
+  <label for="tabthree">Estadisticas</label>
+  <div class="tab">
+    <%= render "estadisticas"%>
+  </div>
+</div>
 <%= link_to 'Volver', tournaments_path, class: "btn" %>

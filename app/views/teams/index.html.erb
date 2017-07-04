@@ -1,6 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Teams</h1>
+<h1>Teams
+  <span><%= link_to '+Crear equipo', new_team_path, class: "btn", style: "float:right" %></span>
+</h1>
 
 <div class="container-teams">
   <% @teams.each do |team| %>
@@ -8,11 +10,9 @@
   <%= image_tag team.logo.url, alt: "imagen", style:"width:100%" %>
     <div class="text">
       <h2><%=team.name%></h2>
-       <h3>Capitan: <%=Player.find(team.capitan).first_name%></h3>          
-       <%= link_to 'Show', team, class: "show" %>
+       <h3>Capitan: <%=Player.find(team.capitan).first_name%></h3>
+       <%= link_to 'Ver jugadores', team, class: "show" %>
     </div>
     </div>
-    <% end %>  
+    <% end %>
 </div>
-<%= link_to 'New Team', new_team_path %>
-
